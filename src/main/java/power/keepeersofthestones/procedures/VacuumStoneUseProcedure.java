@@ -16,8 +16,6 @@ public class VacuumStoneUseProcedure {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.VACUUM_STONE.get()) {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(PowerModMobEffects.RECHARGE_VACUUM_STONE.get()) : false)) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.VACUUM_MASTER.get(), 12000, 0, (false), (false)));
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
 						if (entity instanceof LivingEntity _entity)

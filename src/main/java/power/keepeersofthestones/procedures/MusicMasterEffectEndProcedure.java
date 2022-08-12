@@ -89,7 +89,7 @@ public class MusicMasterEffectEndProcedure {
 		{
 			boolean _setval = false;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.fire = _setval;
+				capability.music = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
