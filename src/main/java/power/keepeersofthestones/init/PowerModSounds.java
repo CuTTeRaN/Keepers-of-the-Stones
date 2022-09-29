@@ -4,43 +4,45 @@
  */
 package power.keepeersofthestones.init;
 
-import power.keepeersofthestones.PowerMod;
-
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
+import java.util.Map;
+import java.util.HashMap;
+
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModSounds {
-	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, PowerMod.MODID);
-	public static final RegistryObject<SoundEvent> POWERFUL_STONE = REGISTRY.register("powerful_stone",
-			() -> new SoundEvent(new ResourceLocation("power", "powerful_stone")));
-	public static final RegistryObject<SoundEvent> TIME_POWER = REGISTRY.register("time_power",
-			() -> new SoundEvent(new ResourceLocation("power", "time_power")));
-	public static final RegistryObject<SoundEvent> MUSIC1 = REGISTRY.register("music1",
-			() -> new SoundEvent(new ResourceLocation("power", "music1")));
-	public static final RegistryObject<SoundEvent> MUSIC2 = REGISTRY.register("music2",
-			() -> new SoundEvent(new ResourceLocation("power", "music2")));
-	public static final RegistryObject<SoundEvent> MUSIC3 = REGISTRY.register("music3",
-			() -> new SoundEvent(new ResourceLocation("power", "music3")));
-	public static final RegistryObject<SoundEvent> MUSIC4 = REGISTRY.register("music4",
-			() -> new SoundEvent(new ResourceLocation("power", "music4")));
-	public static final RegistryObject<SoundEvent> MUSIC5 = REGISTRY.register("music5",
-			() -> new SoundEvent(new ResourceLocation("power", "music5")));
-	public static final RegistryObject<SoundEvent> MUSIC6 = REGISTRY.register("music6",
-			() -> new SoundEvent(new ResourceLocation("power", "music6")));
-	public static final RegistryObject<SoundEvent> MUSIC7 = REGISTRY.register("music7",
-			() -> new SoundEvent(new ResourceLocation("power", "music7")));
-	public static final RegistryObject<SoundEvent> MUSIC8 = REGISTRY.register("music8",
-			() -> new SoundEvent(new ResourceLocation("power", "music8")));
-	public static final RegistryObject<SoundEvent> MUSIC9 = REGISTRY.register("music9",
-			() -> new SoundEvent(new ResourceLocation("power", "music9")));
-	public static final RegistryObject<SoundEvent> MUSIC10 = REGISTRY.register("music10",
-			() -> new SoundEvent(new ResourceLocation("power", "music10")));
-	public static final RegistryObject<SoundEvent> STONE_ACTIVATION = REGISTRY.register("stone_activation",
-			() -> new SoundEvent(new ResourceLocation("power", "stone_activation")));
-	public static final RegistryObject<SoundEvent> STONE_DEACTIVATION = REGISTRY.register("stone_deactivation",
-			() -> new SoundEvent(new ResourceLocation("power", "stone_deactivation")));
+	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
+	static {
+		REGISTRY.put(new ResourceLocation("power", "powerful_stone"), new SoundEvent(new ResourceLocation("power", "powerful_stone")));
+		REGISTRY.put(new ResourceLocation("power", "tyrannosaurus_rex.hurt"),
+				new SoundEvent(new ResourceLocation("power", "tyrannosaurus_rex.hurt")));
+		REGISTRY.put(new ResourceLocation("power", "tyrannosaurus_rex.dead"),
+				new SoundEvent(new ResourceLocation("power", "tyrannosaurus_rex.dead")));
+		REGISTRY.put(new ResourceLocation("power", "raptor.dead"), new SoundEvent(new ResourceLocation("power", "raptor.dead")));
+		REGISTRY.put(new ResourceLocation("power", "raptor.hurt"), new SoundEvent(new ResourceLocation("power", "raptor.hurt")));
+		REGISTRY.put(new ResourceLocation("power", "time_power"), new SoundEvent(new ResourceLocation("power", "time_power")));
+		REGISTRY.put(new ResourceLocation("power", "music1"), new SoundEvent(new ResourceLocation("power", "music1")));
+		REGISTRY.put(new ResourceLocation("power", "music2"), new SoundEvent(new ResourceLocation("power", "music2")));
+		REGISTRY.put(new ResourceLocation("power", "music3"), new SoundEvent(new ResourceLocation("power", "music3")));
+		REGISTRY.put(new ResourceLocation("power", "music4"), new SoundEvent(new ResourceLocation("power", "music4")));
+		REGISTRY.put(new ResourceLocation("power", "music5"), new SoundEvent(new ResourceLocation("power", "music5")));
+		REGISTRY.put(new ResourceLocation("power", "music6"), new SoundEvent(new ResourceLocation("power", "music6")));
+		REGISTRY.put(new ResourceLocation("power", "music7"), new SoundEvent(new ResourceLocation("power", "music7")));
+		REGISTRY.put(new ResourceLocation("power", "music8"), new SoundEvent(new ResourceLocation("power", "music8")));
+		REGISTRY.put(new ResourceLocation("power", "music9"), new SoundEvent(new ResourceLocation("power", "music9")));
+		REGISTRY.put(new ResourceLocation("power", "music10"), new SoundEvent(new ResourceLocation("power", "music10")));
+		REGISTRY.put(new ResourceLocation("power", "stone_activation"), new SoundEvent(new ResourceLocation("power", "stone_activation")));
+		REGISTRY.put(new ResourceLocation("power", "rocket.fly"), new SoundEvent(new ResourceLocation("power", "rocket.fly")));
+		REGISTRY.put(new ResourceLocation("power", "stone_deactivation"), new SoundEvent(new ResourceLocation("power", "stone_deactivation")));
+	}
+
+	@SubscribeEvent
+	public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
+		for (Map.Entry<ResourceLocation, SoundEvent> sound : REGISTRY.entrySet())
+			event.getRegistry().register(sound.getValue().setRegistryName(sound.getKey()));
+	}
 }
