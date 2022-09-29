@@ -8,5 +8,6 @@
     "south": "power:blocks/crystal_block",
     "west": "power:blocks/crystal_block",
     "particle": "power:blocks/crystal_block"
-  }
+  },
+  "render_type": "solid"
 }

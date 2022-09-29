@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.MindBatteryUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,7 +13,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
@@ -37,7 +35,7 @@ public class MindBatteryItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("\u00A7dMind"));
+		list.add(Component.literal("\u00A7dMind"));
 	}
 
 	@Override

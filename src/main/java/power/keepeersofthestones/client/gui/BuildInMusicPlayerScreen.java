@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -85,79 +84,79 @@ public class BuildInMusicPlayerScreen extends AbstractContainerScreen<BuildInMus
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 239, this.topPos + 7, 46, 20, new TextComponent("Stop"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 239, this.topPos + 7, 46, 20, Component.literal("Stop"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(0, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 25, 40, 20, new TextComponent("Cat"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 25, 40, 20, Component.literal("Cat"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(1, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 68, this.topPos + 25, 56, 20, new TextComponent("Blocks"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 68, this.topPos + 25, 56, 20, Component.literal("Blocks"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(2, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 25, 40, 20, new TextComponent("Far"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 25, 40, 20, Component.literal("Far"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(3, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 52, 46, 20, new TextComponent("Mall"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 52, 46, 20, Component.literal("Mall"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(4, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 77, this.topPos + 52, 61, 20, new TextComponent("Mellohi"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 77, this.topPos + 52, 61, 20, Component.literal("Mellohi"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(5, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 140, this.topPos + 52, 51, 20, new TextComponent("Chirp"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 140, this.topPos + 52, 51, 20, Component.literal("Chirp"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(6, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 194, this.topPos + 52, 46, 20, new TextComponent("Stal"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 194, this.topPos + 52, 46, 20, Component.literal("Stal"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(7, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 79, 51, 20, new TextComponent("Strad"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 79, 51, 20, Component.literal("Strad"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(8, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 77, this.topPos + 79, 46, 20, new TextComponent("Ward"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 77, this.topPos + 79, 46, 20, Component.literal("Ward"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(9, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 79, 46, 20, new TextComponent("Wait"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 79, 46, 20, Component.literal("Wait"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(10, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 185, this.topPos + 79, 61, 20, new TextComponent("Pigstep"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 185, this.topPos + 79, 61, 20, Component.literal("Pigstep"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(11, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 11, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 106, 72, 20, new TextComponent("Otherside"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 106, 72, 20, Component.literal("Otherside"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(12, x, y, z));
 				BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 12, x, y, z);

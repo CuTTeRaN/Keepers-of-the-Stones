@@ -1,8 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.EnergiumItemsProcedure;
-import power.keepeersofthestones.procedures.BigSizeUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 import power.keepeersofthestones.init.PowerModItems;
 

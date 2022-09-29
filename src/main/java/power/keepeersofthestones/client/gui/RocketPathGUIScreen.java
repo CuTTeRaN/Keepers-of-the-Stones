@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -85,31 +84,31 @@ public class RocketPathGUIScreen extends AbstractContainerScreen<RocketPathGUIMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 24, 46, 20, new TextComponent("Moon"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 24, 46, 20, Component.literal("Moon"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(0, x, y, z));
 				RocketPathGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 60, 46, 20, new TextComponent("Mars"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 60, 46, 20, Component.literal("Mars"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(1, x, y, z));
 				RocketPathGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 96, 51, 20, new TextComponent("Venus"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 96, 51, 20, Component.literal("Venus"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(2, x, y, z));
 				RocketPathGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 132, 72, 20, new TextComponent("Enceladus"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 132, 72, 20, Component.literal("Enceladus"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(3, x, y, z));
 				RocketPathGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 194, this.topPos + 168, 92, 20, new TextComponent("Back to Earth"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 194, this.topPos + 168, 92, 20, Component.literal("Back to Earth"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(4, x, y, z));
 				RocketPathGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);

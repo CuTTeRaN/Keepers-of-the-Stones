@@ -2,12 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
-import power.keepeersofthestones.procedures.SummonWolfProcedure;
-import power.keepeersofthestones.procedures.SummonSheepProcedure;
-import power.keepeersofthestones.procedures.SummonHorseProcedure;
-import power.keepeersofthestones.procedures.SummonCowProcedure;
-import power.keepeersofthestones.procedures.SummonChickenProcedure;
-import power.keepeersofthestones.procedures.SummonCatProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

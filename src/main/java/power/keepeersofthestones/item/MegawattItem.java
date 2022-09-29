@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.MegawattEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class MegawattItem extends Item {
 				MegawattEntity entityarrow = MegawattEntity.shoot(world, entity, world.getRandom(), 1f, 4, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

@@ -184,7 +184,7 @@
       "name": "AirStone",
       "type": "item",
       "sortid": 24,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "air_stone",
       "path": "~/Stones/Air"
@@ -1332,7 +1332,7 @@
       "name": "IceSharp",
       "type": "rangeditem",
       "sortid": 187,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ice_sharp",
       "path": "~/Stones/Ice"
@@ -1643,7 +1643,7 @@
       "name": "AcusticalExplode",
       "type": "rangeditem",
       "sortid": 204,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "acustical_explode",
       "path": "~/Stones/Sound"
@@ -4660,7 +4660,7 @@
       "name": "ShadowBall",
       "type": "rangeditem",
       "sortid": 363,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "shadow_ball",
       "path": "~/Stones/Shadow"
@@ -4932,7 +4932,7 @@
       "name": "VacuumWebBlock",
       "type": "block",
       "sortid": 378,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "vacuum_web_block",
       "path": "~/Stones/Vacuum"
@@ -6192,7 +6192,7 @@
       "name": "BlackHole",
       "type": "rangeditem",
       "sortid": 441,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "black_hole",
       "path": "~/Stones/Space"
@@ -9459,7 +9459,7 @@
       "name": "BloodBattery",
       "type": "item",
       "sortid": 98,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blood_battery",
       "path": "~/Items/Batteries"
@@ -10365,7 +10365,7 @@
       "name": "ExplosiveFlow",
       "type": "rangeditem",
       "sortid": 639,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "explosive_flow",
       "path": "~/Stones/Explosion"
@@ -10410,7 +10410,7 @@
       "name": "AmberStone",
       "type": "item",
       "sortid": 11,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amber_stone",
       "path": "~/Stones/Amber"
@@ -14875,7 +14875,7 @@
       "name": "Choosestone",
       "type": "command",
       "sortid": 895,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "choosestone",
       "path": "~/Commands"
@@ -15320,7 +15320,7 @@
       "name": "MassInfection",
       "type": "rangeditem",
       "sortid": 918,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "mass_infection",
       "path": "~/Stones/Light"
@@ -19979,23 +19979,6 @@
       "path": "~/Items/Polaris"
     },
     {
-      "name": "PolarisSwordFreezing",
-      "type": "procedure",
-      "sortid": 1174,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "polaris_sword_freezing",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Polaris"
-    },
-    {
       "name": "PolarisShield",
       "type": "item",
       "sortid": 1175,
@@ -22870,5 +22853,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200338700
+  "mcreatorVersion": 202200399999
 }

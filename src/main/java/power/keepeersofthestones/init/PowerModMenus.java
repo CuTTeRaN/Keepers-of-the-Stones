@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package power.keepeersofthestones.init;
 
@@ -75,133 +75,133 @@ import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.world.inventory.BuildInMusicPlayerMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
+import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.network.IContainerFactory;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModMenus {
-	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
-	public static final MenuType<CultivationGUIMenu> CULTIVATION_GUI = register("cultivation_gui",
-			(id, inv, extraData) -> new CultivationGUIMenu(id, inv, extraData));
-	public static final MenuType<SpawnAnimalsGUIMenu> SPAWN_ANIMALS_GUI = register("spawn_animals_gui",
-			(id, inv, extraData) -> new SpawnAnimalsGUIMenu(id, inv, extraData));
-	public static final MenuType<ChoiseMagicStoneGUIMenu> CHOISE_MAGIC_STONE_GUI = register("choise_magic_stone_gui",
-			(id, inv, extraData) -> new ChoiseMagicStoneGUIMenu(id, inv, extraData));
-	public static final MenuType<ChoiseMagicStonesPage2Menu> CHOISE_MAGIC_STONES_PAGE_2 = register("choise_magic_stones_page_2",
-			(id, inv, extraData) -> new ChoiseMagicStonesPage2Menu(id, inv, extraData));
-	public static final MenuType<CheckpointGUIMenu> CHECKPOINT_GUI = register("checkpoint_gui",
-			(id, inv, extraData) -> new CheckpointGUIMenu(id, inv, extraData));
-	public static final MenuType<BatteryCreateGUIMenu> BATTERY_CREATE_GUI = register("battery_create_gui",
-			(id, inv, extraData) -> new BatteryCreateGUIMenu(id, inv, extraData));
-	public static final MenuType<RedstoneBundleGUIMenu> REDSTONE_BUNDLE_GUI = register("redstone_bundle_gui",
-			(id, inv, extraData) -> new RedstoneBundleGUIMenu(id, inv, extraData));
-	public static final MenuType<BuildingGUIMenu> BUILDING_GUI = register("building_gui",
-			(id, inv, extraData) -> new BuildingGUIMenu(id, inv, extraData));
-	public static final MenuType<EBFireMenu> EB_FIRE = register("eb_fire", (id, inv, extraData) -> new EBFireMenu(id, inv, extraData));
-	public static final MenuType<EBAirMenu> EB_AIR = register("eb_air", (id, inv, extraData) -> new EBAirMenu(id, inv, extraData));
-	public static final MenuType<EBWaterMenu> EB_WATER = register("eb_water", (id, inv, extraData) -> new EBWaterMenu(id, inv, extraData));
-	public static final MenuType<EBEarthMenu> EB_EARTH = register("eb_earth", (id, inv, extraData) -> new EBEarthMenu(id, inv, extraData));
-	public static final MenuType<EBEnergyMenu> EB_ENERGY = register("eb_energy", (id, inv, extraData) -> new EBEnergyMenu(id, inv, extraData));
-	public static final MenuType<EBIceMenu> EB_ICE = register("eb_ice", (id, inv, extraData) -> new EBIceMenu(id, inv, extraData));
-	public static final MenuType<EBLightningMenu> EB_LIGHTNING = register("eb_lightning",
-			(id, inv, extraData) -> new EBLightningMenu(id, inv, extraData));
-	public static final MenuType<EBSoundMenu> EB_SOUND = register("eb_sound", (id, inv, extraData) -> new EBSoundMenu(id, inv, extraData));
-	public static final MenuType<EBCrystalMenu> EB_CRYSTAL = register("eb_crystal", (id, inv, extraData) -> new EBCrystalMenu(id, inv, extraData));
-	public static final MenuType<EBLavaMenu> EB_LAVA = register("eb_lava", (id, inv, extraData) -> new EBLavaMenu(id, inv, extraData));
-	public static final MenuType<EBRainMenu> EB_RAIN = register("eb_rain", (id, inv, extraData) -> new EBRainMenu(id, inv, extraData));
-	public static final MenuType<EBTornadoMenu> EB_TORNADO = register("eb_tornado", (id, inv, extraData) -> new EBTornadoMenu(id, inv, extraData));
-	public static final MenuType<EBOceanMenu> EB_OCEAN = register("eb_ocean", (id, inv, extraData) -> new EBOceanMenu(id, inv, extraData));
-	public static final MenuType<EBGreeneryMenu> EB_GREENERY = register("eb_greenery",
-			(id, inv, extraData) -> new EBGreeneryMenu(id, inv, extraData));
-	public static final MenuType<EBAnimalsMenu> EB_ANIMALS = register("eb_animals", (id, inv, extraData) -> new EBAnimalsMenu(id, inv, extraData));
-	public static final MenuType<EBMetalMenu> EB_METAL = register("eb_metal", (id, inv, extraData) -> new EBMetalMenu(id, inv, extraData));
-	public static final MenuType<EBLightMenu> EB_LIGHT = register("eb_light", (id, inv, extraData) -> new EBLightMenu(id, inv, extraData));
-	public static final MenuType<EBShadowMenu> EB_SHADOW = register("eb_shadow", (id, inv, extraData) -> new EBShadowMenu(id, inv, extraData));
-	public static final MenuType<EBVacuumMenu> EB_VACUUM = register("eb_vacuum", (id, inv, extraData) -> new EBVacuumMenu(id, inv, extraData));
-	public static final MenuType<EBSunMenu> EB_SUN = register("eb_sun", (id, inv, extraData) -> new EBSunMenu(id, inv, extraData));
-	public static final MenuType<EBMoonMenu> EB_MOON = register("eb_moon", (id, inv, extraData) -> new EBMoonMenu(id, inv, extraData));
-	public static final MenuType<EBSpaceMenu> EB_SPACE = register("eb_space", (id, inv, extraData) -> new EBSpaceMenu(id, inv, extraData));
-	public static final MenuType<EBTimeMenu> EB_TIME = register("eb_time", (id, inv, extraData) -> new EBTimeMenu(id, inv, extraData));
-	public static final MenuType<EBCreationMenu> EB_CREATION = register("eb_creation",
-			(id, inv, extraData) -> new EBCreationMenu(id, inv, extraData));
-	public static final MenuType<EBDestructionMenu> EB_DESTRUCTION = register("eb_destruction",
-			(id, inv, extraData) -> new EBDestructionMenu(id, inv, extraData));
-	public static final MenuType<EBBloodMenu> EB_BLOOD = register("eb_blood", (id, inv, extraData) -> new EBBloodMenu(id, inv, extraData));
-	public static final MenuType<EBTechnologyMenu> EB_TECHNOLOGY = register("eb_technology",
-			(id, inv, extraData) -> new EBTechnologyMenu(id, inv, extraData));
-	public static final MenuType<EBTeleportationMenu> EB_TELEPORTATION = register("eb_teleportation",
-			(id, inv, extraData) -> new EBTeleportationMenu(id, inv, extraData));
-	public static final MenuType<EBExplosionMenu> EB_EXPLOSION = register("eb_explosion",
-			(id, inv, extraData) -> new EBExplosionMenu(id, inv, extraData));
-	public static final MenuType<EBAmberMenu> EB_AMBER = register("eb_amber", (id, inv, extraData) -> new EBAmberMenu(id, inv, extraData));
-	public static final MenuType<PointGUIMenu> POINT_GUI = register("point_gui", (id, inv, extraData) -> new PointGUIMenu(id, inv, extraData));
-	public static final MenuType<EBBlueFlameMenu> EB_BLUE_FLAME = register("eb_blue_flame",
-			(id, inv, extraData) -> new EBBlueFlameMenu(id, inv, extraData));
-	public static final MenuType<ChoiseMagicStonesPage3Menu> CHOISE_MAGIC_STONES_PAGE_3 = register("choise_magic_stones_page_3",
-			(id, inv, extraData) -> new ChoiseMagicStonesPage3Menu(id, inv, extraData));
-	public static final MenuType<SpaceAtlasGUIMenu> SPACE_ATLAS_GUI = register("space_atlas_gui",
-			(id, inv, extraData) -> new SpaceAtlasGUIMenu(id, inv, extraData));
-	public static final MenuType<CheckPointTPMenu> CHECK_POINT_TP = register("check_point_tp",
-			(id, inv, extraData) -> new CheckPointTPMenu(id, inv, extraData));
-	public static final MenuType<LevelsAndSkillsPageMenu> LEVELS_AND_SKILLS_PAGE = register("levels_and_skills_page",
-			(id, inv, extraData) -> new LevelsAndSkillsPageMenu(id, inv, extraData));
-	public static final MenuType<BuyLevel2Menu> BUY_LEVEL_2 = register("buy_level_2", (id, inv, extraData) -> new BuyLevel2Menu(id, inv, extraData));
-	public static final MenuType<BuyLevel3Menu> BUY_LEVEL_3 = register("buy_level_3", (id, inv, extraData) -> new BuyLevel3Menu(id, inv, extraData));
-	public static final MenuType<EBMistMenu> EB_MIST = register("eb_mist", (id, inv, extraData) -> new EBMistMenu(id, inv, extraData));
-	public static final MenuType<SoundImitateChoiceMenu> SOUND_IMITATE_CHOICE = register("sound_imitate_choice",
-			(id, inv, extraData) -> new SoundImitateChoiceMenu(id, inv, extraData));
-	public static final MenuType<EBSandMenu> EB_SAND = register("eb_sand", (id, inv, extraData) -> new EBSandMenu(id, inv, extraData));
-	public static final MenuType<EBSpeedMenu> EB_SPEED = register("eb_speed", (id, inv, extraData) -> new EBSpeedMenu(id, inv, extraData));
-	public static final MenuType<EBPoisonMenu> EB_POISON = register("eb_poison", (id, inv, extraData) -> new EBPoisonMenu(id, inv, extraData));
-	public static final MenuType<EBMagnetMenu> EB_MAGNET = register("eb_magnet", (id, inv, extraData) -> new EBMagnetMenu(id, inv, extraData));
-	public static final MenuType<EBMushroomsMenu> EB_MUSHROOMS = register("eb_mushrooms",
-			(id, inv, extraData) -> new EBMushroomsMenu(id, inv, extraData));
-	public static final MenuType<EBMercuryMenu> EB_MERCURY = register("eb_mercury", (id, inv, extraData) -> new EBMercuryMenu(id, inv, extraData));
-	public static final MenuType<MusicPlayerGUIMenu> MUSIC_PLAYER_GUI = register("music_player_gui",
-			(id, inv, extraData) -> new MusicPlayerGUIMenu(id, inv, extraData));
-	public static final MenuType<EBMusicMenu> EB_MUSIC = register("eb_music", (id, inv, extraData) -> new EBMusicMenu(id, inv, extraData));
-	public static final MenuType<EBPlagueMenu> EB_PLAGUE = register("eb_plague", (id, inv, extraData) -> new EBPlagueMenu(id, inv, extraData));
-	public static final MenuType<RocketPathGUIMenu> ROCKET_PATH_GUI = register("rocket_path_gui",
-			(id, inv, extraData) -> new RocketPathGUIMenu(id, inv, extraData));
-	public static final MenuType<EBGravityMenu> EB_GRAVITY = register("eb_gravity", (id, inv, extraData) -> new EBGravityMenu(id, inv, extraData));
-	public static final MenuType<CustomMusicPlayerMenu> CUSTOM_MUSIC_PLAYER = register("custom_music_player",
-			(id, inv, extraData) -> new CustomMusicPlayerMenu(id, inv, extraData));
-	public static final MenuType<BuildInMusicPlayerMenu> BUILD_IN_MUSIC_PLAYER = register("build_in_music_player",
-			(id, inv, extraData) -> new BuildInMusicPlayerMenu(id, inv, extraData));
-	public static final MenuType<EBSmokeMenu> EB_SMOKE = register("eb_smoke", (id, inv, extraData) -> new EBSmokeMenu(id, inv, extraData));
-	public static final MenuType<EBSpiritMenu> EB_SPIRIT = register("eb_spirit", (id, inv, extraData) -> new EBSpiritMenu(id, inv, extraData));
-	public static final MenuType<ChoiseMagicPower1Menu> CHOISE_MAGIC_POWER_1 = register("choise_magic_power_1",
-			(id, inv, extraData) -> new ChoiseMagicPower1Menu(id, inv, extraData));
-	public static final MenuType<ChoiseMagicPower3Menu> CHOISE_MAGIC_POWER_3 = register("choise_magic_power_3",
-			(id, inv, extraData) -> new ChoiseMagicPower3Menu(id, inv, extraData));
-	public static final MenuType<ChoiseMagicPower2Menu> CHOISE_MAGIC_POWER_2 = register("choise_magic_power_2",
-			(id, inv, extraData) -> new ChoiseMagicPower2Menu(id, inv, extraData));
-	public static final MenuType<EBAetherMenu> EB_AETHER = register("eb_aether", (id, inv, extraData) -> new EBAetherMenu(id, inv, extraData));
-	public static final MenuType<CompanionsGuiMenu> COMPANIONS_GUI = register("companions_gui",
-			(id, inv, extraData) -> new CompanionsGuiMenu(id, inv, extraData));
-	public static final MenuType<EBFormMenu> EB_FORM = register("eb_form", (id, inv, extraData) -> new EBFormMenu(id, inv, extraData));
-	public static final MenuType<EBMindMenu> EB_MIND = register("eb_mind", (id, inv, extraData) -> new EBMindMenu(id, inv, extraData));
-	public static final MenuType<EBGoldenDustMenu> EB_GOLDEN_DUST = register("eb_golden_dust",
-			(id, inv, extraData) -> new EBGoldenDustMenu(id, inv, extraData));
-
-	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
-		MenuType<T> menuType = new MenuType<T>(containerFactory);
-		menuType.setRegistryName(registryname);
-		REGISTRY.add(menuType);
-		return menuType;
-	}
-
-	@SubscribeEvent
-	public static void registerContainers(RegistryEvent.Register<MenuType<?>> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new MenuType[0]));
-	}
+	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, PowerMod.MODID);
+	public static final RegistryObject<MenuType<CultivationGUIMenu>> CULTIVATION_GUI = REGISTRY.register("cultivation_gui",
+			() -> IForgeMenuType.create(CultivationGUIMenu::new));
+	public static final RegistryObject<MenuType<SpawnAnimalsGUIMenu>> SPAWN_ANIMALS_GUI = REGISTRY.register("spawn_animals_gui",
+			() -> IForgeMenuType.create(SpawnAnimalsGUIMenu::new));
+	public static final RegistryObject<MenuType<ChoiseMagicStoneGUIMenu>> CHOISE_MAGIC_STONE_GUI = REGISTRY.register("choise_magic_stone_gui",
+			() -> IForgeMenuType.create(ChoiseMagicStoneGUIMenu::new));
+	public static final RegistryObject<MenuType<ChoiseMagicStonesPage2Menu>> CHOISE_MAGIC_STONES_PAGE_2 = REGISTRY
+			.register("choise_magic_stones_page_2", () -> IForgeMenuType.create(ChoiseMagicStonesPage2Menu::new));
+	public static final RegistryObject<MenuType<CheckpointGUIMenu>> CHECKPOINT_GUI = REGISTRY.register("checkpoint_gui",
+			() -> IForgeMenuType.create(CheckpointGUIMenu::new));
+	public static final RegistryObject<MenuType<BatteryCreateGUIMenu>> BATTERY_CREATE_GUI = REGISTRY.register("battery_create_gui",
+			() -> IForgeMenuType.create(BatteryCreateGUIMenu::new));
+	public static final RegistryObject<MenuType<RedstoneBundleGUIMenu>> REDSTONE_BUNDLE_GUI = REGISTRY.register("redstone_bundle_gui",
+			() -> IForgeMenuType.create(RedstoneBundleGUIMenu::new));
+	public static final RegistryObject<MenuType<BuildingGUIMenu>> BUILDING_GUI = REGISTRY.register("building_gui",
+			() -> IForgeMenuType.create(BuildingGUIMenu::new));
+	public static final RegistryObject<MenuType<EBFireMenu>> EB_FIRE = REGISTRY.register("eb_fire", () -> IForgeMenuType.create(EBFireMenu::new));
+	public static final RegistryObject<MenuType<EBAirMenu>> EB_AIR = REGISTRY.register("eb_air", () -> IForgeMenuType.create(EBAirMenu::new));
+	public static final RegistryObject<MenuType<EBWaterMenu>> EB_WATER = REGISTRY.register("eb_water", () -> IForgeMenuType.create(EBWaterMenu::new));
+	public static final RegistryObject<MenuType<EBEarthMenu>> EB_EARTH = REGISTRY.register("eb_earth", () -> IForgeMenuType.create(EBEarthMenu::new));
+	public static final RegistryObject<MenuType<EBEnergyMenu>> EB_ENERGY = REGISTRY.register("eb_energy",
+			() -> IForgeMenuType.create(EBEnergyMenu::new));
+	public static final RegistryObject<MenuType<EBIceMenu>> EB_ICE = REGISTRY.register("eb_ice", () -> IForgeMenuType.create(EBIceMenu::new));
+	public static final RegistryObject<MenuType<EBLightningMenu>> EB_LIGHTNING = REGISTRY.register("eb_lightning",
+			() -> IForgeMenuType.create(EBLightningMenu::new));
+	public static final RegistryObject<MenuType<EBSoundMenu>> EB_SOUND = REGISTRY.register("eb_sound", () -> IForgeMenuType.create(EBSoundMenu::new));
+	public static final RegistryObject<MenuType<EBCrystalMenu>> EB_CRYSTAL = REGISTRY.register("eb_crystal",
+			() -> IForgeMenuType.create(EBCrystalMenu::new));
+	public static final RegistryObject<MenuType<EBLavaMenu>> EB_LAVA = REGISTRY.register("eb_lava", () -> IForgeMenuType.create(EBLavaMenu::new));
+	public static final RegistryObject<MenuType<EBRainMenu>> EB_RAIN = REGISTRY.register("eb_rain", () -> IForgeMenuType.create(EBRainMenu::new));
+	public static final RegistryObject<MenuType<EBTornadoMenu>> EB_TORNADO = REGISTRY.register("eb_tornado",
+			() -> IForgeMenuType.create(EBTornadoMenu::new));
+	public static final RegistryObject<MenuType<EBOceanMenu>> EB_OCEAN = REGISTRY.register("eb_ocean", () -> IForgeMenuType.create(EBOceanMenu::new));
+	public static final RegistryObject<MenuType<EBGreeneryMenu>> EB_GREENERY = REGISTRY.register("eb_greenery",
+			() -> IForgeMenuType.create(EBGreeneryMenu::new));
+	public static final RegistryObject<MenuType<EBAnimalsMenu>> EB_ANIMALS = REGISTRY.register("eb_animals",
+			() -> IForgeMenuType.create(EBAnimalsMenu::new));
+	public static final RegistryObject<MenuType<EBMetalMenu>> EB_METAL = REGISTRY.register("eb_metal", () -> IForgeMenuType.create(EBMetalMenu::new));
+	public static final RegistryObject<MenuType<EBLightMenu>> EB_LIGHT = REGISTRY.register("eb_light", () -> IForgeMenuType.create(EBLightMenu::new));
+	public static final RegistryObject<MenuType<EBShadowMenu>> EB_SHADOW = REGISTRY.register("eb_shadow",
+			() -> IForgeMenuType.create(EBShadowMenu::new));
+	public static final RegistryObject<MenuType<EBVacuumMenu>> EB_VACUUM = REGISTRY.register("eb_vacuum",
+			() -> IForgeMenuType.create(EBVacuumMenu::new));
+	public static final RegistryObject<MenuType<EBSunMenu>> EB_SUN = REGISTRY.register("eb_sun", () -> IForgeMenuType.create(EBSunMenu::new));
+	public static final RegistryObject<MenuType<EBMoonMenu>> EB_MOON = REGISTRY.register("eb_moon", () -> IForgeMenuType.create(EBMoonMenu::new));
+	public static final RegistryObject<MenuType<EBSpaceMenu>> EB_SPACE = REGISTRY.register("eb_space", () -> IForgeMenuType.create(EBSpaceMenu::new));
+	public static final RegistryObject<MenuType<EBTimeMenu>> EB_TIME = REGISTRY.register("eb_time", () -> IForgeMenuType.create(EBTimeMenu::new));
+	public static final RegistryObject<MenuType<EBCreationMenu>> EB_CREATION = REGISTRY.register("eb_creation",
+			() -> IForgeMenuType.create(EBCreationMenu::new));
+	public static final RegistryObject<MenuType<EBDestructionMenu>> EB_DESTRUCTION = REGISTRY.register("eb_destruction",
+			() -> IForgeMenuType.create(EBDestructionMenu::new));
+	public static final RegistryObject<MenuType<EBBloodMenu>> EB_BLOOD = REGISTRY.register("eb_blood", () -> IForgeMenuType.create(EBBloodMenu::new));
+	public static final RegistryObject<MenuType<EBTechnologyMenu>> EB_TECHNOLOGY = REGISTRY.register("eb_technology",
+			() -> IForgeMenuType.create(EBTechnologyMenu::new));
+	public static final RegistryObject<MenuType<EBTeleportationMenu>> EB_TELEPORTATION = REGISTRY.register("eb_teleportation",
+			() -> IForgeMenuType.create(EBTeleportationMenu::new));
+	public static final RegistryObject<MenuType<EBExplosionMenu>> EB_EXPLOSION = REGISTRY.register("eb_explosion",
+			() -> IForgeMenuType.create(EBExplosionMenu::new));
+	public static final RegistryObject<MenuType<EBAmberMenu>> EB_AMBER = REGISTRY.register("eb_amber", () -> IForgeMenuType.create(EBAmberMenu::new));
+	public static final RegistryObject<MenuType<PointGUIMenu>> POINT_GUI = REGISTRY.register("point_gui",
+			() -> IForgeMenuType.create(PointGUIMenu::new));
+	public static final RegistryObject<MenuType<EBBlueFlameMenu>> EB_BLUE_FLAME = REGISTRY.register("eb_blue_flame",
+			() -> IForgeMenuType.create(EBBlueFlameMenu::new));
+	public static final RegistryObject<MenuType<ChoiseMagicStonesPage3Menu>> CHOISE_MAGIC_STONES_PAGE_3 = REGISTRY
+			.register("choise_magic_stones_page_3", () -> IForgeMenuType.create(ChoiseMagicStonesPage3Menu::new));
+	public static final RegistryObject<MenuType<SpaceAtlasGUIMenu>> SPACE_ATLAS_GUI = REGISTRY.register("space_atlas_gui",
+			() -> IForgeMenuType.create(SpaceAtlasGUIMenu::new));
+	public static final RegistryObject<MenuType<CheckPointTPMenu>> CHECK_POINT_TP = REGISTRY.register("check_point_tp",
+			() -> IForgeMenuType.create(CheckPointTPMenu::new));
+	public static final RegistryObject<MenuType<LevelsAndSkillsPageMenu>> LEVELS_AND_SKILLS_PAGE = REGISTRY.register("levels_and_skills_page",
+			() -> IForgeMenuType.create(LevelsAndSkillsPageMenu::new));
+	public static final RegistryObject<MenuType<BuyLevel2Menu>> BUY_LEVEL_2 = REGISTRY.register("buy_level_2",
+			() -> IForgeMenuType.create(BuyLevel2Menu::new));
+	public static final RegistryObject<MenuType<BuyLevel3Menu>> BUY_LEVEL_3 = REGISTRY.register("buy_level_3",
+			() -> IForgeMenuType.create(BuyLevel3Menu::new));
+	public static final RegistryObject<MenuType<EBMistMenu>> EB_MIST = REGISTRY.register("eb_mist", () -> IForgeMenuType.create(EBMistMenu::new));
+	public static final RegistryObject<MenuType<SoundImitateChoiceMenu>> SOUND_IMITATE_CHOICE = REGISTRY.register("sound_imitate_choice",
+			() -> IForgeMenuType.create(SoundImitateChoiceMenu::new));
+	public static final RegistryObject<MenuType<EBSandMenu>> EB_SAND = REGISTRY.register("eb_sand", () -> IForgeMenuType.create(EBSandMenu::new));
+	public static final RegistryObject<MenuType<EBSpeedMenu>> EB_SPEED = REGISTRY.register("eb_speed", () -> IForgeMenuType.create(EBSpeedMenu::new));
+	public static final RegistryObject<MenuType<EBPoisonMenu>> EB_POISON = REGISTRY.register("eb_poison",
+			() -> IForgeMenuType.create(EBPoisonMenu::new));
+	public static final RegistryObject<MenuType<EBMagnetMenu>> EB_MAGNET = REGISTRY.register("eb_magnet",
+			() -> IForgeMenuType.create(EBMagnetMenu::new));
+	public static final RegistryObject<MenuType<EBMushroomsMenu>> EB_MUSHROOMS = REGISTRY.register("eb_mushrooms",
+			() -> IForgeMenuType.create(EBMushroomsMenu::new));
+	public static final RegistryObject<MenuType<EBMercuryMenu>> EB_MERCURY = REGISTRY.register("eb_mercury",
+			() -> IForgeMenuType.create(EBMercuryMenu::new));
+	public static final RegistryObject<MenuType<MusicPlayerGUIMenu>> MUSIC_PLAYER_GUI = REGISTRY.register("music_player_gui",
+			() -> IForgeMenuType.create(MusicPlayerGUIMenu::new));
+	public static final RegistryObject<MenuType<EBMusicMenu>> EB_MUSIC = REGISTRY.register("eb_music", () -> IForgeMenuType.create(EBMusicMenu::new));
+	public static final RegistryObject<MenuType<EBPlagueMenu>> EB_PLAGUE = REGISTRY.register("eb_plague",
+			() -> IForgeMenuType.create(EBPlagueMenu::new));
+	public static final RegistryObject<MenuType<RocketPathGUIMenu>> ROCKET_PATH_GUI = REGISTRY.register("rocket_path_gui",
+			() -> IForgeMenuType.create(RocketPathGUIMenu::new));
+	public static final RegistryObject<MenuType<EBGravityMenu>> EB_GRAVITY = REGISTRY.register("eb_gravity",
+			() -> IForgeMenuType.create(EBGravityMenu::new));
+	public static final RegistryObject<MenuType<CustomMusicPlayerMenu>> CUSTOM_MUSIC_PLAYER = REGISTRY.register("custom_music_player",
+			() -> IForgeMenuType.create(CustomMusicPlayerMenu::new));
+	public static final RegistryObject<MenuType<BuildInMusicPlayerMenu>> BUILD_IN_MUSIC_PLAYER = REGISTRY.register("build_in_music_player",
+			() -> IForgeMenuType.create(BuildInMusicPlayerMenu::new));
+	public static final RegistryObject<MenuType<EBSmokeMenu>> EB_SMOKE = REGISTRY.register("eb_smoke", () -> IForgeMenuType.create(EBSmokeMenu::new));
+	public static final RegistryObject<MenuType<EBSpiritMenu>> EB_SPIRIT = REGISTRY.register("eb_spirit",
+			() -> IForgeMenuType.create(EBSpiritMenu::new));
+	public static final RegistryObject<MenuType<ChoiseMagicPower1Menu>> CHOISE_MAGIC_POWER_1 = REGISTRY.register("choise_magic_power_1",
+			() -> IForgeMenuType.create(ChoiseMagicPower1Menu::new));
+	public static final RegistryObject<MenuType<ChoiseMagicPower3Menu>> CHOISE_MAGIC_POWER_3 = REGISTRY.register("choise_magic_power_3",
+			() -> IForgeMenuType.create(ChoiseMagicPower3Menu::new));
+	public static final RegistryObject<MenuType<ChoiseMagicPower2Menu>> CHOISE_MAGIC_POWER_2 = REGISTRY.register("choise_magic_power_2",
+			() -> IForgeMenuType.create(ChoiseMagicPower2Menu::new));
+	public static final RegistryObject<MenuType<EBAetherMenu>> EB_AETHER = REGISTRY.register("eb_aether",
+			() -> IForgeMenuType.create(EBAetherMenu::new));
+	public static final RegistryObject<MenuType<CompanionsGuiMenu>> COMPANIONS_GUI = REGISTRY.register("companions_gui",
+			() -> IForgeMenuType.create(CompanionsGuiMenu::new));
+	public static final RegistryObject<MenuType<EBFormMenu>> EB_FORM = REGISTRY.register("eb_form", () -> IForgeMenuType.create(EBFormMenu::new));
+	public static final RegistryObject<MenuType<EBMindMenu>> EB_MIND = REGISTRY.register("eb_mind", () -> IForgeMenuType.create(EBMindMenu::new));
+	public static final RegistryObject<MenuType<EBGoldenDustMenu>> EB_GOLDEN_DUST = REGISTRY.register("eb_golden_dust",
+			() -> IForgeMenuType.create(EBGoldenDustMenu::new));
 }

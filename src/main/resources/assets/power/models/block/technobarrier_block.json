@@ -8,5 +8,6 @@
     "south": "power:blocks/technobarrier_block",
     "west": "power:blocks/technobarrier_block",
     "particle": "power:blocks/technobarrier_block"
-  }
+  },
+  "render_type": "solid"
 }

@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -85,7 +84,7 @@ public class CompanionsGuiScreen extends AbstractContainerScreen<CompanionsGuiMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 37, 56, 20, new TextComponent("Zombie"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 37, 56, 20, Component.literal("Zombie"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CompanionsGuiButtonMessage(0, x, y, z));
 				CompanionsGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);

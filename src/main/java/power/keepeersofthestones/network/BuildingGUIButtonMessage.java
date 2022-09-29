@@ -2,10 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
-import power.keepeersofthestones.procedures.StreetlightBuildProcedure;
-import power.keepeersofthestones.procedures.LibraryBuildProcedure;
-import power.keepeersofthestones.procedures.ButcherShopBuildProcedure;
-import power.keepeersofthestones.procedures.BlacksmithBuildProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

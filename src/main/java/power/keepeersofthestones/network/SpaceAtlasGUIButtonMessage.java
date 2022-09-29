@@ -2,11 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
-import power.keepeersofthestones.procedures.VenusOnMeProcedure;
-import power.keepeersofthestones.procedures.MoonOnMeProcedure;
-import power.keepeersofthestones.procedures.MarsOnMeProcedure;
-import power.keepeersofthestones.procedures.EnceladusOnMeProcedure;
-import power.keepeersofthestones.procedures.EarthOnMeProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

@@ -1,16 +1,7 @@
 
 package power.keepeersofthestones.command;
 
-import power.keepeersofthestones.procedures.VenusOnMeProcedure;
-import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
 import power.keepeersofthestones.procedures.ResetNonSelectProcedure;
-import power.keepeersofthestones.procedures.MoonOnMeProcedure;
-import power.keepeersofthestones.procedures.MarsOnMeProcedure;
-import power.keepeersofthestones.procedures.LevelSetProcedure;
-import power.keepeersofthestones.procedures.EnceladusOnMeProcedure;
-import power.keepeersofthestones.procedures.EarthOnMeProcedure;
-import power.keepeersofthestones.procedures.DemoteKeeperProcedure;
-import power.keepeersofthestones.procedures.AppointKeeperProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 

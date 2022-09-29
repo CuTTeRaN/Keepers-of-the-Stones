@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.procedures.DetransformKeyPriNazhatiiKlavishiProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

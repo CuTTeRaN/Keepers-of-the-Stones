@@ -2,27 +2,8 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower2Menu;
-import power.keepeersofthestones.procedures.TimeUseProcedure;
-import power.keepeersofthestones.procedures.TeleportationUseProcedure;
-import power.keepeersofthestones.procedures.TechnologyUseProcedure;
-import power.keepeersofthestones.procedures.SpeedUseProcedure;
-import power.keepeersofthestones.procedures.SpaceUseProcedure;
-import power.keepeersofthestones.procedures.SandUseProcedure;
-import power.keepeersofthestones.procedures.PoisonUseProcedure;
-import power.keepeersofthestones.procedures.PlagueUseProcedure;
 import power.keepeersofthestones.procedures.OpenPowerTransferProcedure;
-import power.keepeersofthestones.procedures.MusicUseProcedure;
-import power.keepeersofthestones.procedures.MushroomsUseProcedure;
-import power.keepeersofthestones.procedures.MoonUseProcedure;
-import power.keepeersofthestones.procedures.MistUseProcedure;
-import power.keepeersofthestones.procedures.MercuryUseProcedure;
-import power.keepeersofthestones.procedures.MagnetUseProcedure;
-import power.keepeersofthestones.procedures.GravityUseProcedure;
-import power.keepeersofthestones.procedures.ExplosionUseProcedure;
-import power.keepeersofthestones.procedures.DestructionUseProcedure;
-import power.keepeersofthestones.procedures.CreationUseProcedure;
 import power.keepeersofthestones.procedures.CM3Procedure;
-import power.keepeersofthestones.procedures.BloodUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

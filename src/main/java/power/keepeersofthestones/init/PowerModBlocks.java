@@ -29,10 +29,6 @@ import power.keepeersofthestones.PowerMod;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
@@ -59,19 +55,4 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> DETONATOR_TNT = REGISTRY.register("detonator_tnt", () -> new DetonatorTNTBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockBlock());
-
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
-		@SubscribeEvent
-		public static void clientSetup(FMLClientSetupEvent event) {
-			BatteryChargerBlock.registerRenderLayer();
-			ClusterBlockBlock.registerRenderLayer();
-			VacuumWebBlockBlock.registerRenderLayer();
-			BlackHoleBlockBlock.registerRenderLayer();
-			TechnobarrierBlockBlock.registerRenderLayer();
-			BluePortalBlock.registerRenderLayer();
-			OrangePortalBlock.registerRenderLayer();
-			AmberBlockBlock.registerRenderLayer();
-		}
-	}
 }

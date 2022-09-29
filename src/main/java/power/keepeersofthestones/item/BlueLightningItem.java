@@ -1,8 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.BlueLightningUseProcedure;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;

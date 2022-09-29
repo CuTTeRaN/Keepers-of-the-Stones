@@ -2,27 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
-import power.keepeersofthestones.procedures.WaterUseProcedure;
-import power.keepeersofthestones.procedures.VacuumUseProcedure;
-import power.keepeersofthestones.procedures.TornadoUseProcedure;
-import power.keepeersofthestones.procedures.SunUseProcedure;
-import power.keepeersofthestones.procedures.SoundUseProcedure;
-import power.keepeersofthestones.procedures.ShadowUseProcedure;
-import power.keepeersofthestones.procedures.RainUseProcedure;
-import power.keepeersofthestones.procedures.OceanUseProcedure;
-import power.keepeersofthestones.procedures.MetalUseProcedure;
-import power.keepeersofthestones.procedures.LightningUseProcedure;
-import power.keepeersofthestones.procedures.LightUseProcedure;
-import power.keepeersofthestones.procedures.LavaUseProcedure;
-import power.keepeersofthestones.procedures.IceUseProcedure;
-import power.keepeersofthestones.procedures.GreeneryUseProcedure;
-import power.keepeersofthestones.procedures.FireUseProcedure;
-import power.keepeersofthestones.procedures.EnergyUseProcedure;
-import power.keepeersofthestones.procedures.EarthUseProcedure;
-import power.keepeersofthestones.procedures.CrystalUseProcedure;
 import power.keepeersofthestones.procedures.CM2Procedure;
-import power.keepeersofthestones.procedures.AnimalsUseProcedure;
-import power.keepeersofthestones.procedures.AirUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

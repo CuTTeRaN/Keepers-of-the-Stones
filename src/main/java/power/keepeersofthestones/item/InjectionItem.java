@@ -1,9 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.InjectionUseOnMeProcedure;
-import power.keepeersofthestones.procedures.InjectionOnPlayerProcedure;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;

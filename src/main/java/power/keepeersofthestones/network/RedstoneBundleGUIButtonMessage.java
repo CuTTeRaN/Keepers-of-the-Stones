@@ -2,10 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
-import power.keepeersofthestones.procedures.GetStickyPistonProcedure;
-import power.keepeersofthestones.procedures.GetRedstoneBlockProcedure;
-import power.keepeersofthestones.procedures.GetPistonProcedure;
-import power.keepeersofthestones.procedures.GetObserverProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

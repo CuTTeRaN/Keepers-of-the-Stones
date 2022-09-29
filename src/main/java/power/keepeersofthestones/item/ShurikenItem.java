@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.ShurikenEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class ShurikenItem extends Item {
 				ShurikenEntity entityarrow = ShurikenEntity.shoot(world, entity, world.getRandom(), 0.8f, 10, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

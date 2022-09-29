@@ -4,5 +4,6 @@
     "all": "power:blocks/battery_charger",
     "particle": "power:blocks/battery_charger",
     "2": "power:blocks/battery_charger"
-  }
+  },
+  "render_type": "solid"
 }

@@ -1,10 +1,6 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.TeleportationMasterEffectsProcedure;
-import power.keepeersofthestones.procedures.TeleportationMasterEffectStartProcedure;
-import power.keepeersofthestones.procedures.TeleportationMasterEffectEndProcedure;
-
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;

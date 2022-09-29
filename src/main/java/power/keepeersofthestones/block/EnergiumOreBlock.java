@@ -1,8 +1,6 @@
 
 package power.keepeersofthestones.block;
 
-import power.keepeersofthestones.procedures.EnergiumBlockUseProcedure;
-
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.BlockState;

@@ -1,10 +1,6 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.CrystalMasterEffectStartProcedure;
-import power.keepeersofthestones.procedures.CrystalMasterEffectEndProcedure;
-import power.keepeersofthestones.procedures.CrystalEffectsProcedure;
-
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;

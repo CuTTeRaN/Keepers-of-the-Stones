@@ -1,10 +1,6 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.GoldenDustEffectsProcedure;
-import power.keepeersofthestones.procedures.GoldenDustEffectStartProcedure;
-import power.keepeersofthestones.procedures.GoldenDustEffectEndProcedure;
-
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;

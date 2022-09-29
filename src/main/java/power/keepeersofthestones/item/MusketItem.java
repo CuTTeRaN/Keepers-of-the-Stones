@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.MusketEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class MusketItem extends Item {
 				MusketEntity entityarrow = MusketEntity.shoot(world, entity, world.getRandom(), 1f, 8.7, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

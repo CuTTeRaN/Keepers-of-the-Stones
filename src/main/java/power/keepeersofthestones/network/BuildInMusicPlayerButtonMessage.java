@@ -2,19 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.BuildInMusicPlayerMenu;
-import power.keepeersofthestones.procedures.StopSoundProcedure;
-import power.keepeersofthestones.procedures.PlayMusicWardProcedure;
-import power.keepeersofthestones.procedures.PlayMusicWaitProcedure;
-import power.keepeersofthestones.procedures.PlayMusicStradProcedure;
-import power.keepeersofthestones.procedures.PlayMusicStalProcedure;
-import power.keepeersofthestones.procedures.PlayMusicPigstepProcedure;
-import power.keepeersofthestones.procedures.PlayMusicOthersideProcedure;
-import power.keepeersofthestones.procedures.PlayMusicMellohiProcedure;
-import power.keepeersofthestones.procedures.PlayMusicMallProcedure;
-import power.keepeersofthestones.procedures.PlayMusicFarProcedure;
-import power.keepeersofthestones.procedures.PlayMusicChirpProcedure;
-import power.keepeersofthestones.procedures.PlayMusicCatProcedure;
-import power.keepeersofthestones.procedures.PlayMusicBlocksProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

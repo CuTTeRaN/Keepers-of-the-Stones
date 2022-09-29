@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -85,19 +84,19 @@ public class MusicPlayerGUIScreen extends AbstractContainerScreen<MusicPlayerGUI
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 239, this.topPos + 7, 46, 20, new TextComponent("Stop"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 239, this.topPos + 7, 46, 20, Component.literal("Stop"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(0, x, y, z));
 				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 50, this.topPos + 61, 67, 20, new TextComponent("Build-In"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 50, this.topPos + 61, 67, 20, Component.literal("Build-In"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(1, x, y, z));
 				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 176, this.topPos + 61, 56, 20, new TextComponent("Custom"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 176, this.topPos + 61, 56, 20, Component.literal("Custom"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new MusicPlayerGUIButtonMessage(2, x, y, z));
 				MusicPlayerGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);

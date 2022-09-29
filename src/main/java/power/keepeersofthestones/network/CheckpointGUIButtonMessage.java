@@ -2,10 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
-import power.keepeersofthestones.procedures.TimeCheckpointProcedure;
-import power.keepeersofthestones.procedures.ReturnToPresentProcedure;
-import power.keepeersofthestones.procedures.ReturnToPastProcedure;
-import power.keepeersofthestones.procedures.ReturnCheckpointProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

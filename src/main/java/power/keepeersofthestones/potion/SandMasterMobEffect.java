@@ -1,10 +1,6 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.SandMasterEffectsProcedure;
-import power.keepeersofthestones.procedures.SandMasterEffectStartProcedure;
-import power.keepeersofthestones.procedures.SandMasterEffectEndProcedure;
-
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;

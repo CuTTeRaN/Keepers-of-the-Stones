@@ -4,5 +4,6 @@
     "all": "power:blocks/blue_portal",
     "particle": "power:blocks/blue_portal",
     "0": "power:blocks/blue_portal"
-  }
+  },
+  "render_type": "solid"
 }

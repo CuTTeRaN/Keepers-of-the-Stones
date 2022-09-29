@@ -1,12 +1,6 @@
 
 package power.keepeersofthestones.block;
 
-import power.keepeersofthestones.procedures.VacuumTPProcedure;
-import power.keepeersofthestones.init.PowerModBlocks;
-
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,8 +13,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import java.util.List;
 import java.util.Collections;
@@ -28,7 +20,7 @@ import java.util.Collections;
 public class VacuumWebBlockBlock extends PressurePlateBlock {
 	public VacuumWebBlockBlock() {
 		super(Sensitivity.MOBS, BlockBehaviour.Properties.of(Material.SCULK).sound(SoundType.SCULK_SENSOR).strength(8f, 50f).noCollission()
-				.friction(0.1f).speedFactor(0f).jumpFactor(0f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+				.friction(0.1f).speedFactor(0f).jumpFactor(0f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
 	}
 
 	@Override
@@ -54,10 +46,5 @@ public class VacuumWebBlockBlock extends PressurePlateBlock {
 	public void stepOn(Level world, BlockPos pos, BlockState blockstate, Entity entity) {
 		super.stepOn(world, pos, blockstate, entity);
 		VacuumTPProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.VACUUM_WEB_BLOCK.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

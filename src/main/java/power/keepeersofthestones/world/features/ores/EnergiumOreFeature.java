@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
+import net.minecraft.util.RandomSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -33,7 +34,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 
 import java.util.Set;
-import java.util.Random;
 import java.util.List;
 
 public class EnergiumOreFeature extends OreFeature {
@@ -54,7 +54,6 @@ public class EnergiumOreFeature extends OreFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public EnergiumOreFeature() {
@@ -81,7 +80,7 @@ public class EnergiumOreFeature extends OreFeature {
 
 		private List<Block> base_blocks = null;
 
-		public boolean test(BlockState blockAt, Random random) {
+		public boolean test(BlockState blockAt, RandomSource random) {
 			if (base_blocks == null) {
 				base_blocks = List.of(Blocks.STONE);
 			}

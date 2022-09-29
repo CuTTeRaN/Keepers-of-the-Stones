@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.entity;
 
-import power.keepeersofthestones.procedures.TornadoCreateOnBlockProcedure;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModEntities;
 
@@ -18,11 +17,10 @@ import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
-
-import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class TornadoCreateEntity extends AbstractArrow implements ItemSupplier {
@@ -78,7 +76,7 @@ public class TornadoCreateEntity extends AbstractArrow implements ItemSupplier {
 			this.discard();
 	}
 
-	public static TornadoCreateEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
+	public static TornadoCreateEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		TornadoCreateEntity entityarrow = new TornadoCreateEntity(PowerModEntities.TORNADO_CREATE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
@@ -103,7 +101,7 @@ public class TornadoCreateEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")),
-				SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+				SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

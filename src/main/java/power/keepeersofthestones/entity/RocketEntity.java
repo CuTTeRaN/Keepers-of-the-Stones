@@ -2,7 +2,6 @@
 package power.keepeersofthestones.entity;
 
 import power.keepeersofthestones.world.inventory.RocketPathGUIMenu;
-import power.keepeersofthestones.procedures.ReturnRocketItemProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,8 +11,8 @@ import net.minecraftforge.items.wrapper.EntityHandsInvWrapper;
 import net.minecraftforge.items.wrapper.EntityArmorInvWrapper;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.level.Level;
@@ -39,7 +38,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -133,7 +131,7 @@ public class RocketEntity extends Monster {
 
 	@Override
 	public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @Nullable Direction side) {
-		if (this.isAlive() && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side == null)
+		if (this.isAlive() && capability == ForgeCapabilities.ITEM_HANDLER && side == null)
 			return LazyOptional.of(() -> combined).cast();
 		return super.getCapability(capability, side);
 	}
@@ -168,10 +166,10 @@ public class RocketEntity extends Monster {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
 		if (sourceentity instanceof ServerPlayer serverPlayer) {
-			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
+			NetworkHooks.openScreen(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Rocket");
+					return Component.literal("Rocket");
 				}
 
 				@Override

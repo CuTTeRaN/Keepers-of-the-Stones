@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.AcusticalExplodeEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class AcusticalExplodeItem extends Item {
 				AcusticalExplodeEntity entityarrow = AcusticalExplodeEntity.shoot(world, entity, world.getRandom(), 1.2000000000000002f, 14, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

@@ -33,12 +33,12 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import java.util.Random;
 import java.util.EnumSet;
 
 public class PterodactylEntity extends Monster {
@@ -111,7 +111,7 @@ public class PterodactylEntity extends Monster {
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = PterodactylEntity.this.getRandom();
+				RandomSource random = PterodactylEntity.this.getRandom();
 				double dir_x = PterodactylEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_y = PterodactylEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_z = PterodactylEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);

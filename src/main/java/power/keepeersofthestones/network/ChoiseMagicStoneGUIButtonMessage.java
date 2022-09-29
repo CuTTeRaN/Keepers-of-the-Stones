@@ -2,28 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
-import power.keepeersofthestones.procedures.WithoutStoneVarProcedure;
-import power.keepeersofthestones.procedures.WaterGetProcedure;
-import power.keepeersofthestones.procedures.VacuumGetProcedure;
-import power.keepeersofthestones.procedures.TornadoGetProcedure;
-import power.keepeersofthestones.procedures.SunGetProcedure;
-import power.keepeersofthestones.procedures.SoundGetProcedure;
-import power.keepeersofthestones.procedures.ShadowGetProcedure;
-import power.keepeersofthestones.procedures.RainGetProcedure;
-import power.keepeersofthestones.procedures.OceanGetProcedure;
 import power.keepeersofthestones.procedures.NextPageGUIChoiceStoneProcedure;
-import power.keepeersofthestones.procedures.MetalGetProcedure;
-import power.keepeersofthestones.procedures.LightningGetProcedure;
-import power.keepeersofthestones.procedures.LightGetProcedure;
-import power.keepeersofthestones.procedures.LavaGetProcedure;
-import power.keepeersofthestones.procedures.IceGetProcedure;
-import power.keepeersofthestones.procedures.GreeneryGetProcedure;
-import power.keepeersofthestones.procedures.FireGetProcedure;
-import power.keepeersofthestones.procedures.EnergyGetProcedure;
-import power.keepeersofthestones.procedures.EarthGetProcedure;
-import power.keepeersofthestones.procedures.CrystalGetProcedure;
-import power.keepeersofthestones.procedures.AnimalsGetProcedure;
-import power.keepeersofthestones.procedures.AirGetProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

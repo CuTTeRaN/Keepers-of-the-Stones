@@ -8,42 +8,6 @@
       }
     ]
   },
-  "tyrannosaurus_rex.hurt": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "power:tyrannosaurus_rex.hurt",
-        "stream": false
-      }
-    ]
-  },
-  "tyrannosaurus_rex.dead": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "power:tyrannosaurus_rex.dead",
-        "stream": false
-      }
-    ]
-  },
-  "raptor.dead": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "power:raptor.dead",
-        "stream": false
-      }
-    ]
-  },
-  "raptor.hurt": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "power:raptor.hurt",
-        "stream": false
-      }
-    ]
-  },
   "time_power": {
     "category": "player",
     "subtitle": "subtitles.time_power",
@@ -150,16 +114,6 @@
     "sounds": [
       {
         "name": "power:stone_activation",
-        "stream": false
-      }
-    ]
-  },
-  "rocket.fly": {
-    "category": "neutral",
-    "subtitle": "subtitles.rocket.fly",
-    "sounds": [
-      {
-        "name": "power:rocket.fly",
         "stream": false
       }
     ]

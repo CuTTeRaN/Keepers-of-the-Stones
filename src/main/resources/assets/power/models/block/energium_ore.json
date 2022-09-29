@@ -8,5 +8,6 @@
     "south": "power:blocks/energium_ore",
     "west": "power:blocks/energium_ore",
     "particle": "power:blocks/energium_ore"
-  }
+  },
+  "render_type": "solid"
 }

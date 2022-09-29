@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -28,17 +29,16 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import java.util.Random;
 import java.util.Optional;
 
 public class DinoeraPortalBlock extends NetherPortalBlock {
 	public DinoeraPortalBlock() {
 		super(BlockBehaviour.Properties.of(Material.PORTAL).noCollission().randomTicks().strength(-1.0F).sound(SoundType.GLASS).lightLevel(s -> 5)
-				.noDrops());
+				.noLootTable());
 	}
 
 	@Override
-	public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+	public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
 	}
 
 	public static void portalSpawn(Level world, BlockPos pos) {
@@ -61,7 +61,7 @@ public class DinoeraPortalBlock extends NetherPortalBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	@Override
-	public void animateTick(BlockState state, Level world, BlockPos pos, Random random) {
+	public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
 		for (int i = 0; i < 4; i++) {
 			double px = pos.getX() + random.nextFloat();
 			double py = pos.getY() + random.nextFloat();

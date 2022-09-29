@@ -2,12 +2,6 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
-import power.keepeersofthestones.procedures.ThirdPointTPProcedure;
-import power.keepeersofthestones.procedures.ThirdPointSetProcedure;
-import power.keepeersofthestones.procedures.SecondPointTPProcedure;
-import power.keepeersofthestones.procedures.SecondPointSetProcedure;
-import power.keepeersofthestones.procedures.FirstPointTPProcedure;
-import power.keepeersofthestones.procedures.FirstPointSetProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

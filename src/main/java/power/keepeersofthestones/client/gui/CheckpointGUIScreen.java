@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -86,25 +85,25 @@ public class CheckpointGUIScreen extends AbstractContainerScreen<CheckpointGUIMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 25, 126, 20, new TextComponent("Checkpoint"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 25, 126, 20, Component.literal("Checkpoint"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(0, x, y, z));
 				CheckpointGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 52, 126, 20, new TextComponent("Set checkpoint"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 52, 126, 20, Component.literal("Set checkpoint"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(1, x, y, z));
 				CheckpointGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 97, 126, 20, new TextComponent("Return to the past"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 97, 126, 20, Component.literal("Return to the past"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(2, x, y, z));
 				CheckpointGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 124, 134, 20, new TextComponent("Return to the present"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 124, 134, 20, Component.literal("Return to the present"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(3, x, y, z));
 				CheckpointGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);

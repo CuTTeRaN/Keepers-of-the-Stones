@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.SandFlurryEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class SandFlurryItem extends Item {
 				SandFlurryEntity entityarrow = SandFlurryEntity.shoot(world, entity, world.getRandom(), 1.1f, 10, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -85,19 +84,19 @@ public class SoundImitateChoiceScreen extends AbstractContainerScreen<SoundImita
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 25, 60, 20, new TextComponent("Creeper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 25, 60, 20, Component.literal("Creeper"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(0, x, y, z));
 				SoundImitateChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 79, 55, 20, new TextComponent("Zombie"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 79, 55, 20, Component.literal("Zombie"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(1, x, y, z));
 				SoundImitateChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 52, 65, 20, new TextComponent("Skeleton"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 52, 65, 20, Component.literal("Skeleton"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(2, x, y, z));
 				SoundImitateChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);

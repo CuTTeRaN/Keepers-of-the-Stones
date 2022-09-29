@@ -3,5 +3,6 @@
   "textures": {
     "cross": "power:blocks/sharp_claster_block",
     "particle": "power:blocks/sharp_claster_block"
-  }
+  },
+  "render_type": "solid"
 }

@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class BlackHoleItem extends Item {
 				BlackHoleEntity entityarrow = BlackHoleEntity.shoot(world, entity, world.getRandom(), 1f, 8, 100);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.BoomerangEntity;
 
 import net.minecraft.world.level.Level;
@@ -47,7 +46,6 @@ public class BoomerangItem extends Item {
 				BoomerangEntity entityarrow = BoomerangEntity.shoot(world, entity, world.getRandom(), 2f, 5.5, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

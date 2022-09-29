@@ -12,7 +12,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -110,7 +109,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -70, 61, 20, new TextComponent("4"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -70, 61, 20, Component.literal("4"), e -> {
 			if (ReturnLevel1Procedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(0, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -122,7 +121,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -45, 61, 20, new TextComponent("16"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -45, 61, 20, Component.literal("16"), e -> {
 			if (ReturnLevel2Procedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(1, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -134,13 +133,13 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + -180, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -180, this.topPos + 86, 30, 20, Component.literal("<"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(2, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
 		}));
 	}
 }

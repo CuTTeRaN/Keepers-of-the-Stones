@@ -1,10 +1,6 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.MoonMasterEffectsProcedure;
-import power.keepeersofthestones.procedures.MoonMasterEffectStartProcedure;
-import power.keepeersofthestones.procedures.MoonMasterEffectEndProcedure;
-
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;

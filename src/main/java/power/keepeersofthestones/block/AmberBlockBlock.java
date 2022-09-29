@@ -1,11 +1,6 @@
 
 package power.keepeersofthestones.block;
 
-import power.keepeersofthestones.init.PowerModBlocks;
-
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,8 +13,6 @@ import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import java.util.List;
 import java.util.Collections;
@@ -48,10 +41,4 @@ public class AmberBlockBlock extends Block {
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(Blocks.AIR));
 	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.AMBER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
-	}
-
 }

@@ -1,10 +1,6 @@
 
 package power.keepeersofthestones.potion;
 
-import power.keepeersofthestones.procedures.SpiritMasterEffectsProcedure;
-import power.keepeersofthestones.procedures.SpiritMasterEffectStartProcedure;
-import power.keepeersofthestones.procedures.SpiritMasterEffectEndProcedure;
-
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;

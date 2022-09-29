@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.entity;
 
-import power.keepeersofthestones.procedures.TameTornadoProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;

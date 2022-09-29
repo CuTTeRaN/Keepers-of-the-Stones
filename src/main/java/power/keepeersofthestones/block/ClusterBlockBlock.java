@@ -1,12 +1,7 @@
 
 package power.keepeersofthestones.block;
 
-import power.keepeersofthestones.procedures.EntityOnClusterBlockProcedure;
 import power.keepeersofthestones.procedures.ClusterSharpIsGoneProcedure;
-import power.keepeersofthestones.init.PowerModBlocks;
-
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -29,8 +24,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import java.util.List;
 import java.util.Collections;
@@ -105,10 +98,5 @@ public class ClusterBlockBlock extends Block implements SimpleWaterloggedBlock
 	public void stepOn(Level world, BlockPos pos, BlockState blockstate, Entity entity) {
 		super.stepOn(world, pos, blockstate, entity);
 		EntityOnClusterBlockProcedure.execute(entity);
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.CLUSTER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

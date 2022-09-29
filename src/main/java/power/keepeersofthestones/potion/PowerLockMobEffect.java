@@ -3,7 +3,6 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.PowerLockStartProcedure;
 import power.keepeersofthestones.procedures.PowerLockEndProcedure;
-import power.keepeersofthestones.procedures.DetransformKeyPriNazhatiiKlavishiProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

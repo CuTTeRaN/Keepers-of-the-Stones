@@ -8,5 +8,6 @@
     "south": "power:blocks/detonator_tnt_side",
     "west": "power:blocks/detonator_tnt_side",
     "particle": "power:blocks/detonator_tnt_top"
-  }
+  },
+  "render_type": "solid"
 }
