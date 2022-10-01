@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.BurnBlockProcedureProcedure;
+
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;

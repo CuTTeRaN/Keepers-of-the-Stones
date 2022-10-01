@@ -1643,7 +1643,7 @@
       "name": "AcusticalExplode",
       "type": "rangeditem",
       "sortid": 204,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "acustical_explode",
       "path": "~/Stones/Sound"
@@ -2101,7 +2101,7 @@
       "name": "CrystalShield",
       "type": "item",
       "sortid": 225,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "crystal_shield",
       "path": "~/Stones/Crystal"
@@ -5811,7 +5811,7 @@
       "name": "DestructionStone",
       "type": "item",
       "sortid": 47,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "destruction_stone",
       "path": "~/Stones/Destruction"
@@ -6192,7 +6192,7 @@
       "name": "BlackHole",
       "type": "rangeditem",
       "sortid": 441,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole",
       "path": "~/Stones/Space"
@@ -10365,7 +10365,7 @@
       "name": "ExplosiveFlow",
       "type": "rangeditem",
       "sortid": 639,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosive_flow",
       "path": "~/Stones/Explosion"
@@ -14926,7 +14926,7 @@
       "name": "DiscoBall",
       "type": "rangeditem",
       "sortid": 898,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "disco_ball",
       "path": "~/Stones/Music"
@@ -22853,5 +22853,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200339423
+  "mcreatorVersion": 202200339613
 }

@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.block;
 
+import power.keepeersofthestones.procedures.DetonatorTNTExplodeProcedure;
+
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;

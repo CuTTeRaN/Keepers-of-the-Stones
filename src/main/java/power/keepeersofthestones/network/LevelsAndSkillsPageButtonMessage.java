@@ -4,6 +4,7 @@ package power.keepeersofthestones.network;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
 import power.keepeersofthestones.procedures.OpenBuyLevel3Procedure;
 import power.keepeersofthestones.procedures.OpenBuyLevel2Procedure;
+import power.keepeersofthestones.procedures.OpenBookProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
