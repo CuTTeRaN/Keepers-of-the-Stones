@@ -2,6 +2,9 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
+import power.keepeersofthestones.procedures.EmitateZombieProcedure;
+import power.keepeersofthestones.procedures.EmitateSkeletonProcedure;
+import power.keepeersofthestones.procedures.EmitateCreeperProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.SpeedBatteryUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;

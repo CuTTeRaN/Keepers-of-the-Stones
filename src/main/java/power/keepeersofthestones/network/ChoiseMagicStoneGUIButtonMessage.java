@@ -2,6 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
+import power.keepeersofthestones.procedures.WithoutStoneVarProcedure;
 import power.keepeersofthestones.procedures.NextPageGUIChoiceStoneProcedure;
 import power.keepeersofthestones.PowerMod;
 

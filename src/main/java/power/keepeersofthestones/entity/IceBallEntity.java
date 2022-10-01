@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.entity;
 
+import power.keepeersofthestones.procedures.IceBallInEntityProcedure;
 import power.keepeersofthestones.procedures.IceBallInBlockProcedure;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModEntities;

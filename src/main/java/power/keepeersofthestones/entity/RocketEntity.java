@@ -2,6 +2,7 @@
 package power.keepeersofthestones.entity;
 
 import power.keepeersofthestones.world.inventory.RocketPathGUIMenu;
+import power.keepeersofthestones.procedures.ReturnRocketItemProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;

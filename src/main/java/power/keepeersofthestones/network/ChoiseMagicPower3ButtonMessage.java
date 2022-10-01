@@ -2,7 +2,13 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower3Menu;
+import power.keepeersofthestones.procedures.SpiritUseProcedure;
+import power.keepeersofthestones.procedures.SmokeUseProcedure;
+import power.keepeersofthestones.procedures.MindUseProcedure;
+import power.keepeersofthestones.procedures.FormUseProcedure;
 import power.keepeersofthestones.procedures.CM2Procedure;
+import power.keepeersofthestones.procedures.BlueFlameUseProcedure;
+import power.keepeersofthestones.procedures.AetherUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

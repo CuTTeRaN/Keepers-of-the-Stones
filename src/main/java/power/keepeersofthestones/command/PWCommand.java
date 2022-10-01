@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.command;
 
+import power.keepeersofthestones.procedures.ResetmychoiceProcedureProcedure;
 import power.keepeersofthestones.procedures.ResetNonSelectProcedure;
 
 import org.checkerframework.checker.units.qual.s;

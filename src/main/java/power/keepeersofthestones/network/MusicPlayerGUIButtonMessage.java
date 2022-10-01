@@ -2,6 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
+import power.keepeersofthestones.procedures.StopSoundProcedure;
 import power.keepeersofthestones.procedures.OpenCastomMusicProcedure;
 import power.keepeersofthestones.procedures.OpenBuitinMusicProcedure;
 import power.keepeersofthestones.PowerMod;

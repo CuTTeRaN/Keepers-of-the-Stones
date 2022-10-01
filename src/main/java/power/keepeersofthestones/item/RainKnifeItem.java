@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.RainKnifeAttackProcedure;
+
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;

@@ -3,6 +3,7 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.procedures.PreviousPage2Procedure;
+import power.keepeersofthestones.procedures.BlueFlameGetProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

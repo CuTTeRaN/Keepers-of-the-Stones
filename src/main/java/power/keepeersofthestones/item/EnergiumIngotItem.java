@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.EnergiumBlockUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.Level;

@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.block;
 
+import power.keepeersofthestones.procedures.KillingInAcidProcedure;
 import power.keepeersofthestones.init.PowerModFluids;
 
 import net.minecraft.world.level.material.Material;

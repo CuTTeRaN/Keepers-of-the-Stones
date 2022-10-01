@@ -2,6 +2,17 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.CustomMusicPlayerMenu;
+import power.keepeersofthestones.procedures.StopSoundProcedure;
+import power.keepeersofthestones.procedures.PlayMusic9Procedure;
+import power.keepeersofthestones.procedures.PlayMusic8Procedure;
+import power.keepeersofthestones.procedures.PlayMusic7Procedure;
+import power.keepeersofthestones.procedures.PlayMusic6Procedure;
+import power.keepeersofthestones.procedures.PlayMusic5Procedure;
+import power.keepeersofthestones.procedures.PlayMusic4Procedure;
+import power.keepeersofthestones.procedures.PlayMusic3Procedure;
+import power.keepeersofthestones.procedures.PlayMusic2Procedure;
+import power.keepeersofthestones.procedures.PlayMusic1Procedure;
+import power.keepeersofthestones.procedures.PlayMusic10Procedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
