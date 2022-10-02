@@ -71,9 +71,9 @@ public class JurassicSwampBiome {
 										BlockPredicate.matchesBlocks(List.of(Blocks.GRASS_BLOCK, Blocks.ROOTED_DIRT)), UniformInt.of(2, 5), 2)),
 						List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome())));
 		BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeGenerationSettings);
-		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
 		BiomeDefaultFeatures.addDesertVegetation(biomeGenerationSettings);
 		BiomeDefaultFeatures.addSwampVegetation(biomeGenerationSettings);
+		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
 		BiomeDefaultFeatures.addFossilDecoration(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder();
 		mobSpawnInfo.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 20, 1, 1));

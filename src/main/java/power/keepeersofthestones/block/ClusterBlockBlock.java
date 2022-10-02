@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.block;
 
+import power.keepeersofthestones.procedures.EntityOnClusterBlockProcedure;
 import power.keepeersofthestones.procedures.ClusterSharpIsGoneProcedure;
 
 import net.minecraft.world.level.storage.loot.LootContext;

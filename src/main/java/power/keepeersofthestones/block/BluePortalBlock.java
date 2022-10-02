@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.block;
 
+import power.keepeersofthestones.procedures.TeleportToOrangePortalProcedure;
 import power.keepeersofthestones.procedures.RemoveBluePortalProcedure;
 
 import net.minecraft.world.phys.shapes.VoxelShape;

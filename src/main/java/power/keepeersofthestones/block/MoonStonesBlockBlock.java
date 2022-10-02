@@ -3,6 +3,7 @@ package power.keepeersofthestones.block;
 
 import power.keepeersofthestones.procedures.MultiplicationMoonstoneBlockToTicksProcedure;
 import power.keepeersofthestones.procedures.MultiplicationMoonStoneProcedure;
+import power.keepeersofthestones.procedures.EntityOnMoonstonesProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 

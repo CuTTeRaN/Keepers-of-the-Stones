@@ -4932,7 +4932,7 @@
       "name": "VacuumWebBlock",
       "type": "block",
       "sortid": 378,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_web_block",
       "path": "~/Stones/Vacuum"
@@ -12119,7 +12119,7 @@
       "name": "CheckPointTP",
       "type": "gui",
       "sortid": 746,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "check_point_tp",
       "path": "~/Stones/Teleportation"
