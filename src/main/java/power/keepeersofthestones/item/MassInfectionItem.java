@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.MassInfectionRechargeProcedure;
 import power.keepeersofthestones.entity.MassInfectionEntity;
 
 import net.minecraft.world.level.Level;

@@ -13,9 +13,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-
-import com.mojang.brigadier.CommandDispatcher;
 
 public class PolarisEffectStartProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -47,47 +44,39 @@ public class PolarisEffectStartProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse("item replace entity @s weapon.mainhand with air",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"item replace entity @s weapon.mainhand with air");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse("team add polaris",
-						_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)), "team add polaris");
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						"team add polaris");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse("team modify polaris color aqua",
-						_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)), "team modify polaris color aqua");
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						"team modify polaris color aqua");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse("team join polaris @s",
-						_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)), "team join polaris @s");
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						"team join polaris @s");
 		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 30, 0, (false), (false)));
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:polaris_shield{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:polaris_shield{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:polaris_sword{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:polaris_sword{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 	}

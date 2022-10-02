@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.MentalAttackEntity;
 
 import net.minecraft.world.level.Level;

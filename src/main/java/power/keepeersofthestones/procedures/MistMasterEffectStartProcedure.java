@@ -13,9 +13,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-
-import com.mojang.brigadier.CommandDispatcher;
 
 public class MistMasterEffectStartProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -47,9 +44,7 @@ public class MistMasterEffectStartProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse("item replace entity @s weapon.mainhand with air",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"item replace entity @s weapon.mainhand with air");
 		}
 		if (entity instanceof LivingEntity _entity)
@@ -60,33 +55,29 @@ public class MistMasterEffectStartProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.head with power:mist_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.head with power:mist_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.chest with power:mist_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.chest with power:mist_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.legs with power:mist_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.legs with power:mist_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.feet with power:mist_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.feet with power:mist_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 			}
@@ -94,28 +85,19 @@ public class MistMasterEffectStartProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:misty_fan{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:misty_fan{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:kunai{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:kunai{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:obscurity{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:obscurity{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 	}

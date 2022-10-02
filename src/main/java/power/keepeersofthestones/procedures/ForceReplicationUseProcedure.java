@@ -9,9 +9,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.commands.CommandSourceStack;
-
-import com.mojang.brigadier.CommandDispatcher;
 
 public class ForceReplicationUseProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {
@@ -277,10 +274,8 @@ public class ForceReplicationUseProcedure {
 				{
 					Entity _ent = sourceentity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(
-								new CommandDispatcher<CommandSourceStack>().parse(
-										"give @s power:force_replication{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"give @s power:force_replication{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 			}

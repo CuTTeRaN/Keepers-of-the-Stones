@@ -15,11 +15,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.commands.CommandSourceStack;
 
 import javax.annotation.Nullable;
-
-import com.mojang.brigadier.CommandDispatcher;
 
 @Mod.EventBusSubscriber
 public class RespawnPlayerProcedure {
@@ -1153,8 +1150,8 @@ public class RespawnPlayerProcedure {
 					{
 						Entity _ent = entity;
 						if (!_ent.level.isClientSide() && _ent.getServer() != null)
-							_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse("team remove golden_dust",
-									_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)), "team remove golden_dust");
+							_ent.getServer().getCommands().performPrefixedCommand(
+									_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "team remove golden_dust");
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get());

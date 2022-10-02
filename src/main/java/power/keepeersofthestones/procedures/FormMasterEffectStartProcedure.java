@@ -13,9 +13,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-
-import com.mojang.brigadier.CommandDispatcher;
 
 public class FormMasterEffectStartProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -47,9 +44,7 @@ public class FormMasterEffectStartProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse("item replace entity @s weapon.mainhand with air",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"item replace entity @s weapon.mainhand with air");
 		}
 		if (entity instanceof LivingEntity _entity)
@@ -60,33 +55,29 @@ public class FormMasterEffectStartProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.head with power:form_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.head with power:form_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.chest with power:form_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.chest with power:form_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.legs with power:form_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.legs with power:form_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-								"item replace entity @s armor.feet with power:form_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+						_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"item replace entity @s armor.feet with power:form_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 				}
 			}
@@ -94,37 +85,25 @@ public class FormMasterEffectStartProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:jade_sword{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:jade_sword{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:transform_sphere{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:transform_sphere{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:little_size{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:little_size{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(
-						new CommandDispatcher<CommandSourceStack>().parse(
-								"give @s power:big_size{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}",
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"give @s power:big_size{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 		}
 	}

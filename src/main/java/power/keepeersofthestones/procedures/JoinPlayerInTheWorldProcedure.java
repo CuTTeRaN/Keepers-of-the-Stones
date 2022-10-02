@@ -20,13 +20,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
 
 import javax.annotation.Nullable;
 
 import io.netty.buffer.Unpooled;
-
-import com.mojang.brigadier.CommandDispatcher;
 
 @Mod.EventBusSubscriber
 public class JoinPlayerInTheWorldProcedure {
@@ -66,9 +63,7 @@ public class JoinPlayerInTheWorldProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performCommand(new CommandDispatcher<CommandSourceStack>().parse(
-						"tellraw @s [\"\",{\"text\":\"Full information about mod can be found in our wiki at the link: \"},{\"text\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\"}}]",
-						_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4)),
+				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"tellraw @s [\"\",{\"text\":\"Full information about mod can be found in our wiki at the link: \"},{\"text\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\"}}]");
 		}
 	}

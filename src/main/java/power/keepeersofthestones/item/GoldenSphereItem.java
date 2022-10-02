@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.ReachargeGoldenSphereProcedure;
 import power.keepeersofthestones.entity.GoldenSphereEntity;
 
 import net.minecraft.world.level.Level;
