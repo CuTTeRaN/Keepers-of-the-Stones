@@ -2101,7 +2101,7 @@
       "name": "CrystalShield",
       "type": "item",
       "sortid": 225,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "crystal_shield",
       "path": "~/Stones/Crystal"
@@ -4155,7 +4155,7 @@
       "name": "IronShield",
       "type": "item",
       "sortid": 336,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "iron_shield",
       "path": "~/Stones/Metal"
@@ -4932,7 +4932,7 @@
       "name": "VacuumWebBlock",
       "type": "block",
       "sortid": 378,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "vacuum_web_block",
       "path": "~/Stones/Vacuum"
@@ -5157,7 +5157,7 @@
       "name": "SunRay",
       "type": "item",
       "sortid": 390,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sun_ray",
       "path": "~/Stones/Sun"
@@ -5191,7 +5191,7 @@
       "name": "SunRegeneration",
       "type": "item",
       "sortid": 392,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sun_regeneration",
       "path": "~/Stones/Sun"
@@ -5811,7 +5811,7 @@
       "name": "DestructionStone",
       "type": "item",
       "sortid": 47,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "destruction_stone",
       "path": "~/Stones/Destruction"
@@ -10748,7 +10748,7 @@
       "name": "EnergyAbsorption",
       "type": "item",
       "sortid": 663,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energy_absorption",
       "path": "~/Stones/Energy"
@@ -12391,7 +12391,7 @@
       "name": "BuyLevel2",
       "type": "gui",
       "sortid": 761,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "buy_level_2",
       "path": "~/Main Mod System/LevelSystem"
@@ -14875,7 +14875,7 @@
       "name": "Choosestone",
       "type": "command",
       "sortid": 895,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "choosestone",
       "path": "~/Commands"
@@ -15320,7 +15320,7 @@
       "name": "MassInfection",
       "type": "rangeditem",
       "sortid": 918,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "mass_infection",
       "path": "~/Stones/Light"
@@ -15395,7 +15395,7 @@
       "name": "Injection",
       "type": "item",
       "sortid": 921,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "injection",
       "path": "~/Stones/Plague"
