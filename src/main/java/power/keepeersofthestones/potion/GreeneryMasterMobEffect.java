@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.GreeneryMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.GreeneryMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.GreeneryMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

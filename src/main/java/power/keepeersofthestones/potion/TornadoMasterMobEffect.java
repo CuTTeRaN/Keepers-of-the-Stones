@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.TornadoEffectsProcedure;
 import power.keepeersofthestones.procedures.TornadoEffectStartProcedure;
+import power.keepeersofthestones.procedures.TornadoEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

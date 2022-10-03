@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.MercuryMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.MercuryMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.MercuryMasterEffectEndProcedure;
 
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 

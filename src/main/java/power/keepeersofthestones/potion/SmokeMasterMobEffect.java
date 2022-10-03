@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.SmokeMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.SmokeMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.SmokeMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

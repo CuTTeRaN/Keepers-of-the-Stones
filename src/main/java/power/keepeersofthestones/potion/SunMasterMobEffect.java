@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.SunMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.SunMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.SunMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

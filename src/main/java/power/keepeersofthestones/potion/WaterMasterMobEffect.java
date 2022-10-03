@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.WaterMasterEffectStartProcedure;
 import power.keepeersofthestones.procedures.WaterEffectsProcedure;
+import power.keepeersofthestones.procedures.WaterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

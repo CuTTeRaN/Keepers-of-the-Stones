@@ -2,6 +2,7 @@
 package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.OceanMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.OceanMasterEffectEndProcedure;
 import power.keepeersofthestones.procedures.OceanEffectsProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;

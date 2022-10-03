@@ -2,6 +2,7 @@
 package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.AnimalsMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.AnimalsMasterEffectEndProcedure;
 import power.keepeersofthestones.procedures.AnimalsEffectsProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;

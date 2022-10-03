@@ -2,6 +2,7 @@
 package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.LightningMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.LightningMasterEffectEndProcedure;
 import power.keepeersofthestones.procedures.LightningEffectsProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;

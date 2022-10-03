@@ -2,6 +2,7 @@
 package power.keepeersofthestones.entity;
 
 import power.keepeersofthestones.procedures.MassInfectionOneEntityProcedure;
+import power.keepeersofthestones.procedures.MAssInfectionTickProcedure;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModEntities;
 

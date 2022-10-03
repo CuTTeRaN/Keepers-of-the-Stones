@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.entity;
 
+import power.keepeersofthestones.procedures.TameShadowProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;

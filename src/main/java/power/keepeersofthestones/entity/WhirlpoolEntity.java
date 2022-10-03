@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.entity;
 
+import power.keepeersofthestones.procedures.WhirlpoolpowerProcedure;
 import power.keepeersofthestones.procedures.WaterCreateOnBlockProcedure;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModEntities;

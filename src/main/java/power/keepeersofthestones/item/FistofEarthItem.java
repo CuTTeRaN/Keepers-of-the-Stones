@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.DestroyRocksProcedure;
+
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.Tier;

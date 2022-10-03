@@ -2,6 +2,11 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.RocketPathGUIMenu;
+import power.keepeersofthestones.procedures.FlyOnVenusProcedure;
+import power.keepeersofthestones.procedures.FlyOnMoonProcedure;
+import power.keepeersofthestones.procedures.FlyOnMarsProcedure;
+import power.keepeersofthestones.procedures.FlyOnEnceladusProcedure;
+import power.keepeersofthestones.procedures.FlyOnEarthProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

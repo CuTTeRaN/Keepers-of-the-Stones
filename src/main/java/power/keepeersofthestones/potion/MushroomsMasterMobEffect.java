@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.MushroomsMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.MushroomsMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.MushroomsMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

@@ -2,6 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
+import power.keepeersofthestones.procedures.UpdateToLevel2Procedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;

@@ -2,6 +2,7 @@
 package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.IceMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.IceMasterEffectEndProcedure;
 import power.keepeersofthestones.procedures.IceEffectsProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;

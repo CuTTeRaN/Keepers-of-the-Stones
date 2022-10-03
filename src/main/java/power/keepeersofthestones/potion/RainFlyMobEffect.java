@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.potion;
 
+import power.keepeersofthestones.procedures.RainFlyTickProcedure;
 import power.keepeersofthestones.procedures.RainEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;

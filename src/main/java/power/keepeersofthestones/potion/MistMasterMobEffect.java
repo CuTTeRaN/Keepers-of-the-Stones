@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.MistMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.MistMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.MistMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

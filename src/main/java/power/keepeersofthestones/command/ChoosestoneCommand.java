@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.command;
 
+import power.keepeersofthestones.procedures.ChoosestoneUseProcedure;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;

@@ -2,6 +2,7 @@
 package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.BloodMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.BloodMasterEffectEndProcedure;
 import power.keepeersofthestones.procedures.BloodEffectsProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;

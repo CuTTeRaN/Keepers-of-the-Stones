@@ -2,6 +2,7 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.SunRegenOnOtherProcedure;
+import power.keepeersofthestones.procedures.SunRegenOnMeProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;

@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.entity;
 
+import power.keepeersofthestones.procedures.BurnProcedureProcedure;
 import power.keepeersofthestones.procedures.BurnBlockProcedureProcedure;
 import power.keepeersofthestones.procedures.BlueFlameFireBallParticlesProcedure;
 import power.keepeersofthestones.init.PowerModItems;

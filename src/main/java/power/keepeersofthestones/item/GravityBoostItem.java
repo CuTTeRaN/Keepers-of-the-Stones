@@ -1,6 +1,8 @@
 
 package power.keepeersofthestones.item;
 
+import power.keepeersofthestones.procedures.GravityBoostUseProcedure;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;

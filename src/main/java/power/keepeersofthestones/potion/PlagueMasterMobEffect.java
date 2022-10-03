@@ -1,7 +1,9 @@
 
 package power.keepeersofthestones.potion;
 
+import power.keepeersofthestones.procedures.PlagueMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.PlagueMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.PlagueMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;

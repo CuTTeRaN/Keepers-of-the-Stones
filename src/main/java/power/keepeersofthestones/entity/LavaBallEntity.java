@@ -2,6 +2,7 @@
 package power.keepeersofthestones.entity;
 
 import power.keepeersofthestones.procedures.LavaBurnBlockProcedure;
+import power.keepeersofthestones.procedures.BurnProcedureProcedure;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModEntities;
 

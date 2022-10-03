@@ -3,6 +3,7 @@ package power.keepeersofthestones.potion;
 
 import power.keepeersofthestones.procedures.MagnetMasterEffectsProcedure;
 import power.keepeersofthestones.procedures.MagnetMasterEffectStartProcedure;
+import power.keepeersofthestones.procedures.MagnetMasterEffectEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
