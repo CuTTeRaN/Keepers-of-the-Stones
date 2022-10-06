@@ -1,8 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.init.PowerModTabs;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
@@ -10,7 +8,7 @@ import net.minecraft.world.item.Item;
 
 public class PearlAquaticaItem extends Item {
 	public PearlAquaticaItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).stacksTo(1).fireResistant().rarity(Rarity.RARE));
+		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.RARE));
 	}
 
 	@Override

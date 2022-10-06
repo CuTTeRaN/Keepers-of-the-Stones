@@ -71,7 +71,6 @@ public class PowerMod {
 
 		PowerModMenus.REGISTRY.register(bus);
 		PowerModBiomes.REGISTRY.register(bus);
-		PowerModMenus.REGISTRY.register(bus);
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

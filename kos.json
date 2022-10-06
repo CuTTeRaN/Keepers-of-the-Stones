@@ -8,7 +8,9 @@
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
     "1.18.2-latest": "2.7.1",
-    "1.18.2-recommended": "2.7.1"
+    "1.18.2-recommended": "2.7.1",
+    "1.19.2-latest": "2.7.2",
+    "1.19.2-recommended": "2.7.2"
   },
   "1.16.5": {
    "1.1.18": "
@@ -713,6 +715,12 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Updated some textures
 - [Bugfix] Fixed the use of invisibility and dispersion with golden dust and amber powers
 - [Bugfix] Fixed the generation of golden dust from the master who was given power
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
+ },
+  "1.19.2": {
+"2.7.2": "
+- Port of the mod to version MC 1.19.2
+- [Bugfix] Now the set_level argument is run in the correct order
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

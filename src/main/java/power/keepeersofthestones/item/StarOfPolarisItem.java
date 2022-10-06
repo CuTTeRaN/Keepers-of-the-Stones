@@ -2,7 +2,6 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.StarOfPolarisUseProcedure;
-import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -15,7 +14,7 @@ import net.minecraft.world.InteractionHand;
 
 public class StarOfPolarisItem extends Item {
 	public StarOfPolarisItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).stacksTo(1).fireResistant().rarity(Rarity.RARE));
+		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.RARE));
 	}
 
 	@Override
