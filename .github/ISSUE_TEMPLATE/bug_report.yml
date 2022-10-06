@@ -32,7 +32,7 @@ body:
      label: Mod Version
      description: Which version of the mod are you using?
      options:
-       - 2.7.2 (Release)
+       - 2.7.3 (Release)
        - 2.8.0.x (Beta)
    validations:
      required: true

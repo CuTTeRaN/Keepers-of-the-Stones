@@ -9,8 +9,8 @@
     "1.18.1-recommended": "1.6.1",
     "1.18.2-latest": "2.7.1",
     "1.18.2-recommended": "2.7.1",
-    "1.19.2-latest": "2.7.2",
-    "1.19.2-recommended": "2.7.2"
+    "1.19.2-latest": "2.7.3",
+    "1.19.2-recommended": "2.7.3"
   },
   "1.16.5": {
    "1.1.18": "
@@ -721,6 +721,10 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 "2.7.2": "
 - Port of the mod to version MC 1.19.2
 - [Bugfix] Now the set_level argument is run in the correct order
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.7.3": "
+- Removed future content from creative mode
+- [Bugfix] Fixed a bug that caused the keys to not work
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
