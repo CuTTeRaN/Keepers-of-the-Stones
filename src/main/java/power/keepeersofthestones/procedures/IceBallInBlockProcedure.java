@@ -17,33 +17,34 @@ public class IceBallInBlockProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level,
 					4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "fill ~ ~ ~ ~1 ~2 ~1 ice replace air");
-		new Object() {
+		class WaitHandler2 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
 
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
+				MinecraftForge.EVENT_BUS.register(WaitHandler2.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
+					WaitHandler2.this.ticks += 1;
+					if (WaitHandler2.this.ticks >= WaitHandler2.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
+				MinecraftForge.EVENT_BUS.unregister(WaitHandler2.this);
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO,
 							_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~ ~ ~ ~1 ~2 ~1 air replace ice");
-				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 300);
+		}
+		new WaitHandler2().start(world, 300);
 	}
 }

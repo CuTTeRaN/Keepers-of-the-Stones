@@ -60,27 +60,28 @@ public class DispersionUseProcedure {
 							_player.onUpdateAbilities();
 						}
 					}
-					new Object() {
+					class WaitHandler20 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
 
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
 							this.world = world;
+							MinecraftForge.EVENT_BUS.register(WaitHandler20.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								WaitHandler20.this.ticks += 1;
+								if (WaitHandler20.this.ticks >= WaitHandler20.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(WaitHandler20.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).smoke) {
 								if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -118,9 +119,9 @@ public class DispersionUseProcedure {
 												"item replace entity @s armor.feet with power:smoke_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 200);
+					}
+					new WaitHandler20().start(world, 200);
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 					if (world.isClientSide())
@@ -157,27 +158,28 @@ public class DispersionUseProcedure {
 							_player.onUpdateAbilities();
 						}
 					}
-					new Object() {
+					class WaitHandler37 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
 
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
 							this.world = world;
+							MinecraftForge.EVENT_BUS.register(WaitHandler37.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								WaitHandler37.this.ticks += 1;
+								if (WaitHandler37.this.ticks >= WaitHandler37.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(WaitHandler37.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
@@ -209,9 +211,9 @@ public class DispersionUseProcedure {
 												"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 200);
+					}
+					new WaitHandler37().start(world, 200);
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -249,27 +251,28 @@ public class DispersionUseProcedure {
 						_player.onUpdateAbilities();
 					}
 				}
-				new Object() {
+				class WaitHandler54 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(WaitHandler54.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							WaitHandler54.this.ticks += 1;
+							if (WaitHandler54.this.ticks >= WaitHandler54.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(WaitHandler54.this);
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 							{
@@ -301,9 +304,9 @@ public class DispersionUseProcedure {
 											"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 200);
+				}
+				new WaitHandler54().start(world, 200);
 			}
 		}
 	}

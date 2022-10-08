@@ -31,34 +31,35 @@ public class DestructionPowerUseProcedure {
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.explode(null, x, y, z, 20, Explosion.BlockInteraction.DESTROY);
-			new Object() {
+			class WaitHandler9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(WaitHandler9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						WaitHandler9.this.ticks += 1;
+						if (WaitHandler9.this.ticks >= WaitHandler9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(WaitHandler9.this);
 					if (entity instanceof Player _player) {
 						_player.getAbilities().invulnerable = (false);
 						_player.onUpdateAbilities();
 					}
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 20);
+			}
+			new WaitHandler9().start(world, 20);
 		}
 	}
 }

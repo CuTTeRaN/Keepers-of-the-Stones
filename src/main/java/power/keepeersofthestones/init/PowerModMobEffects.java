@@ -67,7 +67,6 @@ import power.keepeersofthestones.potion.RechargeAirStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAetherStoneMobEffect;
 import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
-import power.keepeersofthestones.potion.PowerOfPolarisMobEffect;
 import power.keepeersofthestones.potion.PowerLockMobEffect;
 import power.keepeersofthestones.potion.PoisonMasterMobEffect;
 import power.keepeersofthestones.potion.PlagueMasterMobEffect;
@@ -264,5 +263,4 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_MIND_STONE = REGISTRY.register("recharge_mind_stone",
 			() -> new RechargeMindStoneMobEffect());
 	public static final RegistryObject<MobEffect> MIND_MASTER = REGISTRY.register("mind_master", () -> new MindMasterMobEffect());
-	public static final RegistryObject<MobEffect> POWER_OF_POLARIS = REGISTRY.register("power_of_polaris", () -> new PowerOfPolarisMobEffect());
 }

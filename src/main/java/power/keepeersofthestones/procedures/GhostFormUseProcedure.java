@@ -26,27 +26,28 @@ public class GhostFormUseProcedure {
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
 			if (entity instanceof ServerPlayer _player)
 				_player.setGameMode(GameType.SPECTATOR);
-			new Object() {
+			class WaitHandler11 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(WaitHandler11.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						WaitHandler11.this.ticks += 1;
+						if (WaitHandler11.this.ticks >= WaitHandler11.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(WaitHandler11.this);
 					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 						if (entity instanceof ServerPlayer _player)
 							_player.setGameMode(GameType.SURVIVAL);
@@ -54,9 +55,9 @@ public class GhostFormUseProcedure {
 						if (entity instanceof ServerPlayer _player)
 							_player.setGameMode(GameType.CREATIVE);
 					}
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 200);
+			}
+			new WaitHandler11().start(world, 200);
 		}
 	}
 }

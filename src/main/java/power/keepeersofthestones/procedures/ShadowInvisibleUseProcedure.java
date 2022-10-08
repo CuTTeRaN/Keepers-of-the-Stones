@@ -51,27 +51,28 @@ public class ShadowInvisibleUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					new Object() {
+					class WaitHandler15 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
 
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
 							this.world = world;
+							MinecraftForge.EVENT_BUS.register(WaitHandler15.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								WaitHandler15.this.ticks += 1;
+								if (WaitHandler15.this.ticks >= WaitHandler15.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(WaitHandler15.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
@@ -103,9 +104,9 @@ public class ShadowInvisibleUseProcedure {
 												"item replace entity @s armor.feet with power:shadow_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 200);
+					}
+					new WaitHandler15().start(world, 200);
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 					if (world.isClientSide())
@@ -134,27 +135,28 @@ public class ShadowInvisibleUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					new Object() {
+					class WaitHandler29 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
 
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
 							this.world = world;
+							MinecraftForge.EVENT_BUS.register(WaitHandler29.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								WaitHandler29.this.ticks += 1;
+								if (WaitHandler29.this.ticks >= WaitHandler29.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(WaitHandler29.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
@@ -186,9 +188,9 @@ public class ShadowInvisibleUseProcedure {
 												"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 200);
+					}
+					new WaitHandler29().start(world, 200);
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -218,27 +220,28 @@ public class ShadowInvisibleUseProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 							_player.inventoryMenu.getCraftSlots());
 				}
-				new Object() {
+				class WaitHandler43 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(WaitHandler43.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							WaitHandler43.this.ticks += 1;
+							if (WaitHandler43.this.ticks >= WaitHandler43.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(WaitHandler43.this);
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 							{
@@ -270,9 +273,9 @@ public class ShadowInvisibleUseProcedure {
 											"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 200);
+				}
+				new WaitHandler43().start(world, 200);
 			}
 		}
 	}

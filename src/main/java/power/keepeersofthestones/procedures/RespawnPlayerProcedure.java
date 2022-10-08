@@ -803,21 +803,6 @@ public class RespawnPlayerProcedure {
 						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIND_STONE.get(), 6000, 0, (false), (false)));
 					}
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new PowerModVariables.PlayerVariables())).polaris) {
-						{
-							boolean _setval = false;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.polaris = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PowerModItems.STAR_OF_POLARIS.get());
-							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-						}
-					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).battery) {
 					{

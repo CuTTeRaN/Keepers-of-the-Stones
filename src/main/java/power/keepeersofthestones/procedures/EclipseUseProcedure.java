@@ -30,36 +30,37 @@ public class EclipseUseProcedure {
 						_ent.getServer().getCommands()
 								.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set night");
 				}
-				new Object() {
+				class WaitHandler9 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(WaitHandler9.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							WaitHandler9.this.ticks += 1;
+							if (WaitHandler9.this.ticks >= WaitHandler9.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(WaitHandler9.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
 								_ent.getServer().getCommands().performPrefixedCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set day");
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 400);
+				}
+				new WaitHandler9().start(world, 400);
 			}
 		}
 	}
