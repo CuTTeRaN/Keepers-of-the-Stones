@@ -28,7 +28,7 @@ public class QuicksandUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandler7 {
+			class WaitHandlerQuicksandUse7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class QuicksandUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler7.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerQuicksandUse7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler7.this.ticks += 1;
-						if (WaitHandler7.this.ticks >= WaitHandler7.this.waitTicks)
+						WaitHandlerQuicksandUse7.this.ticks += 1;
+						if (WaitHandlerQuicksandUse7.this.ticks >= WaitHandlerQuicksandUse7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler7.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerQuicksandUse7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -57,8 +57,8 @@ public class QuicksandUseProcedure {
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:quicksand_block[] replace minecraft:sand");
 				}
 			}
-			new WaitHandler7().start(world, 3);
-			class WaitHandler9 {
+			new WaitHandlerQuicksandUse7().start(world, 3);
+			class WaitHandlerQuicksandUse9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -66,20 +66,20 @@ public class QuicksandUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler9.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerQuicksandUse9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler9.this.ticks += 1;
-						if (WaitHandler9.this.ticks >= WaitHandler9.this.waitTicks)
+						WaitHandlerQuicksandUse9.this.ticks += 1;
+						if (WaitHandlerQuicksandUse9.this.ticks >= WaitHandlerQuicksandUse9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler9.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerQuicksandUse9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -87,7 +87,7 @@ public class QuicksandUseProcedure {
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:sand replace power:quicksand_block");
 				}
 			}
-			new WaitHandler9().start(world, 400);
+			new WaitHandlerQuicksandUse9().start(world, 400);
 		}
 	}
 }

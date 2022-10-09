@@ -24,7 +24,7 @@ public class RainfallUseProcedure {
 				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"weather rain");
 		}
-		class WaitHandler6 {
+		class WaitHandlerRainfallUse6 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -32,20 +32,20 @@ public class RainfallUseProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandler6.this);
+				MinecraftForge.EVENT_BUS.register(WaitHandlerRainfallUse6.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandler6.this.ticks += 1;
-					if (WaitHandler6.this.ticks >= WaitHandler6.this.waitTicks)
+					WaitHandlerRainfallUse6.this.ticks += 1;
+					if (WaitHandlerRainfallUse6.this.ticks >= WaitHandlerRainfallUse6.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandler6.this);
+				MinecraftForge.EVENT_BUS.unregister(WaitHandlerRainfallUse6.this);
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -54,6 +54,6 @@ public class RainfallUseProcedure {
 				}
 			}
 		}
-		new WaitHandler6().start(world, 600);
+		new WaitHandlerRainfallUse6().start(world, 600);
 	}
 }

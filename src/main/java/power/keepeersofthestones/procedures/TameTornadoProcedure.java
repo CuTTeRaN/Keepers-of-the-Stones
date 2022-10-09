@@ -22,7 +22,7 @@ public class TameTornadoProcedure {
 			if (entity instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 				_toTame.tame(_owner);
 		}
-		class WaitHandler3 {
+		class WaitHandlerTameTornado3 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -30,24 +30,24 @@ public class TameTornadoProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandler3.this);
+				MinecraftForge.EVENT_BUS.register(WaitHandlerTameTornado3.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandler3.this.ticks += 1;
-					if (WaitHandler3.this.ticks >= WaitHandler3.this.waitTicks)
+					WaitHandlerTameTornado3.this.ticks += 1;
+					if (WaitHandlerTameTornado3.this.ticks >= WaitHandlerTameTornado3.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandler3.this);
+				MinecraftForge.EVENT_BUS.unregister(WaitHandlerTameTornado3.this);
 				if (!entity.level.isClientSide())
 					entity.discard();
 			}
 		}
-		new WaitHandler3().start(world, 400);
+		new WaitHandlerTameTornado3().start(world, 400);
 	}
 }

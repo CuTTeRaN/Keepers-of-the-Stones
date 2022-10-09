@@ -10,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class ClusterSharpIsGoneProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		class WaitHandler1 {
+		class WaitHandlerClusterSharpIsGone1 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -18,23 +18,23 @@ public class ClusterSharpIsGoneProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandler1.this);
+				MinecraftForge.EVENT_BUS.register(WaitHandlerClusterSharpIsGone1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandler1.this.ticks += 1;
-					if (WaitHandler1.this.ticks >= WaitHandler1.this.waitTicks)
+					WaitHandlerClusterSharpIsGone1.this.ticks += 1;
+					if (WaitHandlerClusterSharpIsGone1.this.ticks >= WaitHandlerClusterSharpIsGone1.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandler1.this);
+				MinecraftForge.EVENT_BUS.unregister(WaitHandlerClusterSharpIsGone1.this);
 				world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			}
 		}
-		new WaitHandler1().start(world, 400);
+		new WaitHandlerClusterSharpIsGone1().start(world, 400);
 	}
 }

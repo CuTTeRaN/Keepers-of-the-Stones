@@ -30,7 +30,7 @@ public class EclipseUseProcedure {
 						_ent.getServer().getCommands()
 								.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set night");
 				}
-				class WaitHandler9 {
+				class WaitHandlerEclipseUse9 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -38,20 +38,20 @@ public class EclipseUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandler9.this);
+						MinecraftForge.EVENT_BUS.register(WaitHandlerEclipseUse9.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandler9.this.ticks += 1;
-							if (WaitHandler9.this.ticks >= WaitHandler9.this.waitTicks)
+							WaitHandlerEclipseUse9.this.ticks += 1;
+							if (WaitHandlerEclipseUse9.this.ticks >= WaitHandlerEclipseUse9.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandler9.this);
+						MinecraftForge.EVENT_BUS.unregister(WaitHandlerEclipseUse9.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -60,7 +60,7 @@ public class EclipseUseProcedure {
 						}
 					}
 				}
-				new WaitHandler9().start(world, 400);
+				new WaitHandlerEclipseUse9().start(world, 400);
 			}
 		}
 	}

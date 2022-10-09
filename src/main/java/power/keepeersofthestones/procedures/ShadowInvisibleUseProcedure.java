@@ -51,7 +51,7 @@ public class ShadowInvisibleUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					class WaitHandler15 {
+					class WaitHandlerShadowInvisibleUse15 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
@@ -59,20 +59,20 @@ public class ShadowInvisibleUseProcedure {
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
 							this.world = world;
-							MinecraftForge.EVENT_BUS.register(WaitHandler15.this);
+							MinecraftForge.EVENT_BUS.register(WaitHandlerShadowInvisibleUse15.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								WaitHandler15.this.ticks += 1;
-								if (WaitHandler15.this.ticks >= WaitHandler15.this.waitTicks)
+								WaitHandlerShadowInvisibleUse15.this.ticks += 1;
+								if (WaitHandlerShadowInvisibleUse15.this.ticks >= WaitHandlerShadowInvisibleUse15.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(WaitHandler15.this);
+							MinecraftForge.EVENT_BUS.unregister(WaitHandlerShadowInvisibleUse15.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
@@ -106,7 +106,7 @@ public class ShadowInvisibleUseProcedure {
 							}
 						}
 					}
-					new WaitHandler15().start(world, 200);
+					new WaitHandlerShadowInvisibleUse15().start(world, 200);
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 					if (world.isClientSide())
@@ -135,7 +135,7 @@ public class ShadowInvisibleUseProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
-					class WaitHandler29 {
+					class WaitHandlerShadowInvisibleUse29 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
@@ -143,20 +143,20 @@ public class ShadowInvisibleUseProcedure {
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
 							this.world = world;
-							MinecraftForge.EVENT_BUS.register(WaitHandler29.this);
+							MinecraftForge.EVENT_BUS.register(WaitHandlerShadowInvisibleUse29.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								WaitHandler29.this.ticks += 1;
-								if (WaitHandler29.this.ticks >= WaitHandler29.this.waitTicks)
+								WaitHandlerShadowInvisibleUse29.this.ticks += 1;
+								if (WaitHandlerShadowInvisibleUse29.this.ticks >= WaitHandlerShadowInvisibleUse29.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(WaitHandler29.this);
+							MinecraftForge.EVENT_BUS.unregister(WaitHandlerShadowInvisibleUse29.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
@@ -190,7 +190,7 @@ public class ShadowInvisibleUseProcedure {
 							}
 						}
 					}
-					new WaitHandler29().start(world, 200);
+					new WaitHandlerShadowInvisibleUse29().start(world, 200);
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -220,7 +220,7 @@ public class ShadowInvisibleUseProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 							_player.inventoryMenu.getCraftSlots());
 				}
-				class WaitHandler43 {
+				class WaitHandlerShadowInvisibleUse43 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -228,20 +228,20 @@ public class ShadowInvisibleUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandler43.this);
+						MinecraftForge.EVENT_BUS.register(WaitHandlerShadowInvisibleUse43.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandler43.this.ticks += 1;
-							if (WaitHandler43.this.ticks >= WaitHandler43.this.waitTicks)
+							WaitHandlerShadowInvisibleUse43.this.ticks += 1;
+							if (WaitHandlerShadowInvisibleUse43.this.ticks >= WaitHandlerShadowInvisibleUse43.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandler43.this);
+						MinecraftForge.EVENT_BUS.unregister(WaitHandlerShadowInvisibleUse43.this);
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 							{
@@ -275,7 +275,7 @@ public class ShadowInvisibleUseProcedure {
 						}
 					}
 				}
-				new WaitHandler43().start(world, 200);
+				new WaitHandlerShadowInvisibleUse43().start(world, 200);
 			}
 		}
 	}

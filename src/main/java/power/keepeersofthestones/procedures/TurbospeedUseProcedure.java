@@ -30,7 +30,7 @@ public class TurbospeedUseProcedure {
 			}
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandler6 {
+			class WaitHandlerTurbospeedUse6 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -38,20 +38,20 @@ public class TurbospeedUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler6.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerTurbospeedUse6.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler6.this.ticks += 1;
-						if (WaitHandler6.this.ticks >= WaitHandler6.this.waitTicks)
+						WaitHandlerTurbospeedUse6.this.ticks += 1;
+						if (WaitHandlerTurbospeedUse6.this.ticks >= WaitHandlerTurbospeedUse6.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler6.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerTurbospeedUse6.this);
 					{
 						boolean _setval = false;
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -61,7 +61,7 @@ public class TurbospeedUseProcedure {
 					}
 				}
 			}
-			new WaitHandler6().start(world, 400);
+			new WaitHandlerTurbospeedUse6().start(world, 400);
 		}
 	}
 }

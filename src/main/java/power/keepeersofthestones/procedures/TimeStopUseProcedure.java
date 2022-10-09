@@ -31,7 +31,7 @@ public class TimeStopUseProcedure {
 						_ent.getServer().getCommands().performPrefixedCommand(
 								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:motion 0 @s");
 				}
-				class WaitHandler8 {
+				class WaitHandlerTimeStopUse8 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -39,20 +39,20 @@ public class TimeStopUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandler8.this);
+						MinecraftForge.EVENT_BUS.register(WaitHandlerTimeStopUse8.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandler8.this.ticks += 1;
-							if (WaitHandler8.this.ticks >= WaitHandler8.this.waitTicks)
+							WaitHandlerTimeStopUse8.this.ticks += 1;
+							if (WaitHandlerTimeStopUse8.this.ticks >= WaitHandlerTimeStopUse8.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandler8.this);
+						MinecraftForge.EVENT_BUS.unregister(WaitHandlerTimeStopUse8.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -61,7 +61,7 @@ public class TimeStopUseProcedure {
 						}
 					}
 				}
-				new WaitHandler8().start(world, 200);
+				new WaitHandlerTimeStopUse8().start(world, 200);
 			}
 			{
 				boolean _setval = true;
@@ -70,7 +70,7 @@ public class TimeStopUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandler9 {
+			class WaitHandlerTimeStopUse9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -78,20 +78,20 @@ public class TimeStopUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler9.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerTimeStopUse9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler9.this.ticks += 1;
-						if (WaitHandler9.this.ticks >= WaitHandler9.this.waitTicks)
+						WaitHandlerTimeStopUse9.this.ticks += 1;
+						if (WaitHandlerTimeStopUse9.this.ticks >= WaitHandlerTimeStopUse9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler9.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerTimeStopUse9.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -101,7 +101,7 @@ public class TimeStopUseProcedure {
 					}
 				}
 			}
-			new WaitHandler9().start(world, 800);
+			new WaitHandlerTimeStopUse9().start(world, 800);
 		}
 	}
 }

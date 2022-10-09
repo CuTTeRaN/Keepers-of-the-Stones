@@ -28,7 +28,7 @@ public class LavaHoleGenProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandler11 {
+			class WaitHandlerLavaHoleGen11 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class LavaHoleGenProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler11.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerLavaHoleGen11.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler11.this.ticks += 1;
-						if (WaitHandler11.this.ticks >= WaitHandler11.this.waitTicks)
+						WaitHandlerLavaHoleGen11.this.ticks += 1;
+						if (WaitHandlerLavaHoleGen11.this.ticks >= WaitHandlerLavaHoleGen11.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler11.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerLavaHoleGen11.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -77,8 +77,8 @@ public class LavaHoleGenProcedure {
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:lava[] replace minecraft:cobblestone");
 				}
 			}
-			new WaitHandler11().start(world, 3);
-			class WaitHandler13 {
+			new WaitHandlerLavaHoleGen11().start(world, 3);
+			class WaitHandlerLavaHoleGen13 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -86,20 +86,20 @@ public class LavaHoleGenProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler13.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerLavaHoleGen13.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler13.this.ticks += 1;
-						if (WaitHandler13.this.ticks >= WaitHandler13.this.waitTicks)
+						WaitHandlerLavaHoleGen13.this.ticks += 1;
+						if (WaitHandlerLavaHoleGen13.this.ticks >= WaitHandlerLavaHoleGen13.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler13.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerLavaHoleGen13.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -107,7 +107,7 @@ public class LavaHoleGenProcedure {
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:cobblestone replace minecraft:lava[]");
 				}
 			}
-			new WaitHandler13().start(world, 400);
+			new WaitHandlerLavaHoleGen13().start(world, 400);
 		}
 	}
 }

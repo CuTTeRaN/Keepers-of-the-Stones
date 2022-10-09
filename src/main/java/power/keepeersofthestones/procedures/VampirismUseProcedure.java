@@ -38,7 +38,7 @@ public class VampirismUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandler7 {
+			class WaitHandlerVampirismUse7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -46,20 +46,20 @@ public class VampirismUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler7.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerVampirismUse7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler7.this.ticks += 1;
-						if (WaitHandler7.this.ticks >= WaitHandler7.this.waitTicks)
+						WaitHandlerVampirismUse7.this.ticks += 1;
+						if (WaitHandlerVampirismUse7.this.ticks >= WaitHandlerVampirismUse7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler7.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerVampirismUse7.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -69,7 +69,7 @@ public class VampirismUseProcedure {
 					}
 				}
 			}
-			new WaitHandler7().start(world, 400);
+			new WaitHandlerVampirismUse7().start(world, 400);
 		}
 	}
 }

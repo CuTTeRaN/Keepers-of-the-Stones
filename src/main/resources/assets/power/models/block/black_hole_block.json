@@ -1,6 +1,9 @@
 {
-  "parent": "block/pressure_plate_up",
+  "parent": "power:custom/black_hole_model",
   "textures": {
-    "texture": "power:blocks/blackholeblock"
-  }
+    "all": "power:blocks/blackholeblock",
+    "particle": "power:blocks/blackholeblock",
+    "0": "power:blocks/blackholeblock"
+  },
+  "render_type": "cutout"
 }

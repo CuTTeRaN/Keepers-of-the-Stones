@@ -39,7 +39,7 @@ public class FlyOnMarsProcedure {
 						1, 1, false);
 			}
 		}
-		class WaitHandler5 {
+		class WaitHandlerFlyOnMars5 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -47,21 +47,21 @@ public class FlyOnMarsProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandler5.this);
+				MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnMars5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandler5.this.ticks += 1;
-					if (WaitHandler5.this.ticks >= WaitHandler5.this.waitTicks)
+					WaitHandlerFlyOnMars5.this.ticks += 1;
+					if (WaitHandlerFlyOnMars5.this.ticks >= WaitHandlerFlyOnMars5.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandler5.this);
-				class WaitHandler4 {
+				MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnMars5.this);
+				class WaitHandlerFlyOnMars4 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -69,20 +69,20 @@ public class FlyOnMarsProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandler4.this);
+						MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnMars4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandler4.this.ticks += 1;
-							if (WaitHandler4.this.ticks >= WaitHandler4.this.waitTicks)
+							WaitHandlerFlyOnMars4.this.ticks += 1;
+							if (WaitHandlerFlyOnMars4.this.ticks >= WaitHandlerFlyOnMars4.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandler4.this);
+						MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnMars4.this);
 						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 							ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("power:mars"));
 							if (_player.level.dimension() == destinationType)
@@ -102,9 +102,9 @@ public class FlyOnMarsProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
 					}
 				}
-				new WaitHandler4().start(world, 20);
+				new WaitHandlerFlyOnMars4().start(world, 20);
 			}
 		}
-		new WaitHandler5().start(world, 200);
+		new WaitHandlerFlyOnMars5().start(world, 200);
 	}
 }

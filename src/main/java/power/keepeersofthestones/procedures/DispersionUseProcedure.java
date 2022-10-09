@@ -60,7 +60,7 @@ public class DispersionUseProcedure {
 							_player.onUpdateAbilities();
 						}
 					}
-					class WaitHandler20 {
+					class WaitHandlerDispersionUse20 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
@@ -68,20 +68,20 @@ public class DispersionUseProcedure {
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
 							this.world = world;
-							MinecraftForge.EVENT_BUS.register(WaitHandler20.this);
+							MinecraftForge.EVENT_BUS.register(WaitHandlerDispersionUse20.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								WaitHandler20.this.ticks += 1;
-								if (WaitHandler20.this.ticks >= WaitHandler20.this.waitTicks)
+								WaitHandlerDispersionUse20.this.ticks += 1;
+								if (WaitHandlerDispersionUse20.this.ticks >= WaitHandlerDispersionUse20.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(WaitHandler20.this);
+							MinecraftForge.EVENT_BUS.unregister(WaitHandlerDispersionUse20.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).smoke) {
 								if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -121,7 +121,7 @@ public class DispersionUseProcedure {
 							}
 						}
 					}
-					new WaitHandler20().start(world, 200);
+					new WaitHandlerDispersionUse20().start(world, 200);
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 					if (world.isClientSide())
@@ -158,7 +158,7 @@ public class DispersionUseProcedure {
 							_player.onUpdateAbilities();
 						}
 					}
-					class WaitHandler37 {
+					class WaitHandlerDispersionUse37 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
@@ -166,20 +166,20 @@ public class DispersionUseProcedure {
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
 							this.world = world;
-							MinecraftForge.EVENT_BUS.register(WaitHandler37.this);
+							MinecraftForge.EVENT_BUS.register(WaitHandlerDispersionUse37.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								WaitHandler37.this.ticks += 1;
-								if (WaitHandler37.this.ticks >= WaitHandler37.this.waitTicks)
+								WaitHandlerDispersionUse37.this.ticks += 1;
+								if (WaitHandlerDispersionUse37.this.ticks >= WaitHandlerDispersionUse37.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(WaitHandler37.this);
+							MinecraftForge.EVENT_BUS.unregister(WaitHandlerDispersionUse37.this);
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 								{
@@ -213,7 +213,7 @@ public class DispersionUseProcedure {
 							}
 						}
 					}
-					new WaitHandler37().start(world, 200);
+					new WaitHandlerDispersionUse37().start(world, 200);
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -251,7 +251,7 @@ public class DispersionUseProcedure {
 						_player.onUpdateAbilities();
 					}
 				}
-				class WaitHandler54 {
+				class WaitHandlerDispersionUse54 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -259,20 +259,20 @@ public class DispersionUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandler54.this);
+						MinecraftForge.EVENT_BUS.register(WaitHandlerDispersionUse54.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandler54.this.ticks += 1;
-							if (WaitHandler54.this.ticks >= WaitHandler54.this.waitTicks)
+							WaitHandlerDispersionUse54.this.ticks += 1;
+							if (WaitHandlerDispersionUse54.this.ticks >= WaitHandlerDispersionUse54.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandler54.this);
+						MinecraftForge.EVENT_BUS.unregister(WaitHandlerDispersionUse54.this);
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
 							{
@@ -306,7 +306,7 @@ public class DispersionUseProcedure {
 						}
 					}
 				}
-				new WaitHandler54().start(world, 200);
+				new WaitHandlerDispersionUse54().start(world, 200);
 			}
 		}
 	}

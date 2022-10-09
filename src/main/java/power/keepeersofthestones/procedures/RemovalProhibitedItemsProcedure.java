@@ -35,7 +35,7 @@ public class RemovalProhibitedItemsProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		class WaitHandler365 {
+		class WaitHandlerRemovalProhibitedItems365 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -43,20 +43,20 @@ public class RemovalProhibitedItemsProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandler365.this);
+				MinecraftForge.EVENT_BUS.register(WaitHandlerRemovalProhibitedItems365.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandler365.this.ticks += 1;
-					if (WaitHandler365.this.ticks >= WaitHandler365.this.waitTicks)
+					WaitHandlerRemovalProhibitedItems365.this.ticks += 1;
+					if (WaitHandlerRemovalProhibitedItems365.this.ticks >= WaitHandlerRemovalProhibitedItems365.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandler365.this);
+				MinecraftForge.EVENT_BUS.unregister(WaitHandlerRemovalProhibitedItems365.this);
 				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).active) {
 					if (entity instanceof Player _player) {
@@ -1886,6 +1886,6 @@ public class RemovalProhibitedItemsProcedure {
 				}
 			}
 		}
-		new WaitHandler365().start(world, 2);
+		new WaitHandlerRemovalProhibitedItems365().start(world, 2);
 	}
 }

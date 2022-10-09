@@ -35,7 +35,7 @@ public class InjectionOnPlayerProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandler7 {
+			class WaitHandlerInjectionOnPlayer7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -43,20 +43,20 @@ public class InjectionOnPlayerProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler7.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerInjectionOnPlayer7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler7.this.ticks += 1;
-						if (WaitHandler7.this.ticks >= WaitHandler7.this.waitTicks)
+						WaitHandlerInjectionOnPlayer7.this.ticks += 1;
+						if (WaitHandlerInjectionOnPlayer7.this.ticks >= WaitHandlerInjectionOnPlayer7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler7.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerInjectionOnPlayer7.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -66,7 +66,7 @@ public class InjectionOnPlayerProcedure {
 					}
 				}
 			}
-			new WaitHandler7().start(world, 800);
+			new WaitHandlerInjectionOnPlayer7().start(world, 800);
 		}
 	}
 }

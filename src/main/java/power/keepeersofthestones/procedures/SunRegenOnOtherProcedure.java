@@ -35,7 +35,7 @@ public class SunRegenOnOtherProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandler5 {
+			class WaitHandlerSunRegenOnOther5 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -43,20 +43,20 @@ public class SunRegenOnOtherProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandler5.this);
+					MinecraftForge.EVENT_BUS.register(WaitHandlerSunRegenOnOther5.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandler5.this.ticks += 1;
-						if (WaitHandler5.this.ticks >= WaitHandler5.this.waitTicks)
+						WaitHandlerSunRegenOnOther5.this.ticks += 1;
+						if (WaitHandlerSunRegenOnOther5.this.ticks >= WaitHandlerSunRegenOnOther5.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandler5.this);
+					MinecraftForge.EVENT_BUS.unregister(WaitHandlerSunRegenOnOther5.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -66,7 +66,7 @@ public class SunRegenOnOtherProcedure {
 					}
 				}
 			}
-			new WaitHandler5().start(world, 400);
+			new WaitHandlerSunRegenOnOther5().start(world, 400);
 		}
 	}
 }
