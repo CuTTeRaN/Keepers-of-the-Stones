@@ -143,7 +143,7 @@ public class PowerModVariables {
 			clone.form = original.form;
 			clone.mind = original.mind;
 			clone.golden_dust = original.golden_dust;
-			clone.polaris = original.polaris;
+			clone.cursed_amethyst = original.cursed_amethyst;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -160,7 +160,6 @@ public class PowerModVariables {
 				clone.ally = original.ally;
 				clone.little = original.little;
 				clone.big = original.big;
-				clone.active_pw = original.active_pw;
 			}
 		}
 
@@ -573,8 +572,7 @@ public class PowerModVariables {
 		public boolean ally = false;
 		public boolean little = false;
 		public boolean big = false;
-		public boolean polaris = false;
-		public boolean active_pw = false;
+		public boolean cursed_amethyst = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -662,8 +660,7 @@ public class PowerModVariables {
 			nbt.putBoolean("ally", ally);
 			nbt.putBoolean("little", little);
 			nbt.putBoolean("big", big);
-			nbt.putBoolean("polaris", polaris);
-			nbt.putBoolean("active_pw", active_pw);
+			nbt.putBoolean("cursed_amethyst", cursed_amethyst);
 			return nbt;
 		}
 
@@ -748,8 +745,7 @@ public class PowerModVariables {
 			ally = nbt.getBoolean("ally");
 			little = nbt.getBoolean("little");
 			big = nbt.getBoolean("big");
-			polaris = nbt.getBoolean("polaris");
-			active_pw = nbt.getBoolean("active_pw");
+			cursed_amethyst = nbt.getBoolean("cursed_amethyst");
 		}
 	}
 
@@ -854,8 +850,7 @@ public class PowerModVariables {
 					variables.ally = message.data.ally;
 					variables.little = message.data.little;
 					variables.big = message.data.big;
-					variables.polaris = message.data.polaris;
-					variables.active_pw = message.data.active_pw;
+					variables.cursed_amethyst = message.data.cursed_amethyst;
 				}
 			});
 			context.setPacketHandled(true);

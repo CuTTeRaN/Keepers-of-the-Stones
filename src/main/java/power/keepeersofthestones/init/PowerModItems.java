@@ -267,6 +267,7 @@ import power.keepeersofthestones.item.DestructionSphereItem;
 import power.keepeersofthestones.item.DestructionPowerItem;
 import power.keepeersofthestones.item.DestructionItem;
 import power.keepeersofthestones.item.CutterSwordItem;
+import power.keepeersofthestones.item.CursedAmethystItem;
 import power.keepeersofthestones.item.CultivationItem;
 import power.keepeersofthestones.item.CrystalStoneItem;
 import power.keepeersofthestones.item.CrystalShieldItem;
@@ -305,6 +306,7 @@ import power.keepeersofthestones.item.BalanceItem;
 import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AnimalsItem;
 import power.keepeersofthestones.item.AnimalsBatteryItem;
+import power.keepeersofthestones.item.AmethystCasterItem;
 import power.keepeersofthestones.item.AmberStreaksItem;
 import power.keepeersofthestones.item.AmberStoneItem;
 import power.keepeersofthestones.item.AmberShieldItem;
@@ -821,6 +823,16 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GOLDEN_STAFF = REGISTRY.register("golden_staff", () -> new GoldenStaffItem());
 	public static final RegistryObject<Item> GOLDEN_SPHERE = REGISTRY.register("golden_sphere", () -> new GoldenSphereItem());
 	public static final RegistryObject<Item> GOLDEN_SHIELD = REGISTRY.register("golden_shield", () -> new GoldenShieldItem());
+	public static final RegistryObject<Item> CURSED_AMETHYST = REGISTRY.register("cursed_amethyst", () -> new CursedAmethystItem());
+	public static final RegistryObject<Item> AMETHYST_CASTER_HELMET = REGISTRY.register("amethyst_caster_helmet",
+			() -> new AmethystCasterItem.Helmet());
+	public static final RegistryObject<Item> AMETHYST_CASTER_CHESTPLATE = REGISTRY.register("amethyst_caster_chestplate",
+			() -> new AmethystCasterItem.Chestplate());
+	public static final RegistryObject<Item> AMETHYST_CASTER_LEGGINGS = REGISTRY.register("amethyst_caster_leggings",
+			() -> new AmethystCasterItem.Leggings());
+	public static final RegistryObject<Item> AMETHYST_CASTER_BOOTS = REGISTRY.register("amethyst_caster_boots", () -> new AmethystCasterItem.Boots());
+	public static final RegistryObject<Item> AMETHYST_WARRIOR = REGISTRY.register("amethyst_warrior_spawn_egg",
+			() -> new ForgeSpawnEggItem(PowerModEntities.AMETHYST_WARRIOR, -6749953, -3394561, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

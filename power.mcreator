@@ -20017,6 +20017,75 @@
         ]
       },
       "path": "~/Stones/Creation/Structures"
+    },
+    {
+      "name": "CursedAmethyst",
+      "type": "item",
+      "sortid": 1170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_amethyst",
+      "path": "~/Items/AmethystCaster"
+    },
+    {
+      "name": "CursedAmethystEffectStart",
+      "type": "procedure",
+      "sortid": 1171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_amethyst_effect_start",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Items/AmethystCaster"
+    },
+    {
+      "name": "CursedAmethystEffectEnd",
+      "type": "procedure",
+      "sortid": 1172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_amethyst_effect_end",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Items/AmethystCaster"
+    },
+    {
+      "name": "CursedAmethystUse",
+      "type": "procedure",
+      "sortid": 1173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_amethyst_use",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Items/AmethystCaster"
+    },
+    {
+      "name": "AmethystCaster",
+      "type": "armor",
+      "sortid": 1174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_caster",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Items/AmethystCaster"
+    },
+    {
+      "name": "AmethystWarrior",
+      "type": "livingentity",
+      "sortid": 1175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_warrior",
+      "path": "~/Items/AmethystCaster"
     }
   ],
   "variable_elements": [
@@ -20831,15 +20900,9 @@
       "value": "false"
     },
     {
-      "name": "polaris",
+      "name": "cursed_amethyst",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "active_pw",
-      "type": "logic",
-      "scope": "player_lifetime",
       "value": "false"
     }
   ],
@@ -21024,6 +21087,7 @@
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.amethyst_caster_leggings": "Amethyst Caster Leggings",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -21031,8 +21095,8 @@
       "item.power.fire_chestplate": "Огненная Мантия",
       "enchantment.power.revenge": "Возмездие",
       "item.power.glow_create": "Создать Светляка",
-      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.technology_chestplate": "Technology Chestplate",
+      "effect.power.recharge_energy_stone": "Перезарядка",
       "item.power.poison_battery": "Батарея",
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
@@ -21063,6 +21127,7 @@
       "effect.power.ice_master": "Мастер Льда",
       "effect.power.recharge_amber_stone": "Перезарядка",
       "item.power.piece_of_earth": "Кусок Земли",
+      "item.power.amethyst_caster_helmet": "Amethyst Caster Helmet",
       "block.power.moon_stones_block": "Блок разрастающихся лунных камней",
       "biome.power.moon_land": "Лунная Земля",
       "effect.power.acceleration_time_effect": "Ускорение Времени",
@@ -21210,6 +21275,7 @@
       "item.power.greenery_boots": "Лиственные ботинки",
       "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
+      "entity.power.amethyst_warrior": "Amethyst Warrior",
       "power.cultivation.jungle_tree.text": "Тропич. Дер.",
       "item.power.music_chestplate": "Music Chestplate",
       "key.power.detransform_key": "Клавиша детрансформации",
@@ -21289,6 +21355,7 @@
       "item.power.mist_leggings": "Mist Leggings",
       "power.cultivation.bamboo.text": "Бамбук",
       "block.power.energy_block": "Энергетический блок",
+      "item.power.amethyst_caster_chestplate": "Amethyst Caster Chestplate",
       "item.power.creation_chestplate": "Creation Chestplate",
       "item.power.sand_chestplate": "Sand Chestplate",
       "item.power.light_sword": "Световой Меч",
@@ -21477,6 +21544,7 @@
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень Пустоты",
       "item.power.raw_energium": "Рудный энерджиум",
+      "item.power.amethyst_warrior_spawn_egg": "Amethyst Warrior Spawn Egg",
       "effect.power.destruction_master": "Мастер Разрушения",
       "item.power.poison_stone": "Камень Яда",
       "biome.power.jurassic_swamp": "Юрское Болото",
@@ -21516,6 +21584,7 @@
       "item.power.lava_helmet": "Лавовые Очки",
       "item.power.time_battery": "Батарея",
       "block.power.energium_ore": "Энерджиумная руда",
+      "item.power.amethyst_caster_boots": "Amethyst Caster Boots",
       "item.power.animals_helmet": "Животный шлем",
       "effect.power.gravity_master": "Мастер Гравитации",
       "item.power.teleportation_battery": "Батарея",
@@ -21693,6 +21762,7 @@
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
       "item.power.gravity_boots": "Gravity Boots",
+      "item.power.cursed_amethyst": "Cursed Amethyst",
       "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Янтарный Щит",
       "itemGroup.tabartifacts": "Артефакты",
@@ -21737,6 +21807,7 @@
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.amethyst_caster_leggings": "Amethyst Caster Leggings",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -21776,6 +21847,7 @@
       "effect.power.ice_master": "Master of Ice",
       "effect.power.recharge_amber_stone": "Recharge",
       "item.power.piece_of_earth": "Piece of the Earth",
+      "item.power.amethyst_caster_helmet": "Amethyst Caster Helmet",
       "block.power.moon_stones_block": "Growing Moon Stones Block",
       "biome.power.moon_land": "Moon Land",
       "effect.power.acceleration_time_effect": "Acceleration Time",
@@ -21923,6 +21995,7 @@
       "item.power.greenery_boots": "Greenery Boots",
       "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
+      "entity.power.amethyst_warrior": "Amethyst Warrior",
       "power.cultivation.jungle_tree.text": "Jungle Tree",
       "item.power.music_chestplate": "Music Chestplate",
       "key.power.detransform_key": "Detransform key",
@@ -22003,6 +22076,7 @@
       "item.power.mist_leggings": "Mist Leggings",
       "power.cultivation.bamboo.text": "Bamboo",
       "block.power.energy_block": "Energy Block",
+      "item.power.amethyst_caster_chestplate": "Amethyst Caster Chestplate",
       "item.power.creation_chestplate": "Creation Chestplate",
       "item.power.sand_chestplate": "Sand Chestplate",
       "item.power.light_sword": "Light Sword",
@@ -22191,6 +22265,7 @@
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.raw_energium": "Raw Energium",
+      "item.power.amethyst_warrior_spawn_egg": "Amethyst Warrior Spawn Egg",
       "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
       "biome.power.jurassic_swamp": "Jurassic Swamp",
@@ -22230,6 +22305,7 @@
       "item.power.lava_helmet": "Lava Helmet",
       "item.power.time_battery": "Battery",
       "block.power.energium_ore": "Energium Ore",
+      "item.power.amethyst_caster_boots": "Amethyst Caster Boots",
       "item.power.animals_helmet": "Animals Helmet",
       "effect.power.gravity_master": "Master of Gravity",
       "item.power.teleportation_battery": "Battery",
@@ -22408,6 +22484,7 @@
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
       "item.power.gravity_boots": "Gravity Boots",
+      "item.power.cursed_amethyst": "Cursed Amethyst",
       "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Amber Shield",
       "itemGroup.tabartifacts": "Artifacts",
@@ -22455,6 +22532,10 @@
           },
           {
             "name": "Music Discs",
+            "children": []
+          },
+          {
+            "name": "AmethystCaster",
             "children": []
           }
         ]
@@ -22728,7 +22809,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.8.0.1",
+    "version": "2.8.0.2",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "Hexagon Studio",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
