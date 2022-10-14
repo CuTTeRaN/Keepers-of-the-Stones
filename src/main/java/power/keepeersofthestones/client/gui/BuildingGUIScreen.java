@@ -108,5 +108,23 @@ public class BuildingGUIScreen extends AbstractContainerScreen<BuildingGUIMenu> 
 				BuildingGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
+		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 83, 87, 20, Component.literal("Maia Pyramid"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(4, x, y, z));
+				BuildingGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 118, this.topPos + 83, 93, 20, Component.literal("Medieval Town"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(5, x, y, z));
+				BuildingGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 110, 108, 20, Component.literal("Overgrown Church"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(6, x, y, z));
+				BuildingGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		}));
 	}
 }

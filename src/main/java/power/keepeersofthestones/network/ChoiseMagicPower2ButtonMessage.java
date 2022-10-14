@@ -10,7 +10,6 @@ import power.keepeersofthestones.procedures.SpaceUseProcedure;
 import power.keepeersofthestones.procedures.SandUseProcedure;
 import power.keepeersofthestones.procedures.PoisonUseProcedure;
 import power.keepeersofthestones.procedures.PlagueUseProcedure;
-import power.keepeersofthestones.procedures.OpenPowerTransferProcedure;
 import power.keepeersofthestones.procedures.MusicUseProcedure;
 import power.keepeersofthestones.procedures.MushroomsUseProcedure;
 import power.keepeersofthestones.procedures.MoonUseProcedure;
@@ -22,6 +21,7 @@ import power.keepeersofthestones.procedures.ExplosionUseProcedure;
 import power.keepeersofthestones.procedures.DestructionUseProcedure;
 import power.keepeersofthestones.procedures.CreationUseProcedure;
 import power.keepeersofthestones.procedures.CM3Procedure;
+import power.keepeersofthestones.procedures.CM1Procedure;
 import power.keepeersofthestones.procedures.BloodUseProcedure;
 import power.keepeersofthestones.PowerMod;
 
@@ -132,7 +132,7 @@ public class ChoiseMagicPower2ButtonMessage {
 		}
 		if (buttonID == 12) {
 
-			OpenPowerTransferProcedure.execute(world, x, y, z, entity);
+			CM1Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 13) {
 
