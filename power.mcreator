@@ -21070,8 +21070,8 @@
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
-      "item.power.disco_ball": "Диско-шар",
       "effect.power.recharge_golden_dust_stone": "Перезарядка",
+      "item.power.disco_ball": "Диско-шар",
       "effect.power.merge_balance": "Слияние Баланс",
       "item.power.spike": "Шип",
       "item.power.explosive_flow": "Взрывной Поток",
@@ -21085,8 +21085,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.amethyst_caster_leggings": "Amethyst Caster Leggings",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
@@ -21790,8 +21790,8 @@
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
-      "item.power.disco_ball": "Disco Ball",
       "effect.power.recharge_golden_dust_stone": "Recharge",
+      "item.power.disco_ball": "Disco Ball",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "item.power.explosive_flow": "Explosive Flow",
@@ -22826,7 +22826,7 @@
     "mcreatorDependencies": [
       "allmods"
     ],
-    "currentGenerator": "forge-1.19.2",
+    "currentGenerator": "forge-1.18.2",
     "credits": "Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors.",
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false

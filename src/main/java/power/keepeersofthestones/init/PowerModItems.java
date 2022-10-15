@@ -34,7 +34,6 @@ import power.keepeersofthestones.item.TimeStopItem;
 import power.keepeersofthestones.item.TimeStoneItem;
 import power.keepeersofthestones.item.TimeReversedItem;
 import power.keepeersofthestones.item.TimeItem;
-import power.keepeersofthestones.item.TimeDilationItem;
 import power.keepeersofthestones.item.TimeBladeItem;
 import power.keepeersofthestones.item.TimeBatteryItem;
 import power.keepeersofthestones.item.TigerClawItem;

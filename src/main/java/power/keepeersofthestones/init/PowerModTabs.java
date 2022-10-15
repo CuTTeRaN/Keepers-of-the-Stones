@@ -4,6 +4,9 @@
  */
 package power.keepeersofthestones.init;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 
@@ -21,7 +24,7 @@ public class PowerModTabs {
 				return new ItemStack(PowerModItems.EMPTY_BATTERY.get());
 			}
 
-			@Override
+			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
 				return false;
 			}
@@ -32,7 +35,7 @@ public class PowerModTabs {
 				return new ItemStack(PowerModItems.ENERGIUM_INGOT.get());
 			}
 
-			@Override
+			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
 				return false;
 			}
@@ -43,7 +46,7 @@ public class PowerModTabs {
 				return new ItemStack(PowerModItems.ROCKET_ITEM.get());
 			}
 
-			@Override
+			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
 				return false;
 			}
@@ -54,7 +57,7 @@ public class PowerModTabs {
 				return new ItemStack(PowerModItems.BOOK_OF_ELEMENTS.get());
 			}
 
-			@Override
+			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
 				return false;
 			}
@@ -65,7 +68,7 @@ public class PowerModTabs {
 				return new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get());
 			}
 
-			@Override
+			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
 				return false;
 			}
