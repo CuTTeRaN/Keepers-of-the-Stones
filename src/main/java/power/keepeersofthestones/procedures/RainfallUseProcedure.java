@@ -21,7 +21,7 @@ public class RainfallUseProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"weather rain");
 		}
 		class RainfallUseWait6 {
@@ -49,8 +49,8 @@ public class RainfallUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands()
-								.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "weather clear");
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+								"weather clear");
 				}
 			}
 		}

@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 public class RespawnPlayerProcedure {
 	@SubscribeEvent
 	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
-		execute(event, event.getEntity());
+		execute(event, event.getPlayer());
 	}
 
 	public static void execute(Entity entity) {
@@ -1152,8 +1152,8 @@ public class RespawnPlayerProcedure {
 					{
 						Entity _ent = entity;
 						if (!_ent.level.isClientSide() && _ent.getServer() != null)
-							_ent.getServer().getCommands().performPrefixedCommand(
-									_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "team remove golden_dust");
+							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+									"team remove golden_dust");
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get());

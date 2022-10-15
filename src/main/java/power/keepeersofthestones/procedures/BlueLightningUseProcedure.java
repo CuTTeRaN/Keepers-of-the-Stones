@@ -34,8 +34,8 @@ public class BlueLightningUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "summon minecraft:lightning_bolt ~ ~ ~");
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+								"summon minecraft:lightning_bolt ~ ~ ~");
 				}
 				class BlueLightningUseWait16 {
 					private int ticks = 0;

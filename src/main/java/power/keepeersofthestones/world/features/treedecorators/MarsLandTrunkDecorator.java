@@ -4,9 +4,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
-import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.core.BlockPos;
+
+import java.util.function.BiConsumer;
+import java.util.Random;
+import java.util.List;
 
 public class MarsLandTrunkDecorator extends TrunkVineDecorator {
 	public static final MarsLandTrunkDecorator INSTANCE = new MarsLandTrunkDecorator();
@@ -15,7 +21,8 @@ public class MarsLandTrunkDecorator extends TrunkVineDecorator {
 	static {
 		codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
 		tdt = new TreeDecoratorType<>(codec);
-		ForgeRegistries.TREE_DECORATOR_TYPES.register("mars_land_tree_trunk_decorator", tdt);
+		tdt.setRegistryName("mars_land_tree_trunk_decorator");
+		ForgeRegistries.TREE_DECORATOR_TYPES.register(tdt);
 	}
 
 	@Override
@@ -24,30 +31,13 @@ public class MarsLandTrunkDecorator extends TrunkVineDecorator {
 	}
 
 	@Override
-	public void place(TreeDecorator.Context context) {
-		context.logs().forEach(blockpos -> {
-			if (context.random().nextInt(3) > 0) {
-				BlockPos pos = blockpos.west();
-				if (context.isAir(pos)) {
-					context.setBlock(pos, Blocks.AIR.defaultBlockState());
-				}
-			}
-			if (context.random().nextInt(3) > 0) {
-				BlockPos pos = blockpos.east();
-				if (context.isAir(pos)) {
-					context.setBlock(pos, Blocks.AIR.defaultBlockState());
-				}
-			}
-			if (context.random().nextInt(3) > 0) {
-				BlockPos pos = blockpos.north();
-				if (context.isAir(pos)) {
-					context.setBlock(pos, Blocks.AIR.defaultBlockState());
-				}
-			}
-			if (context.random().nextInt(3) > 0) {
-				BlockPos pos = blockpos.south();
-				if (context.isAir(pos)) {
-					context.setBlock(pos, Blocks.AIR.defaultBlockState());
+	public void place(LevelSimulatedReader levelReader, BiConsumer<BlockPos, BlockState> biConsumer, Random random, List<BlockPos> listBlockPos,
+			List<BlockPos> listBlockPos2) {
+		listBlockPos.forEach(blockpos -> {
+			if (random.nextInt(3) > 0) {
+				BlockPos bp = blockpos.below();
+				if (Feature.isAir(levelReader, bp)) {
+					biConsumer.accept(blockpos, Blocks.AIR.defaultBlockState());
 				}
 			}
 		});

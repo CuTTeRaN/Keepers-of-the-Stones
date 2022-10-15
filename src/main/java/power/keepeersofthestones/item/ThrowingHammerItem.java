@@ -47,6 +47,7 @@ public class ThrowingHammerItem extends Item {
 				ThrowingHammerEntity entityarrow = ThrowingHammerEntity.shoot(world, entity, world.getRandom(), 0.7000000000000001f, 12, 6);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

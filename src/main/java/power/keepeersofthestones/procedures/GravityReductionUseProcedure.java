@@ -29,8 +29,7 @@ public class GravityReductionUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"attribute @s forge:entity_gravity base set 0.000000001");
 				}
 				class GravityReductionUseWait8 {
@@ -58,7 +57,7 @@ public class GravityReductionUseProcedure {
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.getServer().getCommands().performCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 										"attribute @s forge:entity_gravity base set 0.08");
 						}

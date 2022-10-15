@@ -47,6 +47,7 @@ public class PieceOfEarthItem extends Item {
 				PieceOfEarthEntity entityarrow = PieceOfEarthEntity.shoot(world, entity, world.getRandom(), 0.8f, 14, 4);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

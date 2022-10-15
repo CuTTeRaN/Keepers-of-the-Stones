@@ -29,8 +29,7 @@ public class GravityBoostUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"attribute @s forge:entity_gravity base set 3");
 				}
 				class GravityBoostUseWait8 {
@@ -58,7 +57,7 @@ public class GravityBoostUseProcedure {
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.getServer().getCommands().performCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 										"attribute @s forge:entity_gravity base set 0.08");
 						}

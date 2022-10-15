@@ -8,6 +8,5 @@
     "south": "power:blocks/energy_block",
     "west": "power:blocks/energy_block",
     "particle": "power:blocks/energy_block"
-  },
-  "render_type": "solid"
+  }
 }

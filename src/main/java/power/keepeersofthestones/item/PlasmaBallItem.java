@@ -47,6 +47,7 @@ public class PlasmaBallItem extends Item {
 				PlasmaBallEntity entityarrow = PlasmaBallEntity.shoot(world, entity, world.getRandom(), 1.5f, 4, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

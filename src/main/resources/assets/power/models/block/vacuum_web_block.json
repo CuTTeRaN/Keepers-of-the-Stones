@@ -4,6 +4,5 @@
     "all": "power:blocks/vacuum_web_block",
     "particle": "power:blocks/vacuum_web_block",
     "0": "power:blocks/vacuum_web_block"
-  },
-  "render_type": "cutout"
+  }
 }

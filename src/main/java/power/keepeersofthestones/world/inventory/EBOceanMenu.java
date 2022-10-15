@@ -7,7 +7,6 @@ import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -29,7 +28,7 @@ public class EBOceanMenu extends AbstractContainerMenu implements Supplier<Map<I
 	private boolean bound = false;
 
 	public EBOceanMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.EB_OCEAN.get(), id);
+		super(PowerModMenus.EB_OCEAN, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);
@@ -45,11 +44,6 @@ public class EBOceanMenu extends AbstractContainerMenu implements Supplier<Map<I
 	@Override
 	public boolean stillValid(Player player) {
 		return true;
-	}
-
-	@Override
-	public ItemStack quickMoveStack(Player playerIn, int index) {
-		return ItemStack.EMPTY;
 	}
 
 	public Map<Integer, Slot> get() {

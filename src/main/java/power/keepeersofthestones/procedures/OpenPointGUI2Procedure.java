@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -26,10 +27,10 @@ public class OpenPointGUI2Procedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return Component.literal("CheckPointTP");
+							return new TextComponent("CheckPointTP");
 						}
 
 						@Override
@@ -41,7 +42,7 @@ public class OpenPointGUI2Procedure {
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("\u00A74You can't set checkpoints in other dimensions!"), (false));
+				_player.displayClientMessage(new TextComponent("\u00A74You can't set checkpoints in other dimensions!"), (false));
 		}
 	}
 }

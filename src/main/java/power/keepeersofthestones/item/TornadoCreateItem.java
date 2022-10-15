@@ -47,6 +47,7 @@ public class TornadoCreateItem extends Item {
 				TornadoCreateEntity entityarrow = TornadoCreateEntity.shoot(world, entity, world.getRandom(), 1f, 1, 10);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

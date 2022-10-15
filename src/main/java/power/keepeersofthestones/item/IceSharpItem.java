@@ -47,6 +47,7 @@ public class IceSharpItem extends Item {
 				IceSharpEntity entityarrow = IceSharpEntity.shoot(world, entity, world.getRandom(), 1.2f, 7, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

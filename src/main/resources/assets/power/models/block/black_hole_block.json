@@ -4,6 +4,5 @@
     "all": "power:blocks/blackholeblock",
     "particle": "power:blocks/blackholeblock",
     "0": "power:blocks/blackholeblock"
-  },
-  "render_type": "cutout"
+  }
 }

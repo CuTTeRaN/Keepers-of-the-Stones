@@ -47,6 +47,7 @@ public class ShadowBallItem extends Item {
 				ShadowBallEntity entityarrow = ShadowBallEntity.shoot(world, entity, world.getRandom(), 1.4000000000000001f, 4, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

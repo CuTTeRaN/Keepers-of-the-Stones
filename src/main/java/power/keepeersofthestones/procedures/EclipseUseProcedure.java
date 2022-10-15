@@ -27,8 +27,8 @@ public class EclipseUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands()
-								.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set night");
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+								"time set night");
 				}
 				class EclipseUseWait9 {
 					private int ticks = 0;
@@ -55,8 +55,8 @@ public class EclipseUseProcedure {
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
-										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set day");
+								_ent.getServer().getCommands()
+										.performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set day");
 						}
 					}
 				}

@@ -47,6 +47,7 @@ public class PortalBlastItem extends Item {
 				PortalBlastEntity entityarrow = PortalBlastEntity.shoot(world, entity, world.getRandom(), 1f, 12, 5);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

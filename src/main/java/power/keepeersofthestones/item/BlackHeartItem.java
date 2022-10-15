@@ -47,6 +47,7 @@ public class BlackHeartItem extends Item {
 				BlackHeartEntity entityarrow = BlackHeartEntity.shoot(world, entity, world.getRandom(), 1.2000000000000002f, 1, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

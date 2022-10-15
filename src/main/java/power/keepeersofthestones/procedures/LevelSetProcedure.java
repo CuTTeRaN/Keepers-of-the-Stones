@@ -4,7 +4,7 @@ import power.keepeersofthestones.network.PowerModVariables;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
@@ -30,7 +30,7 @@ public class LevelSetProcedure {
 			e.printStackTrace();
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(Component.literal(
+			_player.displayClientMessage(new TextComponent(
 					("The player has successfully set the level: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PowerModVariables.PlayerVariables())).power_level)),
 					(false));

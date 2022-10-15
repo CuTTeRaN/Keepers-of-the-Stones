@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
@@ -51,7 +51,7 @@ public class AirGetProcedure {
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(
-							Component.literal("\u00A74This stone is occupied by another player, but you can choose another one."), (false));
+							new TextComponent("\u00A74This stone is occupied by another player, but you can choose another one."), (false));
 			}
 		}
 	}

@@ -47,6 +47,7 @@ public class WaterFlowItem extends Item {
 				WaterFlowEntity entityarrow = WaterFlowEntity.shoot(world, entity, world.getRandom(), 1.2000000000000002f, 8, 3);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

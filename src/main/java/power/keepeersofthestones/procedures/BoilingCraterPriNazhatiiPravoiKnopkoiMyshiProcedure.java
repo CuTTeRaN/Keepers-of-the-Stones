@@ -14,7 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
@@ -51,34 +51,34 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 				private void run() {
 					MinecraftForge.EVENT_BUS.unregister(BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait12.this);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:stone");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:grass_block");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:dirt");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-1 ~-3 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:sand");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-1 ~-1 ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:cobblestone");
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
-								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
+										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:magma_block");
 				}
 			}
@@ -106,13 +106,13 @@ public class BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure {
 				private void run() {
 					MinecraftForge.EVENT_BUS.unregister(BoilingCraterPriNazhatiiPravoiKnopkoiMyshiWait15.this);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-1 ~-2 ~2 ~ ~2 minecraft:air replace minecraft:water[]");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:cobblestone replace minecraft:magma_block");
 				}

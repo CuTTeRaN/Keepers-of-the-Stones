@@ -21282,8 +21282,8 @@
       "item.power.sun_battery": "Батарея",
       "item.power.create_shadow": "Создать Тень",
       "effect.power.recharge_ice_stone": "Перезарядка",
-      "item.power.disco_ball": "Диско-шар",
       "effect.power.recharge_golden_dust_stone": "Перезарядка",
+      "item.power.disco_ball": "Диско-шар",
       "effect.power.merge_balance": "Слияние Баланс",
       "item.power.spike": "Шип",
       "effect.power.boiling_master": "Мастер Кипения",
@@ -22005,8 +22005,8 @@
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
-      "item.power.disco_ball": "Disco Ball",
       "effect.power.recharge_golden_dust_stone": "Recharge",
+      "item.power.disco_ball": "Disco Ball",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "effect.power.boiling_master": "Master of Boiling",
@@ -23057,7 +23057,7 @@
     "mcreatorDependencies": [
       "allmods"
     ],
-    "currentGenerator": "forge-1.19.2",
+    "currentGenerator": "forge-1.18.2",
     "credits": "Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors.",
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false

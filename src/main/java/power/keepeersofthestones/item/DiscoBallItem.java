@@ -47,6 +47,7 @@ public class DiscoBallItem extends Item {
 				DiscoBallEntity entityarrow = DiscoBallEntity.shoot(world, entity, world.getRandom(), 1f, 8, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

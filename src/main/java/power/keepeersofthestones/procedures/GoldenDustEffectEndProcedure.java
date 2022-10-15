@@ -36,7 +36,7 @@ public class GoldenDustEffectEndProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"team remove golden_dust");
 		}
 		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {

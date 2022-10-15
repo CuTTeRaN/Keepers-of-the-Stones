@@ -8,6 +8,5 @@
     "south": "power:blocks/sound_block",
     "west": "power:blocks/sound_block",
     "particle": "power:blocks/sound_block"
-  },
-  "render_type": "solid"
+  }
 }

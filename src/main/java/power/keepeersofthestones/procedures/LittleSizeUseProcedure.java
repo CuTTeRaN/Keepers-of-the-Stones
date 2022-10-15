@@ -27,8 +27,8 @@ public class LittleSizeUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:base 0.1 @s");
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+								"scale set pehkui:base 0.1 @s");
 				}
 				{
 					boolean _setval = true;
@@ -62,7 +62,7 @@ public class LittleSizeUseProcedure {
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.getServer().getCommands().performCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:base 1 @s");
 						}
 						{

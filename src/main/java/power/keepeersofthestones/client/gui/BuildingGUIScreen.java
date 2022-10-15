@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -84,43 +85,43 @@ public class BuildingGUIScreen extends AbstractContainerScreen<BuildingGUIMenu> 
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 56, 61, 20, Component.literal("Library"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 56, 61, 20, new TextComponent("Library"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(0, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 118, this.topPos + 29, 77, 20, Component.literal("Blacksmith"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 118, this.topPos + 29, 77, 20, new TextComponent("Blacksmith"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(1, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 29, 87, 20, Component.literal("Butcher Shop"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 29, 87, 20, new TextComponent("Butcher Shop"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(2, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 91, this.topPos + 56, 82, 20, Component.literal("Streetlight"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 91, this.topPos + 56, 82, 20, new TextComponent("Streetlight"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(3, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 83, 87, 20, Component.literal("Maia Pyramid"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 83, 87, 20, new TextComponent("Maia Pyramid"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(4, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 118, this.topPos + 83, 93, 20, Component.literal("Medieval Town"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 118, this.topPos + 83, 93, 20, new TextComponent("Medieval Town"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(5, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 110, 108, 20, Component.literal("Overgrown Church"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 19, this.topPos + 110, 108, 20, new TextComponent("Overgrown Church"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuildingGUIButtonMessage(6, x, y, z));
 				BuildingGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);

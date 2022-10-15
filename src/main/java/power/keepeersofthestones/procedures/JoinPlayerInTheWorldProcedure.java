@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -29,7 +30,7 @@ import io.netty.buffer.Unpooled;
 public class JoinPlayerInTheWorldProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+		execute(event, event.getPlayer().level, event.getPlayer().getX(), event.getPlayer().getY(), event.getPlayer().getZ(), event.getPlayer());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -45,10 +46,10 @@ public class JoinPlayerInTheWorldProcedure {
 				{
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
-								return Component.literal("ChoiseMagicStoneGUI");
+								return new TextComponent("ChoiseMagicStoneGUI");
 							}
 
 							@Override
@@ -63,7 +64,7 @@ public class JoinPlayerInTheWorldProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"tellraw @s [\"\",{\"text\":\"Full information about mod can be found in our wiki at the link: \"},{\"text\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\",\"underlined\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki\"}}]");
 		}
 	}

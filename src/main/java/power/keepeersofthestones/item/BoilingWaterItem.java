@@ -47,6 +47,7 @@ public class BoilingWaterItem extends Item {
 				BoilingWaterEntity entityarrow = BoilingWaterEntity.shoot(world, entity, world.getRandom(), 1f, 9, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

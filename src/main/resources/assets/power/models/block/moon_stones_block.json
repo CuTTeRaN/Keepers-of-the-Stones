@@ -8,6 +8,5 @@
     "south": "power:blocks/moon_stones_block",
     "west": "power:blocks/moon_stones_block",
     "particle": "power:blocks/moon_stones_block"
-  },
-  "render_type": "solid"
+  }
 }

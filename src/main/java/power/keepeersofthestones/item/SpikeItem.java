@@ -47,6 +47,7 @@ public class SpikeItem extends Item {
 				SpikeEntity entityarrow = SpikeEntity.shoot(world, entity, world.getRandom(), 1f, 8, 0);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

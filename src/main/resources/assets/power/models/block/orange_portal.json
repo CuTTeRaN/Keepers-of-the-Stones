@@ -4,6 +4,5 @@
     "all": "power:blocks/orange_portal",
     "particle": "power:blocks/orange_portal",
     "0": "power:blocks/orange_portal"
-  },
-  "render_type": "solid"
+  }
 }

@@ -4,7 +4,7 @@ import power.keepeersofthestones.network.PowerModVariables;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 
 public class FirstPointSetProcedure {
 	public static void execute(double x, double y, double z, Entity entity) {
@@ -34,6 +34,6 @@ public class FirstPointSetProcedure {
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(Component.literal("The return point has been successfully set."), (false));
+			_player.displayClientMessage(new TextComponent("The return point has been successfully set."), (false));
 	}
 }

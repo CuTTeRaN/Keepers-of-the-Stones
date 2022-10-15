@@ -28,8 +28,8 @@ public class TimeStopUseProcedure {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:motion 0 @s");
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+								"scale set pehkui:motion 0 @s");
 				}
 				class TimeStopUseWait8 {
 					private int ticks = 0;
@@ -56,7 +56,7 @@ public class TimeStopUseProcedure {
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
+								_ent.getServer().getCommands().performCommand(
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "scale set pehkui:motion 1 @s");
 						}
 					}

@@ -14,7 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
@@ -51,23 +51,23 @@ public class MercuryPitUseProcedure {
 				private void run() {
 					MinecraftForge.EVENT_BUS.unregister(MercuryPitUseWait10.this);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:mercury_liquid replace minecraft:stone");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:mercury_liquid replace minecraft:grass_block");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:mercury_liquid replace minecraft:dirt");
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:mercury_liquid replace minecraft:sand");
 				}
@@ -96,8 +96,8 @@ public class MercuryPitUseProcedure {
 				private void run() {
 					MinecraftForge.EVENT_BUS.unregister(MercuryPitUseWait12.this);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:dirt replace power:mercury_liquid");
 				}

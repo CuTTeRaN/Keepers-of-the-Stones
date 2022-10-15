@@ -47,6 +47,7 @@ public class KunaiItem extends Item {
 				KunaiEntity entityarrow = KunaiEntity.shoot(world, entity, world.getRandom(), 1f, 13, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}

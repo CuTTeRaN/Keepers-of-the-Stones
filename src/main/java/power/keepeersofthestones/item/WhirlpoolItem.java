@@ -47,6 +47,7 @@ public class WhirlpoolItem extends Item {
 				WhirlpoolEntity entityarrow = WhirlpoolEntity.shoot(world, entity, world.getRandom(), 10f, 1, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
 				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}
