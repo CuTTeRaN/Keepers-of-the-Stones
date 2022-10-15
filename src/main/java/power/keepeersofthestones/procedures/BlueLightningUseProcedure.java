@@ -37,7 +37,7 @@ public class BlueLightningUseProcedure {
 						_ent.getServer().getCommands().performPrefixedCommand(
 								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "summon minecraft:lightning_bolt ~ ~ ~");
 				}
-				class WaitHandlerBlueLightningUse16 {
+				class BlueLightningUseWait16 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -45,27 +45,27 @@ public class BlueLightningUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerBlueLightningUse16.this);
+						MinecraftForge.EVENT_BUS.register(BlueLightningUseWait16.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerBlueLightningUse16.this.ticks += 1;
-							if (WaitHandlerBlueLightningUse16.this.ticks >= WaitHandlerBlueLightningUse16.this.waitTicks)
+							BlueLightningUseWait16.this.ticks += 1;
+							if (BlueLightningUseWait16.this.ticks >= BlueLightningUseWait16.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerBlueLightningUse16.this);
+						MinecraftForge.EVENT_BUS.unregister(BlueLightningUseWait16.this);
 						if (world instanceof ServerLevel _level) {
 							LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 							entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(x, y, z)));
 							entityToSpawn.setVisualOnly(true);
 							_level.addFreshEntity(entityToSpawn);
 						}
-						class WaitHandlerBlueLightningUse15 {
+						class BlueLightningUseWait15 {
 							private int ticks = 0;
 							private float waitTicks;
 							private LevelAccessor world;
@@ -73,27 +73,27 @@ public class BlueLightningUseProcedure {
 							public void start(LevelAccessor world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								this.world = world;
-								MinecraftForge.EVENT_BUS.register(WaitHandlerBlueLightningUse15.this);
+								MinecraftForge.EVENT_BUS.register(BlueLightningUseWait15.this);
 							}
 
 							@SubscribeEvent
 							public void tick(TickEvent.ServerTickEvent event) {
 								if (event.phase == TickEvent.Phase.END) {
-									WaitHandlerBlueLightningUse15.this.ticks += 1;
-									if (WaitHandlerBlueLightningUse15.this.ticks >= WaitHandlerBlueLightningUse15.this.waitTicks)
+									BlueLightningUseWait15.this.ticks += 1;
+									if (BlueLightningUseWait15.this.ticks >= BlueLightningUseWait15.this.waitTicks)
 										run();
 								}
 							}
 
 							private void run() {
-								MinecraftForge.EVENT_BUS.unregister(WaitHandlerBlueLightningUse15.this);
+								MinecraftForge.EVENT_BUS.unregister(BlueLightningUseWait15.this);
 								if (world instanceof ServerLevel _level) {
 									LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 									entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(x, y, z)));
 									entityToSpawn.setVisualOnly(true);
 									_level.addFreshEntity(entityToSpawn);
 								}
-								class WaitHandlerBlueLightningUse14 {
+								class BlueLightningUseWait14 {
 									private int ticks = 0;
 									private float waitTicks;
 									private LevelAccessor world;
@@ -101,27 +101,27 @@ public class BlueLightningUseProcedure {
 									public void start(LevelAccessor world, int waitTicks) {
 										this.waitTicks = waitTicks;
 										this.world = world;
-										MinecraftForge.EVENT_BUS.register(WaitHandlerBlueLightningUse14.this);
+										MinecraftForge.EVENT_BUS.register(BlueLightningUseWait14.this);
 									}
 
 									@SubscribeEvent
 									public void tick(TickEvent.ServerTickEvent event) {
 										if (event.phase == TickEvent.Phase.END) {
-											WaitHandlerBlueLightningUse14.this.ticks += 1;
-											if (WaitHandlerBlueLightningUse14.this.ticks >= WaitHandlerBlueLightningUse14.this.waitTicks)
+											BlueLightningUseWait14.this.ticks += 1;
+											if (BlueLightningUseWait14.this.ticks >= BlueLightningUseWait14.this.waitTicks)
 												run();
 										}
 									}
 
 									private void run() {
-										MinecraftForge.EVENT_BUS.unregister(WaitHandlerBlueLightningUse14.this);
+										MinecraftForge.EVENT_BUS.unregister(BlueLightningUseWait14.this);
 										if (world instanceof ServerLevel _level) {
 											LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 											entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(x, y, z)));
 											entityToSpawn.setVisualOnly(true);
 											_level.addFreshEntity(entityToSpawn);
 										}
-										class WaitHandlerBlueLightningUse13 {
+										class BlueLightningUseWait13 {
 											private int ticks = 0;
 											private float waitTicks;
 											private LevelAccessor world;
@@ -129,27 +129,27 @@ public class BlueLightningUseProcedure {
 											public void start(LevelAccessor world, int waitTicks) {
 												this.waitTicks = waitTicks;
 												this.world = world;
-												MinecraftForge.EVENT_BUS.register(WaitHandlerBlueLightningUse13.this);
+												MinecraftForge.EVENT_BUS.register(BlueLightningUseWait13.this);
 											}
 
 											@SubscribeEvent
 											public void tick(TickEvent.ServerTickEvent event) {
 												if (event.phase == TickEvent.Phase.END) {
-													WaitHandlerBlueLightningUse13.this.ticks += 1;
-													if (WaitHandlerBlueLightningUse13.this.ticks >= WaitHandlerBlueLightningUse13.this.waitTicks)
+													BlueLightningUseWait13.this.ticks += 1;
+													if (BlueLightningUseWait13.this.ticks >= BlueLightningUseWait13.this.waitTicks)
 														run();
 												}
 											}
 
 											private void run() {
-												MinecraftForge.EVENT_BUS.unregister(WaitHandlerBlueLightningUse13.this);
+												MinecraftForge.EVENT_BUS.unregister(BlueLightningUseWait13.this);
 												if (world instanceof ServerLevel _level) {
 													LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 													entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(x, y, z)));
 													entityToSpawn.setVisualOnly(true);
 													_level.addFreshEntity(entityToSpawn);
 												}
-												class WaitHandlerBlueLightningUse12 {
+												class BlueLightningUseWait12 {
 													private int ticks = 0;
 													private float waitTicks;
 													private LevelAccessor world;
@@ -157,20 +157,20 @@ public class BlueLightningUseProcedure {
 													public void start(LevelAccessor world, int waitTicks) {
 														this.waitTicks = waitTicks;
 														this.world = world;
-														MinecraftForge.EVENT_BUS.register(WaitHandlerBlueLightningUse12.this);
+														MinecraftForge.EVENT_BUS.register(BlueLightningUseWait12.this);
 													}
 
 													@SubscribeEvent
 													public void tick(TickEvent.ServerTickEvent event) {
 														if (event.phase == TickEvent.Phase.END) {
-															WaitHandlerBlueLightningUse12.this.ticks += 1;
-															if (WaitHandlerBlueLightningUse12.this.ticks >= WaitHandlerBlueLightningUse12.this.waitTicks)
+															BlueLightningUseWait12.this.ticks += 1;
+															if (BlueLightningUseWait12.this.ticks >= BlueLightningUseWait12.this.waitTicks)
 																run();
 														}
 													}
 
 													private void run() {
-														MinecraftForge.EVENT_BUS.unregister(WaitHandlerBlueLightningUse12.this);
+														MinecraftForge.EVENT_BUS.unregister(BlueLightningUseWait12.this);
 														if (world instanceof ServerLevel _level) {
 															LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 															entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(x, y, z)));
@@ -179,19 +179,19 @@ public class BlueLightningUseProcedure {
 														}
 													}
 												}
-												new WaitHandlerBlueLightningUse12().start(world, 40);
+												new BlueLightningUseWait12().start(world, 40);
 											}
 										}
-										new WaitHandlerBlueLightningUse13().start(world, 40);
+										new BlueLightningUseWait13().start(world, 40);
 									}
 								}
-								new WaitHandlerBlueLightningUse14().start(world, 40);
+								new BlueLightningUseWait14().start(world, 40);
 							}
 						}
-						new WaitHandlerBlueLightningUse15().start(world, 40);
+						new BlueLightningUseWait15().start(world, 40);
 					}
 				}
-				new WaitHandlerBlueLightningUse16().start(world, 40);
+				new BlueLightningUseWait16().start(world, 40);
 			}
 			{
 				boolean _setval = true;
@@ -200,7 +200,7 @@ public class BlueLightningUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandlerBlueLightningUse17 {
+			class BlueLightningUseWait17 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -208,20 +208,20 @@ public class BlueLightningUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerBlueLightningUse17.this);
+					MinecraftForge.EVENT_BUS.register(BlueLightningUseWait17.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerBlueLightningUse17.this.ticks += 1;
-						if (WaitHandlerBlueLightningUse17.this.ticks >= WaitHandlerBlueLightningUse17.this.waitTicks)
+						BlueLightningUseWait17.this.ticks += 1;
+						if (BlueLightningUseWait17.this.ticks >= BlueLightningUseWait17.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerBlueLightningUse17.this);
+					MinecraftForge.EVENT_BUS.unregister(BlueLightningUseWait17.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -231,7 +231,7 @@ public class BlueLightningUseProcedure {
 					}
 				}
 			}
-			new WaitHandlerBlueLightningUse17().start(world, 400);
+			new BlueLightningUseWait17().start(world, 400);
 		}
 	}
 }

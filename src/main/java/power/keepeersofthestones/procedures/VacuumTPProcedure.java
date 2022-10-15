@@ -14,7 +14,7 @@ public class VacuumTPProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		class WaitHandlerVacuumTP1 {
+		class VacuumTPWait1 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -22,20 +22,20 @@ public class VacuumTPProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerVacuumTP1.this);
+				MinecraftForge.EVENT_BUS.register(VacuumTPWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerVacuumTP1.this.ticks += 1;
-					if (WaitHandlerVacuumTP1.this.ticks >= WaitHandlerVacuumTP1.this.waitTicks)
+					VacuumTPWait1.this.ticks += 1;
+					if (VacuumTPWait1.this.ticks >= VacuumTPWait1.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerVacuumTP1.this);
+				MinecraftForge.EVENT_BUS.unregister(VacuumTPWait1.this);
 				{
 					Entity _ent = entity;
 					_ent.teleportTo(x, (y * (-65)), z);
@@ -44,7 +44,7 @@ public class VacuumTPProcedure {
 				}
 			}
 		}
-		new WaitHandlerVacuumTP1().start(world, 3);
+		new VacuumTPWait1().start(world, 3);
 		world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 	}
 }

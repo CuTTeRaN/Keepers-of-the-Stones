@@ -28,7 +28,7 @@ public class SandShieldUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandlerSandShieldUse7 {
+			class SandShieldUseWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class SandShieldUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerSandShieldUse7.this);
+					MinecraftForge.EVENT_BUS.register(SandShieldUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerSandShieldUse7.this.ticks += 1;
-						if (WaitHandlerSandShieldUse7.this.ticks >= WaitHandlerSandShieldUse7.this.waitTicks)
+						SandShieldUseWait7.this.ticks += 1;
+						if (SandShieldUseWait7.this.ticks >= SandShieldUseWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerSandShieldUse7.this);
+					MinecraftForge.EVENT_BUS.unregister(SandShieldUseWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
@@ -57,8 +57,8 @@ public class SandShieldUseProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 sandstone outline");
 				}
 			}
-			new WaitHandlerSandShieldUse7().start(world, 3);
-			class WaitHandlerSandShieldUse9 {
+			new SandShieldUseWait7().start(world, 3);
+			class SandShieldUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -66,20 +66,20 @@ public class SandShieldUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerSandShieldUse9.this);
+					MinecraftForge.EVENT_BUS.register(SandShieldUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerSandShieldUse9.this.ticks += 1;
-						if (WaitHandlerSandShieldUse9.this.ticks >= WaitHandlerSandShieldUse9.this.waitTicks)
+						SandShieldUseWait9.this.ticks += 1;
+						if (SandShieldUseWait9.this.ticks >= SandShieldUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerSandShieldUse9.this);
+					MinecraftForge.EVENT_BUS.unregister(SandShieldUseWait9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
@@ -87,7 +87,7 @@ public class SandShieldUseProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
 				}
 			}
-			new WaitHandlerSandShieldUse9().start(world, 400);
+			new SandShieldUseWait9().start(world, 400);
 		}
 	}
 }

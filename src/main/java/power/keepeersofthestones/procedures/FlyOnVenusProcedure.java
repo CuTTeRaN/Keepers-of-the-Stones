@@ -39,7 +39,7 @@ public class FlyOnVenusProcedure {
 						1, 1, false);
 			}
 		}
-		class WaitHandlerFlyOnVenus5 {
+		class FlyOnVenusWait5 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -47,21 +47,21 @@ public class FlyOnVenusProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnVenus5.this);
+				MinecraftForge.EVENT_BUS.register(FlyOnVenusWait5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerFlyOnVenus5.this.ticks += 1;
-					if (WaitHandlerFlyOnVenus5.this.ticks >= WaitHandlerFlyOnVenus5.this.waitTicks)
+					FlyOnVenusWait5.this.ticks += 1;
+					if (FlyOnVenusWait5.this.ticks >= FlyOnVenusWait5.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnVenus5.this);
-				class WaitHandlerFlyOnVenus4 {
+				MinecraftForge.EVENT_BUS.unregister(FlyOnVenusWait5.this);
+				class FlyOnVenusWait4 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -69,20 +69,20 @@ public class FlyOnVenusProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnVenus4.this);
+						MinecraftForge.EVENT_BUS.register(FlyOnVenusWait4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerFlyOnVenus4.this.ticks += 1;
-							if (WaitHandlerFlyOnVenus4.this.ticks >= WaitHandlerFlyOnVenus4.this.waitTicks)
+							FlyOnVenusWait4.this.ticks += 1;
+							if (FlyOnVenusWait4.this.ticks >= FlyOnVenusWait4.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnVenus4.this);
+						MinecraftForge.EVENT_BUS.unregister(FlyOnVenusWait4.this);
 						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 							ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("power:venus"));
 							if (_player.level.dimension() == destinationType)
@@ -102,9 +102,9 @@ public class FlyOnVenusProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
 					}
 				}
-				new WaitHandlerFlyOnVenus4().start(world, 20);
+				new FlyOnVenusWait4().start(world, 20);
 			}
 		}
-		new WaitHandlerFlyOnVenus5().start(world, 200);
+		new FlyOnVenusWait5().start(world, 200);
 	}
 }

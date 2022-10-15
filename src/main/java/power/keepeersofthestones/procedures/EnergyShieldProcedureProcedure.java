@@ -28,7 +28,7 @@ public class EnergyShieldProcedureProcedure {
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			class WaitHandlerEnergyShieldProcedure7 {
+			class EnergyShieldProcedureWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class EnergyShieldProcedureProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerEnergyShieldProcedure7.this);
+					MinecraftForge.EVENT_BUS.register(EnergyShieldProcedureWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerEnergyShieldProcedure7.this.ticks += 1;
-						if (WaitHandlerEnergyShieldProcedure7.this.ticks >= WaitHandlerEnergyShieldProcedure7.this.waitTicks)
+						EnergyShieldProcedureWait7.this.ticks += 1;
+						if (EnergyShieldProcedureWait7.this.ticks >= EnergyShieldProcedureWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerEnergyShieldProcedure7.this);
+					MinecraftForge.EVENT_BUS.unregister(EnergyShieldProcedureWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(
@@ -58,8 +58,8 @@ public class EnergyShieldProcedureProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 power:energy_block outline");
 				}
 			}
-			new WaitHandlerEnergyShieldProcedure7().start(world, 3);
-			class WaitHandlerEnergyShieldProcedure9 {
+			new EnergyShieldProcedureWait7().start(world, 3);
+			class EnergyShieldProcedureWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -67,20 +67,20 @@ public class EnergyShieldProcedureProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerEnergyShieldProcedure9.this);
+					MinecraftForge.EVENT_BUS.register(EnergyShieldProcedureWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerEnergyShieldProcedure9.this.ticks += 1;
-						if (WaitHandlerEnergyShieldProcedure9.this.ticks >= WaitHandlerEnergyShieldProcedure9.this.waitTicks)
+						EnergyShieldProcedureWait9.this.ticks += 1;
+						if (EnergyShieldProcedureWait9.this.ticks >= EnergyShieldProcedureWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerEnergyShieldProcedure9.this);
+					MinecraftForge.EVENT_BUS.unregister(EnergyShieldProcedureWait9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
@@ -88,7 +88,7 @@ public class EnergyShieldProcedureProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
 				}
 			}
-			new WaitHandlerEnergyShieldProcedure9().start(world, 400);
+			new EnergyShieldProcedureWait9().start(world, 400);
 		}
 	}
 }

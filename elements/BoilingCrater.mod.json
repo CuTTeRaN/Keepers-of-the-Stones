@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unknown",
+    "texture": "boiling_crater",
     "customModelName": "Normal",
-    "name": "Cursed Amethyst",
+    "name": "Boiling Crater",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Artifacts"
+      "value": "No creative tab entry"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -25,12 +25,12 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": true,
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "CursedAmethystUse"
+      "name": "BoilingCraterPriNazhatiiPravoiKnopkoiMyshi"
     },
     "isFood": false,
     "nutritionalValue": 4,

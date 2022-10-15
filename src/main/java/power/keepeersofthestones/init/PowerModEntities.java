@@ -58,10 +58,10 @@ import power.keepeersofthestones.entity.DiscoBallEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BoomerangEntity;
+import power.keepeersofthestones.entity.BoilingWaterEntity;
 import power.keepeersofthestones.entity.BlueFireballEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
-import power.keepeersofthestones.entity.AmethystWarriorEntity;
 import power.keepeersofthestones.entity.AmberStreaksEntity;
 import power.keepeersofthestones.entity.AirFlowEntity;
 import power.keepeersofthestones.entity.AcusticalExplodeEntity;
@@ -282,9 +282,9 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<GoldenSphereEntity>> GOLDEN_SPHERE = register("projectile_golden_sphere",
 			EntityType.Builder.<GoldenSphereEntity>of(GoldenSphereEntity::new, MobCategory.MISC).setCustomClientFactory(GoldenSphereEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<AmethystWarriorEntity>> AMETHYST_WARRIOR = register("amethyst_warrior",
-			EntityType.Builder.<AmethystWarriorEntity>of(AmethystWarriorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(AmethystWarriorEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BoilingWaterEntity>> BOILING_WATER = register("projectile_boiling_water",
+			EntityType.Builder.<BoilingWaterEntity>of(BoilingWaterEntity::new, MobCategory.MISC).setCustomClientFactory(BoilingWaterEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -302,7 +302,6 @@ public class PowerModEntities {
 			GlowEntity.init();
 			ShadowEntity.init();
 			MindZombieEntity.init();
-			AmethystWarriorEntity.init();
 		});
 	}
 
@@ -317,6 +316,5 @@ public class PowerModEntities {
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(MIND_ZOMBIE.get(), MindZombieEntity.createAttributes().build());
-		event.put(AMETHYST_WARRIOR.get(), AmethystWarriorEntity.createAttributes().build());
 	}
 }

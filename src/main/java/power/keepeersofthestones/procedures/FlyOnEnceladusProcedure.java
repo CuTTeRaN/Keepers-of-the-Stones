@@ -39,7 +39,7 @@ public class FlyOnEnceladusProcedure {
 						1, 1, false);
 			}
 		}
-		class WaitHandlerFlyOnEnceladus5 {
+		class FlyOnEnceladusWait5 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -47,21 +47,21 @@ public class FlyOnEnceladusProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnEnceladus5.this);
+				MinecraftForge.EVENT_BUS.register(FlyOnEnceladusWait5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerFlyOnEnceladus5.this.ticks += 1;
-					if (WaitHandlerFlyOnEnceladus5.this.ticks >= WaitHandlerFlyOnEnceladus5.this.waitTicks)
+					FlyOnEnceladusWait5.this.ticks += 1;
+					if (FlyOnEnceladusWait5.this.ticks >= FlyOnEnceladusWait5.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnEnceladus5.this);
-				class WaitHandlerFlyOnEnceladus4 {
+				MinecraftForge.EVENT_BUS.unregister(FlyOnEnceladusWait5.this);
+				class FlyOnEnceladusWait4 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -69,20 +69,20 @@ public class FlyOnEnceladusProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnEnceladus4.this);
+						MinecraftForge.EVENT_BUS.register(FlyOnEnceladusWait4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerFlyOnEnceladus4.this.ticks += 1;
-							if (WaitHandlerFlyOnEnceladus4.this.ticks >= WaitHandlerFlyOnEnceladus4.this.waitTicks)
+							FlyOnEnceladusWait4.this.ticks += 1;
+							if (FlyOnEnceladusWait4.this.ticks >= FlyOnEnceladusWait4.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnEnceladus4.this);
+						MinecraftForge.EVENT_BUS.unregister(FlyOnEnceladusWait4.this);
 						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 							ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY,
 									new ResourceLocation("power:enceladus"));
@@ -103,9 +103,9 @@ public class FlyOnEnceladusProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
 					}
 				}
-				new WaitHandlerFlyOnEnceladus4().start(world, 20);
+				new FlyOnEnceladusWait4().start(world, 20);
 			}
 		}
-		new WaitHandlerFlyOnEnceladus5().start(world, 200);
+		new FlyOnEnceladusWait5().start(world, 200);
 	}
 }

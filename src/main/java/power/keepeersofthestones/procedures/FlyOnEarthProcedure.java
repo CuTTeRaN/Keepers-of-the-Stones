@@ -38,7 +38,7 @@ public class FlyOnEarthProcedure {
 						1, 1, false);
 			}
 		}
-		class WaitHandlerFlyOnEarth5 {
+		class FlyOnEarthWait5 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -46,21 +46,21 @@ public class FlyOnEarthProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnEarth5.this);
+				MinecraftForge.EVENT_BUS.register(FlyOnEarthWait5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerFlyOnEarth5.this.ticks += 1;
-					if (WaitHandlerFlyOnEarth5.this.ticks >= WaitHandlerFlyOnEarth5.this.waitTicks)
+					FlyOnEarthWait5.this.ticks += 1;
+					if (FlyOnEarthWait5.this.ticks >= FlyOnEarthWait5.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnEarth5.this);
-				class WaitHandlerFlyOnEarth4 {
+				MinecraftForge.EVENT_BUS.unregister(FlyOnEarthWait5.this);
+				class FlyOnEarthWait4 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -68,20 +68,20 @@ public class FlyOnEarthProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnEarth4.this);
+						MinecraftForge.EVENT_BUS.register(FlyOnEarthWait4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerFlyOnEarth4.this.ticks += 1;
-							if (WaitHandlerFlyOnEarth4.this.ticks >= WaitHandlerFlyOnEarth4.this.waitTicks)
+							FlyOnEarthWait4.this.ticks += 1;
+							if (FlyOnEarthWait4.this.ticks >= FlyOnEarthWait4.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnEarth4.this);
+						MinecraftForge.EVENT_BUS.unregister(FlyOnEarthWait4.this);
 						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 							ResourceKey<Level> destinationType = Level.OVERWORLD;
 							if (_player.level.dimension() == destinationType)
@@ -101,9 +101,9 @@ public class FlyOnEarthProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
 					}
 				}
-				new WaitHandlerFlyOnEarth4().start(world, 20);
+				new FlyOnEarthWait4().start(world, 20);
 			}
 		}
-		new WaitHandlerFlyOnEarth5().start(world, 200);
+		new FlyOnEarthWait5().start(world, 200);
 	}
 }

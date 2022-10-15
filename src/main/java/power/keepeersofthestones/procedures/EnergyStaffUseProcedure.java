@@ -133,7 +133,7 @@ public class EnergyStaffUseProcedure {
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
-				class WaitHandlerEnergyStaffUse50 {
+				class EnergyStaffUseWait50 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -141,20 +141,20 @@ public class EnergyStaffUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerEnergyStaffUse50.this);
+						MinecraftForge.EVENT_BUS.register(EnergyStaffUseWait50.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerEnergyStaffUse50.this.ticks += 1;
-							if (WaitHandlerEnergyStaffUse50.this.ticks >= WaitHandlerEnergyStaffUse50.this.waitTicks)
+							EnergyStaffUseWait50.this.ticks += 1;
+							if (EnergyStaffUseWait50.this.ticks >= EnergyStaffUseWait50.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerEnergyStaffUse50.this);
+						MinecraftForge.EVENT_BUS.unregister(EnergyStaffUseWait50.this);
 						{
 							boolean _setval = false;
 							sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -164,7 +164,7 @@ public class EnergyStaffUseProcedure {
 						}
 					}
 				}
-				new WaitHandlerEnergyStaffUse50().start(world, 800);
+				new EnergyStaffUseWait50().start(world, 800);
 			}
 		}
 	}

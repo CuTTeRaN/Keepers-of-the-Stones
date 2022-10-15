@@ -24,7 +24,7 @@ public class StormUseProcedure {
 				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 						"weather thunder");
 		}
-		class WaitHandlerStormUse6 {
+		class StormUseWait6 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -32,20 +32,20 @@ public class StormUseProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerStormUse6.this);
+				MinecraftForge.EVENT_BUS.register(StormUseWait6.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerStormUse6.this.ticks += 1;
-					if (WaitHandlerStormUse6.this.ticks >= WaitHandlerStormUse6.this.waitTicks)
+					StormUseWait6.this.ticks += 1;
+					if (StormUseWait6.this.ticks >= StormUseWait6.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerStormUse6.this);
+				MinecraftForge.EVENT_BUS.unregister(StormUseWait6.this);
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -54,6 +54,6 @@ public class StormUseProcedure {
 				}
 			}
 		}
-		new WaitHandlerStormUse6().start(world, 600);
+		new StormUseWait6().start(world, 600);
 	}
 }

@@ -28,7 +28,7 @@ public class ShiedOftheEarthProcedureProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandlerShiedOftheEarthProcedure7 {
+			class ShiedOftheEarthProcedureWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class ShiedOftheEarthProcedureProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerShiedOftheEarthProcedure7.this);
+					MinecraftForge.EVENT_BUS.register(ShiedOftheEarthProcedureWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerShiedOftheEarthProcedure7.this.ticks += 1;
-						if (WaitHandlerShiedOftheEarthProcedure7.this.ticks >= WaitHandlerShiedOftheEarthProcedure7.this.waitTicks)
+						ShiedOftheEarthProcedureWait7.this.ticks += 1;
+						if (ShiedOftheEarthProcedureWait7.this.ticks >= ShiedOftheEarthProcedureWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerShiedOftheEarthProcedure7.this);
+					MinecraftForge.EVENT_BUS.unregister(ShiedOftheEarthProcedureWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
@@ -57,8 +57,8 @@ public class ShiedOftheEarthProcedureProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 stone outline");
 				}
 			}
-			new WaitHandlerShiedOftheEarthProcedure7().start(world, 3);
-			class WaitHandlerShiedOftheEarthProcedure11 {
+			new ShiedOftheEarthProcedureWait7().start(world, 3);
+			class ShiedOftheEarthProcedureWait11 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -66,26 +66,26 @@ public class ShiedOftheEarthProcedureProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerShiedOftheEarthProcedure11.this);
+					MinecraftForge.EVENT_BUS.register(ShiedOftheEarthProcedureWait11.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerShiedOftheEarthProcedure11.this.ticks += 1;
-						if (WaitHandlerShiedOftheEarthProcedure11.this.ticks >= WaitHandlerShiedOftheEarthProcedure11.this.waitTicks)
+						ShiedOftheEarthProcedureWait11.this.ticks += 1;
+						if (ShiedOftheEarthProcedureWait11.this.ticks >= ShiedOftheEarthProcedureWait11.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerShiedOftheEarthProcedure11.this);
+					MinecraftForge.EVENT_BUS.unregister(ShiedOftheEarthProcedureWait11.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 dirt outline");
-					class WaitHandlerShiedOftheEarthProcedure10 {
+					class ShiedOftheEarthProcedureWait10 {
 						private int ticks = 0;
 						private float waitTicks;
 						private LevelAccessor world;
@@ -93,20 +93,20 @@ public class ShiedOftheEarthProcedureProcedure {
 						public void start(LevelAccessor world, int waitTicks) {
 							this.waitTicks = waitTicks;
 							this.world = world;
-							MinecraftForge.EVENT_BUS.register(WaitHandlerShiedOftheEarthProcedure10.this);
+							MinecraftForge.EVENT_BUS.register(ShiedOftheEarthProcedureWait10.this);
 						}
 
 						@SubscribeEvent
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
-								WaitHandlerShiedOftheEarthProcedure10.this.ticks += 1;
-								if (WaitHandlerShiedOftheEarthProcedure10.this.ticks >= WaitHandlerShiedOftheEarthProcedure10.this.waitTicks)
+								ShiedOftheEarthProcedureWait10.this.ticks += 1;
+								if (ShiedOftheEarthProcedureWait10.this.ticks >= ShiedOftheEarthProcedureWait10.this.waitTicks)
 									run();
 							}
 						}
 
 						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(WaitHandlerShiedOftheEarthProcedure10.this);
+							MinecraftForge.EVENT_BUS.unregister(ShiedOftheEarthProcedureWait10.this);
 							if (world instanceof ServerLevel _level)
 								_level.getServer().getCommands()
 										.performPrefixedCommand(
@@ -115,10 +115,10 @@ public class ShiedOftheEarthProcedureProcedure {
 												"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
 						}
 					}
-					new WaitHandlerShiedOftheEarthProcedure10().start(world, 100);
+					new ShiedOftheEarthProcedureWait10().start(world, 100);
 				}
 			}
-			new WaitHandlerShiedOftheEarthProcedure11().start(world, 300);
+			new ShiedOftheEarthProcedureWait11().start(world, 300);
 		}
 	}
 }

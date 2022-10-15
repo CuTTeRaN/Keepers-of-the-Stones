@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class SetBlockMoonStoneProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		class WaitHandlerSetBlockMoonStone1 {
+		class SetBlockMoonStoneWait1 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -19,23 +19,23 @@ public class SetBlockMoonStoneProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerSetBlockMoonStone1.this);
+				MinecraftForge.EVENT_BUS.register(SetBlockMoonStoneWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerSetBlockMoonStone1.this.ticks += 1;
-					if (WaitHandlerSetBlockMoonStone1.this.ticks >= WaitHandlerSetBlockMoonStone1.this.waitTicks)
+					SetBlockMoonStoneWait1.this.ticks += 1;
+					if (SetBlockMoonStoneWait1.this.ticks >= SetBlockMoonStoneWait1.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerSetBlockMoonStone1.this);
+				MinecraftForge.EVENT_BUS.unregister(SetBlockMoonStoneWait1.this);
 				world.setBlock(new BlockPos(x, y, z), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
 			}
 		}
-		new WaitHandlerSetBlockMoonStone1().start(world, 3);
+		new SetBlockMoonStoneWait1().start(world, 3);
 	}
 }

@@ -13,17 +13,17 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-public abstract class AmethystCasterItem extends ArmorItem {
-	public AmethystCasterItem(EquipmentSlot slot, Item.Properties properties) {
+public abstract class BoilingItem extends ArmorItem {
+	public BoilingItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 25;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 40;
 			}
 
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{2, 5, 6, 2}[slot.getIndex()];
+				return new int[]{6, 10, 12, 8}[slot.getIndex()];
 			}
 
 			@Override
@@ -43,12 +43,12 @@ public abstract class AmethystCasterItem extends ArmorItem {
 
 			@Override
 			public String getName() {
-				return "amethyst_caster";
+				return "boiling";
 			}
 
 			@Override
 			public float getToughness() {
-				return 0f;
+				return 10f;
 			}
 
 			@Override
@@ -58,47 +58,47 @@ public abstract class AmethystCasterItem extends ArmorItem {
 		}, slot, properties);
 	}
 
-	public static class Helmet extends AmethystCasterItem {
+	public static class Helmet extends BoilingItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/amethyst_caster__layer_1.png";
+			return "power:textures/models/armor/boiling__layer_1.png";
 		}
 	}
 
-	public static class Chestplate extends AmethystCasterItem {
+	public static class Chestplate extends BoilingItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/amethyst_caster__layer_1.png";
+			return "power:textures/models/armor/boiling__layer_1.png";
 		}
 	}
 
-	public static class Leggings extends AmethystCasterItem {
+	public static class Leggings extends BoilingItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/amethyst_caster__layer_2.png";
+			return "power:textures/models/armor/boiling__layer_2.png";
 		}
 	}
 
-	public static class Boots extends AmethystCasterItem {
+	public static class Boots extends BoilingItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(null));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/amethyst_caster__layer_1.png";
+			return "power:textures/models/armor/boiling__layer_1.png";
 		}
 	}
 }

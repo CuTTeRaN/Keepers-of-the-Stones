@@ -39,7 +39,7 @@ public class FlyOnMoonProcedure {
 						1, 1, false);
 			}
 		}
-		class WaitHandlerFlyOnMoon5 {
+		class FlyOnMoonWait5 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -47,21 +47,21 @@ public class FlyOnMoonProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnMoon5.this);
+				MinecraftForge.EVENT_BUS.register(FlyOnMoonWait5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerFlyOnMoon5.this.ticks += 1;
-					if (WaitHandlerFlyOnMoon5.this.ticks >= WaitHandlerFlyOnMoon5.this.waitTicks)
+					FlyOnMoonWait5.this.ticks += 1;
+					if (FlyOnMoonWait5.this.ticks >= FlyOnMoonWait5.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnMoon5.this);
-				class WaitHandlerFlyOnMoon4 {
+				MinecraftForge.EVENT_BUS.unregister(FlyOnMoonWait5.this);
+				class FlyOnMoonWait4 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -69,20 +69,20 @@ public class FlyOnMoonProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerFlyOnMoon4.this);
+						MinecraftForge.EVENT_BUS.register(FlyOnMoonWait4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerFlyOnMoon4.this.ticks += 1;
-							if (WaitHandlerFlyOnMoon4.this.ticks >= WaitHandlerFlyOnMoon4.this.waitTicks)
+							FlyOnMoonWait4.this.ticks += 1;
+							if (FlyOnMoonWait4.this.ticks >= FlyOnMoonWait4.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerFlyOnMoon4.this);
+						MinecraftForge.EVENT_BUS.unregister(FlyOnMoonWait4.this);
 						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 							ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("power:moon"));
 							if (_player.level.dimension() == destinationType)
@@ -102,9 +102,9 @@ public class FlyOnMoonProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
 					}
 				}
-				new WaitHandlerFlyOnMoon4().start(world, 20);
+				new FlyOnMoonWait4().start(world, 20);
 			}
 		}
-		new WaitHandlerFlyOnMoon5().start(world, 200);
+		new FlyOnMoonWait5().start(world, 200);
 	}
 }

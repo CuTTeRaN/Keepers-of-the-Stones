@@ -35,7 +35,7 @@ public class MoonWitherUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandlerMoonWitherUse5 {
+			class MoonWitherUseWait5 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -43,20 +43,20 @@ public class MoonWitherUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerMoonWitherUse5.this);
+					MinecraftForge.EVENT_BUS.register(MoonWitherUseWait5.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerMoonWitherUse5.this.ticks += 1;
-						if (WaitHandlerMoonWitherUse5.this.ticks >= WaitHandlerMoonWitherUse5.this.waitTicks)
+						MoonWitherUseWait5.this.ticks += 1;
+						if (MoonWitherUseWait5.this.ticks >= MoonWitherUseWait5.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerMoonWitherUse5.this);
+					MinecraftForge.EVENT_BUS.unregister(MoonWitherUseWait5.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -66,7 +66,7 @@ public class MoonWitherUseProcedure {
 					}
 				}
 			}
-			new WaitHandlerMoonWitherUse5().start(world, 400);
+			new MoonWitherUseWait5().start(world, 400);
 		}
 	}
 }

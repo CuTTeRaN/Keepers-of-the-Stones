@@ -119,7 +119,7 @@ public class RocketEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		ReturnRocketItemProcedure.execute(this);
+		ReturnRocketItemProcedure.execute(source.getEntity());
 	}
 
 	private final ItemStackHandler inventory = new ItemStackHandler(9) {

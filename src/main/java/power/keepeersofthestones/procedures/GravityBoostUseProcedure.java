@@ -33,7 +33,7 @@ public class GravityBoostUseProcedure {
 								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"attribute @s forge:entity_gravity base set 3");
 				}
-				class WaitHandlerGravityBoostUse8 {
+				class GravityBoostUseWait8 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -41,20 +41,20 @@ public class GravityBoostUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerGravityBoostUse8.this);
+						MinecraftForge.EVENT_BUS.register(GravityBoostUseWait8.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerGravityBoostUse8.this.ticks += 1;
-							if (WaitHandlerGravityBoostUse8.this.ticks >= WaitHandlerGravityBoostUse8.this.waitTicks)
+							GravityBoostUseWait8.this.ticks += 1;
+							if (GravityBoostUseWait8.this.ticks >= GravityBoostUseWait8.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerGravityBoostUse8.this);
+						MinecraftForge.EVENT_BUS.unregister(GravityBoostUseWait8.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -64,7 +64,7 @@ public class GravityBoostUseProcedure {
 						}
 					}
 				}
-				new WaitHandlerGravityBoostUse8().start(world, 200);
+				new GravityBoostUseWait8().start(world, 200);
 			}
 			{
 				boolean _setval = true;
@@ -73,7 +73,7 @@ public class GravityBoostUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class WaitHandlerGravityBoostUse9 {
+			class GravityBoostUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -81,20 +81,20 @@ public class GravityBoostUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerGravityBoostUse9.this);
+					MinecraftForge.EVENT_BUS.register(GravityBoostUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerGravityBoostUse9.this.ticks += 1;
-						if (WaitHandlerGravityBoostUse9.this.ticks >= WaitHandlerGravityBoostUse9.this.waitTicks)
+						GravityBoostUseWait9.this.ticks += 1;
+						if (GravityBoostUseWait9.this.ticks >= GravityBoostUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerGravityBoostUse9.this);
+					MinecraftForge.EVENT_BUS.unregister(GravityBoostUseWait9.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -104,7 +104,7 @@ public class GravityBoostUseProcedure {
 					}
 				}
 			}
-			new WaitHandlerGravityBoostUse9().start(world, 400);
+			new GravityBoostUseWait9().start(world, 400);
 		}
 	}
 }

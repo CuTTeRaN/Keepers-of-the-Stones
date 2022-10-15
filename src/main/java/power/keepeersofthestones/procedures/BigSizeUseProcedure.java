@@ -37,7 +37,7 @@ public class BigSizeUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				class WaitHandlerBigSizeUse8 {
+				class BigSizeUseWait8 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
@@ -45,20 +45,20 @@ public class BigSizeUseProcedure {
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						this.world = world;
-						MinecraftForge.EVENT_BUS.register(WaitHandlerBigSizeUse8.this);
+						MinecraftForge.EVENT_BUS.register(BigSizeUseWait8.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							WaitHandlerBigSizeUse8.this.ticks += 1;
-							if (WaitHandlerBigSizeUse8.this.ticks >= WaitHandlerBigSizeUse8.this.waitTicks)
+							BigSizeUseWait8.this.ticks += 1;
+							if (BigSizeUseWait8.this.ticks >= BigSizeUseWait8.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(WaitHandlerBigSizeUse8.this);
+						MinecraftForge.EVENT_BUS.unregister(BigSizeUseWait8.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -74,7 +74,7 @@ public class BigSizeUseProcedure {
 						}
 					}
 				}
-				new WaitHandlerBigSizeUse8().start(world, 800);
+				new BigSizeUseWait8().start(world, 800);
 			}
 		}
 	}

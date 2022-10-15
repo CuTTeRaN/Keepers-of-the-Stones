@@ -28,7 +28,7 @@ public class SoundBarrierUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandlerSoundBarrierUse7 {
+			class SoundBarrierUseWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class SoundBarrierUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerSoundBarrierUse7.this);
+					MinecraftForge.EVENT_BUS.register(SoundBarrierUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerSoundBarrierUse7.this.ticks += 1;
-						if (WaitHandlerSoundBarrierUse7.this.ticks >= WaitHandlerSoundBarrierUse7.this.waitTicks)
+						SoundBarrierUseWait7.this.ticks += 1;
+						if (SoundBarrierUseWait7.this.ticks >= SoundBarrierUseWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerSoundBarrierUse7.this);
+					MinecraftForge.EVENT_BUS.unregister(SoundBarrierUseWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -57,8 +57,8 @@ public class SoundBarrierUseProcedure {
 								"fill ~-2 ~ ~-2 ~2 ~4 ~2 power:sound_barrier_block outline");
 				}
 			}
-			new WaitHandlerSoundBarrierUse7().start(world, 3);
-			class WaitHandlerSoundBarrierUse9 {
+			new SoundBarrierUseWait7().start(world, 3);
+			class SoundBarrierUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -66,20 +66,20 @@ public class SoundBarrierUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerSoundBarrierUse9.this);
+					MinecraftForge.EVENT_BUS.register(SoundBarrierUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerSoundBarrierUse9.this.ticks += 1;
-						if (WaitHandlerSoundBarrierUse9.this.ticks >= WaitHandlerSoundBarrierUse9.this.waitTicks)
+						SoundBarrierUseWait9.this.ticks += 1;
+						if (SoundBarrierUseWait9.this.ticks >= SoundBarrierUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerSoundBarrierUse9.this);
+					MinecraftForge.EVENT_BUS.unregister(SoundBarrierUseWait9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
@@ -87,7 +87,7 @@ public class SoundBarrierUseProcedure {
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
 				}
 			}
-			new WaitHandlerSoundBarrierUse9().start(world, 400);
+			new SoundBarrierUseWait9().start(world, 400);
 		}
 	}
 }

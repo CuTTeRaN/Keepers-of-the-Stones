@@ -8,7 +8,7 @@ import org.checkerframework.checker.units.qual.h;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.client.event.RenderGuiOverlayEvent;
+import net.minecraftforge.client.event.RenderGuiEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
@@ -23,7 +23,7 @@ import com.mojang.blaze3d.platform.GlStateManager;
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class FogOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGH)
-	public static void eventHandler(RenderGuiOverlayEvent.Pre event) {
+	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getWindow().getGuiScaledWidth();
 		int h = event.getWindow().getGuiScaledHeight();
 		int posX = w / 2;

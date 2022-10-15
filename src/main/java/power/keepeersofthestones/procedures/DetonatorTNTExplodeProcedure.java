@@ -14,7 +14,7 @@ import net.minecraft.core.BlockPos;
 
 public class DetonatorTNTExplodeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		class WaitHandlerDetonatorTNTExplode4 {
+		class DetonatorTNTExplodeWait4 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -22,20 +22,20 @@ public class DetonatorTNTExplodeProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerDetonatorTNTExplode4.this);
+				MinecraftForge.EVENT_BUS.register(DetonatorTNTExplodeWait4.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerDetonatorTNTExplode4.this.ticks += 1;
-					if (WaitHandlerDetonatorTNTExplode4.this.ticks >= WaitHandlerDetonatorTNTExplode4.this.waitTicks)
+					DetonatorTNTExplodeWait4.this.ticks += 1;
+					if (DetonatorTNTExplodeWait4.this.ticks >= DetonatorTNTExplodeWait4.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerDetonatorTNTExplode4.this);
+				MinecraftForge.EVENT_BUS.unregister(DetonatorTNTExplodeWait4.this);
 				if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == PowerModBlocks.DETONATOR_TNT.get()) {
 					world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 					if (world instanceof Level _level && !_level.isClientSide())
@@ -43,6 +43,6 @@ public class DetonatorTNTExplodeProcedure {
 				}
 			}
 		}
-		new WaitHandlerDetonatorTNTExplode4().start(world, 200);
+		new DetonatorTNTExplodeWait4().start(world, 200);
 	}
 }

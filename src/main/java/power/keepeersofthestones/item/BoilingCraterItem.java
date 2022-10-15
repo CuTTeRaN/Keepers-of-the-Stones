@@ -1,11 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.CursedAmethystUseProcedure;
-import power.keepeersofthestones.init.PowerModTabs;
-
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import power.keepeersofthestones.procedures.BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -16,20 +12,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-public class CursedAmethystItem extends Item {
-	public CursedAmethystItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
+public class BoilingCraterItem extends Item {
+	public BoilingCraterItem() {
+		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
 	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 		return 0F;
-	}
-
-	@Override
-	@OnlyIn(Dist.CLIENT)
-	public boolean isFoil(ItemStack itemstack) {
-		return true;
 	}
 
 	@Override
@@ -40,7 +30,7 @@ public class CursedAmethystItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		CursedAmethystUseProcedure.execute();
+		BoilingCraterPriNazhatiiPravoiKnopkoiMyshiProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
 	}
 }

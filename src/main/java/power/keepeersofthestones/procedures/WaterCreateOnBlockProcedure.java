@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 public class WaterCreateOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		world.setBlock(new BlockPos(x, y + 1, z), Blocks.WATER.defaultBlockState(), 3);
-		class WaitHandlerWaterCreateOnBlock2 {
+		class WaterCreateOnBlockWait2 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -19,23 +19,23 @@ public class WaterCreateOnBlockProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerWaterCreateOnBlock2.this);
+				MinecraftForge.EVENT_BUS.register(WaterCreateOnBlockWait2.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerWaterCreateOnBlock2.this.ticks += 1;
-					if (WaitHandlerWaterCreateOnBlock2.this.ticks >= WaitHandlerWaterCreateOnBlock2.this.waitTicks)
+					WaterCreateOnBlockWait2.this.ticks += 1;
+					if (WaterCreateOnBlockWait2.this.ticks >= WaterCreateOnBlockWait2.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerWaterCreateOnBlock2.this);
+				MinecraftForge.EVENT_BUS.unregister(WaterCreateOnBlockWait2.this);
 				world.setBlock(new BlockPos(x, y + 1, z), Blocks.AIR.defaultBlockState(), 3);
 			}
 		}
-		new WaitHandlerWaterCreateOnBlock2().start(world, 100);
+		new WaterCreateOnBlockWait2().start(world, 100);
 	}
 }

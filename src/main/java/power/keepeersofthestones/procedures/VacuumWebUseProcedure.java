@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class VacuumWebUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		class WaitHandlerVacuumWebUse1 {
+		class VacuumWebUseWait1 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -19,23 +19,23 @@ public class VacuumWebUseProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(WaitHandlerVacuumWebUse1.this);
+				MinecraftForge.EVENT_BUS.register(VacuumWebUseWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					WaitHandlerVacuumWebUse1.this.ticks += 1;
-					if (WaitHandlerVacuumWebUse1.this.ticks >= WaitHandlerVacuumWebUse1.this.waitTicks)
+					VacuumWebUseWait1.this.ticks += 1;
+					if (VacuumWebUseWait1.this.ticks >= VacuumWebUseWait1.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(WaitHandlerVacuumWebUse1.this);
+				MinecraftForge.EVENT_BUS.unregister(VacuumWebUseWait1.this);
 				world.setBlock(new BlockPos(x, y + 1, z), PowerModBlocks.VACUUM_WEB_BLOCK.get().defaultBlockState(), 3);
 			}
 		}
-		new WaitHandlerVacuumWebUse1().start(world, 3);
+		new VacuumWebUseWait1().start(world, 3);
 	}
 }

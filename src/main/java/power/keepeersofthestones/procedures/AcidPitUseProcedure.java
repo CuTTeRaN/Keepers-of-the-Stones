@@ -28,7 +28,7 @@ public class AcidPitUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class WaitHandlerAcidPitUse10 {
+			class AcidPitUseWait10 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -36,20 +36,20 @@ public class AcidPitUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerAcidPitUse10.this);
+					MinecraftForge.EVENT_BUS.register(AcidPitUseWait10.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerAcidPitUse10.this.ticks += 1;
-						if (WaitHandlerAcidPitUse10.this.ticks >= WaitHandlerAcidPitUse10.this.waitTicks)
+						AcidPitUseWait10.this.ticks += 1;
+						if (AcidPitUseWait10.this.ticks >= AcidPitUseWait10.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerAcidPitUse10.this);
+					MinecraftForge.EVENT_BUS.unregister(AcidPitUseWait10.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -72,8 +72,8 @@ public class AcidPitUseProcedure {
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:sand");
 				}
 			}
-			new WaitHandlerAcidPitUse10().start(world, 3);
-			class WaitHandlerAcidPitUse12 {
+			new AcidPitUseWait10().start(world, 3);
+			class AcidPitUseWait12 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
@@ -81,20 +81,20 @@ public class AcidPitUseProcedure {
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					this.world = world;
-					MinecraftForge.EVENT_BUS.register(WaitHandlerAcidPitUse12.this);
+					MinecraftForge.EVENT_BUS.register(AcidPitUseWait12.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						WaitHandlerAcidPitUse12.this.ticks += 1;
-						if (WaitHandlerAcidPitUse12.this.ticks >= WaitHandlerAcidPitUse12.this.waitTicks)
+						AcidPitUseWait12.this.ticks += 1;
+						if (AcidPitUseWait12.this.ticks >= AcidPitUseWait12.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(WaitHandlerAcidPitUse12.this);
+					MinecraftForge.EVENT_BUS.unregister(AcidPitUseWait12.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
@@ -102,7 +102,7 @@ public class AcidPitUseProcedure {
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:dirt replace power:acid[]");
 				}
 			}
-			new WaitHandlerAcidPitUse12().start(world, 400);
+			new AcidPitUseWait12().start(world, 400);
 		}
 	}
 }
