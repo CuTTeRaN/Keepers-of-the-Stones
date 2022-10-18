@@ -68,7 +68,7 @@ public class MoonStonesEntity extends AbstractArrow implements ItemSupplier {
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
 		SetBlockMoonStoneProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(),
-				blockHitResult.getBlockPos().getZ());
+				blockHitResult.getBlockPos().getZ(), this.getOwner());
 	}
 
 	@Override

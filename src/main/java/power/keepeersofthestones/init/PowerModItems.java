@@ -81,6 +81,11 @@ import power.keepeersofthestones.item.SmokeStoneItem;
 import power.keepeersofthestones.item.SmokeScreenItem;
 import power.keepeersofthestones.item.SmokeItem;
 import power.keepeersofthestones.item.SmokeBatteryItem;
+import power.keepeersofthestones.item.SilverStaffItem;
+import power.keepeersofthestones.item.SilverSphereItem;
+import power.keepeersofthestones.item.SilverShieldItem;
+import power.keepeersofthestones.item.SilverDustStoneItem;
+import power.keepeersofthestones.item.SilverDustItem;
 import power.keepeersofthestones.item.ShurikenItem;
 import power.keepeersofthestones.item.ShieldOfEarthItem;
 import power.keepeersofthestones.item.ShadowarmorItem;
@@ -119,6 +124,7 @@ import power.keepeersofthestones.item.PlasmaBallItem;
 import power.keepeersofthestones.item.PlagueStoneItem;
 import power.keepeersofthestones.item.PlagueItem;
 import power.keepeersofthestones.item.PlagueBatteryItem;
+import power.keepeersofthestones.item.PinchOfSilverDustItem;
 import power.keepeersofthestones.item.PinchOfGoldenDustItem;
 import power.keepeersofthestones.item.PieceOfEarthItem;
 import power.keepeersofthestones.item.PegasusWingsItem;
@@ -834,6 +840,16 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BOILING_KATANA = REGISTRY.register("boiling_katana", () -> new BoilingKatanaItem());
 	public static final RegistryObject<Item> BOILING_CRATER = REGISTRY.register("boiling_crater", () -> new BoilingCraterItem());
 	public static final RegistryObject<Item> BOILING_WATER = REGISTRY.register("boiling_water", () -> new BoilingWaterItem());
+	public static final RegistryObject<Item> SILVER_DUST_STONE = REGISTRY.register("silver_dust_stone", () -> new SilverDustStoneItem());
+	public static final RegistryObject<Item> SILVER_DUST_HELMET = REGISTRY.register("silver_dust_helmet", () -> new SilverDustItem.Helmet());
+	public static final RegistryObject<Item> SILVER_DUST_CHESTPLATE = REGISTRY.register("silver_dust_chestplate",
+			() -> new SilverDustItem.Chestplate());
+	public static final RegistryObject<Item> SILVER_DUST_LEGGINGS = REGISTRY.register("silver_dust_leggings", () -> new SilverDustItem.Leggings());
+	public static final RegistryObject<Item> SILVER_DUST_BOOTS = REGISTRY.register("silver_dust_boots", () -> new SilverDustItem.Boots());
+	public static final RegistryObject<Item> SILVER_STAFF = REGISTRY.register("silver_staff", () -> new SilverStaffItem());
+	public static final RegistryObject<Item> SILVER_SPHERE = REGISTRY.register("silver_sphere", () -> new SilverSphereItem());
+	public static final RegistryObject<Item> SILVER_SHIELD = REGISTRY.register("silver_shield", () -> new SilverShieldItem());
+	public static final RegistryObject<Item> PINCH_OF_SILVER_DUST = REGISTRY.register("pinch_of_silver_dust", () -> new PinchOfSilverDustItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

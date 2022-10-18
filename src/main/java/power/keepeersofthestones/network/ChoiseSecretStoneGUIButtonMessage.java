@@ -2,6 +2,7 @@
 package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseSecretStoneGUIMenu;
+import power.keepeersofthestones.procedures.SilverDustGetProcedure;
 import power.keepeersofthestones.procedures.IceGetProcedure;
 import power.keepeersofthestones.procedures.BoilingGetProcedure;
 import power.keepeersofthestones.PowerMod;
@@ -66,6 +67,10 @@ public class ChoiseSecretStoneGUIButtonMessage {
 		if (buttonID == 0) {
 
 			BoilingGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 1) {
+
+			SilverDustGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 5) {
 

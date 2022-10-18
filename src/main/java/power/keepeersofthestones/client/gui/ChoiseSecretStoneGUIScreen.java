@@ -9,7 +9,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -57,6 +56,9 @@ public class ChoiseSecretStoneGUIScreen extends AbstractContainerScreen<ChoiseSe
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/boiling_master.png"));
 		this.blit(ms, this.leftPos + 19, this.topPos + 33, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/silver_dust_master.png"));
+		this.blit(ms, this.leftPos + 19, this.topPos + 60, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -89,53 +91,57 @@ public class ChoiseSecretStoneGUIScreen extends AbstractContainerScreen<ChoiseSe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, new TextComponent("Boiling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.literal("Boiling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseSecretStoneGUIButtonMessage(0, x, y, z));
 				ChoiseSecretStoneGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.literal("Sil.Dust"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseSecretStoneGUIButtonMessage(1, x, y, z));
+				ChoiseSecretStoneGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 33, 56, 20, Component.literal(" "), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseSecretStoneGUIButtonMessage(5, x, y, z));
 				ChoiseSecretStoneGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 60, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 87, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 114, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 141, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 33, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 87, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 114, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 60, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 141, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, Component.literal(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, Component.literal(" "), e -> {
 		}));
 	}
 }

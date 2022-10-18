@@ -3,9 +3,17 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.procedures.GetStickyPistonProcedure;
+import power.keepeersofthestones.procedures.GetRepeaterProcedure;
+import power.keepeersofthestones.procedures.GetRedstoneTorchProcedure;
+import power.keepeersofthestones.procedures.GetRedstoneLampProcedure;
 import power.keepeersofthestones.procedures.GetRedstoneBlockProcedure;
 import power.keepeersofthestones.procedures.GetPistonProcedure;
 import power.keepeersofthestones.procedures.GetObserverProcedure;
+import power.keepeersofthestones.procedures.GetLeverProcedure;
+import power.keepeersofthestones.procedures.GetHopperProcedure;
+import power.keepeersofthestones.procedures.GetDropperProcedure;
+import power.keepeersofthestones.procedures.GetDispenserProcedure;
+import power.keepeersofthestones.procedures.GetComparatorProcedure;
 import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -80,6 +88,38 @@ public class RedstoneBundleGUIButtonMessage {
 		if (buttonID == 3) {
 
 			GetRedstoneBlockProcedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			GetComparatorProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			GetRedstoneLampProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			GetRepeaterProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			GetLeverProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			GetRedstoneTorchProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			GetHopperProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			GetDropperProcedure.execute(entity);
+		}
+		if (buttonID == 11) {
+
+			GetDispenserProcedure.execute(entity);
 		}
 	}
 

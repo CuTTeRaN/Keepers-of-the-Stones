@@ -14,9 +14,13 @@
 package power.keepeersofthestones;
 
 import power.keepeersofthestones.init.PowerModTabs;
+import power.keepeersofthestones.init.PowerModSounds;
+import power.keepeersofthestones.init.PowerModParticleTypes;
 import power.keepeersofthestones.init.PowerModMobEffects;
+import power.keepeersofthestones.init.PowerModMenus;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModFluids;
+import power.keepeersofthestones.init.PowerModFluidTypes;
 import power.keepeersofthestones.init.PowerModFeatures;
 import power.keepeersofthestones.init.PowerModEntities;
 import power.keepeersofthestones.init.PowerModEnchantments;
@@ -53,17 +57,21 @@ public class PowerMod {
 	public PowerMod() {
 		PowerModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		PowerModSounds.REGISTRY.register(bus);
 		PowerModBlocks.REGISTRY.register(bus);
 		PowerModItems.REGISTRY.register(bus);
 		PowerModEntities.REGISTRY.register(bus);
 		PowerModBlockEntities.REGISTRY.register(bus);
 		PowerModFeatures.REGISTRY.register(bus);
 		PowerModFluids.REGISTRY.register(bus);
-		PowerModEnchantments.REGISTRY.register(bus);
+		PowerModFluidTypes.REGISTRY.register(bus);
+
 		PowerModMobEffects.REGISTRY.register(bus);
 
+		PowerModEnchantments.REGISTRY.register(bus);
+		PowerModParticleTypes.REGISTRY.register(bus);
+		PowerModMenus.REGISTRY.register(bus);
 		PowerModBiomes.REGISTRY.register(bus);
-
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

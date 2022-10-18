@@ -20,6 +20,7 @@ import power.keepeersofthestones.entity.SunExplodeEntity;
 import power.keepeersofthestones.entity.SporesEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.SmokeScreenEntity;
+import power.keepeersofthestones.entity.SilverSphereEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
@@ -284,6 +285,9 @@ public class PowerModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BoilingWaterEntity>> BOILING_WATER = register("projectile_boiling_water",
 			EntityType.Builder.<BoilingWaterEntity>of(BoilingWaterEntity::new, MobCategory.MISC).setCustomClientFactory(BoilingWaterEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SilverSphereEntity>> SILVER_SPHERE = register("projectile_silver_sphere",
+			EntityType.Builder.<SilverSphereEntity>of(SilverSphereEntity::new, MobCategory.MISC).setCustomClientFactory(SilverSphereEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
