@@ -1638,7 +1638,7 @@ public class ResetmychoiceProcedureProcedure {
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
-					_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 							"item replace entity @s weapon.mainhand with air");
 			}
 			PowerModVariables.MapVariables.get(world).silver_dust_stone = false;
@@ -1653,10 +1653,10 @@ public class ResetmychoiceProcedureProcedure {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return Component.literal("ChoiseMagicStoneGUI");
+							return new TextComponent("ChoiseMagicStoneGUI");
 						}
 
 						@Override

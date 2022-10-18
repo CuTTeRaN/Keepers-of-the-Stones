@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -84,73 +85,73 @@ public class RedstoneBundleGUIScreen extends AbstractContainerScreen<RedstoneBun
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 24, 135, 20, Component.literal("Piston"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 24, 135, 20, new TextComponent("Piston"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(0, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 51, 135, 20, Component.literal("Piston extension"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 51, 135, 20, new TextComponent("Piston extension"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(1, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 78, 135, 20, Component.literal("Observer "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 78, 135, 20, new TextComponent("Observer "), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(2, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 105, 135, 20, Component.literal("Redstone Block"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 105, 135, 20, new TextComponent("Redstone Block"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(3, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 132, 77, 20, Component.literal("Comparator"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 132, 77, 20, new TextComponent("Comparator"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(4, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 159, 93, 20, Component.literal("Redstone Lamp"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 159, 93, 20, new TextComponent("Redstone Lamp"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(5, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 104, this.topPos + 132, 72, 20, Component.literal("Repeater "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 104, this.topPos + 132, 72, 20, new TextComponent("Repeater "), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(6, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 113, this.topPos + 159, 51, 20, Component.literal("Lever"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 113, this.topPos + 159, 51, 20, new TextComponent("Lever"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(7, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 159, 98, 20, Component.literal("Redstone Torch"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 159, 98, 20, new TextComponent("Redstone Torch"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(8, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 185, this.topPos + 132, 56, 20, Component.literal("Hopper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 185, this.topPos + 132, 56, 20, new TextComponent("Hopper"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(9, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 158, this.topPos + 105, 61, 20, Component.literal("Dropper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 158, this.topPos + 105, 61, 20, new TextComponent("Dropper"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(10, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 158, this.topPos + 78, 72, 20, Component.literal("Dispenser"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 158, this.topPos + 78, 72, 20, new TextComponent("Dispenser"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(11, x, y, z));
 				RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
