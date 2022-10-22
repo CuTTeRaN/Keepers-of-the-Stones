@@ -16,7 +16,6 @@ import power.keepeersofthestones.potion.SpeedMasterMobEffect;
 import power.keepeersofthestones.potion.SpaceMasterMobEffect;
 import power.keepeersofthestones.potion.SoundMasterMobEffect;
 import power.keepeersofthestones.potion.SmokeMasterMobEffect;
-import power.keepeersofthestones.potion.SilverDustMasterMobEffect;
 import power.keepeersofthestones.potion.ShadowMasterMobEffect;
 import power.keepeersofthestones.potion.SandMasterMobEffect;
 import power.keepeersofthestones.potion.RechargeWaterStoneMobEffect;
@@ -31,7 +30,6 @@ import power.keepeersofthestones.potion.RechargeSpeedStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSoundStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSmokeStoneMobEffect;
-import power.keepeersofthestones.potion.RechargeSilverDustStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeShadowStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSandStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeRainStoneMobEffect;
@@ -61,7 +59,6 @@ import power.keepeersofthestones.potion.RechargeEarthStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeDestructionStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeCrystalStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeCreationStoneMobEffect;
-import power.keepeersofthestones.potion.RechargeBoilingStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeBlueFlameStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeBloodStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeAnimalsStoneMobEffect;
@@ -100,7 +97,6 @@ import power.keepeersofthestones.potion.EarthMasterMobEffect;
 import power.keepeersofthestones.potion.DestructionMasterMobEffect;
 import power.keepeersofthestones.potion.CrystalMasterMobEffect;
 import power.keepeersofthestones.potion.CreationMasterMobEffect;
-import power.keepeersofthestones.potion.BoilingMasterMobEffect;
 import power.keepeersofthestones.potion.BlueFlameMasterMobEffect;
 import power.keepeersofthestones.potion.BloodMasterMobEffect;
 import power.keepeersofthestones.potion.AnimalsMasterMobEffect;
@@ -264,11 +260,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> RECHARGE_MIND_STONE = REGISTRY.register("recharge_mind_stone",
 			() -> new RechargeMindStoneMobEffect());
 	public static final RegistryObject<MobEffect> MIND_MASTER = REGISTRY.register("mind_master", () -> new MindMasterMobEffect());
-	public static final RegistryObject<MobEffect> BOILING_MASTER = REGISTRY.register("boiling_master", () -> new BoilingMasterMobEffect());
-	public static final RegistryObject<MobEffect> RECHARGE_BOILING_STONE = REGISTRY.register("recharge_boiling_stone",
-			() -> new RechargeBoilingStoneMobEffect());
-	public static final RegistryObject<MobEffect> SILVER_DUST_MASTER = REGISTRY.register("silver_dust_master", () -> new SilverDustMasterMobEffect());
-	public static final RegistryObject<MobEffect> RECHARGE_SILVER_DUST_STONE = REGISTRY.register("recharge_silver_dust_stone",
-			() -> new RechargeSilverDustStoneMobEffect());
 	public static final RegistryObject<MobEffect> FLYING = REGISTRY.register("flying", () -> new FlyingMobEffect());
 }

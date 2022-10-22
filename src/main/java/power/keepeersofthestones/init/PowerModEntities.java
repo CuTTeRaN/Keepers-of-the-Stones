@@ -20,7 +20,6 @@ import power.keepeersofthestones.entity.SunExplodeEntity;
 import power.keepeersofthestones.entity.SporesEntity;
 import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.SmokeScreenEntity;
-import power.keepeersofthestones.entity.SilverSphereEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
@@ -59,7 +58,6 @@ import power.keepeersofthestones.entity.DiscoBallEntity;
 import power.keepeersofthestones.entity.DestructionSphereEntity;
 import power.keepeersofthestones.entity.ClusterSharpEntity;
 import power.keepeersofthestones.entity.BoomerangEntity;
-import power.keepeersofthestones.entity.BoilingWaterEntity;
 import power.keepeersofthestones.entity.BlueFireballEntity;
 import power.keepeersofthestones.entity.BlackHoleEntity;
 import power.keepeersofthestones.entity.BlackHeartEntity;
@@ -282,12 +280,6 @@ public class PowerModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GoldenSphereEntity>> GOLDEN_SPHERE = register("projectile_golden_sphere",
 			EntityType.Builder.<GoldenSphereEntity>of(GoldenSphereEntity::new, MobCategory.MISC).setCustomClientFactory(GoldenSphereEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<BoilingWaterEntity>> BOILING_WATER = register("projectile_boiling_water",
-			EntityType.Builder.<BoilingWaterEntity>of(BoilingWaterEntity::new, MobCategory.MISC).setCustomClientFactory(BoilingWaterEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<SilverSphereEntity>> SILVER_SPHERE = register("projectile_silver_sphere",
-			EntityType.Builder.<SilverSphereEntity>of(SilverSphereEntity::new, MobCategory.MISC).setCustomClientFactory(SilverSphereEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

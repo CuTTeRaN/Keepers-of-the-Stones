@@ -9,13 +9,13 @@
     "tintType": "No tint",
     "canMultiply": false,
     "flowRate": 1,
-    "levelDecrease": 8,
+    "levelDecrease": 7,
     "slopeFindDistance": 16,
     "spawnParticles": false,
     "dripParticle": {
       "value": "EXPLOSION_NORMAL"
     },
-    "flowStrength": 0.1,
+    "flowStrength": -5.0,
     "luminosity": 0,
     "density": 100000,
     "viscosity": 100000,

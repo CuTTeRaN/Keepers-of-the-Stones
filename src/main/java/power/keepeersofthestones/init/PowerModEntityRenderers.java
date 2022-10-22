@@ -89,7 +89,5 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.MENTAL_ATTACK.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MIND_ZOMBIE.get(), MindZombieRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GOLDEN_SPHERE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.BOILING_WATER.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.SILVER_SPHERE.get(), ThrownItemRenderer::new);
 	}
 }

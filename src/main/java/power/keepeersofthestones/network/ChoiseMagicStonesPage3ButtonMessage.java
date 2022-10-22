@@ -5,7 +5,6 @@ import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
 import power.keepeersofthestones.procedures.SpiritGetProcedure;
 import power.keepeersofthestones.procedures.SmokeGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPage2Procedure;
-import power.keepeersofthestones.procedures.OpenSecretStonesProcedure;
 import power.keepeersofthestones.procedures.MindGetProcedure;
 import power.keepeersofthestones.procedures.GoldenDustGetProcedure;
 import power.keepeersofthestones.procedures.FormGetProcedure;
@@ -101,10 +100,6 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 		if (buttonID == 8) {
 
 			PreviousPage2Procedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 9) {
-
-			OpenSecretStonesProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

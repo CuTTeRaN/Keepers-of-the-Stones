@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.SilverShieldPriNazhatiiPravoiKnopkoiMyshiProcedure;
+import power.keepeersofthestones.procedures.PuddleUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -12,8 +12,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-public class SilverShieldItem extends Item {
-	public SilverShieldItem() {
+public class PuddleItem extends Item {
+	public PuddleItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
@@ -30,7 +30,7 @@ public class SilverShieldItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SilverShieldPriNazhatiiPravoiKnopkoiMyshiProcedure.execute(world, x, y, z, entity, itemstack);
+		PuddleUseProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
 	}
 }

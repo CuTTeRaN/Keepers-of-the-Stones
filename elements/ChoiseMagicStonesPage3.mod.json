@@ -228,20 +228,6 @@
           "x": 33,
           "y": 134
         }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Secret Stones",
-          "onClick": {
-            "name": "OpenSecretStones"
-          },
-          "width": 93,
-          "height": 20,
-          "name": "Secret Stones",
-          "x": 312,
-          "y": 188
-        }
       }
     ],
     "gridSettings": {

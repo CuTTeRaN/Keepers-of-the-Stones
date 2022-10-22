@@ -40,6 +40,7 @@
         "value": "VANISHING_CURSE"
       }
     ],
+    "excludeEnchantments": false,
     "compatibleItems": [
       {
         "value": "CUSTOM:EnergiumSword"
@@ -57,6 +58,7 @@
         "value": "CUSTOM:EnergiumHoe"
       }
     ],
+    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true,

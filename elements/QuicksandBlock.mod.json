@@ -15,7 +15,7 @@
     "dripParticle": {
       "value": "NOTE"
     },
-    "flowStrength": 0.0,
+    "flowStrength": -10.0,
     "luminosity": 0,
     "density": 100000,
     "viscosity": 100000,

@@ -35,7 +35,7 @@ public class RemovalProhibitedItemsProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		class RemovalProhibitedItemsWait371 {
+		class RemovalProhibitedItemsWait364 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
@@ -43,20 +43,20 @@ public class RemovalProhibitedItemsProcedure {
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				this.world = world;
-				MinecraftForge.EVENT_BUS.register(RemovalProhibitedItemsWait371.this);
+				MinecraftForge.EVENT_BUS.register(RemovalProhibitedItemsWait364.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					RemovalProhibitedItemsWait371.this.ticks += 1;
-					if (RemovalProhibitedItemsWait371.this.ticks >= RemovalProhibitedItemsWait371.this.waitTicks)
+					RemovalProhibitedItemsWait364.this.ticks += 1;
+					if (RemovalProhibitedItemsWait364.this.ticks >= RemovalProhibitedItemsWait364.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				MinecraftForge.EVENT_BUS.unregister(RemovalProhibitedItemsWait371.this);
+				MinecraftForge.EVENT_BUS.unregister(RemovalProhibitedItemsWait364.this);
 				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).active) {
 					if (entity instanceof Player _player) {
@@ -1860,42 +1860,7 @@ public class RemovalProhibitedItemsProcedure {
 								_player.inventoryMenu.getCraftSlots());
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.GOLDEN_DUST_BOOTS.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_KATANA.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_CRATER.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_WATER.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_HELMET.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_CHESTPLATE.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_LEGGINGS.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.BOILING_BOOTS.get());
+						ItemStack _stktoremove = new ItemStack(PowerModItems.PUDDLE.get());
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
@@ -1916,6 +1881,6 @@ public class RemovalProhibitedItemsProcedure {
 				}
 			}
 		}
-		new RemovalProhibitedItemsWait371().start(world, 2);
+		new RemovalProhibitedItemsWait364().start(world, 2);
 	}
 }

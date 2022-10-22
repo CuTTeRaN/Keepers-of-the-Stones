@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "silver_dust",
+    "texture": "puddle",
     "customModelName": "Normal",
-    "name": "Pinch Of Silver Dust",
+    "name": "Puddle",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "No creative tab entry"
@@ -30,7 +30,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "PinchOfSilverDustPriNazhatiiPravoiKnopkoiMyshi"
+      "name": "PuddleUse"
     },
     "isFood": false,
     "nutritionalValue": 4,
