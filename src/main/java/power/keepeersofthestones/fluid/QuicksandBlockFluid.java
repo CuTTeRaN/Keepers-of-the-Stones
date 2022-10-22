@@ -35,7 +35,7 @@ public abstract class QuicksandBlockFluid extends ForgeFlowingFluid {
 
 	@Override
 	public Vec3 getFlow(BlockGetter world, BlockPos pos, FluidState fluidstate) {
-		return super.getFlow(world, pos, fluidstate).scale(0);
+		return super.getFlow(world, pos, fluidstate).scale(-10);
 	}
 
 	public static class Source extends QuicksandBlockFluid {
