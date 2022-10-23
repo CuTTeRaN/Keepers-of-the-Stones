@@ -28,56 +28,6 @@ public class PuddleUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class PuddleUseWait11 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(PuddleUseWait11.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						PuddleUseWait11.this.ticks += 1;
-						if (PuddleUseWait11.this.ticks >= PuddleUseWait11.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(PuddleUseWait11.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:stone");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:grass_block");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:dirt");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~ ~-2 ~ ~ ~2 minecraft:water[] replace minecraft:sand");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:water[] replace minecraft:cobblestone");
-				}
-			}
-			new PuddleUseWait11().start(world, 3);
 			class PuddleUseWait13 {
 				private int ticks = 0;
 				private float waitTicks;
@@ -104,10 +54,60 @@ public class PuddleUseProcedure {
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:cobblestone replace minecraft:water[]");
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:stone");
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+										_level.getServer(), null).withSuppressedOutput(),
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:grass_block");
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+										_level.getServer(), null).withSuppressedOutput(),
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:dirt");
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+										_level.getServer(), null).withSuppressedOutput(),
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:sand");
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+										_level.getServer(), null).withSuppressedOutput(),
+								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:cobblestone");
+					class PuddleUseWait12 {
+						private int ticks = 0;
+						private float waitTicks;
+						private LevelAccessor world;
+
+						public void start(LevelAccessor world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							this.world = world;
+							MinecraftForge.EVENT_BUS.register(PuddleUseWait12.this);
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								PuddleUseWait12.this.ticks += 1;
+								if (PuddleUseWait12.this.ticks >= PuddleUseWait12.this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							MinecraftForge.EVENT_BUS.unregister(PuddleUseWait12.this);
+							if (world instanceof ServerLevel _level)
+								_level.getServer().getCommands().performCommand(
+										new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+												_level.getServer(), null).withSuppressedOutput(),
+										"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:grass_block replace minecraft:water[]");
+						}
+					}
+					new PuddleUseWait12().start(world, 400);
 				}
 			}
-			new PuddleUseWait13().start(world, 400);
+			new PuddleUseWait13().start(world, 3);
 		}
 	}
 }
