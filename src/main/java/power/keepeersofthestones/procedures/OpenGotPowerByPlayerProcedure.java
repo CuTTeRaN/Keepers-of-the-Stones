@@ -26,7 +26,10 @@ public class OpenGotPowerByPlayerProcedure {
 			return;
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
 			if (!(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-				(itemstack).shrink(1);
+				if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
+					(itemstack).shrink(1);
+				}
 			}
 			{
 				if (entity instanceof ServerPlayer _ent) {

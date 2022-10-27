@@ -7,10 +7,10 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.7.1",
-    "1.18.2-recommended": "2.7.1",
-    "1.19.2-latest": "2.7.5",
-    "1.19.2-recommended": "2.7.5"
+    "1.18.2-latest": "2.8.0",
+    "1.18.2-recommended": "2.8.0",
+    "1.19.2-latest": "2.8.0",
+    "1.19.2-recommended": "2.8.0"
   },
   "1.16.5": {
    "1.1.18": "
@@ -715,6 +715,21 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Updated some textures
 - [Bugfix] Fixed the use of invisibility and dispersion with golden dust and amber powers
 - [Bugfix] Fixed the generation of golden dust from the master who was given power
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.8.0": "
+- Added new structures to the Structure Builder
+- Add new blocks related to mechanisms to the redstone bag
+- Now rain master can create puddles of water
+- Lightning Master can fly on lightning bolts
+- Now a Pinch of Gold Dust can be used by ordinary players
+- Golden dust can dropped after death
+- Now the tornado disappears after 20 seconds, even if it was tamed
+- Now if the player uses the moon element battery, he will not be able to create moonstones
+- Now the solar blast will not be able to blow up blocks if the player uses the sun battery
+- Updated some textures
+- [Bugfix] Fixed the removal of mind stone recharge when the player went to bed
+- [Bugfix] Fixed reduction of the stack of rocket items when using
+- [Bugfix] Rockets as an item now comply with the rules of the creative inventory
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
  },
   "1.19.2": {
@@ -732,6 +747,21 @@ Known issues: When using some spells together, conflicts may form, which will ca
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
 "2.7.5": "
 - [Bugfix] Fixed the texture of the vacuum trap
-- [Bugfix] Fixed conflicts when using multiple spells with ticksdownload the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
+- [Bugfix] Fixed conflicts when using multiple spells with ticksdownload the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.8.0": "
+- Added new structures to the Structure Builder
+- Add new blocks related to mechanisms to the redstone bag
+- Now rain master can create puddles of water
+- Lightning Master can fly on lightning bolts
+- Now a Pinch of Gold Dust can be used by ordinary players
+- Golden dust can dropped after death
+- Now the tornado disappears after 20 seconds, even if it was tamed
+- Now if the player uses the moon element battery, he will not be able to create moonstones
+- Now the solar blast will not be able to blow up blocks if the player uses the sun battery
+- Updated some textures
+- [Bugfix] Fixed the removal of mind stone recharge when the player went to bed
+- [Bugfix] Fixed reduction of the stack of rocket items when using
+- [Bugfix] Rockets as an item now comply with the rules of the creative inventory
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
