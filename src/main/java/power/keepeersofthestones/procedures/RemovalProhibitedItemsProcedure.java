@@ -35,27 +35,28 @@ public class RemovalProhibitedItemsProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		new Object() {
+		class RemovalProhibitedItemsWait364 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
 
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
+				MinecraftForge.EVENT_BUS.register(RemovalProhibitedItemsWait364.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
+					RemovalProhibitedItemsWait364.this.ticks += 1;
+					if (RemovalProhibitedItemsWait364.this.ticks >= RemovalProhibitedItemsWait364.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
+				MinecraftForge.EVENT_BUS.unregister(RemovalProhibitedItemsWait364.this);
 				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).active) {
 					if (entity instanceof Player _player) {
@@ -1829,11 +1830,6 @@ public class RemovalProhibitedItemsProcedure {
 								_player.inventoryMenu.getCraftSlots());
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.PINCH_OF_GOLDEN_DUST.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PowerModItems.GOLDEN_STAFF.get());
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
@@ -1864,7 +1860,7 @@ public class RemovalProhibitedItemsProcedure {
 								_player.inventoryMenu.getCraftSlots());
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.GOLDEN_DUST_BOOTS.get());
+						ItemStack _stktoremove = new ItemStack(PowerModItems.PUDDLE.get());
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 								_player.inventoryMenu.getCraftSlots());
 					}
@@ -1883,8 +1879,8 @@ public class RemovalProhibitedItemsProcedure {
 						}
 					}
 				}
-				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 2);
+		}
+		new RemovalProhibitedItemsWait364().start(world, 2);
 	}
 }

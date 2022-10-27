@@ -5260,6 +5260,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5475,6 +5479,10 @@
       "registry_name": "set_block_moon_stone",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -6260,10 +6268,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -8268,15 +8272,6 @@
       "path": "~/Stones/Earth"
     },
     {
-      "name": "FireFlying",
-      "type": "potioneffect",
-      "sortid": 543,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fire_flying",
-      "path": "~/Stones/Fire"
-    },
-    {
       "name": "FireFlyingTick",
       "type": "procedure",
       "sortid": 544,
@@ -8321,6 +8316,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -8454,69 +8465,6 @@
         ]
       },
       "path": "~/Stones/Sound"
-    },
-    {
-      "name": "RainFly",
-      "type": "potioneffect",
-      "sortid": 551,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rain_fly",
-      "path": "~/Stones/Rain"
-    },
-    {
-      "name": "RainFlyTick",
-      "type": "procedure",
-      "sortid": 552,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rain_fly_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Stones/Rain"
-    },
-    {
-      "name": "RainEnd",
-      "type": "procedure",
-      "sortid": 553,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rain_end",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Stones/Rain"
     },
     {
       "name": "GetSugarCane",
@@ -18618,6 +18566,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -18791,7 +18743,7 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -19378,6 +19330,14 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -19875,74 +19835,12 @@
       "path": "~/Items/Elemental Book"
     },
     {
-      "name": "StarOfPolaris",
-      "type": "item",
-      "sortid": 1167,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_of_polaris",
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "EyeFireSalamander",
-      "type": "item",
-      "sortid": 1168,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eye_fire_salamander",
-      "path": "~/Items/Fire Salamander"
-    },
-    {
-      "name": "PearlAquatica",
-      "type": "item",
-      "sortid": 1169,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pearl_aquatica",
-      "path": "~/Items/Pearl Of Aquatica"
-    },
-    {
-      "name": "MagicalMeteorite",
-      "type": "item",
-      "sortid": 1170,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magical_meteorite",
-      "path": "~/Items/Magical Meteorite"
-    },
-    {
-      "name": "PowerOfPolaris",
-      "type": "potioneffect",
-      "sortid": 1171,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_of_polaris",
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "StarOfPolarisUse",
+      "name": "CM1",
       "type": "procedure",
-      "sortid": 1171,
+      "sortid": 1166,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "star_of_polaris_use",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "PolarisEffectStart",
-      "type": "procedure",
-      "sortid": 1172,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "polaris_effect_start",
+      "registry_name": "cm_1",
       "metadata": {
         "dependencies": [
           {
@@ -19967,33 +19865,298 @@
           }
         ]
       },
-      "path": "~/Items/Polaris"
+      "path": "~/Stones/GoldenDust"
     },
     {
-      "name": "PolarisSword",
-      "type": "tool",
-      "sortid": 1173,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "polaris_sword",
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "PolarisShield",
-      "type": "item",
-      "sortid": 1175,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "polaris_shield",
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "PolarisShieldUse",
+      "name": "MaiaPyramidBuild",
       "type": "procedure",
-      "sortid": 1176,
+      "sortid": 1167,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "polaris_shield_use",
+      "registry_name": "maia_pyramid_build",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stones/Creation/Structures"
+    },
+    {
+      "name": "MedievalTown",
+      "type": "procedure",
+      "sortid": 1168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medieval_town",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stones/Creation/Structures"
+    },
+    {
+      "name": "OvergrownShurch",
+      "type": "procedure",
+      "sortid": 1169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overgrown_shurch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stones/Creation/Structures"
+    },
+    {
+      "name": "Flying",
+      "type": "potioneffect",
+      "sortid": 1202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying",
+      "path": "~/Stones/Fire"
+    },
+    {
+      "name": "LightningParticle",
+      "type": "particle",
+      "sortid": 1203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_particle",
+      "path": "~/Particles"
+    },
+    {
+      "name": "GetComparator",
+      "type": "procedure",
+      "sortid": 1204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_comparator",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetRepeater",
+      "type": "procedure",
+      "sortid": 1206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_repeater",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetRedstoneLamp",
+      "type": "procedure",
+      "sortid": 1207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_redstone_lamp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetLever",
+      "type": "procedure",
+      "sortid": 1208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_lever",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetRedstoneTorch",
+      "type": "procedure",
+      "sortid": 1209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_redstone_torch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetHopper",
+      "type": "procedure",
+      "sortid": 1210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_hopper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetDropper",
+      "type": "procedure",
+      "sortid": 1211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_dropper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "GetDispenser",
+      "type": "procedure",
+      "sortid": 1212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_dispenser",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stones/Technology"
+    },
+    {
+      "name": "TornadoGone",
+      "type": "procedure",
+      "sortid": 1213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_gone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stones/Tornado"
+    },
+    {
+      "name": "Puddle",
+      "type": "item",
+      "sortid": 1214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puddle",
+      "path": "~/Stones/Rain"
+    },
+    {
+      "name": "PuddleUse",
+      "type": "procedure",
+      "sortid": 1215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puddle_use",
       "metadata": {
         "dependencies": [
           {
@@ -20022,58 +20185,7 @@
           }
         ]
       },
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "PolarisEffectEnd",
-      "type": "procedure",
-      "sortid": 1177,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "polaris_effect_end",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Polaris"
-    },
-    {
-      "name": "PolarFrost",
-      "type": "achievement",
-      "sortid": 1178,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "polar_frost",
-      "path": "~/Achievements"
-    },
-    {
-      "name": "AmethystWarrior",
-      "type": "livingentity",
-      "sortid": 1179,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethyst_warrior",
-      "path": "~/Dark Stones/Horror"
+      "path": "~/Stones/Rain"
     }
   ],
   "variable_elements": [
@@ -20888,15 +21000,9 @@
       "value": "false"
     },
     {
-      "name": "polaris",
+      "name": "cursed_amethyst",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "active_pw",
-      "type": "logic",
-      "scope": "player_lifetime",
       "value": "false"
     }
   ],
@@ -21079,8 +21185,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -21094,6 +21200,7 @@
       "item.power.snow_golem_creator": "Создание Снежного голема",
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Бумеранг",
+      "item.power.puddle": "Puddle",
       "item.power.lava_hammer": "Лавовый Молот",
       "item.power.form_chestplate": "Form Chestplate",
       "advancements.mighty_master.title": "Могучий Мастер",
@@ -21109,7 +21216,6 @@
       "power.cultivation.potato.text": "Картофель",
       "item.power.amber_streaks": "Янтарные Прожилки",
       "effect.power.recharge_vacuum_stone": "Перезарядка",
-      "item.power.magical_meteorite": "Волшебный Метеорит",
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.dispersion": "Дисперсия",
       "item.power.jade_sword": "Нефритовый Меч",
@@ -21268,7 +21374,6 @@
       "item.power.greenery_boots": "Лиственные ботинки",
       "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
-      "entity.power.amethyst_warrior": "Amethyst Warrior",
       "power.cultivation.jungle_tree.text": "Тропич. Дер.",
       "item.power.music_chestplate": "Music Chestplate",
       "key.power.detransform_key": "Клавиша детрансформации",
@@ -21291,7 +21396,6 @@
       "item.power.light_leggings": "Штаны света",
       "item.power.empty_battery": "Батарея",
       "item.power.speed_leggings": "Speed Leggings",
-      "effect.power.power_of_polaris": "Сила Поляриса",
       "item.power.elemental_coin": "Элементальная монета",
       "item.power.magnet_stone": "Камень Магнита",
       "item.power.space_helmet": "Космический шлем",
@@ -21408,7 +21512,6 @@
       "entity.power.raptor": "Раптор",
       "item.power.air_stone": "Камень Воздуха",
       "item.power.amber_helmet": "Amber Helmet",
-      "item.power.polaris_shield": "Щит Поляриса",
       "item.power.sound_stone": "Камень Звука",
       "item.power.electromagnetic_pulse": "Электромагнитный Пульс",
       "item.power.metal_invulnerability": "Неуязвимость Металла",
@@ -21419,7 +21522,6 @@
       "item.power.energy_sphere": "Энергетический Шар",
       "item.power.vacuum_web": "Вакуумная Сеть",
       "itemGroup.tabstones": "Камни",
-      "item.power.eye_fire_salamander": "Око Огненной Саламандры",
       "item.power.poison_chestplate": "Poison Chestplate",
       "item.power.energy_helmet": "Энергетический Шлем",
       "item.power.energy_shield": "Энергощит",
@@ -21429,7 +21531,6 @@
       "item.power.rainfall": "Ливень",
       "item.power.magnet_helmet": "Magnet Helmet",
       "effect.power.smoke_master": "Мастер Дыма",
-      "item.power.star_of_polaris": "Звезда Поляриса",
       "item.power.musket": "Мушкет",
       "item.power.greenery_chestplate": "Травяной нагрудник",
       "item.power.teleportation_leggings": "Штаны телепортации",
@@ -21530,18 +21631,17 @@
       "power.spawn_animals.cow.text": "Корова",
       "item.power.crystal_helmet": "Кристаллическая Каска",
       "item.power.wind_helmet": "Воздушная Шапка",
+      "effect.power.flying": "Fire Flying",
       "itemGroup.tabenergium": "Энерджиум",
       "effect.power.recharge_greenery_stone": "Перезарядка",
       "item.power.crystal_shield": "Кристаллический Щит",
       "item.power.creation_leggings": "Штаны созидания",
       "item.power.magnetic_fishing_rod": "Магнитная Удочка",
-      "advancements.polar_frost.descr": "Добудьте на Энцеладе Звезду Поляриса",
       "item.power.shadow_battery": "Батарея",
       "item.power.metal_boots": "Металлические ботинки",
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень Пустоты",
       "item.power.raw_energium": "Рудный энерджиум",
-      "item.power.amethyst_warrior_spawn_egg": "Amethyst Warrior Spawn Egg",
       "effect.power.destruction_master": "Мастер Разрушения",
       "item.power.poison_stone": "Камень Яда",
       "biome.power.jurassic_swamp": "Юрское Болото",
@@ -21571,7 +21671,6 @@
       "item.power.creation_helmet": "Шлем созидания",
       "item.power.time_stop": "Остановка Времени",
       "block.power.crystal_shield_block": "Блок кристаллического щита",
-      "effect.power.fire_flying": "Огненный Полёт",
       "effect.power.recharge_tornado_stone": "Перезарядка",
       "item.power.animals_battery": "Батарея",
       "item.power.energium_pickaxe": "Энерджиумная кирка",
@@ -21614,7 +21713,6 @@
       "subtitles.raptor.dead": "",
       "item.power.shadow_stone": "Камень Тени",
       "block.power.battery_charger": "Зарядник для батарей",
-      "effect.power.rain_fly": "Дождевой Полёт",
       "item.power.smoke_boots": "Smoke Boots",
       "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Звуковой кинжал",
@@ -21632,7 +21730,6 @@
       "effect.power.recharge_sound_stone": "Перезарядка",
       "item.power.sai": "Саи",
       "entity.power.shadow": "Тень",
-      "advancements.polar_frost.title": "Полярный мороз",
       "item.power.lightning_stone": "Камень Молнии",
       "item.power.blue_flame_stone": "Камень Синего Пламени",
       "item.power.mushrooms_stone": "Камень Грибов",
@@ -21755,12 +21852,10 @@
       "biome.power.mars_land": "Марсианская Земля",
       "effect.power.light_master": "Мастер Света",
       "item.power.aether_boots": "Aether Boots",
-      "item.power.pearl_aquatica": "Жемчужина Акватики",
       "item.power.air_flow": "Поток Воздуха",
       "effect.power.metal_master": "Мастер Металла",
       "effect.power.recharge_metal_stone": "Перезарядка",
       "item.power.gravity_boots": "Gravity Boots",
-      "item.power.polaris_sword": "Меч Поляриса",
       "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Янтарный Щит",
       "itemGroup.tabartifacts": "Артефакты",
@@ -21788,8 +21883,8 @@
       "item.power.explode_leggings": "Explode Leggings",
       "item.power.create_shadow": "Create Shadow",
       "effect.power.recharge_ice_stone": "Recharge",
-      "item.power.disco_ball": "Disco Ball",
       "effect.power.recharge_golden_dust_stone": "Recharge",
+      "item.power.disco_ball": "Disco Ball",
       "effect.power.merge_balance": "Merge Balance",
       "item.power.spike": "Spike",
       "item.power.explosive_flow": "Explosive Flow",
@@ -21803,8 +21898,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -21818,6 +21913,7 @@
       "item.power.snow_golem_creator": "Snow Golem Creator",
       "item.power.mercury_chestplate": "Mercury Chestplate",
       "item.power.boomerang": "Boomerang",
+      "item.power.puddle": "Puddle",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.form_chestplate": "Form Chestplate",
       "advancements.mighty_master.title": "Mighty Master",
@@ -21833,7 +21929,6 @@
       "power.cultivation.potato.text": "Potato",
       "item.power.amber_streaks": "Amber Streaks",
       "effect.power.recharge_vacuum_stone": "Recharge",
-      "item.power.magical_meteorite": "Magical Meteorite",
       "item.power.amber_leggings": "Amber Leggings",
       "item.power.dispersion": "Dispersion",
       "item.power.jade_sword": "Jade Sword",
@@ -21992,7 +22087,6 @@
       "item.power.greenery_boots": "Greenery Boots",
       "item.power.balance_helmet": "Balance Helmet",
       "subtitles.raptor.hut": "",
-      "entity.power.amethyst_warrior": "Amethyst Warrior",
       "power.cultivation.jungle_tree.text": "Jungle Tree",
       "item.power.music_chestplate": "Music Chestplate",
       "key.power.detransform_key": "Detransform key",
@@ -22015,7 +22109,6 @@
       "item.power.light_leggings": "Light Leggings",
       "item.power.empty_battery": "Battery",
       "item.power.speed_leggings": "Speed Leggings",
-      "effect.power.power_of_polaris": "Power Of Polaris",
       "item.power.elemental_coin": "Elemental Coin",
       "item.power.magnet_stone": "Magnet Stone",
       "item.power.space_helmet": "Space Helmet",
@@ -22133,7 +22226,6 @@
       "entity.power.raptor": "Raptor",
       "item.power.air_stone": "Air Stone",
       "item.power.amber_helmet": "Amber Helmet",
-      "item.power.polaris_shield": "Polaris Shield",
       "item.power.sound_stone": "Sound Stone",
       "item.power.electromagnetic_pulse": "Electromagnetic Pulse",
       "item.power.metal_invulnerability": "Invulnerability of Metal",
@@ -22144,7 +22236,6 @@
       "item.power.vacuum_web": "Vacuum Web",
       "item.power.energy_sphere": "Energy Sphere",
       "itemGroup.tabstones": "Stones",
-      "item.power.eye_fire_salamander": "Eye Of Fire Salamander",
       "item.power.poison_chestplate": "Poison Chestplate",
       "item.power.energy_helmet": "Energy Helmet",
       "item.power.energy_shield": "Energy Shield",
@@ -22154,7 +22245,6 @@
       "item.power.rainfall": "Rainfall",
       "item.power.magnet_helmet": "Magnet Helmet",
       "effect.power.smoke_master": "Master of Smoke",
-      "item.power.star_of_polaris": "Star Of Polaris",
       "item.power.musket": "Musket",
       "item.power.greenery_chestplate": "Greenery Chestplate",
       "item.power.teleportation_leggings": "Teleportation Leggings",
@@ -22255,18 +22345,17 @@
       "power.spawn_animals.cow.text": "Cow",
       "item.power.crystal_helmet": "Crystal Helmet",
       "item.power.wind_helmet": "Air Helmet",
+      "effect.power.flying": "Fire Flying",
       "itemGroup.tabenergium": "Energium",
       "item.power.crystal_shield": "Crystal Shield",
       "effect.power.recharge_greenery_stone": "Recharge",
       "item.power.creation_leggings": "Creation Leggings",
       "item.power.magnetic_fishing_rod": "Magnetic Fishing Rod",
-      "advancements.polar_frost.descr": "Get the Polaris Star on Enceladus",
       "item.power.shadow_battery": "Battery",
       "item.power.metal_boots": "Metal Boots",
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.raw_energium": "Raw Energium",
-      "item.power.amethyst_warrior_spawn_egg": "Amethyst Warrior Spawn Egg",
       "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
       "biome.power.jurassic_swamp": "Jurassic Swamp",
@@ -22296,7 +22385,6 @@
       "item.power.creation_helmet": "Creation Helmet",
       "item.power.time_stop": "Time Stop",
       "block.power.crystal_shield_block": "Crystal Shield Block",
-      "effect.power.fire_flying": "Fire Flying",
       "effect.power.recharge_tornado_stone": "Recharge",
       "item.power.animals_battery": "Battery",
       "item.power.energium_pickaxe": "Energium Pickaxe",
@@ -22340,7 +22428,6 @@
       "subtitles.raptor.dead": "",
       "item.power.shadow_stone": "Shadow Stone",
       "block.power.battery_charger": "Battery Charger",
-      "effect.power.rain_fly": "RainFly",
       "item.power.smoke_boots": "Smoke Boots",
       "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Sound Sword",
@@ -22358,7 +22445,6 @@
       "effect.power.recharge_sound_stone": "Recharge",
       "item.power.sai": "Sai",
       "entity.power.shadow": "Shadow",
-      "advancements.polar_frost.title": "Polar frost",
       "item.power.lightning_stone": "Lightning Stone",
       "item.power.blue_flame_stone": "Blue Flame Stone",
       "item.power.mushrooms_stone": "Mushrooms Stone",
@@ -22481,12 +22567,10 @@
       "biome.power.mars_land": "Mars Land",
       "effect.power.light_master": "Master of Light",
       "item.power.aether_boots": "Aether Boots",
-      "item.power.pearl_aquatica": "Pearl Of Aquatica",
       "item.power.air_flow": "Air Flow",
       "effect.power.metal_master": "Master of Metal",
       "effect.power.recharge_metal_stone": "Recharge",
       "item.power.gravity_boots": "Gravity Boots",
-      "item.power.polaris_sword": "Polaris Sword",
       "item.power.mind_helmet": "Mind Helmet",
       "item.power.amber_shield": "Amber Shield",
       "itemGroup.tabartifacts": "Artifacts",
@@ -22521,22 +22605,6 @@
         "name": "Items",
         "children": [
           {
-            "name": "Polaris",
-            "children": []
-          },
-          {
-            "name": "Fire Salamander",
-            "children": []
-          },
-          {
-            "name": "Pearl Of Aquatica",
-            "children": []
-          },
-          {
-            "name": "Wristwatch",
-            "children": []
-          },
-          {
             "name": "Elemental Book",
             "children": []
           },
@@ -22546,10 +22614,6 @@
           },
           {
             "name": "Energium",
-            "children": []
-          },
-          {
-            "name": "Magical Meteorite",
             "children": []
           },
           {
@@ -22565,31 +22629,6 @@
       {
         "name": "Tags",
         "children": []
-      },
-      {
-        "name": "Dark Stones",
-        "children": [
-          {
-            "name": "Horror",
-            "children": []
-          },
-          {
-            "name": "Filth",
-            "children": []
-          },
-          {
-            "name": "Thirst",
-            "children": []
-          },
-          {
-            "name": "Chaos",
-            "children": []
-          },
-          {
-            "name": "Darkness",
-            "children": []
-          }
-        ]
       },
       {
         "name": "Stones",
@@ -22814,6 +22853,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Darkness",
+            "children": []
           }
         ]
       },
@@ -22838,15 +22881,19 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Particles",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.8.0.1",
+    "version": "2.8.0",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
-    "author": "Hexagon Studio",
+    "author": "UMC",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
     "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
@@ -22866,5 +22913,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200340118
+  "mcreatorVersion": 202200343417
 }

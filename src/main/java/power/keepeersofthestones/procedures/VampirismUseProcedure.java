@@ -38,27 +38,28 @@ public class VampirismUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			new Object() {
+			class VampirismUseWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(VampirismUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						VampirismUseWait7.this.ticks += 1;
+						if (VampirismUseWait7.this.ticks >= VampirismUseWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(VampirismUseWait7.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -66,9 +67,9 @@ public class VampirismUseProcedure {
 							capability.syncPlayerVariables(sourceentity);
 						});
 					}
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 400);
+			}
+			new VampirismUseWait7().start(world, 400);
 		}
 	}
 }

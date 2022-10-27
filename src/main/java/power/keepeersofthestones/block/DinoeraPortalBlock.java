@@ -3,6 +3,7 @@ package power.keepeersofthestones.block;
 
 import power.keepeersofthestones.world.teleporter.DinoeraTeleporter;
 import power.keepeersofthestones.world.teleporter.DinoeraPortalShape;
+import power.keepeersofthestones.init.PowerModBlocks;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -27,6 +28,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import java.util.Random;
 import java.util.Optional;
@@ -103,5 +106,10 @@ public class DinoeraPortalBlock extends NetherPortalBlock {
 	private void teleportToDimension(Entity entity, BlockPos pos, ResourceKey<Level> destinationType) {
 		entity.changeDimension(entity.getServer().getLevel(destinationType),
 				new DinoeraTeleporter(entity.getServer().getLevel(destinationType), pos));
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void registerRenderLayer() {
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.DINOERA_PORTAL.get(), renderType -> renderType == RenderType.translucent());
 	}
 }

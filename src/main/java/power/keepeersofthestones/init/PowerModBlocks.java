@@ -64,6 +64,7 @@ public class PowerModBlocks {
 	public static class ClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
+			DinoeraPortalBlock.registerRenderLayer();
 			BatteryChargerBlock.registerRenderLayer();
 			ClusterBlockBlock.registerRenderLayer();
 			VacuumWebBlockBlock.registerRenderLayer();

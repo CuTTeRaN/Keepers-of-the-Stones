@@ -11,30 +11,31 @@ import net.minecraft.core.BlockPos;
 
 public class BlackHoleUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		new Object() {
+		class BlackHoleUseWait1 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
 
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
+				MinecraftForge.EVENT_BUS.register(BlackHoleUseWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
+					BlackHoleUseWait1.this.ticks += 1;
+					if (BlackHoleUseWait1.this.ticks >= BlackHoleUseWait1.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
+				MinecraftForge.EVENT_BUS.unregister(BlackHoleUseWait1.this);
 				world.setBlock(new BlockPos(x, y + 1, z), PowerModBlocks.BLACK_HOLE_BLOCK.get().defaultBlockState(), 3);
-				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 3);
+		}
+		new BlackHoleUseWait1().start(world, 3);
 	}
 }

@@ -73,31 +73,31 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 
 			SpiritGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 1) {
 
 			FormGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 3) {
+		if (buttonID == 2) {
 
 			AetherGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 4) {
+		if (buttonID == 3) {
 
 			MindGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 5) {
+		if (buttonID == 4) {
 
 			GoldenDustGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 6) {
+		if (buttonID == 5) {
 
 			BlueFlameGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 9) {
+		if (buttonID == 7) {
 
 			SmokeGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 10) {
+		if (buttonID == 8) {
 
 			PreviousPage2Procedure.execute(world, x, y, z, entity);
 		}

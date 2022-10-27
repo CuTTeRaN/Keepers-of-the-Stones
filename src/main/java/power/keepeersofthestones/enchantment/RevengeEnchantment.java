@@ -10,6 +10,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.EquipmentSlot;
 
+import java.util.List;
+
 public class RevengeEnchantment extends Enchantment {
 	public RevengeEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, slots);
@@ -22,16 +24,16 @@ public class RevengeEnchantment extends Enchantment {
 
 	@Override
 	protected boolean checkCompatibility(Enchantment ench) {
-		return ench == Enchantments.SHARPNESS || ench == Enchantments.SMITE || ench == Enchantments.BANE_OF_ARTHROPODS
-				|| ench == Enchantments.SWEEPING_EDGE || ench == Enchantments.FIRE_ASPECT || ench == Enchantments.KNOCKBACK
-				|| ench == Enchantments.MOB_LOOTING || ench == Enchantments.MENDING || ench == Enchantments.UNBREAKING
-				|| ench == Enchantments.VANISHING_CURSE;
+		return List
+				.of(Enchantments.SHARPNESS, Enchantments.SMITE, Enchantments.BANE_OF_ARTHROPODS, Enchantments.SWEEPING_EDGE, Enchantments.FIRE_ASPECT,
+						Enchantments.KNOCKBACK, Enchantments.MOB_LOOTING, Enchantments.MENDING, Enchantments.UNBREAKING, Enchantments.VANISHING_CURSE)
+				.contains(ench);
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
 		Item item = stack.getItem();
-		return item == PowerModItems.ENERGIUM_SWORD.get() || item == PowerModItems.ENERGIUM_PICKAXE.get() || item == PowerModItems.ENERGIUM_AXE.get()
-				|| item == PowerModItems.ENERGIUM_SHOVEL.get() || item == PowerModItems.ENERGIUM_HOE.get();
+		return List.of(PowerModItems.ENERGIUM_SWORD.get(), PowerModItems.ENERGIUM_PICKAXE.get(), PowerModItems.ENERGIUM_AXE.get(),
+				PowerModItems.ENERGIUM_SHOVEL.get(), PowerModItems.ENERGIUM_HOE.get()).contains(item);
 	}
 }

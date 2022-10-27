@@ -32,27 +32,28 @@ public class GravityReductionUseProcedure {
 						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 								"attribute @s forge:entity_gravity base set 0.000000001");
 				}
-				new Object() {
+				class GravityReductionUseWait8 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(GravityReductionUseWait8.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							GravityReductionUseWait8.this.ticks += 1;
+							if (GravityReductionUseWait8.this.ticks >= GravityReductionUseWait8.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(GravityReductionUseWait8.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -60,9 +61,9 @@ public class GravityReductionUseProcedure {
 										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 										"attribute @s forge:entity_gravity base set 0.08");
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 200);
+				}
+				new GravityReductionUseWait8().start(world, 200);
 			}
 			{
 				boolean _setval = true;
@@ -71,27 +72,28 @@ public class GravityReductionUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			new Object() {
+			class GravityReductionUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(GravityReductionUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						GravityReductionUseWait9.this.ticks += 1;
+						if (GravityReductionUseWait9.this.ticks >= GravityReductionUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(GravityReductionUseWait9.this);
 					{
 						boolean _setval = false;
 						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -99,9 +101,9 @@ public class GravityReductionUseProcedure {
 							capability.syncPlayerVariables(sourceentity);
 						});
 					}
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 400);
+			}
+			new GravityReductionUseWait9().start(world, 400);
 		}
 	}
 }

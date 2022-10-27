@@ -28,64 +28,66 @@ public class WoodenShieldUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 600);
-			new Object() {
+			class WoodenShieldUseWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(WoodenShieldUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						WoodenShieldUseWait7.this.ticks += 1;
+						if (WoodenShieldUseWait7.this.ticks >= WoodenShieldUseWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(WoodenShieldUseWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 oak_wood outline");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 3);
-			new Object() {
+			}
+			new WoodenShieldUseWait7().start(world, 3);
+			class WoodenShieldUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(WoodenShieldUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						WoodenShieldUseWait9.this.ticks += 1;
+						if (WoodenShieldUseWait9.this.ticks >= WoodenShieldUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(WoodenShieldUseWait9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 600);
+			}
+			new WoodenShieldUseWait9().start(world, 600);
 		}
 	}
 }

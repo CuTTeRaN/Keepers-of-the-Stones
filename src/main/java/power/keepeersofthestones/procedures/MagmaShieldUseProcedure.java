@@ -28,64 +28,66 @@ public class MagmaShieldUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			new Object() {
+			class MagmaShieldUseWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(MagmaShieldUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						MagmaShieldUseWait7.this.ticks += 1;
+						if (MagmaShieldUseWait7.this.ticks >= MagmaShieldUseWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(MagmaShieldUseWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 magma_block outline");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 3);
-			new Object() {
+			}
+			new MagmaShieldUseWait7().start(world, 3);
+			class MagmaShieldUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(MagmaShieldUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						MagmaShieldUseWait9.this.ticks += 1;
+						if (MagmaShieldUseWait9.this.ticks >= MagmaShieldUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(MagmaShieldUseWait9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 400);
+			}
+			new MagmaShieldUseWait9().start(world, 400);
 		}
 	}
 }

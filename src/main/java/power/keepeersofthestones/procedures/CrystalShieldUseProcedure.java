@@ -28,64 +28,66 @@ public class CrystalShieldUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			new Object() {
+			class CrystalShieldUseWait7 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(CrystalShieldUseWait7.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						CrystalShieldUseWait7.this.ticks += 1;
+						if (CrystalShieldUseWait7.this.ticks >= CrystalShieldUseWait7.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(CrystalShieldUseWait7.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~ ~-2 ~2 ~4 ~2 power:crystal_shield_block outline");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 3);
-			new Object() {
+			}
+			new CrystalShieldUseWait7().start(world, 3);
+			class CrystalShieldUseWait9 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(CrystalShieldUseWait9.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						CrystalShieldUseWait9.this.ticks += 1;
+						if (CrystalShieldUseWait9.this.ticks >= CrystalShieldUseWait9.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(CrystalShieldUseWait9.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 400);
+			}
+			new CrystalShieldUseWait9().start(world, 400);
 		}
 	}
 }

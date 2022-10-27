@@ -111,4 +111,5 @@ public class ClusterBlockBlock extends Block implements SimpleWaterloggedBlock
 	public static void registerRenderLayer() {
 		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.CLUSTER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
 	}
+
 }

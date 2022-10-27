@@ -28,27 +28,28 @@ public class MercuryPitUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			new Object() {
+			class MercuryPitUseWait10 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(MercuryPitUseWait10.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						MercuryPitUseWait10.this.ticks += 1;
+						if (MercuryPitUseWait10.this.ticks >= MercuryPitUseWait10.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(MercuryPitUseWait10.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
@@ -69,38 +70,39 @@ public class MercuryPitUseProcedure {
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:mercury_liquid replace minecraft:sand");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 3);
-			new Object() {
+			}
+			new MercuryPitUseWait10().start(world, 3);
+			class MercuryPitUseWait12 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(MercuryPitUseWait12.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						MercuryPitUseWait12.this.ticks += 1;
+						if (MercuryPitUseWait12.this.ticks >= MercuryPitUseWait12.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(MercuryPitUseWait12.this);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
 								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:dirt replace power:mercury_liquid");
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 400);
+			}
+			new MercuryPitUseWait12().start(world, 400);
 		}
 	}
 }

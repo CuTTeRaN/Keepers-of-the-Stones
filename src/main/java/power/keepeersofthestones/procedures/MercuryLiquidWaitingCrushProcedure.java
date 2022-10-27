@@ -16,34 +16,35 @@ public class MercuryLiquidWaitingCrushProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		new Object() {
+		class MercuryLiquidWaitingCrushWait1 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
 
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
+				MinecraftForge.EVENT_BUS.register(MercuryLiquidWaitingCrushWait1.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
+					MercuryLiquidWaitingCrushWait1.this.ticks += 1;
+					if (MercuryLiquidWaitingCrushWait1.this.ticks >= MercuryLiquidWaitingCrushWait1.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
+				MinecraftForge.EVENT_BUS.unregister(MercuryLiquidWaitingCrushWait1.this);
 				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).mercury) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1, (false), (false)));
 				}
-				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 200);
+		}
+		new MercuryLiquidWaitingCrushWait1().start(world, 200);
 	}
 }

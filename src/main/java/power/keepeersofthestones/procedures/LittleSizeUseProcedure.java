@@ -37,27 +37,28 @@ public class LittleSizeUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				new Object() {
+				class LittleSizeUseWait8 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(LittleSizeUseWait8.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							LittleSizeUseWait8.this.ticks += 1;
+							if (LittleSizeUseWait8.this.ticks >= LittleSizeUseWait8.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(LittleSizeUseWait8.this);
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -71,9 +72,9 @@ public class LittleSizeUseProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 800);
+				}
+				new LittleSizeUseWait8().start(world, 800);
 			}
 		}
 	}

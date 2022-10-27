@@ -25,7 +25,7 @@ public abstract class MercuryLiquidFluid extends ForgeFlowingFluid {
 
 	).explosionResistance(1000000f)
 
-			.tickRate(1).levelDecreasePerBlock(8).slopeFindDistance(16)
+			.tickRate(1).levelDecreasePerBlock(7).slopeFindDistance(16)
 
 			.block(() -> (LiquidBlock) PowerModBlocks.MERCURY_LIQUID.get());
 
@@ -35,7 +35,7 @@ public abstract class MercuryLiquidFluid extends ForgeFlowingFluid {
 
 	@Override
 	public Vec3 getFlow(BlockGetter world, BlockPos pos, FluidState fluidstate) {
-		return super.getFlow(world, pos, fluidstate).scale(0.1);
+		return super.getFlow(world, pos, fluidstate).scale(-5);
 	}
 
 	public static class Source extends MercuryLiquidFluid {

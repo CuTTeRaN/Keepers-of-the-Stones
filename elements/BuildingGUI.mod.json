@@ -78,6 +78,48 @@
           "x": 177,
           "y": 71
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Maia Pyramid",
+          "onClick": {
+            "name": "MaiaPyramidBuild"
+          },
+          "width": 87,
+          "height": 20,
+          "name": "Maia Pyramid",
+          "x": 105,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Medieval Town",
+          "onClick": {
+            "name": "MedievalTown"
+          },
+          "width": 93,
+          "height": 20,
+          "name": "Medieval Town",
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Overgrown Church",
+          "onClick": {
+            "name": "OvergrownShurch"
+          },
+          "width": 108,
+          "height": 20,
+          "name": "Overgrown Church",
+          "x": 105,
+          "y": 125
+        }
       }
     ],
     "gridSettings": {

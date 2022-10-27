@@ -39,48 +39,50 @@ public class FlyOnVenusProcedure {
 						1, 1, false);
 			}
 		}
-		new Object() {
+		class FlyOnVenusWait5 {
 			private int ticks = 0;
 			private float waitTicks;
 			private LevelAccessor world;
 
 			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
+				MinecraftForge.EVENT_BUS.register(FlyOnVenusWait5.this);
 			}
 
 			@SubscribeEvent
 			public void tick(TickEvent.ServerTickEvent event) {
 				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
+					FlyOnVenusWait5.this.ticks += 1;
+					if (FlyOnVenusWait5.this.ticks >= FlyOnVenusWait5.this.waitTicks)
 						run();
 				}
 			}
 
 			private void run() {
-				new Object() {
+				MinecraftForge.EVENT_BUS.unregister(FlyOnVenusWait5.this);
+				class FlyOnVenusWait4 {
 					private int ticks = 0;
 					private float waitTicks;
 					private LevelAccessor world;
 
 					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
+						MinecraftForge.EVENT_BUS.register(FlyOnVenusWait4.this);
 					}
 
 					@SubscribeEvent
 					public void tick(TickEvent.ServerTickEvent event) {
 						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
+							FlyOnVenusWait4.this.ticks += 1;
+							if (FlyOnVenusWait4.this.ticks >= FlyOnVenusWait4.this.waitTicks)
 								run();
 						}
 					}
 
 					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(FlyOnVenusWait4.this);
 						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 							ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("power:venus"));
 							if (_player.level.dimension() == destinationType)
@@ -88,8 +90,7 @@ public class FlyOnVenusProcedure {
 							ServerLevel nextLevel = _player.server.getLevel(destinationType);
 							if (nextLevel != null) {
 								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, nextLevel.getSharedSpawnPos().getX(), nextLevel.getSharedSpawnPos().getY() + 1,
-										nextLevel.getSharedSpawnPos().getZ(), _player.getYRot(), _player.getXRot());
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
@@ -98,11 +99,11 @@ public class FlyOnVenusProcedure {
 						}
 						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
-						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 20);
-				MinecraftForge.EVENT_BUS.unregister(this);
+				}
+				new FlyOnVenusWait4().start(world, 20);
 			}
-		}.start(world, 200);
+		}
+		new FlyOnVenusWait5().start(world, 200);
 	}
 }

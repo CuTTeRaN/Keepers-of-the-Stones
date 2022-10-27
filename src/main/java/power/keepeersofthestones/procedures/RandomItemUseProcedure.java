@@ -28,27 +28,28 @@ public class RandomItemUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
-			new Object() {
+			class RandomItemUseWait56 {
 				private int ticks = 0;
 				private float waitTicks;
 				private LevelAccessor world;
 
 				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
+					MinecraftForge.EVENT_BUS.register(RandomItemUseWait56.this);
 				}
 
 				@SubscribeEvent
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						RandomItemUseWait56.this.ticks += 1;
+						if (RandomItemUseWait56.this.ticks >= RandomItemUseWait56.this.waitTicks)
 							run();
 					}
 				}
 
 				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(RandomItemUseWait56.this);
 					if (Mth.nextInt(new Random(), 1, 25) == 1) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(Items.BREAD);
@@ -200,9 +201,9 @@ public class RandomItemUseProcedure {
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 					}
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 3);
+			}
+			new RandomItemUseWait56().start(world, 3);
 		}
 	}
 }

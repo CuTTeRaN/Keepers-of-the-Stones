@@ -3,6 +3,9 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.procedures.StreetlightBuildProcedure;
+import power.keepeersofthestones.procedures.OvergrownShurchProcedure;
+import power.keepeersofthestones.procedures.MedievalTownProcedure;
+import power.keepeersofthestones.procedures.MaiaPyramidBuildProcedure;
 import power.keepeersofthestones.procedures.LibraryBuildProcedure;
 import power.keepeersofthestones.procedures.ButcherShopBuildProcedure;
 import power.keepeersofthestones.procedures.BlacksmithBuildProcedure;
@@ -80,6 +83,18 @@ public class BuildingGUIButtonMessage {
 		if (buttonID == 3) {
 
 			StreetlightBuildProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			MaiaPyramidBuildProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			MedievalTownProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 6) {
+
+			OvergrownShurchProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
