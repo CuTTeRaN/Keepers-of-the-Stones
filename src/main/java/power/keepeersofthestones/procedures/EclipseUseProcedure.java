@@ -1,10 +1,7 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -30,37 +27,14 @@ public class EclipseUseProcedure {
 						_ent.getServer().getCommands()
 								.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set night");
 				}
-				class EclipseUseWait9 {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						this.world = world;
-						MinecraftForge.EVENT_BUS.register(EclipseUseWait9.this);
+				PowerMod.queueServerWork(400, () -> {
+					{
+						Entity _ent = entity;
+						if (!_ent.level.isClientSide() && _ent.getServer() != null)
+							_ent.getServer().getCommands()
+									.performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set day");
 					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							EclipseUseWait9.this.ticks += 1;
-							if (EclipseUseWait9.this.ticks >= EclipseUseWait9.this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(EclipseUseWait9.this);
-						{
-							Entity _ent = entity;
-							if (!_ent.level.isClientSide() && _ent.getServer() != null)
-								_ent.getServer().getCommands().performPrefixedCommand(
-										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "time set day");
-						}
-					}
-				}
-				new EclipseUseWait9().start(world, 400);
+				});
 			}
 		}
 	}

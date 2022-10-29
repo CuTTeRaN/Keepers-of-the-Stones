@@ -2,10 +2,7 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -60,68 +57,45 @@ public class DispersionUseProcedure {
 							_player.onUpdateAbilities();
 						}
 					}
-					class DispersionUseWait20 {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							this.world = world;
-							MinecraftForge.EVENT_BUS.register(DispersionUseWait20.this);
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								DispersionUseWait20.this.ticks += 1;
-								if (DispersionUseWait20.this.ticks >= DispersionUseWait20.this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(DispersionUseWait20.this);
-							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new PowerModVariables.PlayerVariables())).smoke) {
-								if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-									if (entity instanceof Player _player) {
-										_player.getAbilities().invulnerable = (false);
-										_player.onUpdateAbilities();
-									}
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.head with power:smoke_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.chest with power:smoke_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.legs with power:smoke_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.feet with power:smoke_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+					PowerMod.queueServerWork(200, () -> {
+						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new PowerModVariables.PlayerVariables())).smoke) {
+							if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+								if (entity instanceof Player _player) {
+									_player.getAbilities().invulnerable = (false);
+									_player.onUpdateAbilities();
 								}
 							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.head with power:smoke_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.chest with power:smoke_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.legs with power:smoke_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.feet with power:smoke_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
 						}
-					}
-					new DispersionUseWait20().start(world, 200);
+					});
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 					if (world.isClientSide())
@@ -158,62 +132,39 @@ public class DispersionUseProcedure {
 							_player.onUpdateAbilities();
 						}
 					}
-					class DispersionUseWait37 {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							this.world = world;
-							MinecraftForge.EVENT_BUS.register(DispersionUseWait37.this);
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								DispersionUseWait37.this.ticks += 1;
-								if (DispersionUseWait37.this.ticks >= DispersionUseWait37.this.waitTicks)
-									run();
+					PowerMod.queueServerWork(200, () -> {
+						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.head with power:golden_dust_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.chest with power:golden_dust_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.legs with power:golden_dust_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level.isClientSide() && _ent.getServer() != null)
+									_ent.getServer().getCommands().performPrefixedCommand(
+											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+											"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
-
-						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(DispersionUseWait37.this);
-							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new PowerModVariables.PlayerVariables())).shadow) {
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.head with power:golden_dust_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.chest with power:golden_dust_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.legs with power:golden_dust_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-								{
-									Entity _ent = entity;
-									if (!_ent.level.isClientSide() && _ent.getServer() != null)
-										_ent.getServer().getCommands().performPrefixedCommand(
-												_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-												"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-								}
-							}
-						}
-					}
-					new DispersionUseWait37().start(world, 200);
+					});
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -251,62 +202,39 @@ public class DispersionUseProcedure {
 						_player.onUpdateAbilities();
 					}
 				}
-				class DispersionUseWait54 {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						this.world = world;
-						MinecraftForge.EVENT_BUS.register(DispersionUseWait54.this);
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							DispersionUseWait54.this.ticks += 1;
-							if (DispersionUseWait54.this.ticks >= DispersionUseWait54.this.waitTicks)
-								run();
+				PowerMod.queueServerWork(200, () -> {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new PowerModVariables.PlayerVariables())).shadow) {
+						{
+							Entity _ent = entity;
+							if (!_ent.level.isClientSide() && _ent.getServer() != null)
+								_ent.getServer().getCommands().performPrefixedCommand(
+										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+										"item replace entity @s armor.head with power:amber_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+						}
+						{
+							Entity _ent = entity;
+							if (!_ent.level.isClientSide() && _ent.getServer() != null)
+								_ent.getServer().getCommands().performPrefixedCommand(
+										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+										"item replace entity @s armor.chest with power:amber_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+						}
+						{
+							Entity _ent = entity;
+							if (!_ent.level.isClientSide() && _ent.getServer() != null)
+								_ent.getServer().getCommands().performPrefixedCommand(
+										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+										"item replace entity @s armor.legs with power:amber_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+						}
+						{
+							Entity _ent = entity;
+							if (!_ent.level.isClientSide() && _ent.getServer() != null)
+								_ent.getServer().getCommands().performPrefixedCommand(
+										_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+										"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 						}
 					}
-
-					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(DispersionUseWait54.this);
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new PowerModVariables.PlayerVariables())).shadow) {
-							{
-								Entity _ent = entity;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performPrefixedCommand(
-											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-											"item replace entity @s armor.head with power:amber_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-							}
-							{
-								Entity _ent = entity;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performPrefixedCommand(
-											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-											"item replace entity @s armor.chest with power:amber_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-							}
-							{
-								Entity _ent = entity;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performPrefixedCommand(
-											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-											"item replace entity @s armor.legs with power:amber_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-							}
-							{
-								Entity _ent = entity;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performPrefixedCommand(
-											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-											"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-							}
-						}
-					}
-				}
-				new DispersionUseWait54().start(world, 200);
+				});
 			}
 		}
 	}

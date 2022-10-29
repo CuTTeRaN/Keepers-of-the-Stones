@@ -3,11 +3,9 @@ package power.keepeersofthestones.procedures;
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModMobEffects;
 import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -133,38 +131,15 @@ public class EnergyStaffUseProcedure {
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
-				class EnergyStaffUseWait50 {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						this.world = world;
-						MinecraftForge.EVENT_BUS.register(EnergyStaffUseWait50.this);
+				PowerMod.queueServerWork(800, () -> {
+					{
+						boolean _setval = false;
+						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.recharge_spell_energy = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
 					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							EnergyStaffUseWait50.this.ticks += 1;
-							if (EnergyStaffUseWait50.this.ticks >= EnergyStaffUseWait50.this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						MinecraftForge.EVENT_BUS.unregister(EnergyStaffUseWait50.this);
-						{
-							boolean _setval = false;
-							sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.recharge_spell_energy = _setval;
-								capability.syncPlayerVariables(sourceentity);
-							});
-						}
-					}
-				}
-				new EnergyStaffUseWait50().start(world, 800);
+				});
 			}
 		}
 	}

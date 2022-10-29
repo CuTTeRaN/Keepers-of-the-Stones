@@ -41,9 +41,9 @@ public class FistofEarthItem extends ShovelItem {
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
-		InteractionResult retval = super.useOn(context);
+		super.useOn(context);
 		DestroyRocksProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
 				context.getClickedPos().getZ(), context.getPlayer());
-		return retval;
+		return InteractionResult.SUCCESS;
 	}
 }

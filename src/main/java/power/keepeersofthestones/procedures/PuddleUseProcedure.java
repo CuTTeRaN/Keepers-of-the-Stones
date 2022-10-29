@@ -1,10 +1,7 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -28,86 +25,40 @@ public class PuddleUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class PuddleUseWait13 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(PuddleUseWait13.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						PuddleUseWait13.this.ticks += 1;
-						if (PuddleUseWait13.this.ticks >= PuddleUseWait13.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(PuddleUseWait13.this);
+			PowerMod.queueServerWork(3, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:stone");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:grass_block");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:dirt");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:sand");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:cobblestone");
+				PowerMod.queueServerWork(400, () -> {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:stone");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:grass_block");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:dirt");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:sand");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:water[] replace minecraft:cobblestone");
-					class PuddleUseWait12 {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							this.world = world;
-							MinecraftForge.EVENT_BUS.register(PuddleUseWait12.this);
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								PuddleUseWait12.this.ticks += 1;
-								if (PuddleUseWait12.this.ticks >= PuddleUseWait12.this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(PuddleUseWait12.this);
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(
-										new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-												_level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:grass_block replace minecraft:water[]");
-						}
-					}
-					new PuddleUseWait12().start(world, 400);
-				}
-			}
-			new PuddleUseWait13().start(world, 3);
+								"fill ~-2 ~ ~-2 ~2 ~ ~2 minecraft:grass_block replace minecraft:water[]");
+				});
+			});
 		}
 	}
 }

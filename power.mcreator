@@ -21185,8 +21185,8 @@
       "effect.power.recharge_moon_stone": "Перезарядка",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
-      "item.power.earth_battery": "Батарея",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_helmet": "Повязка Молнии",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -21898,8 +21898,8 @@
       "effect.power.recharge_moon_stone": "Recharge",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
-      "item.power.earth_battery": "Battery",
       "item.power.music_helmet": "Music Helmet",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_helmet": "Lightning Helmet",
       "item.power.blood_boots": "Blood Boots",
       "item.power.crestcent_leggings": "Crestcent Leggings",
@@ -22891,7 +22891,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.8.0",
+    "version": "2.8.1",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "UMC",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
@@ -22913,5 +22913,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200343417
+  "mcreatorVersion": 202200343622
 }

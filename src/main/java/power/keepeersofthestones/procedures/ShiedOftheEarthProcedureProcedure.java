@@ -1,10 +1,7 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -28,97 +25,25 @@ public class ShiedOftheEarthProcedureProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class ShiedOftheEarthProcedureWait7 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(ShiedOftheEarthProcedureWait7.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						ShiedOftheEarthProcedureWait7.this.ticks += 1;
-						if (ShiedOftheEarthProcedureWait7.this.ticks >= ShiedOftheEarthProcedureWait7.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(ShiedOftheEarthProcedureWait7.this);
+			PowerMod.queueServerWork(3, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO,
+							_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~ ~-2 ~2 ~4 ~2 stone outline");
+			});
+			PowerMod.queueServerWork(300, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO,
+							_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~ ~-2 ~2 ~4 ~2 dirt outline");
+				PowerMod.queueServerWork(100, () -> {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~4 ~2 stone outline");
-				}
-			}
-			new ShiedOftheEarthProcedureWait7().start(world, 3);
-			class ShiedOftheEarthProcedureWait11 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(ShiedOftheEarthProcedureWait11.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						ShiedOftheEarthProcedureWait11.this.ticks += 1;
-						if (ShiedOftheEarthProcedureWait11.this.ticks >= ShiedOftheEarthProcedureWait11.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(ShiedOftheEarthProcedureWait11.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands()
-								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~4 ~2 dirt outline");
-					class ShiedOftheEarthProcedureWait10 {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							this.world = world;
-							MinecraftForge.EVENT_BUS.register(ShiedOftheEarthProcedureWait10.this);
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								ShiedOftheEarthProcedureWait10.this.ticks += 1;
-								if (ShiedOftheEarthProcedureWait10.this.ticks >= ShiedOftheEarthProcedureWait10.this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							MinecraftForge.EVENT_BUS.unregister(ShiedOftheEarthProcedureWait10.this);
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands()
-										.performPrefixedCommand(
-												new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-														Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-												"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
-						}
-					}
-					new ShiedOftheEarthProcedureWait10().start(world, 100);
-				}
-			}
-			new ShiedOftheEarthProcedureWait11().start(world, 300);
+										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
+				});
+			});
 		}
 	}
 }

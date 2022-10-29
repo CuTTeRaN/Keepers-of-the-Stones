@@ -1,10 +1,7 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -28,67 +25,19 @@ public class AmberShieldUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class AmberShieldUseWait7 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(AmberShieldUseWait7.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						AmberShieldUseWait7.this.ticks += 1;
-						if (AmberShieldUseWait7.this.ticks >= AmberShieldUseWait7.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(AmberShieldUseWait7.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands()
-								.performPrefixedCommand(
-										new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-												_level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~4 ~2 power:amber_block outline");
-				}
-			}
-			new AmberShieldUseWait7().start(world, 3);
-			class AmberShieldUseWait9 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(AmberShieldUseWait9.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						AmberShieldUseWait9.this.ticks += 1;
-						if (AmberShieldUseWait9.this.ticks >= AmberShieldUseWait9.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(AmberShieldUseWait9.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands()
-								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
-										Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
-				}
-			}
-			new AmberShieldUseWait9().start(world, 400);
+			PowerMod.queueServerWork(3, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands()
+							.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
+									Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"fill ~-2 ~ ~-2 ~2 ~4 ~2 power:amber_block outline");
+			});
+			PowerMod.queueServerWork(400, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO,
+							_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
+			});
 		}
 	}
 }

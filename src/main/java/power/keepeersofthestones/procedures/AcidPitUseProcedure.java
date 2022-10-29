@@ -1,10 +1,7 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -28,81 +25,38 @@ public class AcidPitUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			class AcidPitUseWait10 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(AcidPitUseWait10.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						AcidPitUseWait10.this.ticks += 1;
-						if (AcidPitUseWait10.this.ticks >= AcidPitUseWait10.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(AcidPitUseWait10.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:stone");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:grass_block");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:dirt");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:sand");
-				}
-			}
-			new AcidPitUseWait10().start(world, 3);
-			class AcidPitUseWait12 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(AcidPitUseWait12.this);
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						AcidPitUseWait12.this.ticks += 1;
-						if (AcidPitUseWait12.this.ticks >= AcidPitUseWait12.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(AcidPitUseWait12.this);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:dirt replace power:acid[]");
-				}
-			}
-			new AcidPitUseWait12().start(world, 400);
+			PowerMod.queueServerWork(3, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:stone");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+									_level.getServer(), null).withSuppressedOutput(),
+							"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:grass_block");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands()
+							.performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+											_level.getServer(), null).withSuppressedOutput(),
+									"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:dirt");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands()
+							.performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+											_level.getServer(), null).withSuppressedOutput(),
+									"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:acid[] replace minecraft:sand");
+			});
+			PowerMod.queueServerWork(400, () -> {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands()
+							.performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""),
+											_level.getServer(), null).withSuppressedOutput(),
+									"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:dirt replace power:acid[]");
+			});
 		}
 	}
 }
