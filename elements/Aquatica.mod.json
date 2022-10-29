@@ -4,10 +4,10 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "cold_ocean"
+        "value": "deep_cold_ocean"
       },
       {
-        "value": "deep_cold_ocean"
+        "value": "deep_dark"
       },
       {
         "value": "deep_frozen_ocean"
@@ -20,18 +20,6 @@
       },
       {
         "value": "deep_warm_ocean"
-      },
-      {
-        "value": "frozen_ocean"
-      },
-      {
-        "value": "lukewarm_ocean"
-      },
-      {
-        "value": "ocean"
-      },
-      {
-        "value": "warm_ocean"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -52,7 +40,7 @@
       "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
-      "value": "PORTAL"
+      "value": "DOLPHIN"
     },
     "portalLuminance": 0,
     "portalSound": {
