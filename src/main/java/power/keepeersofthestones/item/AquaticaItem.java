@@ -1,7 +1,6 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.init.PowerModTabs;
 import power.keepeersofthestones.block.AquaticaPortalBlock;
 
 import net.minecraft.world.level.Level;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class AquaticaItem extends Item {
 	public AquaticaItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).durability(64));
+		super(new Item.Properties().tab(null).durability(64));
 	}
 
 	@Override
