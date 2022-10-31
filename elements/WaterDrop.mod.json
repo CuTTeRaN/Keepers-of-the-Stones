@@ -20,7 +20,6 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
-    "isShield": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": true,
@@ -38,7 +37,6 @@
     "saturation": 0.30000001192092896,
     "isMeat": false,
     "isAlwaysEdible": false,
-    "animation": "eat",
-    "isShiled": false
+    "animation": "eat"
   }
 }
