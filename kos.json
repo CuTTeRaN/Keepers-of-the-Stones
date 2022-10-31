@@ -9,8 +9,8 @@
     "1.18.1-recommended": "1.6.1",
     "1.18.2-latest": "2.8.0",
     "1.18.2-recommended": "2.8.0",
-    "1.19.2-latest": "2.8.1",
-    "1.19.2-recommended": "2.8.1"
+    "1.19.2-latest": "2.8.2",
+    "1.19.2-recommended": "2.8.2"
   },
   "1.16.5": {
    "1.1.18": "
@@ -764,6 +764,11 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Rockets as an item now comply with the rules of the creative inventory
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
 "2.8.1": "
-- [Bugfix] Fixes and improvements for the server side of the modthe mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
+- [Bugfix] Fixes and improvements for the server side of the mod
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.8.2": "
+- The Master of the Ocean can now build a portal to the underwater dimension of Aquatica
+- [Bugfix] Fixed a bug that caused most of the mod's functions to not work without operator permissions
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }
