@@ -1,10 +1,15 @@
 package power.keepeersofthestones.procedures;
 
+import org.checkerframework.checker.units.qual.s;
+
+import net.minecraftforge.common.ForgeHooks;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.TaskChainer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -15,6 +20,11 @@ import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSigningContext;
+
+import javax.annotation.Nullable;
 
 public class ReturnToPastProcedure {
 	public static void execute(Entity entity) {
@@ -36,9 +46,21 @@ public class ReturnToPastProcedure {
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-						"tp ~ 256 ~");
+			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+				CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+						_ent.level.getServer(), _ent, true, (c, s, r) -> {
+						}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+					@Override
+					@Nullable
+					public Entity getEntity() {
+						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+							return null;
+						return super.getEntity();
+					}
+				};
+				_ent.getServer().getCommands().performPrefixedCommand(_css, "tp ~ 256 ~");
+			}
 		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 600, 0, (false), (false)));

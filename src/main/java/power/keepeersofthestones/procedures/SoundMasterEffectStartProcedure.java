@@ -2,7 +2,10 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.common.ForgeHooks;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -10,9 +13,16 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.TaskChainer;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSigningContext;
+
+import javax.annotation.Nullable;
 
 public class SoundMasterEffectStartProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -43,9 +53,21 @@ public class SoundMasterEffectStartProcedure {
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-						"item replace entity @s weapon.mainhand with air");
+			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+				CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+						_ent.level.getServer(), _ent, true, (c, s, r) -> {
+						}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+					@Override
+					@Nullable
+					public Entity getEntity() {
+						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+							return null;
+						return super.getEntity();
+					}
+				};
+				_ent.getServer().getCommands().performPrefixedCommand(_css, "item replace entity @s weapon.mainhand with air");
+			}
 		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 30, 0, (false), (false)));
@@ -54,57 +76,157 @@ public class SoundMasterEffectStartProcedure {
 					.orElse(new PowerModVariables.PlayerVariables())).golden_dust) {
 				{
 					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+						CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+								_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+								_ent.getDisplayName(), _ent.level.getServer(), _ent, true, (c, s, r) -> {
+								}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+							@Override
+							@Nullable
+							public Entity getEntity() {
+								if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+									return null;
+								return super.getEntity();
+							}
+						};
+						_ent.getServer().getCommands().performPrefixedCommand(_css,
 								"item replace entity @s armor.head with power:sound_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+					}
 				}
 				{
 					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+						CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+								_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+								_ent.getDisplayName(), _ent.level.getServer(), _ent, true, (c, s, r) -> {
+								}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+							@Override
+							@Nullable
+							public Entity getEntity() {
+								if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+									return null;
+								return super.getEntity();
+							}
+						};
+						_ent.getServer().getCommands().performPrefixedCommand(_css,
 								"item replace entity @s armor.chest with power:sound_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+					}
 				}
 				{
 					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+						CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+								_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+								_ent.getDisplayName(), _ent.level.getServer(), _ent, true, (c, s, r) -> {
+								}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+							@Override
+							@Nullable
+							public Entity getEntity() {
+								if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+									return null;
+								return super.getEntity();
+							}
+						};
+						_ent.getServer().getCommands().performPrefixedCommand(_css,
 								"item replace entity @s armor.legs with power:sound_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+					}
 				}
 				{
 					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performPrefixedCommand(
-								_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+						CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+								_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+								_ent.getDisplayName(), _ent.level.getServer(), _ent, true, (c, s, r) -> {
+								}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+							@Override
+							@Nullable
+							public Entity getEntity() {
+								if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+									return null;
+								return super.getEntity();
+							}
+						};
+						_ent.getServer().getCommands().performPrefixedCommand(_css,
 								"item replace entity @s armor.feet with power:sound_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+					}
 				}
 			}
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+				CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+						_ent.level.getServer(), _ent, true, (c, s, r) -> {
+						}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+					@Override
+					@Nullable
+					public Entity getEntity() {
+						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+							return null;
+						return super.getEntity();
+					}
+				};
+				_ent.getServer().getCommands().performPrefixedCommand(_css,
 						"give @s power:sound_sword{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+			}
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+				CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+						_ent.level.getServer(), _ent, true, (c, s, r) -> {
+						}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+					@Override
+					@Nullable
+					public Entity getEntity() {
+						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+							return null;
+						return super.getEntity();
+					}
+				};
+				_ent.getServer().getCommands().performPrefixedCommand(_css,
 						"give @s power:acustical_explode{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+			}
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+				CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+						_ent.level.getServer(), _ent, true, (c, s, r) -> {
+						}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+					@Override
+					@Nullable
+					public Entity getEntity() {
+						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+							return null;
+						return super.getEntity();
+					}
+				};
+				_ent.getServer().getCommands().performPrefixedCommand(_css,
 						"give @s power:sound_barrier{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+			}
 		}
 		{
 			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null)
-				_ent.getServer().getCommands().performPrefixedCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+				CommandSourceStack _css = new CommandSourceStack(_ent, _ent.position(), _ent.getRotationVector(),
+						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+						_ent.level.getServer(), _ent, true, (c, s, r) -> {
+						}, EntityAnchorArgument.Anchor.FEET, CommandSigningContext.ANONYMOUS, TaskChainer.IMMEDIATE) {
+					@Override
+					@Nullable
+					public Entity getEntity() {
+						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
+							return null;
+						return super.getEntity();
+					}
+				};
+				_ent.getServer().getCommands().performPrefixedCommand(_css,
 						"give @s power:sound_imitate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
+			}
 		}
 	}
 }
