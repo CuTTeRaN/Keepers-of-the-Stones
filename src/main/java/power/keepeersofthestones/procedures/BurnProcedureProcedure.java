@@ -6,6 +6,6 @@ public class BurnProcedureProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		entity.setSecondsOnFire(10);
+		entity.setSecondsOnFire(3);
 	}
 }
