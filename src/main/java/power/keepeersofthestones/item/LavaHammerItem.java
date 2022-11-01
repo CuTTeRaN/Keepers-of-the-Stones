@@ -25,7 +25,7 @@ public class LavaHammerItem extends PickaxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 16f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -39,7 +39,7 @@ public class LavaHammerItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.5f, new Item.Properties().tab(null).fireResistant());
+		}, 1, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 
 	@Override

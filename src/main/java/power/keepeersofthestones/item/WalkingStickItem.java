@@ -18,7 +18,7 @@ public class WalkingStickItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 15.5f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -32,6 +32,6 @@ public class WalkingStickItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.2000000000000002f, new Item.Properties().tab(null).fireResistant());
+		}, 3, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 }

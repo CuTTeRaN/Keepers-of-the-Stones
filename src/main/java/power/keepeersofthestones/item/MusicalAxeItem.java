@@ -32,6 +32,6 @@ public class MusicalAxeItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.2000000000000002f, new Item.Properties().tab(null).fireResistant());
+		}, 1, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 }

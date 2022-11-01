@@ -22,7 +22,7 @@ public class BloodReaperItem extends AxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 13f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -36,7 +36,7 @@ public class BloodReaperItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.7f, new Item.Properties().tab(null).fireResistant());
+		}, 1, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 
 	@Override

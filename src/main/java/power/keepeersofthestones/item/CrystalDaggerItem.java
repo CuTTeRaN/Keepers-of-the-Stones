@@ -18,7 +18,7 @@ public class CrystalDaggerItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 5f;
+				return 14f;
 			}
 
 			public int getLevel() {

@@ -18,7 +18,7 @@ public class SandDaggerItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 13f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -32,6 +32,6 @@ public class SandDaggerItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.2f, new Item.Properties().tab(null));
+		}, 3, -2f, new Item.Properties().tab(null));
 	}
 }

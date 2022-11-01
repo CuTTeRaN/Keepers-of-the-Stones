@@ -22,7 +22,7 @@ public class FistofEarthItem extends ShovelItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 10f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -36,7 +36,7 @@ public class FistofEarthItem extends ShovelItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.7999999999999998f, new Item.Properties().tab(null).fireResistant());
+		}, 1, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 
 	@Override
