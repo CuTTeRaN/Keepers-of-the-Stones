@@ -1,7 +1,5 @@
 package power.keepeersofthestones.procedures;
 
-import net.minecraftforge.common.ForgeHooks;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -17,8 +15,6 @@ import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-
-import javax.annotation.Nullable;
 
 public class ReturnToPresentProcedure {
 	public static void execute(Entity entity) {
@@ -41,18 +37,10 @@ public class ReturnToPresentProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-				CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
-						_ent.level.getServer(), _ent) {
-					@Override
-					@Nullable
-					public Entity getEntity() {
-						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
-							return null;
-						return super.getEntity();
-					}
-				};
-				_ent.getServer().getCommands().performPrefixedCommand(_css, "tp ~ 256 ~");
+				_ent.getServer().getCommands()
+						.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+								_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+								_ent.getDisplayName(), _ent.level.getServer(), _ent), "tp ~ 256 ~");
 			}
 		}
 		if (entity instanceof LivingEntity _entity)

@@ -4,8 +4,6 @@ import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.common.ForgeHooks;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -18,8 +16,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
-
-import javax.annotation.Nullable;
 
 public class DispersionUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -75,76 +71,40 @@ public class DispersionUseProcedure {
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.head with power:smoke_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.chest with power:smoke_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.legs with power:smoke_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.feet with power:smoke_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
@@ -192,76 +152,40 @@ public class DispersionUseProcedure {
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.head with power:golden_dust_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.chest with power:golden_dust_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.legs with power:golden_dust_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
 							{
 								Entity _ent = entity;
 								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-											_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-											_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-										@Override
-										@Nullable
-										public Entity getEntity() {
-											if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE)
-													.getCallerClass() == ForgeHooks.class)
-												return null;
-											return super.getEntity();
-										}
-									};
-									_ent.getServer().getCommands().performPrefixedCommand(_css,
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+													_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent),
 											"item replace entity @s armor.feet with power:golden_dust_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 								}
 							}
@@ -310,72 +234,40 @@ public class DispersionUseProcedure {
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-								CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-										_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-										_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-									@Override
-									@Nullable
-									public Entity getEntity() {
-										if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
-											return null;
-										return super.getEntity();
-									}
-								};
-								_ent.getServer().getCommands().performPrefixedCommand(_css,
+								_ent.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+												_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+												_ent.getDisplayName(), _ent.level.getServer(), _ent),
 										"item replace entity @s armor.head with power:amber_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-								CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-										_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-										_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-									@Override
-									@Nullable
-									public Entity getEntity() {
-										if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
-											return null;
-										return super.getEntity();
-									}
-								};
-								_ent.getServer().getCommands().performPrefixedCommand(_css,
+								_ent.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+												_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+												_ent.getDisplayName(), _ent.level.getServer(), _ent),
 										"item replace entity @s armor.chest with power:amber_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-								CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-										_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-										_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-									@Override
-									@Nullable
-									public Entity getEntity() {
-										if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
-											return null;
-										return super.getEntity();
-									}
-								};
-								_ent.getServer().getCommands().performPrefixedCommand(_css,
+								_ent.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+												_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+												_ent.getDisplayName(), _ent.level.getServer(), _ent),
 										"item replace entity @s armor.legs with power:amber_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-								CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-										_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-										_ent.getDisplayName(), _ent.level.getServer(), _ent) {
-									@Override
-									@Nullable
-									public Entity getEntity() {
-										if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
-											return null;
-										return super.getEntity();
-									}
-								};
-								_ent.getServer().getCommands().performPrefixedCommand(_css,
+								_ent.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+												_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+												_ent.getDisplayName(), _ent.level.getServer(), _ent),
 										"item replace entity @s armor.feet with power:amber_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 							}
 						}

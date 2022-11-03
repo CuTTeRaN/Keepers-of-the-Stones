@@ -5,7 +5,6 @@ import power.keepeersofthestones.init.PowerModItems;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.common.ForgeHooks;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -18,8 +17,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-
-import javax.annotation.Nullable;
 
 public class GoldenDustEffectEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -42,18 +39,10 @@ public class GoldenDustEffectEndProcedure {
 		{
 			Entity _ent = entity;
 			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-				CommandSourceStack _css = new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-						_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
-						_ent.level.getServer(), _ent) {
-					@Override
-					@Nullable
-					public Entity getEntity() {
-						if (StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE).getCallerClass() == ForgeHooks.class)
-							return null;
-						return super.getEntity();
-					}
-				};
-				_ent.getServer().getCommands().performPrefixedCommand(_css, "team remove golden_dust");
+				_ent.getServer().getCommands()
+						.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+								_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+								_ent.getDisplayName(), _ent.level.getServer(), _ent), "team remove golden_dust");
 			}
 		}
 		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
