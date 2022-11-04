@@ -20186,6 +20186,18 @@
         ]
       },
       "path": "~/Stones/Rain"
+    },
+    {
+      "name": "Aquatica",
+      "type": "dimension",
+      "sortid": 1217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aquatica",
+      "metadata": {
+        "ep": true
+      },
+      "path": "~/Stones/Ocean"
     }
   ],
   "variable_elements": [
@@ -21717,6 +21729,7 @@
       "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Звуковой кинжал",
       "item.power.pegasus_wings": "Крылья Пегаса",
+      "item.power.aquatica": "Pearl of Aquatica",
       "effect.power.magnet_master": "Мастер Магнита",
       "item.power.ice_boots": "Ледяные Сапоги",
       "effect.power.recharge_aether_stone": "Перезарядка",
@@ -22432,6 +22445,7 @@
       "item.power.mind_boots": "Mind Boots",
       "item.power.sound_sword": "Sound Sword",
       "item.power.pegasus_wings": "Pegasus Wings",
+      "item.power.aquatica": "Pearl of Aquatica",
       "effect.power.magnet_master": "Master of Magnet",
       "item.power.ice_boots": "Ice Boots",
       "effect.power.recharge_aether_stone": "Recharge",
@@ -22891,12 +22905,12 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.8.0",
+    "version": "2.9.0.2",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "UMC",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
     "license": "GNU General Public License version 3 (GPLv3)",
-    "disableForgeVersionCheck": true,
+    "disableForgeVersionCheck": false,
     "serverSideOnly": false,
     "updateURL": "https://raw.githubusercontent.com/MagicalAlexey/Keepers-of-the-Stones/main/kos.json",
     "modPicture": "logo",
@@ -22913,5 +22927,5 @@
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200343417
+  "mcreatorVersion": 202200344423
 }

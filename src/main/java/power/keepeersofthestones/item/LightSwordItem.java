@@ -18,7 +18,7 @@ public class LightSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 9f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -32,6 +32,6 @@ public class LightSwordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.4000000000000001f, new Item.Properties().tab(null).fireResistant());
+		}, 3, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 }

@@ -32,6 +32,6 @@ public class TechnoPickaxeItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.6f, new Item.Properties().tab(null).fireResistant());
+		}, 1, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 }

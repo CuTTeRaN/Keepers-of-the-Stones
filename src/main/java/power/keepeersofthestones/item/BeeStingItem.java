@@ -22,7 +22,7 @@ public class BeeStingItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 4f;
+				return 14f;
 			}
 
 			public int getLevel() {

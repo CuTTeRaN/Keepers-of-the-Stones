@@ -24,10 +24,10 @@ public class BurnItem extends Item {
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
-		InteractionResult retval = super.useOn(context);
+		super.useOn(context);
 		BurnBlockProcedureProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
 				context.getClickedPos().getZ());
-		return retval;
+		return InteractionResult.SUCCESS;
 	}
 
 	@Override

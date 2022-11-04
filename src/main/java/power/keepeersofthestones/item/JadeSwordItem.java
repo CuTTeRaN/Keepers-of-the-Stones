@@ -32,6 +32,6 @@ public class JadeSwordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.1f, new Item.Properties().tab(null).fireResistant());
+		}, 3, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 }

@@ -2,10 +2,7 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -35,38 +32,15 @@ public class MoonWitherUseProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			class MoonWitherUseWait5 {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					this.world = world;
-					MinecraftForge.EVENT_BUS.register(MoonWitherUseWait5.this);
+			PowerMod.queueServerWork(400, () -> {
+				{
+					boolean _setval = false;
+					sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.recharge_spell_moon = _setval;
+						capability.syncPlayerVariables(sourceentity);
+					});
 				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						MoonWitherUseWait5.this.ticks += 1;
-						if (MoonWitherUseWait5.this.ticks >= MoonWitherUseWait5.this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					MinecraftForge.EVENT_BUS.unregister(MoonWitherUseWait5.this);
-					{
-						boolean _setval = false;
-						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.recharge_spell_moon = _setval;
-							capability.syncPlayerVariables(sourceentity);
-						});
-					}
-				}
-			}
-			new MoonWitherUseWait5().start(world, 400);
+			});
 		}
 	}
 }

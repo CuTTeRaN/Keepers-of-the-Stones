@@ -18,7 +18,7 @@ public class MaceItem extends PickaxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 16f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -32,6 +32,6 @@ public class MaceItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.9000000000000001f, new Item.Properties().tab(null));
+		}, 1, -2f, new Item.Properties().tab(null));
 	}
 }
