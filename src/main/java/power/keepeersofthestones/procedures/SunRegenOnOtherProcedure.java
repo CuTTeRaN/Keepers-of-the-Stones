@@ -2,7 +2,10 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
-import power.keepeersofthestones.PowerMod;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -32,15 +35,38 @@ public class SunRegenOnOtherProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			PowerMod.queueServerWork(400, () -> {
-				{
-					boolean _setval = false;
-					sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.recharge_spell_sun = _setval;
-						capability.syncPlayerVariables(sourceentity);
-					});
+			class SunRegenOnOtherWait5 {
+				private int ticks = 0;
+				private float waitTicks;
+				private LevelAccessor world;
+
+				public void start(LevelAccessor world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					this.world = world;
+					MinecraftForge.EVENT_BUS.register(SunRegenOnOtherWait5.this);
 				}
-			});
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						SunRegenOnOtherWait5.this.ticks += 1;
+						if (SunRegenOnOtherWait5.this.ticks >= SunRegenOnOtherWait5.this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(SunRegenOnOtherWait5.this);
+					{
+						boolean _setval = false;
+						sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.recharge_spell_sun = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
+					}
+				}
+			}
+			new SunRegenOnOtherWait5().start(world, 400);
 		}
 	}
 }

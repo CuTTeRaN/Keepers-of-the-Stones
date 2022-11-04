@@ -1,7 +1,10 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-import power.keepeersofthestones.PowerMod;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -28,12 +31,35 @@ public class DestructionPowerUseProcedure {
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.explode(null, x, y, z, 20, Explosion.BlockInteraction.DESTROY);
-			PowerMod.queueServerWork(20, () -> {
-				if (entity instanceof Player _player) {
-					_player.getAbilities().invulnerable = (false);
-					_player.onUpdateAbilities();
+			class DestructionPowerUseWait9 {
+				private int ticks = 0;
+				private float waitTicks;
+				private LevelAccessor world;
+
+				public void start(LevelAccessor world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					this.world = world;
+					MinecraftForge.EVENT_BUS.register(DestructionPowerUseWait9.this);
 				}
-			});
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						DestructionPowerUseWait9.this.ticks += 1;
+						if (DestructionPowerUseWait9.this.ticks >= DestructionPowerUseWait9.this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(DestructionPowerUseWait9.this);
+					if (entity instanceof Player _player) {
+						_player.getAbilities().invulnerable = (false);
+						_player.onUpdateAbilities();
+					}
+				}
+			}
+			new DestructionPowerUseWait9().start(world, 20);
 		}
 	}
 }

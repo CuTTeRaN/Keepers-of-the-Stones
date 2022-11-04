@@ -1,8 +1,9 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.PowerMod;
-
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -37,25 +38,71 @@ public class FlyOnEarthProcedure {
 						1, 1, false);
 			}
 		}
-		PowerMod.queueServerWork(200, () -> {
-			PowerMod.queueServerWork(20, () -> {
-				if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-					ResourceKey<Level> destinationType = Level.OVERWORLD;
-					if (_player.level.dimension() == destinationType)
-						return;
-					ServerLevel nextLevel = _player.server.getLevel(destinationType);
-					if (nextLevel != null) {
-						_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-						_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
-						_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
-						for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-							_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
-						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
+		class FlyOnEarthWait5 {
+			private int ticks = 0;
+			private float waitTicks;
+			private LevelAccessor world;
+
+			public void start(LevelAccessor world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				this.world = world;
+				MinecraftForge.EVENT_BUS.register(FlyOnEarthWait5.this);
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					FlyOnEarthWait5.this.ticks += 1;
+					if (FlyOnEarthWait5.this.ticks >= FlyOnEarthWait5.this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				MinecraftForge.EVENT_BUS.unregister(FlyOnEarthWait5.this);
+				class FlyOnEarthWait4 {
+					private int ticks = 0;
+					private float waitTicks;
+					private LevelAccessor world;
+
+					public void start(LevelAccessor world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						this.world = world;
+						MinecraftForge.EVENT_BUS.register(FlyOnEarthWait4.this);
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							FlyOnEarthWait4.this.ticks += 1;
+							if (FlyOnEarthWait4.this.ticks >= FlyOnEarthWait4.this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						MinecraftForge.EVENT_BUS.unregister(FlyOnEarthWait4.this);
+						if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+							ResourceKey<Level> destinationType = Level.OVERWORLD;
+							if (_player.level.dimension() == destinationType)
+								return;
+							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							if (nextLevel != null) {
+								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
+							}
+						}
+						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
 					}
 				}
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 1));
-			});
-		});
+				new FlyOnEarthWait4().start(world, 20);
+			}
+		}
+		new FlyOnEarthWait5().start(world, 200);
 	}
 }

@@ -3,10 +3,10 @@ package power.keepeersofthestones.world.teleporter;
 
 import power.keepeersofthestones.init.PowerModBlocks;
 
-import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.ITeleporter;
 
 import net.minecraft.world.phys.Vec3;
@@ -28,7 +28,6 @@ import net.minecraft.server.level.TicketType;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Vec3i;
-import net.minecraft.core.Holder;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.BlockUtil;
@@ -42,15 +41,15 @@ import com.google.common.collect.ImmutableSet;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AquaticaTeleporter implements ITeleporter {
 	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("aquatica_portal", Vec3i::compareTo, 300);
-	public static Holder<PoiType> poi = null;
+	public static PoiType poi = null;
 
 	@SubscribeEvent
-	public static void registerPointOfInterest(RegisterEvent event) {
-		event.register(ForgeRegistries.Keys.POI_TYPES, registerHelper -> {
-			PoiType poiType = new PoiType(ImmutableSet.copyOf(PowerModBlocks.AQUATICA_PORTAL.get().getStateDefinition().getPossibleStates()), 0, 1);
-			registerHelper.register("aquatica_portal", poiType);
-			poi = ForgeRegistries.POI_TYPES.getHolder(poiType).get();
-		});
+	public static void registerPointOfInterest(RegistryEvent.Register<PoiType> event) {
+		poi = new PoiType("aquatica_portal",
+				com.google.common.collect.Sets
+						.newHashSet(ImmutableSet.copyOf(PowerModBlocks.AQUATICA_PORTAL.get().getStateDefinition().getPossibleStates())),
+				0, 1).setRegistryName("aquatica_portal");
+		ForgeRegistries.POI_TYPES.register(poi);
 	}
 
 	private final ServerLevel level;
@@ -65,8 +64,8 @@ public class AquaticaTeleporter implements ITeleporter {
 		PoiManager poimanager = this.level.getPoiManager();
 		int i = p_192987_ ? 16 : 128;
 		poimanager.ensureLoadedAndValid(this.level, p_192986_, i);
-		Optional<PoiRecord> optional = poimanager.getInSquare((p_230634_) -> {
-			return p_230634_.is(poi.unwrapKey().get());
+		Optional<PoiRecord> optional = poimanager.getInSquare((p_77654_) -> {
+			return p_77654_ == poi;
 		}, p_192986_, i, PoiManager.Occupancy.ANY).filter((p_192981_) -> {
 			return p_192988_.isWithinBounds(p_192981_.getPos());
 		}).sorted(Comparator.<PoiRecord>comparingDouble((p_192984_) -> {

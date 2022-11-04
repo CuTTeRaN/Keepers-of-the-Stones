@@ -1,7 +1,10 @@
 package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.init.PowerModItems;
-import power.keepeersofthestones.PowerMod;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
@@ -23,15 +26,38 @@ public class GhostFormUseProcedure {
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 1200);
 			if (entity instanceof ServerPlayer _player)
 				_player.setGameMode(GameType.SPECTATOR);
-			PowerMod.queueServerWork(200, () -> {
-				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-					if (entity instanceof ServerPlayer _player)
-						_player.setGameMode(GameType.SURVIVAL);
-				} else if (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) {
-					if (entity instanceof ServerPlayer _player)
-						_player.setGameMode(GameType.CREATIVE);
+			class GhostFormUseWait11 {
+				private int ticks = 0;
+				private float waitTicks;
+				private LevelAccessor world;
+
+				public void start(LevelAccessor world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					this.world = world;
+					MinecraftForge.EVENT_BUS.register(GhostFormUseWait11.this);
 				}
-			});
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						GhostFormUseWait11.this.ticks += 1;
+						if (GhostFormUseWait11.this.ticks >= GhostFormUseWait11.this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(GhostFormUseWait11.this);
+					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+						if (entity instanceof ServerPlayer _player)
+							_player.setGameMode(GameType.SURVIVAL);
+					} else if (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) {
+						if (entity instanceof ServerPlayer _player)
+							_player.setGameMode(GameType.CREATIVE);
+					}
+				}
+			}
+			new GhostFormUseWait11().start(world, 200);
 		}
 	}
 }

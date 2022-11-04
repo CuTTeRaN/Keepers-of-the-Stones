@@ -2,7 +2,10 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
-import power.keepeersofthestones.PowerMod;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -27,15 +30,38 @@ public class TurbospeedUseProcedure {
 			}
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
-			PowerMod.queueServerWork(400, () -> {
-				{
-					boolean _setval = false;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.turbospeed = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+			class TurbospeedUseWait6 {
+				private int ticks = 0;
+				private float waitTicks;
+				private LevelAccessor world;
+
+				public void start(LevelAccessor world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					this.world = world;
+					MinecraftForge.EVENT_BUS.register(TurbospeedUseWait6.this);
 				}
-			});
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						TurbospeedUseWait6.this.ticks += 1;
+						if (TurbospeedUseWait6.this.ticks >= TurbospeedUseWait6.this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					MinecraftForge.EVENT_BUS.unregister(TurbospeedUseWait6.this);
+					{
+						boolean _setval = false;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.turbospeed = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+			}
+			new TurbospeedUseWait6().start(world, 400);
 		}
 	}
 }
