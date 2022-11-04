@@ -70,6 +70,7 @@ import power.keepeersofthestones.world.inventory.ChoiseMagicPower2Menu;
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
 import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
 import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
+import power.keepeersofthestones.world.inventory.BuyReactiveFlyingMenu;
 import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
 import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
@@ -204,4 +205,6 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<EBMindMenu>> EB_MIND = REGISTRY.register("eb_mind", () -> IForgeMenuType.create(EBMindMenu::new));
 	public static final RegistryObject<MenuType<EBGoldenDustMenu>> EB_GOLDEN_DUST = REGISTRY.register("eb_golden_dust",
 			() -> IForgeMenuType.create(EBGoldenDustMenu::new));
+	public static final RegistryObject<MenuType<BuyReactiveFlyingMenu>> BUY_REACTIVE_FLYING = REGISTRY.register("buy_reactive_flying",
+			() -> IForgeMenuType.create(BuyReactiveFlyingMenu::new));
 }

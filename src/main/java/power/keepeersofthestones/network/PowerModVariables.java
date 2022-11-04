@@ -144,6 +144,7 @@ public class PowerModVariables {
 			clone.mind = original.mind;
 			clone.golden_dust = original.golden_dust;
 			clone.cursed_amethyst = original.cursed_amethyst;
+			clone.reactive_flying = original.reactive_flying;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.recharge_spell_sun = original.recharge_spell_sun;
@@ -573,6 +574,7 @@ public class PowerModVariables {
 		public boolean little = false;
 		public boolean big = false;
 		public boolean cursed_amethyst = false;
+		public boolean reactive_flying = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -661,6 +663,7 @@ public class PowerModVariables {
 			nbt.putBoolean("little", little);
 			nbt.putBoolean("big", big);
 			nbt.putBoolean("cursed_amethyst", cursed_amethyst);
+			nbt.putBoolean("reactive_flying", reactive_flying);
 			return nbt;
 		}
 
@@ -746,6 +749,7 @@ public class PowerModVariables {
 			little = nbt.getBoolean("little");
 			big = nbt.getBoolean("big");
 			cursed_amethyst = nbt.getBoolean("cursed_amethyst");
+			reactive_flying = nbt.getBoolean("reactive_flying");
 		}
 	}
 
@@ -851,6 +855,7 @@ public class PowerModVariables {
 					variables.little = message.data.little;
 					variables.big = message.data.big;
 					variables.cursed_amethyst = message.data.cursed_amethyst;
+					variables.reactive_flying = message.data.reactive_flying;
 				}
 			});
 			context.setPacketHandled(true);

@@ -20198,6 +20198,153 @@
         "ep": true
       },
       "path": "~/Stones/Ocean"
+    },
+    {
+      "name": "GetLevel1",
+      "type": "procedure",
+      "sortid": 1218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "GetLevel2",
+      "type": "procedure",
+      "sortid": 1219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "ReturnReactiveFlying",
+      "type": "procedure",
+      "sortid": 1220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_reactive_flying",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "NoReturnReactiveFlying",
+      "type": "procedure",
+      "sortid": 1221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_return_reactive_flying",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "BuyReactiveFlying",
+      "type": "gui",
+      "sortid": 1222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_reactive_flying",
+      "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "OpenBuyReactiveFlying",
+      "type": "procedure",
+      "sortid": 1223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buy_reactive_flying",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "UpdateToReactiveFlying",
+      "type": "procedure",
+      "sortid": 1224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_to_reactive_flying",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/LevelSystem"
     }
   ],
   "variable_elements": [
@@ -21013,6 +21160,12 @@
     },
     {
       "name": "cursed_amethyst",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "reactive_flying",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -22905,7 +23058,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.9.0.2",
+    "version": "2.9.0.3",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "UMC",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

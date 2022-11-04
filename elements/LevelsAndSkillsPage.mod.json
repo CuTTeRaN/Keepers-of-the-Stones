@@ -21,23 +21,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "text": "4",
-          "onClick": {
-            "name": "OpenBuyLevel2"
-          },
-          "displayCondition": {
-            "name": "ReturnLevel1"
-          },
-          "width": 61,
-          "height": 20,
-          "name": "4",
-          "x": 125,
-          "y": 50
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "Level 2",
@@ -47,20 +30,7 @@
           },
           "name": "Level 2",
           "x": 50,
-          "y": 55
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "elemental_coin.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "ReturnLevel1"
-          },
-          "name": "elemental_coin.png",
-          "x": 100,
-          "y": 50
+          "y": 72
         }
       },
       {
@@ -73,37 +43,7 @@
           },
           "name": "Level 3",
           "x": 50,
-          "y": 80
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "elemental_coin.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "ReturnLevel2"
-          },
-          "name": "elemental_coin.png",
-          "x": 100,
-          "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "16",
-          "onClick": {
-            "name": "OpenBuyLevel3"
-          },
-          "displayCondition": {
-            "name": "ReturnLevel2"
-          },
-          "width": 61,
-          "height": 20,
-          "name": "16",
-          "x": 125,
-          "y": 75
+          "y": 102
         }
       },
       {
@@ -112,11 +52,11 @@
           "image": "level_checked.png",
           "use1Xscale": false,
           "displayCondition": {
-            "name": "ReturnLevel2"
+            "name": "GetLevel2"
           },
           "name": "level_checked.png",
-          "x": 150,
-          "y": 50
+          "x": 142,
+          "y": 64
         }
       },
       {
@@ -128,8 +68,8 @@
             "name": "ReturnLevel3"
           },
           "name": "level_checked.png",
-          "x": 150,
-          "y": 75
+          "x": 144,
+          "y": 96
         }
       },
       {
@@ -156,7 +96,7 @@
           },
           "name": "Level 1",
           "x": 50,
-          "y": 30
+          "y": 39
         }
       },
       {
@@ -165,11 +105,11 @@
           "image": "level_checked.png",
           "use1Xscale": false,
           "displayCondition": {
-            "name": "ReturnLevel1"
+            "name": "GetLevel1"
           },
           "name": "level_checked.png",
-          "x": 150,
-          "y": 25
+          "x": 141,
+          "y": 33
         }
       },
       {
@@ -182,6 +122,136 @@
           "x": 366,
           "y": 206
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Buy",
+          "onClick": {
+            "name": "OpenBuyLevel2"
+          },
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Buy",
+          "x": 131,
+          "y": 59
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Buy",
+          "onClick": {
+            "name": "OpenBuyLevel3"
+          },
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Buy",
+          "x": 131,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Reactive Flying",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Reactive Flying",
+          "x": 239,
+          "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_master.png",
+          "use1Xscale": false,
+          "name": "fire_master.png",
+          "x": 260,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blue_flame_master.png",
+          "use1Xscale": false,
+          "name": "blue_flame_master.png",
+          "x": 278,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lightning_master.png",
+          "use1Xscale": false,
+          "name": "lightning_master.png",
+          "x": 294,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "For:",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "For:",
+          "x": 239,
+          "y": 55
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Buy",
+          "onClick": {
+            "name": "OpenBuyReactiveFlying"
+          },
+          "displayCondition": {
+            "name": "NoReturnReactiveFlying"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Buy",
+          "x": 342,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnReactiveFlying"
+          },
+          "name": "level_checked.png",
+          "x": 352,
+          "y": 50
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rain_master.png",
+          "use1Xscale": false,
+          "name": "rain_master.png",
+          "x": 308,
+          "y": 49
+        }
       }
     ],
     "gridSettings": {
@@ -189,7 +259,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

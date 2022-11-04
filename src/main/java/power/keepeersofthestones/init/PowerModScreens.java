@@ -70,6 +70,7 @@ import power.keepeersofthestones.client.gui.ChoiseMagicPower2Screen;
 import power.keepeersofthestones.client.gui.ChoiseMagicPower1Screen;
 import power.keepeersofthestones.client.gui.CheckpointGUIScreen;
 import power.keepeersofthestones.client.gui.CheckPointTPScreen;
+import power.keepeersofthestones.client.gui.BuyReactiveFlyingScreen;
 import power.keepeersofthestones.client.gui.BuyLevel3Screen;
 import power.keepeersofthestones.client.gui.BuyLevel2Screen;
 import power.keepeersofthestones.client.gui.BuildingGUIScreen;
@@ -159,6 +160,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_FORM.get(), EBFormScreen::new);
 			MenuScreens.register(PowerModMenus.EB_MIND.get(), EBMindScreen::new);
 			MenuScreens.register(PowerModMenus.EB_GOLDEN_DUST.get(), EBGoldenDustScreen::new);
+			MenuScreens.register(PowerModMenus.BUY_REACTIVE_FLYING.get(), BuyReactiveFlyingScreen::new);
 		});
 	}
 }
