@@ -12,7 +12,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
 
 public class EnergyStaffUseProcedure {
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, ItemStack itemstack) {
@@ -109,8 +108,6 @@ public class EnergyStaffUseProcedure {
 						_entity.removeEffect(PowerModMobEffects.FORM_MASTER.get());
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(PowerModMobEffects.MIND_MASTER.get());
-					if (sourceentity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.ENERGY_MASTER.get(), 24000, 0, (false), (false)));
 					if (sourceentity instanceof LivingEntity _entity)
 						_entity.removeEffect(PowerModMobEffects.RECHARGE_ENERGY_STONE.get());
 					if (sourceentity instanceof Player _player) {
