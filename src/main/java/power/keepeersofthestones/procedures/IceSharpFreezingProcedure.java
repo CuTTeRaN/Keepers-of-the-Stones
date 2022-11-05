@@ -4,10 +4,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -18,10 +15,9 @@ public class IceSharpFreezingProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 255, (false), (false)));
+		entity.setTicksFrozen((int) 1200);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SNOWFLAKE, x, y, z, 25, 2, 2, 2, 1);
+			_level.sendParticles(ParticleTypes.SNOWFLAKE, x, y, z, 25, 2, 2, 2, 0.1);
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, new BlockPos(x, y, z),
