@@ -15,7 +15,7 @@ public class IceSharpFreezingProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.setTicksFrozen((int) 1200);
+		entity.setTicksFrozen(1200);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.SNOWFLAKE, x, y, z, 25, 2, 2, 2, 0.1);
 		if (world instanceof Level _level) {
