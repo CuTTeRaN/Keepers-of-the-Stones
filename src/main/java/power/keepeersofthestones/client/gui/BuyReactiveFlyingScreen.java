@@ -75,7 +75,7 @@ public class BuyReactiveFlyingScreen extends AbstractContainerScreen<BuyReactive
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "To buy, put the required number of coins in the slot (8)", 46, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.buy_reactive_flying.label"), 46, 7, -12829636);
 	}
 
 	@Override
@@ -88,11 +88,12 @@ public class BuyReactiveFlyingScreen extends AbstractContainerScreen<BuyReactive
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 217, this.topPos + 34, 40, 20, Component.literal("Buy"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new BuyReactiveFlyingButtonMessage(0, x, y, z));
-				BuyReactiveFlyingButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 217, this.topPos + 34, 40, 20, Component.translatable("gui.power.buy_reactive_flying.Buy"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new BuyReactiveFlyingButtonMessage(0, x, y, z));
+						BuyReactiveFlyingButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

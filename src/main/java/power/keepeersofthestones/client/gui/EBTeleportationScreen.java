@@ -95,11 +95,12 @@ public class EBTeleportationScreen extends AbstractContainerScreen<EBTeleportati
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBTeleportationButtonMessage(0, x, y, z));
-				EBTeleportationButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_teleportation.>"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBTeleportationButtonMessage(0, x, y, z));
+						EBTeleportationButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

@@ -95,7 +95,7 @@ public class EBMistScreen extends AbstractContainerScreen<EBMistMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_mist.>"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBMistButtonMessage(0, x, y, z));
 				EBMistButtonMessage.handleButtonAction(entity, 0, x, y, z);

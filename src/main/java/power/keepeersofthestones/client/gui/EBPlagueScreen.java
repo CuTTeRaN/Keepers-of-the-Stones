@@ -95,7 +95,7 @@ public class EBPlagueScreen extends AbstractContainerScreen<EBPlagueMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_plague.>"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBPlagueButtonMessage(0, x, y, z));
 				EBPlagueButtonMessage.handleButtonAction(entity, 0, x, y, z);

@@ -95,7 +95,7 @@ public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_music.>"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBMusicButtonMessage(0, x, y, z));
 				EBMusicButtonMessage.handleButtonAction(entity, 0, x, y, z);

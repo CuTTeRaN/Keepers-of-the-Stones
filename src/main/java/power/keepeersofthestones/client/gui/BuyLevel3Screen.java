@@ -75,7 +75,7 @@ public class BuyLevel3Screen extends AbstractContainerScreen<BuyLevel3Menu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "To buy, put the required number of coins in the slot (16)", 46, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.buy_level_3.label"), 46, 7, -12829636);
 	}
 
 	@Override
@@ -88,7 +88,7 @@ public class BuyLevel3Screen extends AbstractContainerScreen<BuyLevel3Menu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 217, this.topPos + 34, 40, 20, Component.literal("Buy"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 217, this.topPos + 34, 40, 20, Component.translatable("gui.power.buy_level_3.Buy"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new BuyLevel3ButtonMessage(0, x, y, z));
 				BuyLevel3ButtonMessage.handleButtonAction(entity, 0, x, y, z);

@@ -13,13 +13,13 @@
       {
         "type": "label",
         "data": {
-          "text": "Choose where to fly",
+          "text": "<t:item.power.rocket_item>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose where to fly",
-          "x": 159,
+          "name": "<t:item.power.rocket_item>",
+          "x": 177,
           "y": 26
         }
       },

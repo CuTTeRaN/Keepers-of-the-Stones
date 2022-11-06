@@ -95,7 +95,7 @@ public class EBFormScreen extends AbstractContainerScreen<EBFormMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_form.>"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBFormButtonMessage(0, x, y, z));
 				EBFormButtonMessage.handleButtonAction(entity, 0, x, y, z);

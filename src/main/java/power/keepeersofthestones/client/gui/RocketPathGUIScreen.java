@@ -71,7 +71,7 @@ public class RocketPathGUIScreen extends AbstractContainerScreen<RocketPathGUIMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose where to fly", 95, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("item.power.rocket_item"), 113, 6, -12829636);
 	}
 
 	@Override
@@ -84,35 +84,40 @@ public class RocketPathGUIScreen extends AbstractContainerScreen<RocketPathGUIMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 24, 46, 20, Component.literal("Moon"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(0, x, y, z));
-				RocketPathGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 60, 46, 20, Component.literal("Mars"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(1, x, y, z));
-				RocketPathGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 96, 51, 20, Component.literal("Venus"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(2, x, y, z));
-				RocketPathGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 32, this.topPos + 132, 72, 20, Component.literal("Enceladus"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(3, x, y, z));
-				RocketPathGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 194, this.topPos + 168, 92, 20, Component.literal("Back to Earth"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(4, x, y, z));
-				RocketPathGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 32, this.topPos + 24, 46, 20, Component.translatable("gui.power.rocket_path_gui.Moon"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(0, x, y, z));
+						RocketPathGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 32, this.topPos + 60, 46, 20, Component.translatable("gui.power.rocket_path_gui.Mars"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(1, x, y, z));
+						RocketPathGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 32, this.topPos + 96, 51, 20, Component.translatable("gui.power.rocket_path_gui.Venus"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(2, x, y, z));
+						RocketPathGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 32, this.topPos + 132, 72, 20, Component.translatable("gui.power.rocket_path_gui.Enceladus"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(3, x, y, z));
+						RocketPathGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 194, this.topPos + 168, 92, 20, Component.translatable("gui.power.rocket_path_gui.Back to Earth"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new RocketPathGUIButtonMessage(4, x, y, z));
+						RocketPathGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}));
 	}
 }

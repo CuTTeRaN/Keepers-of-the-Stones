@@ -95,7 +95,7 @@ public class EBGravityScreen extends AbstractContainerScreen<EBGravityMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_gravity.>"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBGravityButtonMessage(0, x, y, z));
 				EBGravityButtonMessage.handleButtonAction(entity, 0, x, y, z);

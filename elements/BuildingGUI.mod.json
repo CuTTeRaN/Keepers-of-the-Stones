@@ -13,13 +13,13 @@
       {
         "type": "label",
         "data": {
-          "text": "Select the structure you want to place",
+          "text": "<t:item.power.constructions>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Select the structure you want to place",
-          "x": 114,
+          "name": "<t:item.power.constructions>",
+          "x": 150,
           "y": 26
         }
       },

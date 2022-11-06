@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "To buy, put the required number of coins in the slot (8)",
+          "text": "<t:gui.power.buy_reactive_flying.label>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "To buy, put the required number of coins in the slot (8)",
+          "name": "<t:gui.power.buy_reactive_flying.label>",
           "x": 60,
           "y": 44
         }

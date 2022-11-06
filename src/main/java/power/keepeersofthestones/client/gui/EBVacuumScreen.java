@@ -95,7 +95,7 @@ public class EBVacuumScreen extends AbstractContainerScreen<EBVacuumMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.literal(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_vacuum.>"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBVacuumButtonMessage(0, x, y, z));
 				EBVacuumButtonMessage.handleButtonAction(entity, 0, x, y, z);
