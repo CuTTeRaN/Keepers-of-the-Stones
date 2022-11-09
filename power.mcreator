@@ -23514,7 +23514,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.9.0.4",
+    "version": "2.9.0.5",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "UMC",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
@@ -23532,7 +23532,7 @@
       "allmods"
     ],
     "currentGenerator": "forge-1.19.2",
-    "credits": "Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors.",
+    "credits": "Created by MagicalAlexey, with the support of SamuelMorsch, 7ZLBeka, as well as many other contributors.",
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
   },
