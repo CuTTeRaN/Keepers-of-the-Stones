@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.buy_level_2.label>",
+          "text": "To buy, put the required number of coins in the slot (4)",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.buy_level_2.label>",
+          "name": "To buy, put the required number of coins in the slot (4)",
           "x": 60,
           "y": 44
         }

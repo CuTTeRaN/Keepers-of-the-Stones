@@ -27,12 +27,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.choice_power.label>",
+          "text": "Choose the desired power of the elements",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.choice_power.label>",
+          "name": "Choose the desired power of the elements",
           "x": 141,
           "y": 26
         }

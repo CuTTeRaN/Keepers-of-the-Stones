@@ -27,13 +27,13 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:item.power.companions>",
+          "text": "Choose the entity you want to make your henchman",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:item.power.companions>",
-          "x": 159,
+          "name": "Choose the entity you want to make your henchman",
+          "x": 96,
           "y": 80
         }
       }

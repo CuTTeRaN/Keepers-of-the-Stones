@@ -37,12 +37,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.choice_stone.label>",
+          "text": "Choose a stone to get it",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.choice_stone.label>",
+          "name": "Choose a stone to get it",
           "x": 141,
           "y": 26
         }

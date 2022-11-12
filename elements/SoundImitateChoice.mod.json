@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:item.power.sound_imitate>",
+          "text": "Select the mob for emitate sound",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:item.power.sound_imitate>",
+          "name": "Select the mob for emitate sound",
           "x": 132,
           "y": 44
         }

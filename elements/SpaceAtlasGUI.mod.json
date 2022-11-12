@@ -23,12 +23,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.space_atlas.label.text>",
+          "text": "Atlas of Space Travel",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "<t:power.space_atlas.label.text>",
+          "name": "Atlas of Space Travel",
           "x": 57,
           "y": 17
         }

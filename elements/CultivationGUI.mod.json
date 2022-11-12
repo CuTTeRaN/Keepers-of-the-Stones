@@ -13,14 +13,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:item.power.cultivation>",
+          "text": "Select a plant to get",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:item.power.cultivation>",
-          "x": 168,
-          "y": 44
+          "name": "Select a plant to get",
+          "x": 150,
+          "y": 43
         }
       },
       {

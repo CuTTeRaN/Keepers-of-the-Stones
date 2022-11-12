@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power:checkpointtime.label>",
+          "text": "Returning to the last point",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power:checkpointtime.label>",
+          "name": "Returning to the last point",
           "x": 141,
           "y": 44
         }
@@ -26,12 +26,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.checkpoints.label>",
+          "text": "Checkpoints:",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.checkpoints.label>",
+          "name": "Checkpoints:",
           "x": 141,
           "y": 62
         }
@@ -81,12 +81,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.checkpoint_gui.Set checkpoint>",
+          "text": "Set checkpoint:",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.checkpoint_gui.Set checkpoint>",
+          "name": "Set checkpoint:",
           "x": 141,
           "y": 116
         }

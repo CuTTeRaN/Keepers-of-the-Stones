@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:item.power.music_player>",
+          "text": "Music Player",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:item.power.music_player>",
+          "name": "Music Player",
           "x": 186,
           "y": 44
         }

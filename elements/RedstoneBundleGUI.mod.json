@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:item.power.redstone_bundle>",
+          "text": "Select the mechanism to add",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:item.power.redstone_bundle>",
+          "name": "Select the mechanism to add",
           "x": 141,
           "y": 26
         }

@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:power.spawn_animals.label.text>",
+          "text": "Choose an animal to summon",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:power.spawn_animals.label.text>",
+          "name": "Choose an animal to summon",
           "x": 141,
           "y": 44
         }

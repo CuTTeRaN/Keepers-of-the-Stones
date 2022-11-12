@@ -23,12 +23,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.level2>",
+          "text": "Level 2",
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.level2>",
+          "name": "Level 2",
           "x": 50,
           "y": 72
         }
@@ -36,12 +36,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.level3>",
+          "text": "Level 3",
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.level3>",
+          "name": "Level 3",
           "x": 50,
           "y": 102
         }
@@ -89,12 +89,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.level1>",
+          "text": "Level 1",
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.level1>",
+          "name": "Level 1",
           "x": 50,
           "y": 39
         }
@@ -160,12 +160,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.reactiveflying>",
+          "text": "Reactive Flying",
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.reactiveflying>",
+          "name": "Reactive Flying",
           "x": 239,
           "y": 39
         }
@@ -203,12 +203,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.for>",
+          "text": "For:",
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.for>",
+          "name": "For:",
           "x": 239,
           "y": 55
         }

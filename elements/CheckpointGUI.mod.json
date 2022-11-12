@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power:checkpointtime.label>",
+          "text": "Returning to the last point",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power:checkpointtime.label>",
+          "name": "Returning to the last point",
           "x": 141,
           "y": 44
         }
@@ -82,13 +82,13 @@
       {
         "type": "label",
         "data": {
-          "text": "<t:gui.power.checkpoint_gui.timetravel>",
+          "text": "Time travel",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<t:gui.power.checkpoint_gui.timetravel>",
-          "x": 141,
+          "name": "Time travel",
+          "x": 186,
           "y": 116
         }
       }
