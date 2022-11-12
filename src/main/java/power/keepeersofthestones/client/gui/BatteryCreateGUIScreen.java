@@ -80,7 +80,7 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("block.power.battery_charger"), 42, 7, -12829636);
+		this.font.draw(poseStack, "Charging the battery", 42, 7, -12829636);
 		this.font.draw(poseStack, "" + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				BlockEntity BlockEntity = world.getBlockEntity(pos);

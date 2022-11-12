@@ -79,7 +79,7 @@ public class BuyLevel3Menu extends AbstractContainerMenu implements Supplier<Map
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 191, 35) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (PowerModItems.ELEMENTAL_COIN.get() == stack.getItem());
+				return PowerModItems.ELEMENTAL_COIN.get() == stack.getItem();
 			}
 		}));
 		for (int si = 0; si < 3; ++si)

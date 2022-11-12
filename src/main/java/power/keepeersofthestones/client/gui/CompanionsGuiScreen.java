@@ -71,7 +71,7 @@ public class CompanionsGuiScreen extends AbstractContainerScreen<CompanionsGuiMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.companions"), 95, 10, -12829636);
+		this.font.draw(poseStack, "Choose the entity you want to make your henchman", 32, 10, -12829636);
 	}
 
 	@Override

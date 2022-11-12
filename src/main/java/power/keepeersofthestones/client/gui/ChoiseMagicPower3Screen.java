@@ -90,7 +90,7 @@ public class ChoiseMagicPower3Screen extends AbstractContainerScreen<ChoiseMagic
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.power.choice_power.label"), 127, 6, -12829636);
+		this.font.draw(poseStack, "Choose the desired power of the elements", 127, 6, -12829636);
 		this.font.draw(poseStack, "3/3", 10, 6, -12829636);
 	}
 

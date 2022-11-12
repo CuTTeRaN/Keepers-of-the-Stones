@@ -71,8 +71,8 @@ public class CheckpointGUIScreen extends AbstractContainerScreen<CheckpointGUIMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "" + (Component.translatable("gui.power:checkpointtime.label").getString()) + "", 15, 7, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.power.checkpoint_gui.timetravel"), 15, 79, -12829636);
+		this.font.draw(poseStack, "Returning to the last point", 15, 7, -12829636);
+		this.font.draw(poseStack, "Time travel", 60, 79, -12829636);
 	}
 
 	@Override

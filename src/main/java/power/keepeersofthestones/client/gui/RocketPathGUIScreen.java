@@ -71,7 +71,7 @@ public class RocketPathGUIScreen extends AbstractContainerScreen<RocketPathGUIMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.rocket_item"), 113, 6, -12829636);
+		this.font.draw(poseStack, "Choose where to fly", 95, 6, -12829636);
 	}
 
 	@Override

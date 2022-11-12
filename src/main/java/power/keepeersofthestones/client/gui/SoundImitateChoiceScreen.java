@@ -71,7 +71,7 @@ public class SoundImitateChoiceScreen extends AbstractContainerScreen<SoundImita
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.sound_imitate"), 6, 7, -12829636);
+		this.font.draw(poseStack, "Select the mob for emitate sound", 6, 7, -12829636);
 	}
 
 	@Override

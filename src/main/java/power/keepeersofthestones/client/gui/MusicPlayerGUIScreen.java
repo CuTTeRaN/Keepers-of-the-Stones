@@ -71,7 +71,7 @@ public class MusicPlayerGUIScreen extends AbstractContainerScreen<MusicPlayerGUI
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.music_player"), 122, 7, -12829636);
+		this.font.draw(poseStack, "Music Player", 122, 7, -12829636);
 	}
 
 	@Override

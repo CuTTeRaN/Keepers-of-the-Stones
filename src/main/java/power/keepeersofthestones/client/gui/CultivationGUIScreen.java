@@ -71,7 +71,7 @@ public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUI
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.cultivation"), 131, 7, -12829636);
+		this.font.draw(poseStack, "Select a plant to get", 113, 6, -12829636);
 	}
 
 	@Override

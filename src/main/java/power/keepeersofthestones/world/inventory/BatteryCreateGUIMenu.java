@@ -81,7 +81,7 @@ public class BatteryCreateGUIMenu extends AbstractContainerMenu implements Suppl
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 52, 35) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (PowerModItems.EMPTY_BATTERY.get() == stack.getItem());
+				return PowerModItems.EMPTY_BATTERY.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 106, 35) {

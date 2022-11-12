@@ -71,7 +71,7 @@ public class RedstoneBundleGUIScreen extends AbstractContainerScreen<RedstoneBun
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.redstone_bundle"), 77, 6, -12829636);
+		this.font.draw(poseStack, "Select the mechanism to add", 77, 6, -12829636);
 	}
 
 	@Override

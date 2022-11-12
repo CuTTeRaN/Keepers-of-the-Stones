@@ -71,9 +71,9 @@ public class CheckPointTPScreen extends AbstractContainerScreen<CheckPointTPMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "" + (Component.translatable("gui.power:checkpointtime.label").getString()) + "", 15, 7, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.power.checkpoints.label"), 15, 25, -12829636);
-		this.font.draw(poseStack, "" + (Component.translatable("gui.power.checkpoint_gui.Set checkpoint").getString()) + "", 15, 79, -12829636);
+		this.font.draw(poseStack, "Returning to the last point", 15, 7, -12829636);
+		this.font.draw(poseStack, "Checkpoints:", 15, 25, -12829636);
+		this.font.draw(poseStack, "Set checkpoint:", 15, 79, -12829636);
 	}
 
 	@Override

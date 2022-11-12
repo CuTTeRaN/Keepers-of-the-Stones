@@ -75,7 +75,7 @@ public class BuyReactiveFlyingScreen extends AbstractContainerScreen<BuyReactive
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.power.buy_reactive_flying.label"), 46, 7, -12829636);
+		this.font.draw(poseStack, "To buy, put the required number of coins in the slot (8)", 46, 7, -12829636);
 	}
 
 	@Override

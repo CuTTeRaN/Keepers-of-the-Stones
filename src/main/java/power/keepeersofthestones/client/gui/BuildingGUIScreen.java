@@ -71,7 +71,7 @@ public class BuildingGUIScreen extends AbstractContainerScreen<BuildingGUIMenu> 
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("item.power.constructions"), 64, 11, -12829636);
+		this.font.draw(poseStack, "Select the structure you want to place", 28, 11, -12829636);
 	}
 
 	@Override

@@ -71,7 +71,7 @@ public class SpaceAtlasGUIScreen extends AbstractContainerScreen<SpaceAtlasGUIMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("power.space_atlas.label.text"), 99, 153, -16777216);
+		this.font.draw(poseStack, "Atlas of Space Travel", 99, 153, -16777216);
 	}
 
 	@Override

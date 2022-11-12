@@ -75,7 +75,7 @@ public class BuyLevel3Screen extends AbstractContainerScreen<BuyLevel3Menu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.power.buy_level_3.label"), 46, 7, -12829636);
+		this.font.draw(poseStack, "To buy, put the required number of coins in the slot (16)", 46, 7, -12829636);
 	}
 
 	@Override
