@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "To buy, put the required number of coins in the slot (4)",
+          "text": {
+            "fixedValue": "To buy, put the required number of coins in the slot (4)"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

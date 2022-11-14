@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Basic",
+          "text": {
+            "fixedValue": "Class: Basic"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Air",
+          "text": {
+            "fixedValue": "Element: Air"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Soaring",
+          "text": {
+            "fixedValue": "Force: Soaring"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

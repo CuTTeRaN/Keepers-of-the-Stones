@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Charging the battery",
+          "text": {
+            "fixedValue": "Charging the battery"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -76,7 +78,9 @@
       {
         "type": "label",
         "data": {
-          "text": "<BNBT:integer:fuelRemaining>",
+          "text": {
+            "fixedValue": "<BNBT:integer:fuelRemaining>"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

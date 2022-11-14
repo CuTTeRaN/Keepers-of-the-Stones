@@ -27,7 +27,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Choose the entity you want to make your henchman",
+          "text": {
+            "fixedValue": "Choose the entity you want to make your henchman"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

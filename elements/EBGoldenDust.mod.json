@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Unique",
+          "text": {
+            "fixedValue": "Class: Unique"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Golden Dust",
+          "text": {
+            "fixedValue": "Element: Golden Dust"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Goodness",
+          "text": {
+            "fixedValue": "Force: Goodness"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

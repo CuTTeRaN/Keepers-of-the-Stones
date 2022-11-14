@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Great, Unique",
+          "text": {
+            "fixedValue": "Class: Great, Unique"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Moon",
+          "text": {
+            "fixedValue": "Element: Moon"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Withering",
+          "text": {
+            "fixedValue": "Force: Withering"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

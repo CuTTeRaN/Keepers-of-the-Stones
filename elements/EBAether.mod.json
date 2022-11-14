@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Basic",
+          "text": {
+            "fixedValue": "Class: Basic"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Aether",
+          "text": {
+            "fixedValue": "Element: Aether"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Quintessence",
+          "text": {
+            "fixedValue": "Force: Quintessence"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

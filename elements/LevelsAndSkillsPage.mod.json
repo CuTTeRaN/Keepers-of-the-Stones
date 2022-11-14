@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Level 2",
+          "text": {
+            "fixedValue": "Level 2"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Level 3",
+          "text": {
+            "fixedValue": "Level 3"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
@@ -89,7 +93,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Level 1",
+          "text": {
+            "fixedValue": "Level 1"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
@@ -160,7 +166,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Reactive Flying",
+          "text": {
+            "fixedValue": "Reactive Flying"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
@@ -203,7 +211,9 @@
       {
         "type": "label",
         "data": {
-          "text": "For:",
+          "text": {
+            "fixedValue": "For:"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0

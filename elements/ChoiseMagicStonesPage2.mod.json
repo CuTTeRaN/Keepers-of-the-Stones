@@ -27,7 +27,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Choose a stone to get it",
+          "text": {
+            "fixedValue": "Choose a stone to get it"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -424,7 +426,9 @@
       {
         "type": "label",
         "data": {
-          "text": "2/3",
+          "text": {
+            "fixedValue": "2/3"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

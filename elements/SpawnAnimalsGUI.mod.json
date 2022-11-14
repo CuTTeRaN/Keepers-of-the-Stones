@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Choose an animal to summon",
+          "text": {
+            "fixedValue": "Choose an animal to summon"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

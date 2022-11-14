@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Middle",
+          "text": {
+            "fixedValue": "Class: Middle"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Metal",
+          "text": {
+            "fixedValue": "Element: Metal"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Invulnerability",
+          "text": {
+            "fixedValue": "Force: Invulnerability"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

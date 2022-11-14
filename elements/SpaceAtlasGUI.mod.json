@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Atlas of Space Travel",
+          "text": {
+            "fixedValue": "Atlas of Space Travel"
+          },
           "color": {
             "value": -16777216,
             "falpha": 0.0

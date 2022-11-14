@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Select the mechanism to add",
+          "text": {
+            "fixedValue": "Select the mechanism to add"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

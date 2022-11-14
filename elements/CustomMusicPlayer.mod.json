@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Music Player",
+          "text": {
+            "fixedValue": "Music Player"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -180,7 +182,9 @@
       {
         "type": "label",
         "data": {
-          "text": "This music works only with a resource pack that adds music!",
+          "text": {
+            "fixedValue": "This music works only with a resource pack that adds music!"
+          },
           "color": {
             "value": -65536,
             "falpha": 0.0

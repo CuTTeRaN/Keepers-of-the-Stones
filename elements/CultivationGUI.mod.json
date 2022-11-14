@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Select a plant to get",
+          "text": {
+            "fixedValue": "Select a plant to get"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Additional",
+          "text": {
+            "fixedValue": "Class: Additional"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Mist",
+          "text": {
+            "fixedValue": "Element: Mist"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Stealth",
+          "text": {
+            "fixedValue": "Force: Stealth"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

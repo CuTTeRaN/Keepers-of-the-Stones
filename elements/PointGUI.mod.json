@@ -24,7 +24,9 @@
       {
         "type": "label",
         "data": {
-          "text": "X",
+          "text": {
+            "fixedValue": "X"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -37,7 +39,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Enter the desired coordinates",
+          "text": {
+            "fixedValue": "Enter the desired coordinates"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -61,7 +65,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Y",
+          "text": {
+            "fixedValue": "Y"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -74,7 +80,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Z",
+          "text": {
+            "fixedValue": "Z"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

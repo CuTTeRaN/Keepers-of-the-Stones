@@ -23,7 +23,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Class: Additional, Unique",
+          "text": {
+            "fixedValue": "Class: Additional, Unique"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -36,7 +38,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Element: Amber",
+          "text": {
+            "fixedValue": "Element: Amber"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -49,7 +53,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Force: Replication",
+          "text": {
+            "fixedValue": "Force: Replication"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0

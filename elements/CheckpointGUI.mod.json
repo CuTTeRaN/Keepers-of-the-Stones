@@ -13,7 +13,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Returning to the last point",
+          "text": {
+            "fixedValue": "Returning to the last point"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
@@ -82,7 +84,9 @@
       {
         "type": "label",
         "data": {
-          "text": "Time travel",
+          "text": {
+            "fixedValue": "Time travel"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
