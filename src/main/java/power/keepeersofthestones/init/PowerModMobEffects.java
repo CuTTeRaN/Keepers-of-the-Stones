@@ -87,6 +87,7 @@ import power.keepeersofthestones.potion.IceMasterMobEffect;
 import power.keepeersofthestones.potion.GreeneryMasterMobEffect;
 import power.keepeersofthestones.potion.GravityMasterMobEffect;
 import power.keepeersofthestones.potion.GoldenDustMasterMobEffect;
+import power.keepeersofthestones.potion.FreezingMobEffect;
 import power.keepeersofthestones.potion.FormMasterMobEffect;
 import power.keepeersofthestones.potion.FogMobEffect;
 import power.keepeersofthestones.potion.FlyingMobEffect;
@@ -261,4 +262,5 @@ public class PowerModMobEffects {
 			() -> new RechargeMindStoneMobEffect());
 	public static final RegistryObject<MobEffect> MIND_MASTER = REGISTRY.register("mind_master", () -> new MindMasterMobEffect());
 	public static final RegistryObject<MobEffect> FLYING = REGISTRY.register("flying", () -> new FlyingMobEffect());
+	public static final RegistryObject<MobEffect> FREEZING = REGISTRY.register("freezing", () -> new FreezingMobEffect());
 }

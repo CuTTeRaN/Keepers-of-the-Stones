@@ -37,7 +37,7 @@
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": "Blocks.OBSIDIAN"
+      "value": ""
     },
     "portalParticles": {
       "value": "DOLPHIN"
@@ -50,8 +50,8 @@
     "igniterTab": {
       "value": "No creative tab entry"
     },
-    "texture": "aquatic_pearl",
-    "portalTexture": "aquatica_portal",
-    "enablePortal": true
+    "texture": "",
+    "portalTexture": "",
+    "enablePortal": false
   }
 }

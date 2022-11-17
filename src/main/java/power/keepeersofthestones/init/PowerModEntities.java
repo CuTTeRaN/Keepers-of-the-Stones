@@ -43,7 +43,6 @@ import power.keepeersofthestones.entity.MagicFireballEntity;
 import power.keepeersofthestones.entity.LavaBallEntity;
 import power.keepeersofthestones.entity.KunaiEntity;
 import power.keepeersofthestones.entity.IceSpearEntity;
-import power.keepeersofthestones.entity.IceSharpEntity;
 import power.keepeersofthestones.entity.IceBallEntity;
 import power.keepeersofthestones.entity.GoldenSphereEntity;
 import power.keepeersofthestones.entity.GoldenCrossbowEntity;
@@ -124,9 +123,6 @@ public class PowerModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<IceBallEntity>> ICE_BALL = register("projectile_ice_ball",
 			EntityType.Builder.<IceBallEntity>of(IceBallEntity::new, MobCategory.MISC).setCustomClientFactory(IceBallEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<IceSharpEntity>> ICE_SHARP = register("projectile_ice_sharp",
-			EntityType.Builder.<IceSharpEntity>of(IceSharpEntity::new, MobCategory.MISC).setCustomClientFactory(IceSharpEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PlasmaBallEntity>> PLASMA_BALL = register("projectile_plasma_ball",
 			EntityType.Builder.<PlasmaBallEntity>of(PlasmaBallEntity::new, MobCategory.MISC).setCustomClientFactory(PlasmaBallEntity::new)

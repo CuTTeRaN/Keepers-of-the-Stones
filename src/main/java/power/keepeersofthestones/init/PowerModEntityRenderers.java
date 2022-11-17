@@ -41,7 +41,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.PIECE_OF_EARTH.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGY_SPHERE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ICE_BALL.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.ICE_SHARP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.PLASMA_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ACUSTICAL_EXPLODE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CLUSTER_SHARP.get(), ThrownItemRenderer::new);

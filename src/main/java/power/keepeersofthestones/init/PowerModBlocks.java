@@ -22,7 +22,6 @@ import power.keepeersofthestones.block.ClusterBlockBlock;
 import power.keepeersofthestones.block.BluePortalBlock;
 import power.keepeersofthestones.block.BlackHoleBlockBlock;
 import power.keepeersofthestones.block.BatteryChargerBlock;
-import power.keepeersofthestones.block.AquaticaPortalBlock;
 import power.keepeersofthestones.block.AmberBlockBlock;
 import power.keepeersofthestones.block.AcidBlock;
 import power.keepeersofthestones.PowerMod;
@@ -56,5 +55,4 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> DETONATOR_TNT = REGISTRY.register("detonator_tnt", () -> new DetonatorTNTBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> QUICKSAND_BLOCK = REGISTRY.register("quicksand_block", () -> new QuicksandBlockBlock());
-	public static final RegistryObject<Block> AQUATICA_PORTAL = REGISTRY.register("aquatica_portal", () -> new AquaticaPortalBlock());
 }

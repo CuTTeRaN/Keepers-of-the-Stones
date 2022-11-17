@@ -113,7 +113,7 @@ public class RemovalProhibitedItemsProcedure {
 							_player.inventoryMenu.getCraftSlots());
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = new ItemStack(PowerModItems.ICE_SHARP.get());
+					ItemStack _stktoremove = new ItemStack(PowerModItems.POLARIS_STAR.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 							_player.inventoryMenu.getCraftSlots());
 				}
@@ -1843,7 +1843,7 @@ public class RemovalProhibitedItemsProcedure {
 							_player.inventoryMenu.getCraftSlots());
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = new ItemStack(PowerModItems.AQUATICA.get());
+					ItemStack _stktoremove = new ItemStack(PowerModItems.PEARL_OF_AQUATICA.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 							_player.inventoryMenu.getCraftSlots());
 				}
