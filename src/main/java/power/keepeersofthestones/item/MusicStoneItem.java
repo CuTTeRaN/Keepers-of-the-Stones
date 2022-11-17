@@ -37,7 +37,7 @@ public class MusicStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MusicStoneUseProcedure.execute(entity);
+		MusicStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -47,7 +47,7 @@ public class LightBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LightBatteryUseProcedure.execute(entity);
+		LightBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

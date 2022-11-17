@@ -47,7 +47,7 @@ public class SunBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SunBatteryUseProcedure.execute(entity);
+		SunBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -37,7 +37,7 @@ public class TeleportationStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TeleportationStoneUseProcedure.execute(entity);
+		TeleportationStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

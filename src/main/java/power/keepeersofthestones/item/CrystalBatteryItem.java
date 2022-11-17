@@ -47,7 +47,7 @@ public class CrystalBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		CrystalBatteryUseProcedure.execute(entity);
+		CrystalBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

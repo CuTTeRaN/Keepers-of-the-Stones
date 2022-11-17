@@ -37,7 +37,7 @@ public class LightningStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LightningStoneUseProcedure.execute(entity);
+		LightningStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

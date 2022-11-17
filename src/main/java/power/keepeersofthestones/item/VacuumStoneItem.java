@@ -37,7 +37,7 @@ public class VacuumStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		VacuumStoneUseProcedure.execute(entity);
+		VacuumStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

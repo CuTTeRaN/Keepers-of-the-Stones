@@ -37,7 +37,7 @@ public class GravityStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		GravityStoneUseProcedure.execute(entity);
+		GravityStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

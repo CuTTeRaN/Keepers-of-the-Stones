@@ -47,7 +47,7 @@ public class AnimalsBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		AnimalsBatteryUseProcedure.execute(entity);
+		AnimalsBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

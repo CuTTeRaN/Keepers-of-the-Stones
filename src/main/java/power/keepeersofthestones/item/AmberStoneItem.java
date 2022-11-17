@@ -31,7 +31,7 @@ public class AmberStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		AmberStoneUseProcedure.execute(entity);
+		AmberStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

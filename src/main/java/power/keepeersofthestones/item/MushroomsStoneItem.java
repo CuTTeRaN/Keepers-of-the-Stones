@@ -37,7 +37,7 @@ public class MushroomsStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MushroomsStoneUseProcedure.execute(entity);
+		MushroomsStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

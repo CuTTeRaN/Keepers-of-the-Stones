@@ -37,7 +37,7 @@ public class BloodStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		BloodStoneUseProcedure.execute(entity);
+		BloodStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

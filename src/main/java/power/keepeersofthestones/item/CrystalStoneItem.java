@@ -37,7 +37,7 @@ public class CrystalStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		CrystalStoneUseProcedure.execute(entity);
+		CrystalStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

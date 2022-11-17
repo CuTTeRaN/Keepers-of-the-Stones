@@ -37,7 +37,7 @@ public class OceanStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		OceanStoneUseProcedure.execute(entity);
+		OceanStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

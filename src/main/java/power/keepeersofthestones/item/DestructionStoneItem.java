@@ -37,7 +37,7 @@ public class DestructionStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		DestructionStoneUseProcedure.execute(entity);
+		DestructionStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

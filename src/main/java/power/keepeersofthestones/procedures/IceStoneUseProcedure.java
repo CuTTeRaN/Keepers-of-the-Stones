@@ -3,7 +3,9 @@ package power.keepeersofthestones.procedures;
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModMobEffects;
 import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.PowerMod;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -11,7 +13,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 
 public class IceStoneUseProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ICE_STONE.get()) {
@@ -34,6 +36,9 @@ public class IceStoneUseProcedure {
 					}
 				}
 			}
+			PowerMod.queueServerWork(2, () -> {
+				(itemstack).shrink(1);
+			});
 		}
 	}
 }

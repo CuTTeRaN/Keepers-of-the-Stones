@@ -37,7 +37,7 @@ public class EarthStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		EarthStoneUseProcedure.execute(entity);
+		EarthStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

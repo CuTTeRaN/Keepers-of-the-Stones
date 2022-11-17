@@ -47,7 +47,7 @@ public class GreeneryBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		GreeneryBatteryUseProcedure.execute(entity);
+		GreeneryBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

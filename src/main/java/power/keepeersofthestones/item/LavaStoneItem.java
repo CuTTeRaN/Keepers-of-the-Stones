@@ -37,7 +37,7 @@ public class LavaStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LavaStoneUseProcedure.execute(entity);
+		LavaStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

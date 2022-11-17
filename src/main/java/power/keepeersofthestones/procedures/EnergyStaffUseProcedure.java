@@ -5,8 +5,6 @@ import power.keepeersofthestones.init.PowerModMobEffects;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -108,18 +106,6 @@ public class EnergyStaffUseProcedure {
 						_entity.removeEffect(PowerModMobEffects.FORM_MASTER.get());
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(PowerModMobEffects.MIND_MASTER.get());
-					if (sourceentity instanceof LivingEntity _entity)
-						_entity.removeEffect(PowerModMobEffects.RECHARGE_ENERGY_STONE.get());
-					if (sourceentity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(PowerModItems.ENERGY_STONE.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
-								_player.inventoryMenu.getCraftSlots());
-					}
-					if (sourceentity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_ABSORPTION.get());
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
 				}
 				{
 					boolean _setval = true;

@@ -47,7 +47,7 @@ public class TeleportationBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TeleportationBatteryUseProcedure.execute(entity);
+		TeleportationBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

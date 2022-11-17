@@ -47,7 +47,7 @@ public class IceBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		IceBatteryUseProcedure.execute(entity);
+		IceBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

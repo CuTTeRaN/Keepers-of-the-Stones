@@ -47,7 +47,7 @@ public class TechnologyBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TechnologyBatteryUseProcedure.execute(entity);
+		TechnologyBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

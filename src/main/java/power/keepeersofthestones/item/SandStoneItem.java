@@ -37,7 +37,7 @@ public class SandStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SandStoneUseProcedure.execute(entity);
+		SandStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

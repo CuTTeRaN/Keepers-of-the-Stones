@@ -37,7 +37,7 @@ public class TornadoStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TornadoStoneUseProcedure.execute(entity);
+		TornadoStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

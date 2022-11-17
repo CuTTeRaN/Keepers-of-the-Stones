@@ -47,7 +47,7 @@ public class GravityBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		GravityBatteryUseProcedure.execute(entity);
+		GravityBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

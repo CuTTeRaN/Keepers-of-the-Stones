@@ -37,7 +37,7 @@ public class MetalStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MetalStoneUseProcedure.execute(entity);
+		MetalStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

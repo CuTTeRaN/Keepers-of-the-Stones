@@ -47,7 +47,7 @@ public class MetalBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MetalBatteryUseProcedure.execute(entity);
+		MetalBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

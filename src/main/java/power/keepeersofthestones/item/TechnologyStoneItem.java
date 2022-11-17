@@ -37,7 +37,7 @@ public class TechnologyStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TechnologyStoneUseProcedure.execute(entity);
+		TechnologyStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

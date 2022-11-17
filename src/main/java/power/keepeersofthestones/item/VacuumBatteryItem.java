@@ -47,7 +47,7 @@ public class VacuumBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		VacuumBatteryUseProcedure.execute(entity);
+		VacuumBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

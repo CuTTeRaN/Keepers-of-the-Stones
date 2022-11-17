@@ -37,7 +37,7 @@ public class TimeStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TimeStoneUseProcedure.execute(entity);
+		TimeStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -37,7 +37,7 @@ public class PlagueStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		PlagueStoneUseProcedure.execute(entity);
+		PlagueStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

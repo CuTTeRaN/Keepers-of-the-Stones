@@ -47,7 +47,7 @@ public class MoonBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MoonBatteryUseProcedure.execute(entity);
+		MoonBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

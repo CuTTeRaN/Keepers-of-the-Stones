@@ -37,7 +37,7 @@ public class AetherStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		AetherStoneUseProcedure.execute(entity);
+		AetherStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

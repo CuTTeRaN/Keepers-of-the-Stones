@@ -37,7 +37,7 @@ public class MindStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MindStoneUseProcedure.execute(entity);
+		MindStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

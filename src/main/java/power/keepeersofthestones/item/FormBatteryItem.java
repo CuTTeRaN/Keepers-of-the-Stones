@@ -47,7 +47,7 @@ public class FormBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		FormBatteryUseProcedure.execute(entity);
+		FormBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

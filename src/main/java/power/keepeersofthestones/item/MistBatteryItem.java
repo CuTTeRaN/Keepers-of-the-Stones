@@ -47,7 +47,7 @@ public class MistBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MistBatteryUseProcedure.execute(entity);
+		MistBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

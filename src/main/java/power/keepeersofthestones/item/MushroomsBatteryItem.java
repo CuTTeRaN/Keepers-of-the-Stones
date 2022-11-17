@@ -47,7 +47,7 @@ public class MushroomsBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MushroomsBatteryUseProcedure.execute(entity);
+		MushroomsBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

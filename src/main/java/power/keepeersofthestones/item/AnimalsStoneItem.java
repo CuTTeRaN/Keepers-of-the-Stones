@@ -37,7 +37,7 @@ public class AnimalsStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		AnimalsStoneUseProcedure.execute(entity);
+		AnimalsStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

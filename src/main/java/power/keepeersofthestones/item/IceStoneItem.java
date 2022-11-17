@@ -37,7 +37,7 @@ public class IceStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		IceStoneUseProcedure.execute(entity);
+		IceStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -47,7 +47,7 @@ public class TimeBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TimeBatteryUseProcedure.execute(entity);
+		TimeBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

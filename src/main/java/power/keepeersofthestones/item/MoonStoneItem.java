@@ -37,7 +37,7 @@ public class MoonStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MoonStoneUseProcedure.execute(entity);
+		MoonStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

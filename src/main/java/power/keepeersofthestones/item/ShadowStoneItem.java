@@ -37,7 +37,7 @@ public class ShadowStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		ShadowStoneUseProcedure.execute(entity);
+		ShadowStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -47,7 +47,7 @@ public class WaterBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		WaterBatteryUseProcedure.execute(entity);
+		WaterBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -37,7 +37,7 @@ public class WaterStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		WaterStoneUseProcedure.execute(entity);
+		WaterStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

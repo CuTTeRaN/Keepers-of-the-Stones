@@ -47,7 +47,7 @@ public class TornadoBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TornadoBatteryUseProcedure.execute(entity);
+		TornadoBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

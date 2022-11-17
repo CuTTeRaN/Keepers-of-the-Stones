@@ -47,7 +47,7 @@ public class ExplosionBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		ExplosionBatteryUseProcedure.execute(entity);
+		ExplosionBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

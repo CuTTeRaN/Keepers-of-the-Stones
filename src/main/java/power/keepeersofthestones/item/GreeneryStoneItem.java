@@ -37,7 +37,7 @@ public class GreeneryStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		GreeneryStoneUseProcedure.execute(entity);
+		GreeneryStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

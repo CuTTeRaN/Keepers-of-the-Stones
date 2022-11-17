@@ -37,7 +37,7 @@ public class BlueFlameStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		BlueFlameStoneUseProcedure.execute(entity);
+		BlueFlameStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -47,7 +47,7 @@ public class PlagueBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		PlagueBatteryUseProcedure.execute(entity);
+		PlagueBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

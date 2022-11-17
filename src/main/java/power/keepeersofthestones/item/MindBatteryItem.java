@@ -47,7 +47,7 @@ public class MindBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MindBatteryUseProcedure.execute(entity);
+		MindBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

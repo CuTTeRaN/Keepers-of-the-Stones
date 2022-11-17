@@ -47,7 +47,7 @@ public class SpeedBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SpeedBatteryUseProcedure.execute(entity);
+		SpeedBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

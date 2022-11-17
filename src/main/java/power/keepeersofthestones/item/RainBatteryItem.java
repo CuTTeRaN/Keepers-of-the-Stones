@@ -47,7 +47,7 @@ public class RainBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		RainBatteryUseProcedure.execute(entity);
+		RainBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

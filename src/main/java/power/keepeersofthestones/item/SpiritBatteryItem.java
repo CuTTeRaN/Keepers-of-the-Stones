@@ -47,7 +47,7 @@ public class SpiritBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SpiritBatteryUseProcedure.execute(entity);
+		SpiritBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

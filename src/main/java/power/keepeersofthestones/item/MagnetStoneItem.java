@@ -37,7 +37,7 @@ public class MagnetStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MagnetStoneUseProcedure.execute(entity);
+		MagnetStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

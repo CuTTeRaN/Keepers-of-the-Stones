@@ -37,7 +37,7 @@ public class GoldenDustStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		GoldenDustStoneUseProcedure.execute(entity);
+		GoldenDustStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

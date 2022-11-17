@@ -37,7 +37,7 @@ public class EnergyStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		EnergyStoneUseProcedure.execute(entity);
+		EnergyStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

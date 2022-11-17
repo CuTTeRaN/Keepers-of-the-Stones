@@ -37,7 +37,7 @@ public class RainStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		RainStoneUseProcedure.execute(entity);
+		RainStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

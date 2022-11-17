@@ -47,7 +47,7 @@ public class SandBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SandBatteryUseProcedure.execute(entity);
+		SandBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

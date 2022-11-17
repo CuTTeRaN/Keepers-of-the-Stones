@@ -37,7 +37,7 @@ public class PoisonStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		PoisonStoneUseProcedure.execute(entity);
+		PoisonStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

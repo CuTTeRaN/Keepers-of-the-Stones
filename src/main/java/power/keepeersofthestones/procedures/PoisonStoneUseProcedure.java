@@ -3,7 +3,9 @@ package power.keepeersofthestones.procedures;
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModMobEffects;
 import power.keepeersofthestones.init.PowerModItems;
+import power.keepeersofthestones.PowerMod;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -11,7 +13,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 
 public class PoisonStoneUseProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.POISON_STONE.get()) {
@@ -31,6 +33,9 @@ public class PoisonStoneUseProcedure {
 							if (entity instanceof LivingEntity _entity)
 								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POISON_MASTER.get(), 12000, 0, (false), (false)));
 						}
+						PowerMod.queueServerWork(2, () -> {
+							(itemstack).shrink(1);
+						});
 					}
 				}
 			}

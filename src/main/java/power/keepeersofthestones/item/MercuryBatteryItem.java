@@ -47,7 +47,7 @@ public class MercuryBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MercuryBatteryUseProcedure.execute(entity);
+		MercuryBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

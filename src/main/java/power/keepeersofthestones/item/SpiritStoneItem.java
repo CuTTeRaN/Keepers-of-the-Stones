@@ -37,7 +37,7 @@ public class SpiritStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SpiritStoneUseProcedure.execute(entity);
+		SpiritStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

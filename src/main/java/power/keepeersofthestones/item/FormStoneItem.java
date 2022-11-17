@@ -37,7 +37,7 @@ public class FormStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		FormStoneUseProcedure.execute(entity);
+		FormStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

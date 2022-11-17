@@ -47,7 +47,7 @@ public class FireBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		FireBatteryUseProcedure.execute(entity);
+		FireBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

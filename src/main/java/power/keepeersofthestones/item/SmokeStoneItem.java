@@ -37,7 +37,7 @@ public class SmokeStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SmokeStoneUseProcedure.execute(entity);
+		SmokeStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

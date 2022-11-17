@@ -47,7 +47,7 @@ public class MagnetBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MagnetBatteryUseProcedure.execute(entity);
+		MagnetBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

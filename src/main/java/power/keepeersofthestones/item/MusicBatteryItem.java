@@ -47,7 +47,7 @@ public class MusicBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MusicBatteryUseProcedure.execute(entity);
+		MusicBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

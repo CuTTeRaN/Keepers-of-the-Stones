@@ -37,7 +37,7 @@ public class SunStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SunStoneUseProcedure.execute(entity);
+		SunStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

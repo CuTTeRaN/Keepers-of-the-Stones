@@ -37,7 +37,7 @@ public class LightStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LightStoneUseProcedure.execute(entity);
+		LightStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

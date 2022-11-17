@@ -37,7 +37,7 @@ public class MercuryStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MercuryStoneUseProcedure.execute(entity);
+		MercuryStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

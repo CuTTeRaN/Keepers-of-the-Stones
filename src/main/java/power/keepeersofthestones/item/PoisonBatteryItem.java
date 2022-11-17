@@ -47,7 +47,7 @@ public class PoisonBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		PoisonBatteryUseProcedure.execute(entity);
+		PoisonBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

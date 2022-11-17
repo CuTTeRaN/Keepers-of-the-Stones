@@ -47,7 +47,7 @@ public class SpaceBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SpaceBatteryUseProcedure.execute(entity);
+		SpaceBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -37,7 +37,7 @@ public class CreationStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		CreationStoneUseProcedure.execute(entity);
+		CreationStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

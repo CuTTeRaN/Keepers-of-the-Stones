@@ -37,7 +37,7 @@ public class SpeedStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SpeedStoneUseProcedure.execute(entity);
+		SpeedStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

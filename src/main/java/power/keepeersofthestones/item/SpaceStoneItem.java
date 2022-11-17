@@ -37,7 +37,7 @@ public class SpaceStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		SpaceStoneUseProcedure.execute(entity);
+		SpaceStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

@@ -47,7 +47,7 @@ public class LavaBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LavaBatteryUseProcedure.execute(entity);
+		LavaBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

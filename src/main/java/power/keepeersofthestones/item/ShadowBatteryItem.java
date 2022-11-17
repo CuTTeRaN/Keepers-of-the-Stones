@@ -47,7 +47,7 @@ public class ShadowBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		ShadowBatteryUseProcedure.execute(entity);
+		ShadowBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

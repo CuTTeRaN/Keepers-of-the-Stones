@@ -47,7 +47,7 @@ public class BlueFlameBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		BlueFlameBatteryUseProcedure.execute(entity);
+		BlueFlameBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

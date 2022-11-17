@@ -47,7 +47,7 @@ public class BloodBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		BloodBatteryUseProcedure.execute(entity);
+		BloodBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

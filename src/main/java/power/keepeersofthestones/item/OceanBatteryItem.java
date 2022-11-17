@@ -47,7 +47,7 @@ public class OceanBatteryItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		OceanBatteryUseProcedure.execute(entity);
+		OceanBatteryUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }

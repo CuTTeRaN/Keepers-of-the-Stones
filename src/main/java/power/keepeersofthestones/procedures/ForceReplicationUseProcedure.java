@@ -2,16 +2,10 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModMobEffects;
-import power.keepeersofthestones.init.PowerModItems;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 public class ForceReplicationUseProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {
@@ -269,20 +263,6 @@ public class ForceReplicationUseProcedure {
 				if (!(sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(PowerModMobEffects.MIND_MASTER.get()) : false)) {
 					if (sourceentity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.MIND_MASTER.get(), 6000, 0, (false), (false)));
-				}
-			}
-			if (!(sourceentity instanceof Player _playerHasItem
-					? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FORCE_REPLICATION.get()))
-					: false)) {
-				{
-					Entity _ent = sourceentity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-						_ent.getServer().getCommands().performPrefixedCommand(
-								new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-										_ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-										_ent.getDisplayName(), _ent.level.getServer(), _ent),
-								"give @s power:force_replication{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-					}
 				}
 			}
 		}

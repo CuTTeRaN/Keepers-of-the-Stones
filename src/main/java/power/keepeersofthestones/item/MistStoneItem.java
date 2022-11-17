@@ -37,7 +37,7 @@ public class MistStoneItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		MistStoneUseProcedure.execute(entity);
+		MistStoneUseProcedure.execute(world, entity, itemstack);
 		return ar;
 	}
 }
