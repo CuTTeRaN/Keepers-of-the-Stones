@@ -22,12 +22,6 @@ This mod will add new sources of energy to the world with which you can transfor
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="forge"
-    mandatory=true
-    versionRange="[43.1.47,)"
-    ordering="NONE"
-    side="BOTH"
 
 [[dependencies.power]]
     modId="pehkui"
