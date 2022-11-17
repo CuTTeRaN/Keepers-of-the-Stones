@@ -79,13 +79,14 @@
         "type": "label",
         "data": {
           "text": {
-            "fixedValue": "<BNBT:integer:fuelRemaining>"
+            "fixedValue": "",
+            "name": "BatteryCreateGUIZnachieniie"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<BNBT:integer:fuelRemaining>",
+          "name": "BatteryCreateGUIZnachieniie (string procedure)",
           "x": 209,
           "y": 88
         }

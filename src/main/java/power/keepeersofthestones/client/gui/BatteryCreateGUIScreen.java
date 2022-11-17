@@ -2,14 +2,13 @@
 package power.keepeersofthestones.client.gui;
 
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
+import power.keepeersofthestones.procedures.BatteryCreateGUIZnachieniieProcedure;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.Minecraft;
 
@@ -81,14 +80,9 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, "Charging the battery", 42, 7, -12829636);
-		this.font.draw(poseStack, "" + ((int) new Object() {
-			public double getValue(BlockPos pos, String tag) {
-				BlockEntity BlockEntity = world.getBlockEntity(pos);
-				if (BlockEntity != null)
-					return BlockEntity.getPersistentData().getDouble(tag);
-				return 0;
-			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")) + "", 83, 51, -12829636);
+		this.font.draw(poseStack,
+
+				BatteryCreateGUIZnachieniieProcedure.execute(world, x, y, z), 83, 51, -12829636);
 	}
 
 	@Override

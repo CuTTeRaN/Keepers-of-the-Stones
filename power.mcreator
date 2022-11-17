@@ -20345,6 +20345,36 @@
         ]
       },
       "path": "~/Main Mod System/LevelSystem"
+    },
+    {
+      "name": "BatteryCreateGUIZnachieniie",
+      "type": "procedure",
+      "sortid": 1225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battery_create_gui_znachieniie",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries"
     }
   ],
   "variable_elements": [
