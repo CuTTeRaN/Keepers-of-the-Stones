@@ -2,6 +2,7 @@ package power.keepeersofthestones.procedures;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicPower1Menu;
 import power.keepeersofthestones.network.PowerModVariables;
+import power.keepeersofthestones.PowerMod;
 
 import net.minecraftforge.network.NetworkHooks;
 
@@ -26,9 +27,9 @@ public class OpenPowerTransferProcedure {
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).battery) {
-				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+				PowerMod.queueServerWork(2, () -> {
 					(itemstack).shrink(1);
-				}
+				});
 				{
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = new BlockPos(x, y, z);

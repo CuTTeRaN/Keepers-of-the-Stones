@@ -20,7 +20,7 @@ import net.minecraft.world.InteractionHand;
 
 public class PinchOfGoldenDustItem extends Item {
 	public PinchOfGoldenDustItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).durability(1).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(PowerModTabs.TAB_ARTIFACTS).stacksTo(16).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override

@@ -10,11 +10,11 @@
     "creativeTab": {
       "value": "CUSTOM:Artifacts"
     },
-    "stackSize": 1,
+    "stackSize": 16,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 0.0,
-    "damageCount": 1,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
