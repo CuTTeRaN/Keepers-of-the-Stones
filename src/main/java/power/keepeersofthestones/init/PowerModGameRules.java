@@ -12,4 +12,6 @@ import net.minecraft.world.level.GameRules;
 public class PowerModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> GETTINGSTONESWHENENTERINGTHEGAME = GameRules
 			.register("gettingStonesWhenEnteringTheGame", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+	public static final GameRules.Key<GameRules.BooleanValue> GETRANDOMSTONE = GameRules.register("getRandomStone", GameRules.Category.PLAYER,
+			GameRules.BooleanValue.create(false));
 }

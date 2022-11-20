@@ -21151,6 +21151,39 @@
         ]
       },
       "path": "~/Stones/Ice"
+    },
+    {
+      "name": "GetRandomStone",
+      "type": "gamerule",
+      "sortid": 1232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getRandomStone",
+      "metadata": {
+        "type": "logic"
+      },
+      "path": "~/Main Mod System/ReceivingStones"
+    },
+    {
+      "name": "RandomChoiceStone",
+      "type": "procedure",
+      "sortid": 1233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_choice_stone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Main Mod System/ReceivingStones"
     }
   ],
   "variable_elements": [
@@ -22214,6 +22247,7 @@
       "effect.power.tornado_master": "Мастер Торнадо",
       "biome.power.enceladus_ice_desert": "Ледянная Пустыня Энцелада",
       "gui.power.choise_magic_power_2.Teleport.": "Телепорт.",
+      "gamerule.getRandomStone.description": "Includes random distribution of stones to players",
       "item.power.bo_staff": "Посох Бо",
       "item.power.destruction_helmet": "Шлем разрушения",
       "gui.power.choise_magic_stones_page_2.Gravity": "Гравитация",
@@ -22420,6 +22454,7 @@
       "item.power.mist_boots": "Mist Boots",
       "advancements.mighty_master.descr": "Выберите свой волшебный камень",
       "item.power.sun_chestplate": "Нагрудник солнца",
+      "gamerule.getRandomStone": "Random receipt of stones",
       "item.power.explosion_battery": "Батарея",
       "item.power.point": "Точка",
       "effect.power.recharge_blue_flame_stone": "Перезарядка",
@@ -23158,6 +23193,7 @@
       "effect.power.tornado_master": "Master of Tornado",
       "biome.power.enceladus_ice_desert": "Enceladus Ice Desert",
       "gui.power.choise_magic_power_2.Teleport.": "Teleport.",
+      "gamerule.getRandomStone.description": "Includes random distribution of stones to players",
       "item.power.bo_staff": "Bo Staff",
       "item.power.destruction_helmet": "Destruction Helmet",
       "gui.power.choise_magic_stones_page_2.Gravity": "Gravity",
@@ -23364,6 +23400,7 @@
       "item.power.mist_boots": "Mist Boots",
       "advancements.mighty_master.descr": "Choose your magic stone",
       "item.power.sun_chestplate": "Sun Chestplate",
+      "gamerule.getRandomStone": "Random receipt of stones",
       "item.power.explosion_battery": "Battery",
       "item.power.point": "Point",
       "effect.power.recharge_blue_flame_stone": "Recharge",

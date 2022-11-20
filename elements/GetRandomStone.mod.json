@@ -1,0 +1,12 @@
+{
+  "_fv": 35,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Random receipt of stones",
+    "description": "Includes random distribution of stones to players",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}
