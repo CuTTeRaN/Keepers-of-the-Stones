@@ -22,7 +22,7 @@ public class BlueFireSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 16f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -36,7 +36,7 @@ public class BlueFireSwordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.05f, new Item.Properties().tab(null).fireResistant());
+		}, 3, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 
 	@Override

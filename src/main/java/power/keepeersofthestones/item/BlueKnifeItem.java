@@ -52,9 +52,9 @@ public class BlueKnifeItem extends Item {
 			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
 			builder.put(Attributes.ATTACK_DAMAGE,
-					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 12f, AttributeModifier.Operation.ADDITION));
+					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 14f, AttributeModifier.Operation.ADDITION));
 			builder.put(Attributes.ATTACK_SPEED,
-					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -2.2999999999999998, AttributeModifier.Operation.ADDITION));
+					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -2, AttributeModifier.Operation.ADDITION));
 			return builder.build();
 		}
 		return super.getDefaultAttributeModifiers(equipmentSlot);

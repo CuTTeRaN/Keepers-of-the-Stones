@@ -25,7 +25,7 @@ public class LavaHammerItem extends PickaxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 16f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -39,7 +39,7 @@ public class LavaHammerItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.5f, new Item.Properties().tab(null).fireResistant());
+		}, 1, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 
 	@Override
@@ -51,9 +51,9 @@ public class LavaHammerItem extends PickaxeItem {
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
-		InteractionResult retval = super.useOn(context);
+		super.useOn(context);
 		DestroyRocksProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
 				context.getClickedPos().getZ(), context.getPlayer());
-		return retval;
+		return InteractionResult.SUCCESS;
 	}
 }

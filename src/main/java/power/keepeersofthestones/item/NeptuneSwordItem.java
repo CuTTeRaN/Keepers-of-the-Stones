@@ -23,7 +23,7 @@ public class NeptuneSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 19f;
+				return 14f;
 			}
 
 			public int getLevel() {
@@ -37,7 +37,7 @@ public class NeptuneSwordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2.2999999999999998f, new Item.Properties().tab(null).fireResistant());
+		}, 3, -2f, new Item.Properties().tab(null).fireResistant());
 	}
 
 	@Override

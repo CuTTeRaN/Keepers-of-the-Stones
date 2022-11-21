@@ -18,7 +18,7 @@ public class SaiItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 6f;
+				return 14f;
 			}
 
 			public int getLevel() {

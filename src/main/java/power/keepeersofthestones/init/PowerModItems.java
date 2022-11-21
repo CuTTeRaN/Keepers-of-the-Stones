@@ -303,6 +303,7 @@ import power.keepeersofthestones.item.BigSizeItem;
 import power.keepeersofthestones.item.BeeStingItem;
 import power.keepeersofthestones.item.BatonItem;
 import power.keepeersofthestones.item.BalanceItem;
+import power.keepeersofthestones.item.AquaticaItem;
 import power.keepeersofthestones.item.AnimalsStoneItem;
 import power.keepeersofthestones.item.AnimalsItem;
 import power.keepeersofthestones.item.AnimalsBatteryItem;
@@ -823,6 +824,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GOLDEN_SPHERE = REGISTRY.register("golden_sphere", () -> new GoldenSphereItem());
 	public static final RegistryObject<Item> GOLDEN_SHIELD = REGISTRY.register("golden_shield", () -> new GoldenShieldItem());
 	public static final RegistryObject<Item> PUDDLE = REGISTRY.register("puddle", () -> new PuddleItem());
+	public static final RegistryObject<Item> AQUATICA = REGISTRY.register("aquatica", () -> new AquaticaItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
