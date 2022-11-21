@@ -71,9 +71,9 @@ public class CheckPointTPScreen extends AbstractContainerScreen<CheckPointTPMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Returning to the last point", 15, 7, -12829636);
-		this.font.draw(poseStack, "Checkpoints:", 15, 25, -12829636);
-		this.font.draw(poseStack, "Set checkpoint:", 15, 79, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.check_point_tp.label_returning_to_the_last_point"), 15, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.check_point_tp.label_checkpoints"), 15, 25, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.check_point_tp.label_set_checkpoint"), 15, 79, -12829636);
 	}
 
 	@Override
@@ -86,41 +86,47 @@ public class CheckPointTPScreen extends AbstractContainerScreen<CheckPointTPMenu
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 15, this.topPos + 43, 30, 20, Component.translatable("gui.power.check_point_tp.1"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(0, x, y, z));
-				CheckPointTPButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 60, this.topPos + 43, 30, 20, Component.translatable("gui.power.check_point_tp.2"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(1, x, y, z));
-				CheckPointTPButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 105, this.topPos + 43, 30, 20, Component.translatable("gui.power.check_point_tp.3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(2, x, y, z));
-				CheckPointTPButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 15, this.topPos + 97, 30, 20, Component.translatable("gui.power.check_point_tp.1"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(3, x, y, z));
-				CheckPointTPButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 60, this.topPos + 97, 30, 20, Component.translatable("gui.power.check_point_tp.2"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(4, x, y, z));
-				CheckPointTPButtonMessage.handleButtonAction(entity, 4, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 105, this.topPos + 97, 30, 20, Component.translatable("gui.power.check_point_tp.3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(5, x, y, z));
-				CheckPointTPButtonMessage.handleButtonAction(entity, 5, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 15, this.topPos + 43, 30, 20, Component.translatable("gui.power.check_point_tp.button_1"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(0, x, y, z));
+						CheckPointTPButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 60, this.topPos + 43, 30, 20, Component.translatable("gui.power.check_point_tp.button_2"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(1, x, y, z));
+						CheckPointTPButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 105, this.topPos + 43, 30, 20, Component.translatable("gui.power.check_point_tp.button_3"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(2, x, y, z));
+						CheckPointTPButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 15, this.topPos + 97, 30, 20, Component.translatable("gui.power.check_point_tp.button_11"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(3, x, y, z));
+						CheckPointTPButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 60, this.topPos + 97, 30, 20, Component.translatable("gui.power.check_point_tp.button_21"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(4, x, y, z));
+						CheckPointTPButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 105, this.topPos + 97, 30, 20, Component.translatable("gui.power.check_point_tp.button_31"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(5, x, y, z));
+						CheckPointTPButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}));
 	}
 }

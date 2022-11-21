@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,6 @@
         "data": {
           "image": "book_of_elements_book.png",
           "use1Xscale": true,
-          "name": "book_of_elements_book.png",
           "x": -31,
           "y": -7
         }
@@ -23,6 +22,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_class_additional",
           "text": {
             "fixedValue": "Class: Additional"
           },
@@ -30,7 +30,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Class: Additional",
           "x": 51,
           "y": 35
         }
@@ -38,6 +37,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_element_speed",
           "text": {
             "fixedValue": "Element: Speed"
           },
@@ -45,7 +45,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Element: Speed",
           "x": 51,
           "y": 53
         }
@@ -53,6 +52,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_force_boost",
           "text": {
             "fixedValue": "Force: Boost"
           },
@@ -60,7 +60,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Force: Boost",
           "x": 51,
           "y": 71
         }
@@ -70,7 +69,6 @@
         "data": {
           "image": "speed_stone.png",
           "use1Xscale": false,
-          "name": "speed_stone.png",
           "x": 109,
           "y": 11
         }
@@ -80,7 +78,6 @@
         "data": {
           "image": "speed_master.png",
           "use1Xscale": false,
-          "name": "speed_master.png",
           "x": 307,
           "y": 11
         }
@@ -90,7 +87,6 @@
         "data": {
           "image": "speed_element.png",
           "use1Xscale": true,
-          "name": "speed_element.png",
           "x": 285,
           "y": 35
         }
@@ -98,13 +94,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_empty",
           "text": ">",
           "onClick": {
             "name": "OpenLevelsAndSkillsPage"
           },
           "width": 30,
           "height": 20,
-          "name": ">",
           "x": 366,
           "y": 206
         }

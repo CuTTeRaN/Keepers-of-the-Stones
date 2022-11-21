@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_choose_an_animal_to_summon",
           "text": {
             "fixedValue": "Choose an animal to summon"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose an animal to summon",
           "x": 141,
           "y": 44
         }
@@ -28,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_wolf",
           "text": "Wolf",
           "onClick": {
             "name": "SummonWolf"
           },
           "width": 46,
           "height": 20,
-          "name": "Wolf",
           "x": 141,
           "y": 62
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_chicken",
           "text": "Chicken",
           "onClick": {
             "name": "SummonChicken"
           },
           "width": 61,
           "height": 20,
-          "name": "Chicken",
           "x": 204,
           "y": 62
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_cow",
           "text": "Cow",
           "onClick": {
             "name": "SummonCow"
           },
           "width": 40,
           "height": 20,
-          "name": "Cow",
           "x": 141,
           "y": 89
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_cat",
           "text": "Cat",
           "onClick": {
             "name": "SummonCat"
           },
           "width": 40,
           "height": 20,
-          "name": "Cat",
           "x": 204,
           "y": 89
         }
@@ -84,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_horse",
           "text": "Horse",
           "onClick": {
             "name": "SummonHorse"
           },
           "width": 51,
           "height": 20,
-          "name": "Horse",
           "x": 141,
           "y": 116
         }
@@ -98,13 +98,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_sheep",
           "text": "Sheep",
           "onClick": {
             "name": "SummonSheep"
           },
           "width": 51,
           "height": 20,
-          "name": "Sheep",
           "x": 204,
           "y": 116
         }

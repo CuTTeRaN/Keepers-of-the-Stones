@@ -132,8 +132,8 @@ public class ChoiseMagicStoneGUIScreen extends AbstractContainerScreen<ChoiseMag
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose a stone to get it", 127, 6, -12829636);
-		this.font.draw(poseStack, "1/3", 10, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_stone_gui.label_choose_a_stone_to_get_it"), 127, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_stone_gui.label_13"), 10, 6, -12829636);
 	}
 
 	@Override
@@ -147,154 +147,154 @@ public class ChoiseMagicStoneGUIScreen extends AbstractContainerScreen<ChoiseMag
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Fire"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.button_fire"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(0, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Air"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.button_air"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(1, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Water"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_water"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(2, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Earth"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_earth"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(3, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Energy"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_energy"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(4, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Ice"), e -> {
+				new Button(this.leftPos + 136, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.button_ice"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(5, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Lightning"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_lightning"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(6, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Sound"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_sound"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(7, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Crystal"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_crystal"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(8, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Lava"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_lava"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(9, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Rain"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 33, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_rain"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(10, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Ocean"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_ocean"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(11, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Greenery"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_greenery"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(12, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Tornado"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_tornado"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(13, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 316, this.topPos + 168, 72, 20, Component.translatable("gui.power.choise_magic_stone_gui.Next page"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_next_page"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(14, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 14, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Animals"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_animals"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(15, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 15, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Metal"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_metal"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(16, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 16, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Light"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_light"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(17, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 17, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Shadow"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_shadow"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(18, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 18, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Vacuum"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_vacuum"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(19, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 19, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_stone_gui.Sun"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_stone_gui.button_sun"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(20, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 20, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 208, this.topPos + 168, 93, 20,
-				Component.translatable("gui.power.choise_magic_stone_gui.Without stone"), e -> {
+				Component.translatable("gui.power.choise_magic_stone_gui.button_without_stone"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStoneGUIButtonMessage(21, x, y, z));
 						ChoiseMagicStoneGUIButtonMessage.handleButtonAction(entity, 21, x, y, z);

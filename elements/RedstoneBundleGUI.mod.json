@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_select_the_mechanism_to_add",
           "text": {
             "fixedValue": "Select the mechanism to add"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Select the mechanism to add",
           "x": 141,
           "y": 26
         }
@@ -28,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_piston",
           "text": "Piston",
           "onClick": {
             "name": "GetPiston"
           },
           "width": 135,
           "height": 20,
-          "name": "Piston",
           "x": 78,
           "y": 44
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_piston_extension",
           "text": "Piston extension",
           "onClick": {
             "name": "GetStickyPiston"
           },
           "width": 135,
           "height": 20,
-          "name": "Piston extension",
           "x": 78,
           "y": 71
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_observer",
           "text": "Observer ",
           "onClick": {
             "name": "GetObserver"
           },
           "width": 135,
           "height": 20,
-          "name": "Observer ",
           "x": 78,
           "y": 98
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_redstone_block",
           "text": "Redstone Block",
           "onClick": {
             "name": "GetRedstoneBlock"
           },
           "width": 135,
           "height": 20,
-          "name": "Redstone Block",
           "x": 78,
           "y": 125
         }
@@ -84,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_comparator",
           "text": "Comparator",
           "onClick": {
             "name": "GetComparator"
           },
           "width": 77,
           "height": 20,
-          "name": "Comparator",
           "x": 78,
           "y": 152
         }
@@ -98,13 +98,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_redstone_lamp",
           "text": "Redstone Lamp",
           "onClick": {
             "name": "GetRedstoneLamp"
           },
           "width": 93,
           "height": 20,
-          "name": "Redstone Lamp",
           "x": 78,
           "y": 179
         }
@@ -112,13 +112,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_repeater",
           "text": "Repeater ",
           "onClick": {
             "name": "GetRepeater"
           },
           "width": 72,
           "height": 20,
-          "name": "Repeater ",
           "x": 168,
           "y": 152
         }
@@ -126,13 +126,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_lever",
           "text": "Lever",
           "onClick": {
             "name": "GetLever"
           },
           "width": 51,
           "height": 20,
-          "name": "Lever",
           "x": 177,
           "y": 179
         }
@@ -140,13 +140,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_redstone_torch",
           "text": "Redstone Torch",
           "onClick": {
             "name": "GetRedstoneTorch"
           },
           "width": 98,
           "height": 20,
-          "name": "Redstone Torch",
           "x": 231,
           "y": 179
         }
@@ -154,13 +154,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_hopper",
           "text": "Hopper",
           "onClick": {
             "name": "GetHopper"
           },
           "width": 56,
           "height": 20,
-          "name": "Hopper",
           "x": 249,
           "y": 152
         }
@@ -168,13 +168,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_dropper",
           "text": "Dropper",
           "onClick": {
             "name": "GetDropper"
           },
           "width": 61,
           "height": 20,
-          "name": "Dropper",
           "x": 222,
           "y": 125
         }
@@ -182,13 +182,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_dispenser",
           "text": "Dispenser",
           "onClick": {
             "name": "GetDispenser"
           },
           "width": 72,
           "height": 20,
-          "name": "Dispenser",
           "x": 222,
           "y": 98
         }

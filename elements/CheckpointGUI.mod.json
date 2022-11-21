@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_returning_to_the_last_point",
           "text": {
             "fixedValue": "Returning to the last point"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Returning to the last point",
           "x": 141,
           "y": 44
         }
@@ -28,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_checkpoint",
           "text": "Checkpoint",
           "onClick": {
             "name": "ReturnCheckpoint"
           },
           "width": 126,
           "height": 20,
-          "name": "Checkpoint",
           "x": 150,
           "y": 62
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_set_checkpoint",
           "text": "Set checkpoint",
           "onClick": {
             "name": "TimeCheckpoint"
           },
           "width": 126,
           "height": 20,
-          "name": "Set checkpoint",
           "x": 150,
           "y": 89
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_return_to_the_past",
           "text": "Return to the past",
           "onClick": {
             "name": "ReturnToPast"
           },
           "width": 126,
           "height": 20,
-          "name": "Return to the past",
           "x": 150,
           "y": 134
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_return_to_the_present",
           "text": "Return to the present",
           "onClick": {
             "name": "ReturnToPresent"
           },
           "width": 134,
           "height": 20,
-          "name": "Return to the present",
           "x": 150,
           "y": 161
         }
@@ -84,6 +84,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_time_travel",
           "text": {
             "fixedValue": "Time travel"
           },
@@ -91,7 +92,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Time travel",
           "x": 186,
           "y": 116
         }

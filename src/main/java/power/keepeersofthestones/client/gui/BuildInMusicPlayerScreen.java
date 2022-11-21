@@ -71,7 +71,7 @@ public class BuildInMusicPlayerScreen extends AbstractContainerScreen<BuildInMus
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Music Player", 122, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.build_in_music_player.label_music_player"), 122, 7, -12829636);
 	}
 
 	@Override
@@ -85,91 +85,91 @@ public class BuildInMusicPlayerScreen extends AbstractContainerScreen<BuildInMus
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 239, this.topPos + 7, 46, 20, Component.translatable("gui.power.build_in_music_player.Stop"), e -> {
+				new Button(this.leftPos + 239, this.topPos + 7, 46, 20, Component.translatable("gui.power.build_in_music_player.button_stop"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(0, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 23, this.topPos + 25, 40, 20, Component.translatable("gui.power.build_in_music_player.Cat"), e -> {
+				new Button(this.leftPos + 23, this.topPos + 25, 40, 20, Component.translatable("gui.power.build_in_music_player.button_cat"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(1, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 68, this.topPos + 25, 56, 20, Component.translatable("gui.power.build_in_music_player.Blocks"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 68, this.topPos + 25, 56, 20,
+				Component.translatable("gui.power.build_in_music_player.button_blocks"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(2, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 131, this.topPos + 25, 40, 20, Component.translatable("gui.power.build_in_music_player.Far"), e -> {
+				new Button(this.leftPos + 131, this.topPos + 25, 40, 20, Component.translatable("gui.power.build_in_music_player.button_far"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(3, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 23, this.topPos + 52, 46, 20, Component.translatable("gui.power.build_in_music_player.Mall"), e -> {
+				new Button(this.leftPos + 23, this.topPos + 52, 46, 20, Component.translatable("gui.power.build_in_music_player.button_mall"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(4, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 77, this.topPos + 52, 61, 20, Component.translatable("gui.power.build_in_music_player.Mellohi"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 77, this.topPos + 52, 61, 20,
+				Component.translatable("gui.power.build_in_music_player.button_mellohi"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(5, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 140, this.topPos + 52, 51, 20, Component.translatable("gui.power.build_in_music_player.Chirp"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 140, this.topPos + 52, 51, 20,
+				Component.translatable("gui.power.build_in_music_player.button_chirp"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(6, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 194, this.topPos + 52, 46, 20, Component.translatable("gui.power.build_in_music_player.Stal"), e -> {
+				new Button(this.leftPos + 194, this.topPos + 52, 46, 20, Component.translatable("gui.power.build_in_music_player.button_stal"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(7, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 23, this.topPos + 79, 51, 20, Component.translatable("gui.power.build_in_music_player.Strad"), e -> {
+				new Button(this.leftPos + 23, this.topPos + 79, 51, 20, Component.translatable("gui.power.build_in_music_player.button_strad"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(8, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 77, this.topPos + 79, 46, 20, Component.translatable("gui.power.build_in_music_player.Ward"), e -> {
+				new Button(this.leftPos + 77, this.topPos + 79, 46, 20, Component.translatable("gui.power.build_in_music_player.button_ward"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(9, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 131, this.topPos + 79, 46, 20, Component.translatable("gui.power.build_in_music_player.Wait"), e -> {
+				new Button(this.leftPos + 131, this.topPos + 79, 46, 20, Component.translatable("gui.power.build_in_music_player.button_wait"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(10, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 185, this.topPos + 79, 61, 20, Component.translatable("gui.power.build_in_music_player.Pigstep"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 185, this.topPos + 79, 61, 20,
+				Component.translatable("gui.power.build_in_music_player.button_pigstep"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(11, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 23, this.topPos + 106, 72, 20, Component.translatable("gui.power.build_in_music_player.Otherside"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 23, this.topPos + 106, 72, 20,
+				Component.translatable("gui.power.build_in_music_player.button_otherside"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new BuildInMusicPlayerButtonMessage(12, x, y, z));
 						BuildInMusicPlayerButtonMessage.handleButtonAction(entity, 12, x, y, z);

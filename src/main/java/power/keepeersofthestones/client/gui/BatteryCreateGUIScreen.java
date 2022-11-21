@@ -79,7 +79,7 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Charging the battery", 42, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.battery_create_gui.label_charging_the_battery"), 42, 7, -12829636);
 		this.font.draw(poseStack,
 
 				BatteryCreateGUIZnachieniieProcedure.execute(world, x, y, z), 83, 51, -12829636);

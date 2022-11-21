@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,6 @@
         "data": {
           "image": "space_atlas.png",
           "use1Xscale": true,
-          "name": "space_atlas.png",
           "x": -31,
           "y": -6
         }
@@ -23,6 +22,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_atlas_of_space_travel",
           "text": {
             "fixedValue": "Atlas of Space Travel"
           },
@@ -30,7 +30,6 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "Atlas of Space Travel",
           "x": 57,
           "y": 17
         }
@@ -38,13 +37,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_moon",
           "text": "Moon",
           "onClick": {
             "name": "MoonOnMe"
           },
           "width": 46,
           "height": 20,
-          "name": "Moon",
           "x": 42,
           "y": 62
         }
@@ -52,13 +51,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_earth",
           "text": "Earth",
           "onClick": {
             "name": "EarthOnMe"
           },
           "width": 51,
           "height": 20,
-          "name": "Earth",
           "x": 42,
           "y": 35
         }
@@ -66,13 +65,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mars",
           "text": "Mars",
           "onClick": {
             "name": "MarsOnMe"
           },
           "width": 46,
           "height": 20,
-          "name": "Mars",
           "x": 42,
           "y": 89
         }
@@ -80,13 +79,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_venus",
           "text": "Venus",
           "onClick": {
             "name": "VenusOnMe"
           },
           "width": 51,
           "height": 20,
-          "name": "Venus",
           "x": 42,
           "y": 116
         }
@@ -94,13 +93,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_enceladus",
           "text": "Enceladus",
           "onClick": {
             "name": "EnceladusOnMe"
           },
           "width": 72,
           "height": 20,
-          "name": "Enceladus",
           "x": 42,
           "y": 140
         }

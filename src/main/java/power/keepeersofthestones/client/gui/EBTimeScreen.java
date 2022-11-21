@@ -80,9 +80,9 @@ public class EBTimeScreen extends AbstractContainerScreen<EBTimeMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Great, Unique", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Time", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: History", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_time.label_class_great_unique"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_time.label_element_time"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_time.label_force_history"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBTimeScreen extends AbstractContainerScreen<EBTimeMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_time.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBTimeButtonMessage(0, x, y, z));
-				EBTimeButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_time.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBTimeButtonMessage(0, x, y, z));
+						EBTimeButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

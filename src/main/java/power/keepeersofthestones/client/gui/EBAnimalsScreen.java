@@ -80,9 +80,9 @@ public class EBAnimalsScreen extends AbstractContainerScreen<EBAnimalsMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Middle", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Animals", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Mobility", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_animals.label_class_middle"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_animals.label_element_animals"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_animals.label_force_mobility"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBAnimalsScreen extends AbstractContainerScreen<EBAnimalsMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_animals.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBAnimalsButtonMessage(0, x, y, z));
-				EBAnimalsButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_animals.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBAnimalsButtonMessage(0, x, y, z));
+						EBAnimalsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

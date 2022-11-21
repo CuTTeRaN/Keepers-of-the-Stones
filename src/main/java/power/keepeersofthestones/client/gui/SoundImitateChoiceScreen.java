@@ -71,7 +71,7 @@ public class SoundImitateChoiceScreen extends AbstractContainerScreen<SoundImita
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Select the mob for emitate sound", 6, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.sound_imitate_choice.label_select_the_mob_for_emitate_sound"), 6, 7, -12829636);
 	}
 
 	@Override
@@ -84,22 +84,22 @@ public class SoundImitateChoiceScreen extends AbstractContainerScreen<SoundImita
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(
-				new Button(this.leftPos + 51, this.topPos + 25, 60, 20, Component.translatable("gui.power.sound_imitate_choice.Creeper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 25, 60, 20,
+				Component.translatable("gui.power.sound_imitate_choice.button_creeper"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(0, x, y, z));
 						SoundImitateChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 51, this.topPos + 79, 55, 20, Component.translatable("gui.power.sound_imitate_choice.Zombie"), e -> {
+				new Button(this.leftPos + 51, this.topPos + 79, 55, 20, Component.translatable("gui.power.sound_imitate_choice.button_zombie"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(1, x, y, z));
 						SoundImitateChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 51, this.topPos + 52, 65, 20, Component.translatable("gui.power.sound_imitate_choice.Skeleton"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 52, 65, 20,
+				Component.translatable("gui.power.sound_imitate_choice.button_skeleton"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SoundImitateChoiceButtonMessage(2, x, y, z));
 						SoundImitateChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);

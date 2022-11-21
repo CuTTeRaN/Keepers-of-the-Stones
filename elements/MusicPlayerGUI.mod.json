@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_music_player",
           "text": {
             "fixedValue": "Music Player"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Music Player",
           "x": 186,
           "y": 44
         }
@@ -28,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_stop",
           "text": "Stop",
           "onClick": {
             "name": "StopSound"
           },
           "width": 46,
           "height": 20,
-          "name": "Stop",
           "x": 303,
           "y": 44
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_buildin",
           "text": "Build-In",
           "onClick": {
             "name": "OpenBuitinMusic"
           },
           "width": 67,
           "height": 20,
-          "name": "Build-In",
           "x": 114,
           "y": 98
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_custom",
           "text": "Custom",
           "onClick": {
             "name": "OpenCastomMusic"
           },
           "width": 56,
           "height": 20,
-          "name": "Custom",
           "x": 240,
           "y": 98
         }

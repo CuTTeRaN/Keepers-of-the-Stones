@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_choose_where_to_fly",
           "text": {
             "fixedValue": "Choose where to fly"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose where to fly",
           "x": 159,
           "y": 26
         }
@@ -28,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_moon",
           "text": "Moon",
           "onClick": {
             "name": "FlyOnMoon"
           },
           "width": 46,
           "height": 20,
-          "name": "Moon",
           "x": 96,
           "y": 44
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mars",
           "text": "Mars",
           "onClick": {
             "name": "FlyOnMars"
           },
           "width": 46,
           "height": 20,
-          "name": "Mars",
           "x": 96,
           "y": 80
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_venus",
           "text": "Venus",
           "onClick": {
             "name": "FlyOnVenus"
           },
           "width": 51,
           "height": 20,
-          "name": "Venus",
           "x": 96,
           "y": 116
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_enceladus",
           "text": "Enceladus",
           "onClick": {
             "name": "FlyOnEnceladus"
           },
           "width": 72,
           "height": 20,
-          "name": "Enceladus",
           "x": 96,
           "y": 152
         }
@@ -84,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_back_to_earth",
           "text": "Back to Earth",
           "onClick": {
             "name": "FlyOnEarth"
           },
           "width": 92,
           "height": 20,
-          "name": "Back to Earth",
           "x": 258,
           "y": 188
         }

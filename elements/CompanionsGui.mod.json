@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,13 +13,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_zombie",
           "text": "Zombie",
           "onClick": {
             "name": "SummonMyZombie"
           },
           "width": 56,
           "height": 20,
-          "name": "Zombie",
           "x": 78,
           "y": 107
         }
@@ -27,6 +27,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_choose_the_entity_you_want_to_ma",
           "text": {
             "fixedValue": "Choose the entity you want to make your henchman"
           },
@@ -34,7 +35,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose the entity you want to make your henchman",
           "x": 96,
           "y": 80
         }

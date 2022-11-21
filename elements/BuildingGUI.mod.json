@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_select_the_structure_you_want_to",
           "text": {
             "fixedValue": "Select the structure you want to place"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Select the structure you want to place",
           "x": 114,
           "y": 26
         }
@@ -28,13 +28,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_library",
           "text": "Library",
           "onClick": {
             "name": "LibraryBuild"
           },
           "width": 61,
           "height": 20,
-          "name": "Library",
           "x": 105,
           "y": 71
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_blacksmith",
           "text": "Blacksmith",
           "onClick": {
             "name": "BlacksmithBuild"
           },
           "width": 77,
           "height": 20,
-          "name": "Blacksmith",
           "x": 204,
           "y": 44
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_butcher_shop",
           "text": "Butcher Shop",
           "onClick": {
             "name": "ButcherShopBuild"
           },
           "width": 87,
           "height": 20,
-          "name": "Butcher Shop",
           "x": 105,
           "y": 44
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_streetlight",
           "text": "Streetlight",
           "onClick": {
             "name": "StreetlightBuild"
           },
           "width": 82,
           "height": 20,
-          "name": "Streetlight",
           "x": 177,
           "y": 71
         }
@@ -84,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_maia_pyramid",
           "text": "Maia Pyramid",
           "onClick": {
             "name": "MaiaPyramidBuild"
           },
           "width": 87,
           "height": 20,
-          "name": "Maia Pyramid",
           "x": 105,
           "y": 98
         }
@@ -98,13 +98,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_medieval_town",
           "text": "Medieval Town",
           "onClick": {
             "name": "MedievalTown"
           },
           "width": 93,
           "height": 20,
-          "name": "Medieval Town",
           "x": 204,
           "y": 98
         }
@@ -112,13 +112,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_overgrown_church",
           "text": "Overgrown Church",
           "onClick": {
             "name": "OvergrownShurch"
           },
           "width": 108,
           "height": 20,
-          "name": "Overgrown Church",
           "x": 105,
           "y": 125
         }

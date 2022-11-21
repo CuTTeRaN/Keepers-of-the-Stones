@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,13 +13,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_moon",
           "text": " Moon",
           "onClick": {
             "name": "MoonGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Moon",
           "x": 51,
           "y": 53
         }
@@ -27,6 +27,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_choose_a_stone_to_get_it",
           "text": {
             "fixedValue": "Choose a stone to get it"
           },
@@ -34,7 +35,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose a stone to get it",
           "x": 141,
           "y": 26
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_amber",
           "text": " Amber",
           "onClick": {
             "name": "AmberGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Amber",
           "x": 141,
           "y": 161
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_destruct",
           "text": " Destruct",
           "onClick": {
             "name": "DestructionGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Destruct",
           "x": 51,
           "y": 134
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_space",
           "text": "Space",
           "onClick": {
             "name": "SpaceGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Space",
           "x": 51,
           "y": 80
         }
@@ -84,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_blood",
           "text": "Blood",
           "onClick": {
             "name": "BloodGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Blood",
           "x": 51,
           "y": 161
         }
@@ -98,13 +98,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_time",
           "text": "Time",
           "onClick": {
             "name": "TimeGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Time",
           "x": 141,
           "y": 53
         }
@@ -112,13 +112,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_techolog",
           "text": "Techolog.",
           "onClick": {
             "name": "TechnologyGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Techolog.",
           "x": 141,
           "y": 80
         }
@@ -126,13 +126,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_explosion",
           "text": "Explosion",
           "onClick": {
             "name": "ExplosionGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Explosion",
           "x": 141,
           "y": 134
         }
@@ -140,13 +140,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_teleport",
           "text": "Teleport.",
           "onClick": {
             "name": "TeleportationGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Teleport.",
           "x": 141,
           "y": 107
         }
@@ -154,13 +154,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_creation",
           "text": "Creation",
           "onClick": {
             "name": "CreationGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Creation",
           "x": 51,
           "y": 107
         }
@@ -168,13 +168,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mist",
           "text": "Mist",
           "onClick": {
             "name": "MistGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Mist",
           "x": 240,
           "y": 53
         }
@@ -182,13 +182,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_sand",
           "text": "Sand",
           "onClick": {
             "name": "SandGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Sand",
           "x": 240,
           "y": 80
         }
@@ -196,13 +196,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_speed",
           "text": " Speed",
           "onClick": {
             "name": "SpeedGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Speed",
           "x": 240,
           "y": 107
         }
@@ -210,13 +210,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_previous_page",
           "text": "Previous page",
           "onClick": {
             "name": "PreviousPageGUIChoiceStones"
           },
           "width": 93,
           "height": 20,
-          "name": "Previous page",
           "x": 24,
           "y": 188
         }
@@ -226,7 +226,6 @@
         "data": {
           "image": "moon_master.png",
           "use1Xscale": false,
-          "name": "moon_master.png",
           "x": 33,
           "y": 53
         }
@@ -236,7 +235,6 @@
         "data": {
           "image": "cosmos_master.png",
           "use1Xscale": false,
-          "name": "cosmos_master.png",
           "x": 33,
           "y": 80
         }
@@ -246,7 +244,6 @@
         "data": {
           "image": "blood_master.png",
           "use1Xscale": false,
-          "name": "blood_master.png",
           "x": 33,
           "y": 161
         }
@@ -256,7 +253,6 @@
         "data": {
           "image": "time_master.png",
           "use1Xscale": false,
-          "name": "time_master.png",
           "x": 123,
           "y": 53
         }
@@ -266,7 +262,6 @@
         "data": {
           "image": "technology_master.png",
           "use1Xscale": false,
-          "name": "technology_master.png",
           "x": 123,
           "y": 80
         }
@@ -276,7 +271,6 @@
         "data": {
           "image": "teleportation_master.png",
           "use1Xscale": false,
-          "name": "teleportation_master.png",
           "x": 123,
           "y": 107
         }
@@ -286,7 +280,6 @@
         "data": {
           "image": "explosion_master.png",
           "use1Xscale": false,
-          "name": "explosion_master.png",
           "x": 123,
           "y": 134
         }
@@ -294,13 +287,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_poison",
           "text": " Poison",
           "onClick": {
             "name": "PoisonGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Poison",
           "x": 240,
           "y": 134
         }
@@ -308,13 +301,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_magnet",
           "text": "Magnet",
           "onClick": {
             "name": "MagnetGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Magnet",
           "x": 240,
           "y": 161
         }
@@ -322,13 +315,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mushrooms",
           "text": "Mushrooms",
           "onClick": {
             "name": "MushroomsGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Mushrooms",
           "x": 339,
           "y": 53
         }
@@ -336,13 +329,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mercury",
           "text": "Mercury",
           "onClick": {
             "name": "MercuryGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Mercury",
           "x": 339,
           "y": 80
         }
@@ -350,13 +343,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_music",
           "text": "Music",
           "onClick": {
             "name": "MusicGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Music",
           "x": 339,
           "y": 107
         }
@@ -366,7 +359,6 @@
         "data": {
           "image": "creation_master.png",
           "use1Xscale": false,
-          "name": "creation_master.png",
           "x": 33,
           "y": 107
         }
@@ -376,7 +368,6 @@
         "data": {
           "image": "destruction_master.png",
           "use1Xscale": false,
-          "name": "destruction_master.png",
           "x": 33,
           "y": 134
         }
@@ -384,13 +375,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_plague",
           "text": "Plague",
           "onClick": {
             "name": "PlagueGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Plague",
           "x": 339,
           "y": 134
         }
@@ -398,13 +389,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_gravity",
           "text": "Gravity",
           "onClick": {
             "name": "GravityGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Gravity",
           "x": 339,
           "y": 161
         }
@@ -412,13 +403,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_next_page",
           "text": "Next page",
           "onClick": {
             "name": "NextToPage3"
           },
           "width": 72,
           "height": 20,
-          "name": "Next page",
           "x": 330,
           "y": 188
         }
@@ -426,6 +417,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_23",
           "text": {
             "fixedValue": "2/3"
           },
@@ -433,7 +425,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "2/3",
           "x": 24,
           "y": 26
         }
@@ -443,7 +434,6 @@
         "data": {
           "image": "amber_master.png",
           "use1Xscale": false,
-          "name": "amber_master.png",
           "x": 123,
           "y": 161
         }
@@ -453,7 +443,6 @@
         "data": {
           "image": "space_master.png",
           "use1Xscale": false,
-          "name": "space_master.png",
           "x": 33,
           "y": 80
         }
@@ -463,7 +452,6 @@
         "data": {
           "image": "mist_master.png",
           "use1Xscale": false,
-          "name": "mist_master.png",
           "x": 222,
           "y": 53
         }
@@ -473,7 +461,6 @@
         "data": {
           "image": "sand_master.png",
           "use1Xscale": false,
-          "name": "sand_master.png",
           "x": 222,
           "y": 80
         }
@@ -483,7 +470,6 @@
         "data": {
           "image": "speed_master.png",
           "use1Xscale": false,
-          "name": "speed_master.png",
           "x": 222,
           "y": 107
         }
@@ -493,7 +479,6 @@
         "data": {
           "image": "poison_master.png",
           "use1Xscale": false,
-          "name": "poison_master.png",
           "x": 222,
           "y": 134
         }
@@ -503,7 +488,6 @@
         "data": {
           "image": "magnet_master.png",
           "use1Xscale": false,
-          "name": "magnet_master.png",
           "x": 222,
           "y": 161
         }
@@ -513,7 +497,6 @@
         "data": {
           "image": "mushrooms_master.png",
           "use1Xscale": false,
-          "name": "mushrooms_master.png",
           "x": 321,
           "y": 53
         }
@@ -523,7 +506,6 @@
         "data": {
           "image": "mercury_master.png",
           "use1Xscale": false,
-          "name": "mercury_master.png",
           "x": 321,
           "y": 80
         }
@@ -533,7 +515,6 @@
         "data": {
           "image": "music_master.png",
           "use1Xscale": false,
-          "name": "music_master.png",
           "x": 321,
           "y": 107
         }
@@ -543,7 +524,6 @@
         "data": {
           "image": "plague_master.png",
           "use1Xscale": false,
-          "name": "plague_master.png",
           "x": 321,
           "y": 134
         }
@@ -553,7 +533,6 @@
         "data": {
           "image": "gravity_master.png",
           "use1Xscale": false,
-          "name": "gravity_master.png",
           "x": 321,
           "y": 161
         }

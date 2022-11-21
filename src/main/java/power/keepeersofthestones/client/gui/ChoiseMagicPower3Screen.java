@@ -90,8 +90,8 @@ public class ChoiseMagicPower3Screen extends AbstractContainerScreen<ChoiseMagic
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose the desired power of the elements", 127, 6, -12829636);
-		this.font.draw(poseStack, "3/3", 10, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_power_3.label_choose_the_desired_power_of_the"), 127, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_power_3.label_33"), 10, 6, -12829636);
 	}
 
 	@Override
@@ -105,49 +105,49 @@ public class ChoiseMagicPower3Screen extends AbstractContainerScreen<ChoiseMagic
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_3.Spirit"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_3.button_spirit"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(0, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_3.Form"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_3.button_form"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(1, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_power_3.Aether"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_3.button_aether"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(2, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 127, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_3.Mind"), e -> {
+				new Button(this.leftPos + 127, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_3.button_mind"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(3, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_3.Blue Flame"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_3.button_blue_flame"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(4, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_3.Smoke"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_3.button_smoke"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(5, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 10, this.topPos + 168, 93, 20,
-				Component.translatable("gui.power.choise_magic_power_3.Previous page"), e -> {
+				Component.translatable("gui.power.choise_magic_power_3.button_previous_page"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower3ButtonMessage(6, x, y, z));
 						ChoiseMagicPower3ButtonMessage.handleButtonAction(entity, 6, x, y, z);

@@ -80,9 +80,9 @@ public class EBTechnologyScreen extends AbstractContainerScreen<EBTechnologyMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Middle", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Technology", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Control", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_technology.label_class_middle"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_technology.label_element_technology"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_technology.label_force_control"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBTechnologyScreen extends AbstractContainerScreen<EBTechnologyMenu
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_technology.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBTechnologyButtonMessage(0, x, y, z));
-				EBTechnologyButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_technology.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBTechnologyButtonMessage(0, x, y, z));
+						EBTechnologyButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

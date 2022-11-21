@@ -108,11 +108,11 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Level 2", -163, -48, -13421773);
-		this.font.draw(poseStack, "Level 3", -163, -18, -13421773);
-		this.font.draw(poseStack, "Level 1", -163, -81, -13421773);
-		this.font.draw(poseStack, "Reactive Flying", 25, -81, -13421773);
-		this.font.draw(poseStack, "For:", 25, -65, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.power.levels_and_skills_page.label_level_2"), -163, -48, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.power.levels_and_skills_page.label_level_3"), -163, -18, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.power.levels_and_skills_page.label_level_1"), -163, -81, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.power.levels_and_skills_page.label_reactive_flying"), 25, -81, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.power.levels_and_skills_page.label_for"), 25, -65, -13421773);
 	}
 
 	@Override
@@ -125,54 +125,54 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(
-				new Button(this.leftPos + -180, this.topPos + 86, 30, 20, Component.translatable("gui.power.levels_and_skills_page.<"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -180, this.topPos + 86, 30, 20,
+				Component.translatable("gui.power.levels_and_skills_page.button_empty"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(0, x, y, z));
 						LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.levels_and_skills_page.>"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20,
+				Component.translatable("gui.power.levels_and_skills_page.button_empty1"), e -> {
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + -82, this.topPos + -61, 40, 20, Component.translatable("gui.power.levels_and_skills_page.Buy"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -82, this.topPos + -61, 40, 20,
+				Component.translatable("gui.power.levels_and_skills_page.button_buy"), e -> {
 					if (ReturnLevel1Procedure.execute(entity)) {
 						PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(2, x, y, z));
 						LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
-					@Override
-					public void render(PoseStack ms, int gx, int gy, float ticks) {
-						if (ReturnLevel1Procedure.execute(entity))
-							super.render(ms, gx, gy, ticks);
-					}
-				});
-		this.addRenderableWidget(
-				new Button(this.leftPos + -82, this.topPos + -29, 40, 20, Component.translatable("gui.power.levels_and_skills_page.Buy"), e -> {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (ReturnLevel1Procedure.execute(entity))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addRenderableWidget(new Button(this.leftPos + -82, this.topPos + -29, 40, 20,
+				Component.translatable("gui.power.levels_and_skills_page.button_buy1"), e -> {
 					if (ReturnLevel2Procedure.execute(entity)) {
 						PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(3, x, y, z));
 						LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
-					@Override
-					public void render(PoseStack ms, int gx, int gy, float ticks) {
-						if (ReturnLevel2Procedure.execute(entity))
-							super.render(ms, gx, gy, ticks);
-					}
-				});
-		this.addRenderableWidget(
-				new Button(this.leftPos + 128, this.topPos + -75, 40, 20, Component.translatable("gui.power.levels_and_skills_page.Buy"), e -> {
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (ReturnLevel2Procedure.execute(entity))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addRenderableWidget(new Button(this.leftPos + 128, this.topPos + -75, 40, 20,
+				Component.translatable("gui.power.levels_and_skills_page.button_buy2"), e -> {
 					if (NoReturnReactiveFlyingProcedure.execute(entity)) {
 						PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(4, x, y, z));
 						LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
-					@Override
-					public void render(PoseStack ms, int gx, int gy, float ticks) {
-						if (NoReturnReactiveFlyingProcedure.execute(entity))
-							super.render(ms, gx, gy, ticks);
-					}
-				});
+			@Override
+			public void render(PoseStack ms, int gx, int gy, float ticks) {
+				if (NoReturnReactiveFlyingProcedure.execute(entity))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
 	}
 }

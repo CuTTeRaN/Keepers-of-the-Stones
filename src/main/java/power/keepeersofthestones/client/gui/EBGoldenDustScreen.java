@@ -77,9 +77,9 @@ public class EBGoldenDustScreen extends AbstractContainerScreen<EBGoldenDustMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Unique", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Golden Dust", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Goodness", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_golden_dust.label_class_unique"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_golden_dust.label_element_golden_dust"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_golden_dust.label_force_goodness"), -162, -49, -12829636);
 	}
 
 	@Override

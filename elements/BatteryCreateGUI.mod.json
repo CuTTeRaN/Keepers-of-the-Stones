@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_charging_the_battery",
           "text": {
             "fixedValue": "Charging the battery"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Charging the battery",
           "x": 168,
           "y": 44
         }
@@ -34,7 +34,6 @@
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
-          "name": "Slot #0",
           "x": 150,
           "y": 71
         }
@@ -48,7 +47,6 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
-          "name": "Slot #1",
           "x": 177,
           "y": 71
         }
@@ -59,7 +57,6 @@
           "id": 2,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
-          "name": "Slot #2",
           "x": 231,
           "y": 71
         }
@@ -70,7 +67,6 @@
           "id": 3,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
-          "name": "Slot #3",
           "x": 258,
           "y": 71
         }
@@ -78,6 +74,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_proc_battery_create_gui_znachien",
           "text": {
             "fixedValue": "",
             "name": "BatteryCreateGUIZnachieniie"
@@ -86,7 +83,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "BatteryCreateGUIZnachieniie (string procedure)",
           "x": 209,
           "y": 88
         }
@@ -96,7 +92,6 @@
         "data": {
           "image": "slot_for_stone.png",
           "use1Xscale": false,
-          "name": "slot_for_stone.png",
           "x": 150,
           "y": 72
         }
@@ -106,7 +101,6 @@
         "data": {
           "image": "slot_for_battery.png",
           "use1Xscale": false,
-          "name": "slot_for_battery.png",
           "x": 178,
           "y": 72
         }
@@ -116,7 +110,6 @@
         "data": {
           "image": "arrow_gui.png",
           "use1Xscale": false,
-          "name": "arrow_gui.png",
           "x": 201,
           "y": 73
         }

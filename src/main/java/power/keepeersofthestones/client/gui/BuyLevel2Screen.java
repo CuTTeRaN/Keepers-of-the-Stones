@@ -75,7 +75,7 @@ public class BuyLevel2Screen extends AbstractContainerScreen<BuyLevel2Menu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "To buy, put the required number of coins in the slot (4)", 46, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.buy_level_2.label_to_buy_put_the_required_number"), 46, 7, -12829636);
 	}
 
 	@Override
@@ -88,11 +88,12 @@ public class BuyLevel2Screen extends AbstractContainerScreen<BuyLevel2Menu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 217, this.topPos + 34, 40, 20, Component.translatable("gui.power.buy_level_2.Buy"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new BuyLevel2ButtonMessage(0, x, y, z));
-				BuyLevel2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 217, this.topPos + 34, 40, 20, Component.translatable("gui.power.buy_level_2.button_buy"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new BuyLevel2ButtonMessage(0, x, y, z));
+						BuyLevel2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

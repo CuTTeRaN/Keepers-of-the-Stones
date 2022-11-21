@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -14,9 +14,9 @@
         "type": "textfield",
         "data": {
           "placeholder": "0",
+          "name": "tpX",
           "width": 120,
           "height": 20,
-          "name": "tpX",
           "x": 159,
           "y": 62
         }
@@ -24,6 +24,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_x",
           "text": {
             "fixedValue": "X"
           },
@@ -31,7 +32,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "X",
           "x": 150,
           "y": 71
         }
@@ -39,6 +39,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_enter_the_desired_coordinates",
           "text": {
             "fixedValue": "Enter the desired coordinates"
           },
@@ -46,7 +47,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Enter the desired coordinates",
           "x": 141,
           "y": 44
         }
@@ -55,9 +55,9 @@
         "type": "textfield",
         "data": {
           "placeholder": "0",
+          "name": "tpY",
           "width": 120,
           "height": 20,
-          "name": "tpY",
           "x": 159,
           "y": 98
         }
@@ -65,6 +65,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_y",
           "text": {
             "fixedValue": "Y"
           },
@@ -72,7 +73,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Y",
           "x": 150,
           "y": 107
         }
@@ -80,6 +80,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_z",
           "text": {
             "fixedValue": "Z"
           },
@@ -87,7 +88,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Z",
           "x": 150,
           "y": 143
         }
@@ -96,9 +96,9 @@
         "type": "textfield",
         "data": {
           "placeholder": "0",
+          "name": "tpZ",
           "width": 120,
           "height": 20,
-          "name": "tpZ",
           "x": 159,
           "y": 134
         }
@@ -106,13 +106,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_teleport",
           "text": "Teleport",
           "onClick": {
             "name": "PointTP"
           },
           "width": 67,
           "height": 20,
-          "name": "Teleport",
           "x": 177,
           "y": 170
         }

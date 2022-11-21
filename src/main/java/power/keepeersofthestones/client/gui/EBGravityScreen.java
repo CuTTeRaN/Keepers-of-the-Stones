@@ -80,9 +80,9 @@ public class EBGravityScreen extends AbstractContainerScreen<EBGravityMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Gravity", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Binding", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_gravity.label_class_additional"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_gravity.label_element_gravity"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_gravity.label_force_binding"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBGravityScreen extends AbstractContainerScreen<EBGravityMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_gravity.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBGravityButtonMessage(0, x, y, z));
-				EBGravityButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_gravity.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBGravityButtonMessage(0, x, y, z));
+						EBGravityButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

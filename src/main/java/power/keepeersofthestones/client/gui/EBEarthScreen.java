@@ -80,9 +80,9 @@ public class EBEarthScreen extends AbstractContainerScreen<EBEarthMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Basic", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Earth", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Resistance", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_earth.label_class_basic"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_earth.label_element_earth"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_earth.label_force_resistance"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBEarthScreen extends AbstractContainerScreen<EBEarthMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_earth.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBEarthButtonMessage(0, x, y, z));
-				EBEarthButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_earth.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBEarthButtonMessage(0, x, y, z));
+						EBEarthButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

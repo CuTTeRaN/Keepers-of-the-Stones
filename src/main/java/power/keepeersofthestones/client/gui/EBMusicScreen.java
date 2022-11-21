@@ -80,9 +80,9 @@ public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional, Unique", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Music", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Pleasure", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_music.label_class_additional_unique"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_music.label_element_music"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_music.label_force_pleasure"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBMusicScreen extends AbstractContainerScreen<EBMusicMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_music.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBMusicButtonMessage(0, x, y, z));
-				EBMusicButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_music.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBMusicButtonMessage(0, x, y, z));
+						EBMusicButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

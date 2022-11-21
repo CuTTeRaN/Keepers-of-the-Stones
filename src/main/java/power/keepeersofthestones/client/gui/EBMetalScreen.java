@@ -80,9 +80,9 @@ public class EBMetalScreen extends AbstractContainerScreen<EBMetalMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Middle", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Metal", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Invulnerability", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_metal.label_class_middle"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_metal.label_element_metal"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_metal.label_force_invulnerability"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBMetalScreen extends AbstractContainerScreen<EBMetalMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_metal.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBMetalButtonMessage(0, x, y, z));
-				EBMetalButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_metal.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBMetalButtonMessage(0, x, y, z));
+						EBMetalButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

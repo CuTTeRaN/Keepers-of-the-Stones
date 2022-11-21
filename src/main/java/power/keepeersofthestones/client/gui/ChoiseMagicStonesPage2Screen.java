@@ -135,8 +135,8 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose a stone to get it", 127, 6, -12829636);
-		this.font.draw(poseStack, "2/3", 10, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_stones_page_2.label_choose_a_stone_to_get_it"), 127, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_stones_page_2.label_23"), 10, 6, -12829636);
 	}
 
 	@Override
@@ -149,155 +149,155 @@ public class ChoiseMagicStonesPage2Screen extends AbstractContainerScreen<Choise
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2. Moon"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_moon"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(0, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2. Amber"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_amber"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(1, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2. Destruct"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_destruct"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(2, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2.Space"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_space"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(3, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2.Blood"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_blood"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(4, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 127, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2.Time"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_time"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(5, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Techolog."), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_techolog"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(6, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 114, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Explosion"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_explosion"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(7, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 87, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Teleport."), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_teleport"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(8, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Creation"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_creation"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(9, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 226, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2.Mist"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 33, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_mist"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(10, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 226, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2.Sand"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_sand"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(11, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 226, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2. Speed"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_speed"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(12, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 10, this.topPos + 168, 93, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Previous page"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_previous_page"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(13, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 114, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2. Poison"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_poison"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(14, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 14, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 141, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Magnet"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_magnet"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(15, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 15, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Mushrooms"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_mushrooms"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(16, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 16, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Mercury"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_mercury"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(17, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 17, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_stones_page_2.Music"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_music"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(18, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 18, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Plague"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_plague"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(19, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 19, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Gravity"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_gravity"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(20, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 20, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20,
-				Component.translatable("gui.power.choise_magic_stones_page_2.Next page"), e -> {
+				Component.translatable("gui.power.choise_magic_stones_page_2.button_next_page"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage2ButtonMessage(21, x, y, z));
 						ChoiseMagicStonesPage2ButtonMessage.handleButtonAction(entity, 21, x, y, z);

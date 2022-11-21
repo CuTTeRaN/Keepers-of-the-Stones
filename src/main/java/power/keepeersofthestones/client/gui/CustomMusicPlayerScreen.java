@@ -71,8 +71,8 @@ public class CustomMusicPlayerScreen extends AbstractContainerScreen<CustomMusic
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Music Player", 160, 7, -12829636);
-		this.font.draw(poseStack, "This music works only with a resource pack that adds music!", 25, 142, -65536);
+		this.font.draw(poseStack, Component.translatable("gui.power.custom_music_player.label_music_player"), 160, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.custom_music_player.label_this_music_works_only_with_a_res"), 25, 142, -65536);
 	}
 
 	@Override
@@ -86,77 +86,77 @@ public class CustomMusicPlayerScreen extends AbstractContainerScreen<CustomMusic
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 277, this.topPos + 7, 46, 20, Component.translatable("gui.power.custom_music_player.Stop"), e -> {
+				new Button(this.leftPos + 277, this.topPos + 7, 46, 20, Component.translatable("gui.power.custom_music_player.button_stop"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(0, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 61, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.1"), e -> {
+				new Button(this.leftPos + 61, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.button_1"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(1, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 97, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.2"), e -> {
+				new Button(this.leftPos + 97, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.button_2"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(2, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 133, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.3"), e -> {
+				new Button(this.leftPos + 133, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.button_3"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(3, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 169, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.4"), e -> {
+				new Button(this.leftPos + 169, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.button_4"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(4, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 205, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.5"), e -> {
+				new Button(this.leftPos + 205, this.topPos + 34, 30, 20, Component.translatable("gui.power.custom_music_player.button_5"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(5, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 61, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.6"), e -> {
+				new Button(this.leftPos + 61, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.button_6"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(6, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 97, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.7"), e -> {
+				new Button(this.leftPos + 97, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.button_7"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(7, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 133, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.8"), e -> {
+				new Button(this.leftPos + 133, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.button_8"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(8, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 169, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.9"), e -> {
+				new Button(this.leftPos + 169, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.button_9"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(9, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 205, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.10"), e -> {
+				new Button(this.leftPos + 205, this.topPos + 61, 30, 20, Component.translatable("gui.power.custom_music_player.button_10"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CustomMusicPlayerButtonMessage(10, x, y, z));
 						CustomMusicPlayerButtonMessage.handleButtonAction(entity, 10, x, y, z);

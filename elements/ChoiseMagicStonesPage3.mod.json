@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,13 +13,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_spirit",
           "text": "Spirit",
           "onClick": {
             "name": "SpiritGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Spirit",
           "x": 51,
           "y": 107
         }
@@ -27,6 +27,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_choose_a_stone_to_get_it",
           "text": {
             "fixedValue": "Choose a stone to get it"
           },
@@ -34,7 +35,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Choose a stone to get it",
           "x": 141,
           "y": 26
         }
@@ -42,13 +42,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_form",
           "text": "Form",
           "onClick": {
             "name": "FormGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Form",
           "x": 51,
           "y": 161
         }
@@ -56,13 +56,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_aether",
           "text": "Aether",
           "onClick": {
             "name": "AetherGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Aether",
           "x": 51,
           "y": 134
         }
@@ -70,13 +70,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_mind",
           "text": "Mind",
           "onClick": {
             "name": "MindGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Mind",
           "x": 141,
           "y": 53
         }
@@ -84,13 +84,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_g_dust",
           "text": "G. Dust",
           "onClick": {
             "name": "GoldenDustGet"
           },
           "width": 56,
           "height": 20,
-          "name": "G. Dust",
           "x": 141,
           "y": 80
         }
@@ -98,13 +98,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_blue_flame",
           "text": "Blue Flame",
           "onClick": {
             "name": "BlueFlameGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Blue Flame",
           "x": 51,
           "y": 53
         }
@@ -112,10 +112,10 @@
       {
         "type": "button",
         "data": {
+          "name": "button_empty",
           "text": " ",
           "width": 56,
           "height": 20,
-          "name": " ",
           "x": 141,
           "y": 107
         }
@@ -123,13 +123,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_smoke",
           "text": "Smoke",
           "onClick": {
             "name": "SmokeGet"
           },
           "width": 56,
           "height": 20,
-          "name": "Smoke",
           "x": 51,
           "y": 80
         }
@@ -137,13 +137,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_previous_page",
           "text": "Previous page",
           "onClick": {
             "name": "PreviousPage2"
           },
           "width": 93,
           "height": 20,
-          "name": "Previous page",
           "x": 24,
           "y": 188
         }
@@ -151,6 +151,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_33",
           "text": {
             "fixedValue": "3/3"
           },
@@ -158,7 +159,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "3/3",
           "x": 24,
           "y": 26
         }
@@ -168,7 +168,6 @@
         "data": {
           "image": "blue_flame_master.png",
           "use1Xscale": false,
-          "name": "blue_flame_master.png",
           "x": 33,
           "y": 53
         }
@@ -178,7 +177,6 @@
         "data": {
           "image": "smoke_master.png",
           "use1Xscale": false,
-          "name": "smoke_master.png",
           "x": 33,
           "y": 80
         }
@@ -188,7 +186,6 @@
         "data": {
           "image": "spirit_master.png",
           "use1Xscale": false,
-          "name": "spirit_master.png",
           "x": 33,
           "y": 107
         }
@@ -198,7 +195,6 @@
         "data": {
           "image": "form_master.png",
           "use1Xscale": false,
-          "name": "form_master.png",
           "x": 33,
           "y": 161
         }
@@ -208,7 +204,6 @@
         "data": {
           "image": "golden_dust_master.png",
           "use1Xscale": false,
-          "name": "golden_dust_master.png",
           "x": 123,
           "y": 80
         }
@@ -218,7 +213,6 @@
         "data": {
           "image": "mind_master.png",
           "use1Xscale": false,
-          "name": "mind_master.png",
           "x": 123,
           "y": 53
         }
@@ -228,7 +222,6 @@
         "data": {
           "image": "aether_master.png",
           "use1Xscale": false,
-          "name": "aether_master.png",
           "x": 33,
           "y": 134
         }

@@ -80,9 +80,9 @@ public class EBSunScreen extends AbstractContainerScreen<EBSunMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Great, Unique", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Sun", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Healing", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_sun.label_class_great_unique"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_sun.label_element_sun"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_sun.label_force_healing"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBSunScreen extends AbstractContainerScreen<EBSunMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_sun.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBSunButtonMessage(0, x, y, z));
-				EBSunButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_sun.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBSunButtonMessage(0, x, y, z));
+						EBSunButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

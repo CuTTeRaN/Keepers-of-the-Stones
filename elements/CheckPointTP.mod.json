@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_returning_to_the_last_point",
           "text": {
             "fixedValue": "Returning to the last point"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Returning to the last point",
           "x": 141,
           "y": 44
         }
@@ -28,6 +28,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_checkpoints",
           "text": {
             "fixedValue": "Checkpoints:"
           },
@@ -35,7 +36,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Checkpoints:",
           "x": 141,
           "y": 62
         }
@@ -43,13 +43,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_1",
           "text": "1",
           "onClick": {
             "name": "FirstPointTP"
           },
           "width": 30,
           "height": 20,
-          "name": "1",
           "x": 141,
           "y": 80
         }
@@ -57,13 +57,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_2",
           "text": "2",
           "onClick": {
             "name": "SecondPointTP"
           },
           "width": 30,
           "height": 20,
-          "name": "2",
           "x": 186,
           "y": 80
         }
@@ -71,13 +71,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_3",
           "text": "3",
           "onClick": {
             "name": "ThirdPointTP"
           },
           "width": 30,
           "height": 20,
-          "name": "3",
           "x": 231,
           "y": 80
         }
@@ -85,6 +85,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_set_checkpoint",
           "text": {
             "fixedValue": "Set checkpoint:"
           },
@@ -92,7 +93,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Set checkpoint:",
           "x": 141,
           "y": 116
         }
@@ -100,13 +100,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_11",
           "text": "1",
           "onClick": {
             "name": "FirstPointSet"
           },
           "width": 30,
           "height": 20,
-          "name": "1",
           "x": 141,
           "y": 134
         }
@@ -114,13 +114,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_21",
           "text": "2",
           "onClick": {
             "name": "SecondPointSet"
           },
           "width": 30,
           "height": 20,
-          "name": "2",
           "x": 186,
           "y": 134
         }
@@ -128,13 +128,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_31",
           "text": "3",
           "onClick": {
             "name": "ThirdPointSet"
           },
           "width": 30,
           "height": 20,
-          "name": "3",
           "x": 231,
           "y": 134
         }

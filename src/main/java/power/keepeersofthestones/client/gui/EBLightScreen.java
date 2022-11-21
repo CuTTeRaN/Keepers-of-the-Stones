@@ -80,9 +80,9 @@ public class EBLightScreen extends AbstractContainerScreen<EBLightMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Middle", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Light", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Glow", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_light.label_class_middle"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_light.label_element_light"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_light.label_force_glow"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBLightScreen extends AbstractContainerScreen<EBLightMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_light.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBLightButtonMessage(0, x, y, z));
-				EBLightButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_light.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBLightButtonMessage(0, x, y, z));
+						EBLightButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

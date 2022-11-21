@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,6 +13,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_to_buy_put_the_required_number",
           "text": {
             "fixedValue": "To buy, put the required number of coins in the slot (8)"
           },
@@ -20,7 +21,6 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "To buy, put the required number of coins in the slot (8)",
           "x": 60,
           "y": 44
         }
@@ -38,7 +38,6 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
           "x": 204,
           "y": 71
         }
@@ -48,7 +47,6 @@
         "data": {
           "image": "elemental_coin.png",
           "use1Xscale": false,
-          "name": "elemental_coin.png",
           "x": 186,
           "y": 71
         }
@@ -56,13 +54,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_buy",
           "text": "Buy",
           "onClick": {
             "name": "UpdateToReactiveFlying"
           },
           "width": 40,
           "height": 20,
-          "name": "Buy",
           "x": 231,
           "y": 71
         }

@@ -87,10 +87,10 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "X", 24, 34, -12829636);
-		this.font.draw(poseStack, "Enter the desired coordinates", 15, 7, -12829636);
-		this.font.draw(poseStack, "Y", 24, 70, -12829636);
-		this.font.draw(poseStack, "Z", 24, 106, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.point_gui.label_x"), 24, 34, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.point_gui.label_enter_the_desired_coordinates"), 15, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.point_gui.label_y"), 24, 70, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.point_gui.label_z"), 24, 106, -12829636);
 	}
 
 	@Override
@@ -182,7 +182,7 @@ public class PointGUIScreen extends AbstractContainerScreen<PointGUIMenu> {
 		tpZ.setMaxLength(32767);
 		this.addWidget(this.tpZ);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 51, this.topPos + 133, 67, 20, Component.translatable("gui.power.point_gui.Teleport"), e -> {
+				new Button(this.leftPos + 51, this.topPos + 133, 67, 20, Component.translatable("gui.power.point_gui.button_teleport"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new PointGUIButtonMessage(0, x, y, z));
 						PointGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);

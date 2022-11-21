@@ -80,9 +80,9 @@ public class EBTeleportationScreen extends AbstractContainerScreen<EBTeleportati
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Teleportation", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Moving", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_teleportation.label_class_additional"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_teleportation.label_element_teleportation"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_teleportation.label_force_moving"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public class EBTeleportationScreen extends AbstractContainerScreen<EBTeleportati
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_teleportation.>"), e -> {
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_teleportation.button_empty"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new EBTeleportationButtonMessage(0, x, y, z));
 						EBTeleportationButtonMessage.handleButtonAction(entity, 0, x, y, z);

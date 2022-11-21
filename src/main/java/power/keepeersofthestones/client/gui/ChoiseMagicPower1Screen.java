@@ -132,8 +132,8 @@ public class ChoiseMagicPower1Screen extends AbstractContainerScreen<ChoiseMagic
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose the desired power of the elements", 127, 6, -12829636);
-		this.font.draw(poseStack, "1/3", 10, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_power_1.label_choose_the_desired_power_of_the"), 127, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.choise_magic_power_1.label_13"), 10, 6, -12829636);
 	}
 
 	@Override
@@ -147,147 +147,147 @@ public class ChoiseMagicPower1Screen extends AbstractContainerScreen<ChoiseMagic
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Fire"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_fire"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(0, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Air"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_air"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(1, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Water"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_water"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(2, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Earth"), e -> {
+				new Button(this.leftPos + 37, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_earth"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(3, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 37, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Energy"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_energy"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(4, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Ice"), e -> {
+				new Button(this.leftPos + 136, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_ice"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(5, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Lightning"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_lightning"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(6, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Sound"), e -> {
+				new Button(this.leftPos + 136, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_sound"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(7, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Crystal"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 136, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_crystal"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(8, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 136, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Lava"), e -> {
+				new Button(this.leftPos + 136, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_lava"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(9, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Rain"), e -> {
+				new Button(this.leftPos + 235, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_rain"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(10, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Ocean"), e -> {
+				new Button(this.leftPos + 235, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_ocean"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(11, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Greenery"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_greenery"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(12, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Tornado"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 60, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_tornado"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(13, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 316, this.topPos + 168, 72, 20, Component.translatable("gui.power.choise_magic_power_1.Next page"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_next_page"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(14, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 14, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 235, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Animals"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 235, this.topPos + 141, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_animals"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(15, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 15, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Metal"), e -> {
+				new Button(this.leftPos + 325, this.topPos + 33, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_metal"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(16, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 16, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Light"), e -> {
+				new Button(this.leftPos + 325, this.topPos + 60, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_light"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(17, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 17, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 87, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Shadow"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_shadow"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(18, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 18, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 114, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Vacuum"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20,
+				Component.translatable("gui.power.choise_magic_power_1.button_vacuum"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(19, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 19, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 325, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_1.Sun"), e -> {
+				new Button(this.leftPos + 325, this.topPos + 141, 56, 20, Component.translatable("gui.power.choise_magic_power_1.button_sun"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicPower1ButtonMessage(20, x, y, z));
 						ChoiseMagicPower1ButtonMessage.handleButtonAction(entity, 20, x, y, z);

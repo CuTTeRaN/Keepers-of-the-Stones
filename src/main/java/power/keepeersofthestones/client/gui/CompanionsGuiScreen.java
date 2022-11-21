@@ -71,7 +71,7 @@ public class CompanionsGuiScreen extends AbstractContainerScreen<CompanionsGuiMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose the entity you want to make your henchman", 32, 10, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.companions_gui.label_choose_the_entity_you_want_to_ma"), 32, 10, -12829636);
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class CompanionsGuiScreen extends AbstractContainerScreen<CompanionsGuiMe
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 14, this.topPos + 37, 56, 20, Component.translatable("gui.power.companions_gui.Zombie"), e -> {
+				new Button(this.leftPos + 14, this.topPos + 37, 56, 20, Component.translatable("gui.power.companions_gui.button_zombie"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new CompanionsGuiButtonMessage(0, x, y, z));
 						CompanionsGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);

@@ -80,9 +80,9 @@ public class EBBlueFlameScreen extends AbstractContainerScreen<EBBlueFlameMenu> 
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Blue Flame", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Amplification", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_blue_flame.label_class_additional"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_blue_flame.label_element_blue_flame"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_blue_flame.label_force_amplification"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBBlueFlameScreen extends AbstractContainerScreen<EBBlueFlameMenu> 
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_blue_flame.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBBlueFlameButtonMessage(0, x, y, z));
-				EBBlueFlameButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_blue_flame.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBBlueFlameButtonMessage(0, x, y, z));
+						EBBlueFlameButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

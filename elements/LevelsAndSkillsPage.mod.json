@@ -1,5 +1,5 @@
 {
-  "_fv": 35,
+  "_fv": 36,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,6 @@
         "data": {
           "image": "book_of_elements_book.png",
           "use1Xscale": true,
-          "name": "book_of_elements_book.png",
           "x": -31,
           "y": -7
         }
@@ -23,6 +22,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_level_2",
           "text": {
             "fixedValue": "Level 2"
           },
@@ -30,7 +30,6 @@
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "Level 2",
           "x": 50,
           "y": 72
         }
@@ -38,6 +37,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_level_3",
           "text": {
             "fixedValue": "Level 3"
           },
@@ -45,7 +45,6 @@
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "Level 3",
           "x": 50,
           "y": 102
         }
@@ -58,7 +57,6 @@
           "displayCondition": {
             "name": "GetLevel2"
           },
-          "name": "level_checked.png",
           "x": 142,
           "y": 64
         }
@@ -71,7 +69,6 @@
           "displayCondition": {
             "name": "ReturnLevel3"
           },
-          "name": "level_checked.png",
           "x": 144,
           "y": 96
         }
@@ -79,13 +76,13 @@
       {
         "type": "button",
         "data": {
+          "name": "button_empty",
           "text": "<",
           "onClick": {
             "name": "OpenBook"
           },
           "width": 30,
           "height": 20,
-          "name": "<",
           "x": 33,
           "y": 206
         }
@@ -93,6 +90,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_level_1",
           "text": {
             "fixedValue": "Level 1"
           },
@@ -100,7 +98,6 @@
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "Level 1",
           "x": 50,
           "y": 39
         }
@@ -113,7 +110,6 @@
           "displayCondition": {
             "name": "GetLevel1"
           },
-          "name": "level_checked.png",
           "x": 141,
           "y": 33
         }
@@ -121,10 +117,10 @@
       {
         "type": "button",
         "data": {
+          "name": "button_empty1",
           "text": ">",
           "width": 30,
           "height": 20,
-          "name": ">",
           "x": 366,
           "y": 206
         }
@@ -132,6 +128,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_buy",
           "text": "Buy",
           "onClick": {
             "name": "OpenBuyLevel2"
@@ -141,7 +138,6 @@
           },
           "width": 40,
           "height": 20,
-          "name": "Buy",
           "x": 131,
           "y": 59
         }
@@ -149,6 +145,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_buy1",
           "text": "Buy",
           "onClick": {
             "name": "OpenBuyLevel3"
@@ -158,7 +155,6 @@
           },
           "width": 40,
           "height": 20,
-          "name": "Buy",
           "x": 131,
           "y": 91
         }
@@ -166,6 +162,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_reactive_flying",
           "text": {
             "fixedValue": "Reactive Flying"
           },
@@ -173,7 +170,6 @@
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "Reactive Flying",
           "x": 239,
           "y": 39
         }
@@ -183,7 +179,6 @@
         "data": {
           "image": "fire_master.png",
           "use1Xscale": false,
-          "name": "fire_master.png",
           "x": 260,
           "y": 49
         }
@@ -193,7 +188,6 @@
         "data": {
           "image": "blue_flame_master.png",
           "use1Xscale": false,
-          "name": "blue_flame_master.png",
           "x": 278,
           "y": 49
         }
@@ -203,7 +197,6 @@
         "data": {
           "image": "lightning_master.png",
           "use1Xscale": false,
-          "name": "lightning_master.png",
           "x": 294,
           "y": 49
         }
@@ -211,6 +204,7 @@
       {
         "type": "label",
         "data": {
+          "name": "label_for",
           "text": {
             "fixedValue": "For:"
           },
@@ -218,7 +212,6 @@
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "For:",
           "x": 239,
           "y": 55
         }
@@ -226,6 +219,7 @@
       {
         "type": "button",
         "data": {
+          "name": "button_buy2",
           "text": "Buy",
           "onClick": {
             "name": "OpenBuyReactiveFlying"
@@ -235,7 +229,6 @@
           },
           "width": 40,
           "height": 20,
-          "name": "Buy",
           "x": 342,
           "y": 45
         }
@@ -248,7 +241,6 @@
           "displayCondition": {
             "name": "ReturnReactiveFlying"
           },
-          "name": "level_checked.png",
           "x": 352,
           "y": 50
         }
@@ -258,7 +250,6 @@
         "data": {
           "image": "rain_master.png",
           "use1Xscale": false,
-          "name": "rain_master.png",
           "x": 308,
           "y": 49
         }

@@ -80,9 +80,9 @@ public class EBTornadoScreen extends AbstractContainerScreen<EBTornadoMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Tornado", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Spinning", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_tornado.label_class_additional"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_tornado.label_element_tornado"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_tornado.label_force_spinning"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBTornadoScreen extends AbstractContainerScreen<EBTornadoMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_tornado.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBTornadoButtonMessage(0, x, y, z));
-				EBTornadoButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_tornado.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBTornadoButtonMessage(0, x, y, z));
+						EBTornadoButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

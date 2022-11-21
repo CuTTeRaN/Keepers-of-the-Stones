@@ -80,9 +80,9 @@ public class EBPlagueScreen extends AbstractContainerScreen<EBPlagueMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Additional", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Plague", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Infection", -162, -49, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_plague.label_class_additional"), -162, -85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_plague.label_element_plague"), -162, -67, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.eb_plague.label_force_infection"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -95,11 +95,12 @@ public class EBPlagueScreen extends AbstractContainerScreen<EBPlagueMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_plague.>"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new EBPlagueButtonMessage(0, x, y, z));
-				EBPlagueButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
+		this.addRenderableWidget(
+				new Button(this.leftPos + 152, this.topPos + 86, 30, 20, Component.translatable("gui.power.eb_plague.button_empty"), e -> {
+					if (true) {
+						PowerMod.PACKET_HANDLER.sendToServer(new EBPlagueButtonMessage(0, x, y, z));
+						EBPlagueButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}));
 	}
 }

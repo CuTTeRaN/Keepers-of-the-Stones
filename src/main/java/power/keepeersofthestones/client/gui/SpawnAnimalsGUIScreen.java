@@ -71,7 +71,7 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose an animal to summon", 15, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.spawn_animals_gui.label_choose_an_animal_to_summon"), 15, 7, -12829636);
 	}
 
 	@Override
@@ -85,42 +85,42 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 15, this.topPos + 25, 46, 20, Component.translatable("gui.power.spawn_animals_gui.Wolf"), e -> {
+				new Button(this.leftPos + 15, this.topPos + 25, 46, 20, Component.translatable("gui.power.spawn_animals_gui.button_wolf"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(0, x, y, z));
 						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 78, this.topPos + 25, 61, 20, Component.translatable("gui.power.spawn_animals_gui.Chicken"), e -> {
+				new Button(this.leftPos + 78, this.topPos + 25, 61, 20, Component.translatable("gui.power.spawn_animals_gui.button_chicken"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(1, x, y, z));
 						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 15, this.topPos + 52, 40, 20, Component.translatable("gui.power.spawn_animals_gui.Cow"), e -> {
+				new Button(this.leftPos + 15, this.topPos + 52, 40, 20, Component.translatable("gui.power.spawn_animals_gui.button_cow"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(2, x, y, z));
 						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 78, this.topPos + 52, 40, 20, Component.translatable("gui.power.spawn_animals_gui.Cat"), e -> {
+				new Button(this.leftPos + 78, this.topPos + 52, 40, 20, Component.translatable("gui.power.spawn_animals_gui.button_cat"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(3, x, y, z));
 						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 15, this.topPos + 79, 51, 20, Component.translatable("gui.power.spawn_animals_gui.Horse"), e -> {
+				new Button(this.leftPos + 15, this.topPos + 79, 51, 20, Component.translatable("gui.power.spawn_animals_gui.button_horse"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(4, x, y, z));
 						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 78, this.topPos + 79, 51, 20, Component.translatable("gui.power.spawn_animals_gui.Sheep"), e -> {
+				new Button(this.leftPos + 78, this.topPos + 79, 51, 20, Component.translatable("gui.power.spawn_animals_gui.button_sheep"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(5, x, y, z));
 						SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);

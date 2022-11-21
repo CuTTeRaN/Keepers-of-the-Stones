@@ -71,7 +71,7 @@ public class RedstoneBundleGUIScreen extends AbstractContainerScreen<RedstoneBun
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Select the mechanism to add", 77, 6, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.power.redstone_bundle_gui.label_select_the_mechanism_to_add"), 77, 6, -12829636);
 	}
 
 	@Override
@@ -85,84 +85,84 @@ public class RedstoneBundleGUIScreen extends AbstractContainerScreen<RedstoneBun
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(
-				new Button(this.leftPos + 14, this.topPos + 24, 135, 20, Component.translatable("gui.power.redstone_bundle_gui.Piston"), e -> {
+				new Button(this.leftPos + 14, this.topPos + 24, 135, 20, Component.translatable("gui.power.redstone_bundle_gui.button_piston"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(0, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 51, 135, 20,
-				Component.translatable("gui.power.redstone_bundle_gui.Piston extension"), e -> {
+				Component.translatable("gui.power.redstone_bundle_gui.button_piston_extension"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(1, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 14, this.topPos + 78, 135, 20, Component.translatable("gui.power.redstone_bundle_gui.Observer "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 78, 135, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_observer"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(2, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 105, 135, 20,
-				Component.translatable("gui.power.redstone_bundle_gui.Redstone Block"), e -> {
+				Component.translatable("gui.power.redstone_bundle_gui.button_redstone_block"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(3, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 14, this.topPos + 132, 77, 20, Component.translatable("gui.power.redstone_bundle_gui.Comparator"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 132, 77, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_comparator"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(4, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 14, this.topPos + 159, 93, 20, Component.translatable("gui.power.redstone_bundle_gui.Redstone Lamp"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 14, this.topPos + 159, 93, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_redstone_lamp"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(5, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 104, this.topPos + 132, 72, 20, Component.translatable("gui.power.redstone_bundle_gui.Repeater "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 104, this.topPos + 132, 72, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_repeater"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(6, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(
-				new Button(this.leftPos + 113, this.topPos + 159, 51, 20, Component.translatable("gui.power.redstone_bundle_gui.Lever"), e -> {
+				new Button(this.leftPos + 113, this.topPos + 159, 51, 20, Component.translatable("gui.power.redstone_bundle_gui.button_lever"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(7, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}));
 		this.addRenderableWidget(new Button(this.leftPos + 167, this.topPos + 159, 98, 20,
-				Component.translatable("gui.power.redstone_bundle_gui.Redstone Torch"), e -> {
+				Component.translatable("gui.power.redstone_bundle_gui.button_redstone_torch"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(8, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 185, this.topPos + 132, 56, 20, Component.translatable("gui.power.redstone_bundle_gui.Hopper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 185, this.topPos + 132, 56, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_hopper"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(9, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 158, this.topPos + 105, 61, 20, Component.translatable("gui.power.redstone_bundle_gui.Dropper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 158, this.topPos + 105, 61, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_dropper"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(10, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}));
-		this.addRenderableWidget(
-				new Button(this.leftPos + 158, this.topPos + 78, 72, 20, Component.translatable("gui.power.redstone_bundle_gui.Dispenser"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 158, this.topPos + 78, 72, 20,
+				Component.translatable("gui.power.redstone_bundle_gui.button_dispenser"), e -> {
 					if (true) {
 						PowerMod.PACKET_HANDLER.sendToServer(new RedstoneBundleGUIButtonMessage(11, x, y, z));
 						RedstoneBundleGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
