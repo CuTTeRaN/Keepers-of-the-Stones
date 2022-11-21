@@ -39,7 +39,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 2) {
@@ -61,7 +61,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 3) {
@@ -83,7 +83,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 4) {
@@ -105,7 +105,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 5) {
@@ -127,7 +127,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 5) {
@@ -149,7 +149,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 6) {
@@ -171,7 +171,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 7) {
@@ -193,7 +193,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 8) {
@@ -215,7 +215,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 9) {
@@ -237,7 +237,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 10) {
@@ -259,7 +259,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 11) {
@@ -281,7 +281,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 12) {
@@ -303,7 +303,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 13) {
@@ -325,7 +325,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 14) {
@@ -347,7 +347,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 15) {
@@ -369,7 +369,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 16) {
@@ -391,7 +391,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 17) {
@@ -413,7 +413,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 18) {
@@ -435,7 +435,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 19) {
@@ -457,7 +457,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 20) {
@@ -479,7 +479,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 21) {
@@ -501,7 +501,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 22) {
@@ -523,7 +523,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 23) {
@@ -545,7 +545,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 24) {
@@ -567,7 +567,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 25) {
@@ -589,7 +589,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 26) {
@@ -611,7 +611,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 27) {
@@ -633,7 +633,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 28) {
@@ -655,7 +655,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 29) {
@@ -677,7 +677,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 30) {
@@ -699,7 +699,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 31) {
@@ -721,7 +721,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 32) {
@@ -743,7 +743,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 33) {
@@ -765,7 +765,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 34) {
@@ -787,7 +787,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 35) {
@@ -809,7 +809,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 36) {
@@ -831,7 +831,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 37) {
@@ -853,7 +853,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 38) {
@@ -875,7 +875,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 39) {
@@ -897,7 +897,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 40) {
@@ -919,7 +919,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 41) {
@@ -941,7 +941,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 42) {
@@ -963,7 +963,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 43) {
@@ -985,7 +985,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 44) {
@@ -1007,7 +1007,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 45) {
@@ -1029,7 +1029,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 46) {
@@ -1051,7 +1051,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 			if (random == 47) {
@@ -1073,7 +1073,7 @@ public class RandomChoiceStoneProcedure {
 						}
 					});
 				} else {
-					random = Mth.nextInt(RandomSource.create(), 1, 47);
+					RandomChoiceStoneProcedure.execute(world, entity);
 				}
 			}
 		}
