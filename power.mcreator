@@ -11554,15 +11554,6 @@
       "path": "~/Stones/Teleportation"
     },
     {
-      "name": "PointGUI",
-      "type": "gui",
-      "sortid": 699,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "point_gui",
-      "path": "~/Stones/Teleportation"
-    },
-    {
       "name": "PointTP",
       "type": "procedure",
       "sortid": 700,
@@ -11578,39 +11569,6 @@
           {
             "name": "guistate",
             "type": "map"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Stones/Teleportation"
-    },
-    {
-      "name": "OpenPontGUI",
-      "type": "procedure",
-      "sortid": 701,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_pont_gui",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -24717,7 +24675,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones",
-    "version": "2.9.0.8",
+    "version": "2.9.0.9",
     "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
     "author": "UMC",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",

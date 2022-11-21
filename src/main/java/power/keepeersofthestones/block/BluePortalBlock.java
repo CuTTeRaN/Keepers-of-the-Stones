@@ -64,10 +64,10 @@ public class BluePortalBlock extends Block implements SimpleWaterloggedBlock
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 8, 16, 32, 9);
-			case NORTH -> box(0, 0, 7, 16, 32, 8);
-			case EAST -> box(8, 0, 0, 9, 32, 16);
-			case WEST -> box(7, 0, 0, 8, 32, 16);
+			default -> box(0, 0, 8, 16, 32, 8.8999999999999995);
+			case NORTH -> box(0, 0, 7.1000000000000005, 16, 32, 8);
+			case EAST -> box(8, 0, 0, 8.8999999999999995, 32, 16);
+			case WEST -> box(7.1000000000000005, 0, 0, 8, 32, 16);
 		};
 	}
 

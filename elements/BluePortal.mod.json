@@ -20,13 +20,13 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": true,
     "boundingBoxes": [
       {
         "mx": 0.0,
         "my": 0.0,
-        "mz": 7.0,
+        "mz": 7.1000000000000005,
         "Mx": 16.0,
         "My": 32.0,
         "Mz": 8.0,

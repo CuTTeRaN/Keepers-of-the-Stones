@@ -9,7 +9,6 @@ import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
 import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
 import power.keepeersofthestones.world.inventory.RocketPathGUIMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
-import power.keepeersofthestones.world.inventory.PointGUIMenu;
 import power.keepeersofthestones.world.inventory.MusicPlayerGUIMenu;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
 import power.keepeersofthestones.world.inventory.EBWaterMenu;
@@ -146,8 +145,6 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<EBExplosionMenu>> EB_EXPLOSION = REGISTRY.register("eb_explosion",
 			() -> IForgeMenuType.create(EBExplosionMenu::new));
 	public static final RegistryObject<MenuType<EBAmberMenu>> EB_AMBER = REGISTRY.register("eb_amber", () -> IForgeMenuType.create(EBAmberMenu::new));
-	public static final RegistryObject<MenuType<PointGUIMenu>> POINT_GUI = REGISTRY.register("point_gui",
-			() -> IForgeMenuType.create(PointGUIMenu::new));
 	public static final RegistryObject<MenuType<EBBlueFlameMenu>> EB_BLUE_FLAME = REGISTRY.register("eb_blue_flame",
 			() -> IForgeMenuType.create(EBBlueFlameMenu::new));
 	public static final RegistryObject<MenuType<ChoiseMagicStonesPage3Menu>> CHOISE_MAGIC_STONES_PAGE_3 = REGISTRY

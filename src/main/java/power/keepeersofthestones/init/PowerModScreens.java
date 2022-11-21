@@ -9,7 +9,6 @@ import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
 import power.keepeersofthestones.client.gui.SoundImitateChoiceScreen;
 import power.keepeersofthestones.client.gui.RocketPathGUIScreen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
-import power.keepeersofthestones.client.gui.PointGUIScreen;
 import power.keepeersofthestones.client.gui.MusicPlayerGUIScreen;
 import power.keepeersofthestones.client.gui.LevelsAndSkillsPageScreen;
 import power.keepeersofthestones.client.gui.EBWaterScreen;
@@ -127,7 +126,6 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.EB_TELEPORTATION.get(), EBTeleportationScreen::new);
 			MenuScreens.register(PowerModMenus.EB_EXPLOSION.get(), EBExplosionScreen::new);
 			MenuScreens.register(PowerModMenus.EB_AMBER.get(), EBAmberScreen::new);
-			MenuScreens.register(PowerModMenus.POINT_GUI.get(), PointGUIScreen::new);
 			MenuScreens.register(PowerModMenus.EB_BLUE_FLAME.get(), EBBlueFlameScreen::new);
 			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_STONES_PAGE_3.get(), ChoiseMagicStonesPage3Screen::new);
 			MenuScreens.register(PowerModMenus.SPACE_ATLAS_GUI.get(), SpaceAtlasGUIScreen::new);

@@ -5,5 +5,5 @@
     "particle": "power:blocks/orange_portal",
     "0": "power:blocks/orange_portal"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }
