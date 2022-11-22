@@ -25,6 +25,7 @@ body:
      description: On which version of Minecraft is the mod installed?
      options:
        - 1.19.2 (Main)
+       - 1.19.3 (Future)
    validations:
      required: true
  - type: dropdown
